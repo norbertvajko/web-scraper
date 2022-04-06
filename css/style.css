@@ -52,7 +52,7 @@ nav {
     color:white;
 }
 .content h1 {
-    font-size: 90px;
+    font-size: 65px;
     font-weight: 500;
     padding:40px;
 }
@@ -99,5 +99,31 @@ nav {
         height: 100%;
     }
 }
+footer {
+    text-align: right;
+    color:white;
+    background: black;
+    display:block;
+}
+footer a {
+    color: green;
+}
+
+.contact {
+    color:white;
+    position:absolute;
+    top:25%;
+    left:40%;
+}
+input[type=text] {
+    width: 100%;
+}
+.s-submenu {
+    display: flex;
+    position: absolute;
+}
+
+
+
 
 

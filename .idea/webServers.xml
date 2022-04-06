@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="26da2f80-dcf9-49ad-90d5-1292c1efcd32" name="http://n_vajko.internship.rankingcoach.com" url="http://n_vajko.internship.rankingcoach.com">
+        <fileTransfer host="internship.rankingcoach.com" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
