@@ -8,13 +8,6 @@
 .logo {
     width:140px ;
 }
-.home-header {
-    height: 100vh;
-    width: 100%;
-    padding: 2% 8%;
-    background: transparent;
-    position: relative;
-}
 .header {
     height: 100vh;
     width: 100%;
@@ -22,6 +15,16 @@
     background: black;
     position: relative;
 }
+
+.home-header {
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    padding: 2% 8%;
+    background: transparent;
+    position: relative;
+}
+
 nav {
     display: flex;
     align-items: center;
@@ -112,9 +115,6 @@ footer {
     background: orange;
     display:block;
 }
-footer a {
-    color: green;
-}
 
 .contact {
     color:white;
@@ -139,11 +139,46 @@ input[type=text] {
     display: flex;
     flex-direction: column;
 }
-.ab-us-content {
+.products-content {
     padding: 50px;
     text-align: center;
     background-color: purple;
     color: white;
+}
+.fa {
+    color:white;
+    display: flex;
+    width: 10px;
+}
+#daily-offer {
+    text-align: center;
+    position: relative;
+    top: -350px;
+}
+
+#play-btn {
+    background: transparent;
+    width: 38px;
+    height: 38px;
+    border-color: red;
+}
+.favorites-content {
+    height:500px;
+    background: blue;
+    margin-left:20%;
+    margin-right: 20%;
+    /*position: absolute;*/
+}
+
+.favorites-content h1 {
+    color:white;
+}
+.menu-content-fav {
+    width: 200px;
+    height: 300px;
+    margin-left:5%;
+    background: yellow;
+    position:absolute;
 }
 
 
