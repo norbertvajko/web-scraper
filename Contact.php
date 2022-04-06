@@ -20,10 +20,11 @@
     <nav>
         <img src="assets/logo.jpg" class="logo">
         <ul class="nav-links">
-            <li><a href="Home.php">Home</a></li>
+            <li><a href="index.php">Home</a></li>
             <li><a href="About Us.php">About Us</a></li>
-            <li><a href="Services.php">Services</a>
-                <div class="s-submenu">
+            <li class="nav-dropdown">
+                <a class="nav-dropdown-main-link" href="Services.php">Services</a>
+                <div class="s-submenu nav-dropdown-links">
                     <a href="#">Link 1</a>
                     <a href="#">Link 2</a>
                 </div>

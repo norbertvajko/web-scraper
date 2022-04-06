@@ -8,6 +8,13 @@
 .logo {
     width:140px ;
 }
+.home-header {
+    height: 100vh;
+    width: 100%;
+    padding: 2% 8%;
+    background: transparent;
+    position: relative;
+}
 .header {
     height: 100vh;
     width: 100%;
@@ -102,7 +109,7 @@ nav {
 footer {
     text-align: right;
     color:white;
-    background: black;
+    background: orange;
     display:block;
 }
 footer a {
@@ -118,11 +125,26 @@ footer a {
 input[type=text] {
     width: 100%;
 }
-.s-submenu {
-    display: flex;
+
+.nav-dropdown-links{
+    display: none;
     position: absolute;
 }
 
+.nav-dropdown:hover .nav-dropdown-main-link{
+    color: red;
+}
+
+.nav-dropdown:hover .nav-dropdown-links{
+    display: flex;
+    flex-direction: column;
+}
+.ab-us-content {
+    padding: 50px;
+    text-align: center;
+    background-color: purple;
+    color: white;
+}
 
 
 
