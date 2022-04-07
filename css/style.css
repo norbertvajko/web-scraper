@@ -21,7 +21,7 @@
     height: 100vh;
     width: 100%;
     padding: 2% 8%;
-    background: transparent;
+    background: black;
     position: relative;
 }
 
@@ -128,6 +128,7 @@ input[type=text] {
 
 .nav-dropdown-links{
     display: none;
+
     position: absolute;
 }
 
@@ -153,7 +154,7 @@ input[type=text] {
 #daily-offer {
     text-align: center;
     position: relative;
-    top: -350px;
+    top: -150px;
 }
 
 #play-btn {
@@ -180,7 +181,25 @@ input[type=text] {
     background: yellow;
     position:absolute;
 }
+.content-description {
+    position: relative;
+    top:-80px;
+}
+.btn-collapse {
 
+}
+.social-vertical-items {
+
+    position:absolute;
+    background: transparent;
+    width:50px;
+    height:300px;
+    left:1300px;
+    top:20px;
+}
+#results-table {
+    background-color: yellow;
+}
 
 
 
