@@ -25,20 +25,20 @@
         <button id="play-btn"><i class="fa fa-play"></i></button>
 
         <ul class="nav-links">
-            <li><i class="fa fa-home"></i><a href="index.php">Home</a></li>
+            <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
 
-            <li class="nav-dropdown"><i class="fa fa-list"></i>
-                <a class="nav-dropdown-main-link" href="#">Products</a>
-                <div class="s-submenu nav-dropdown-links">
-                    <a href="Products.php">Computers</a>
-                    <a href="#">Laptops</a>
-                    <a href="#">Phones</a>
-                    <a href="#">TV</a>
-                </div>
-            </li>
+<!--            <li class="nav-dropdown"><i class="fa fa-list"></i>-->
+<!--                <a class="nav-dropdown-main-link" href="#">Products</a>-->
+<!--&lt;!&ndash;                <div class="s-submenu nav-dropdown-links">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <a href="Products.html">Computers</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <a href="#">Laptops</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <a href="#">Phones</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <a href="#">TV</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+<!--            </li>-->
 
-            <li><i class="fa fa-heart-o"></i><a href="Favorites.php">Favorites</a></li>
-            <li><i class="fa fa-envelope-open"></i><a href="Contact.php">Contact</a></li>
+            <li><i class="fa fa-heart-o"></i><a href="Favorites.html">Favorites</a></li>
+            <li><i class="fa fa-envelope-open"></i><a href="Contact.html">Contact</a></li>
 
             <li><button class="button-collapse" type="button"> <img src="assets/navbar-icon-17.jpg  " height =50" width="50" alt="navbar-button"/></button>
                 <div class="button-collapse-content">
@@ -109,7 +109,7 @@
 <footer>
     <p>Author: Vajko Norbert</p>
     <p><a href="mailto:hege@example.com">norbertvajko@yahoo.com</a></p>
-    <p><a href="Favorites.php">Favorites</a></p>
+    <p><a href="Favorites.html">Favorites</a></p>
 </footer>
 </body>
 </html>
