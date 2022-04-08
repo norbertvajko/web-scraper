@@ -2,15 +2,12 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="26da2f80-dcf9-49ad-90d5-1292c1efcd32" name="http://n_vajko.internship.rankingcoach.com" url="http://n_vajko.internship.rankingcoach.com">
+      <webServer id="26da2f80-dcf9-49ad-90d5-1292c1efcd32" name="http://n_vajko.internship.rankingcoach.com" url="https://n_vajko.internship.rankingcoach.com">
         <fileTransfer host="internship.rankingcoach.com" port="21">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
         </fileTransfer>
-      </webServer>
-      <webServer id="5553e2da-fd64-4bbf-a710-4bf3c5918200" name="xampp" url="http://localhost/project">
-        <fileTransfer mountedRoot="D:\programs\xampp\htdocs\project" accessType="MOUNT" port="0" />
       </webServer>
     </option>
   </component>
