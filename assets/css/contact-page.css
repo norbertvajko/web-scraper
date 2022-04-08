@@ -1,12 +1,14 @@
-.header {
+header {
     width: 100%;
     height: 100px;
+    color:white;
+    text-align: center;
 }
-.content {
+main {
     position:relative;
     height: 800px;
 }
-.content h1 {
+main h1 {
     color:white;
     position:relative;
     left:40%;

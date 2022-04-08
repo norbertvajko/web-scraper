@@ -1,16 +1,21 @@
-.header {
+header {
     width: 100%;
     height: 100px;
 }
-
-.content {
+.favorites-content-description {
     position:relative;
-    height: 800px;
-}
-.favorites-content-description h1 {
-    color:blue;
+    left:150px;
+    color:white;
 }
 
+main {
+    height: 800px;
+    width: 100%;
+}
+main h2 {
+    color:white;
+    text-align: center;
+}
 .favorites-content-description h1 ul {
     position: relative;
     right: 1750px;
@@ -20,6 +25,7 @@
 }
 .favorites-content-description ul li a {
     text-decoration: none;
+    color:white;
 
 }
 
