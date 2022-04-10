@@ -3,10 +3,8 @@ header {
     height: 100px;
 }
 header h1 {
-    position:relative;
     text-align: center;
     color:white;
-    top:50px
 }
 
 main {
@@ -15,61 +13,53 @@ main {
 }
 
 .product-search-container h1 {
-    position:relative;
     text-align: center;
-    top:100px;
 }
 .product-search-container  {
-    position:relative;
-    left:700px;
-    top:200px;
+
 }
 .product-search-container h2 {
-    position:relative;
-    left:100px;
     color:white;
+    margin:0 700px;
 }
 .product-search-container input {
-    position:relative;
-    left:100px;
+    margin:0 700px;
 }
 .product-search-container button {
-    position:relative;
-    left:100px;
+    margin:0 900px 50px;
 }
 .social-items-links {
     margin:0;
     padding: 0;
+    float:right;
 }
 .social-items-links {
     list-style: none;
 }
+
 .social-items-links  li a {
     color:grey;
     cursor:pointer;
 }
+
 .social-items-links li a:hover {
     color:white;
 }
+.product-results {
+    height:400px;
+}
 .product-results h3 {
-    position:relative;
-    left:40%;
-    top:-90px;
     color:white;
 }
 .product-results-table {
-    position:relative;
-    left:700px;
     color:white;
+}
+.app-containers {
+
 }
 .app-containers h4 {
-    position:relative;
     color:white;
     text-align: center;
-    top:100px;
 }
-.app-container-badges {
-    position:relative;
-    text-align: center;
-    top:110px;
-}
+
+

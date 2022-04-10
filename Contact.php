@@ -21,7 +21,7 @@
 
 
 <nav>
-    <img id="logo" src="assets/new-logo.png" alt="logo-image">
+    <img id="logo" src="assets/images/new-logo.png" alt="logo-image">
 
     <ul class="nav-links">
         <li><i class="fa fa-home fa-2x"></i><a href="index.php">Home</a></li>

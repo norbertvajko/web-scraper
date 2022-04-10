@@ -2,5 +2,8 @@ footer {
     position:absolute;
     bottom: 0;
     width: 100%;
-    background: white;
+    background: grey;
+}
+footer p {
+    display: inline-block;
 }

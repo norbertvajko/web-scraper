@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta content="Search engine for IT products and compare them" name="description">
@@ -10,7 +10,7 @@
 
     <title>Search for the best deal right now!</title>
 
-    <link rel="icon" type="image/x-icon" href="assets/spider-title-logo.png">
+    <link rel="icon" type="image/x-icon" href="assets/images/spider-title-logo.png">
 
     <link href="assets/css/home-page.css" rel="stylesheet">
     <link href="assets/css/nav-bar.css" rel=stylesheet>
@@ -22,7 +22,7 @@
 <body>
 
 <nav>
-    <img id="logo" src="assets/new-logo.png" alt="logo-image">
+    <img id="logo" src="assets/images/new-logo.png" alt="logo-image">
 
     <ul class="nav-links">
         <li><i class="fa fa-home fa-2x"></i><a href="index.php">Home</a></li>
@@ -37,9 +37,11 @@
     </ul>
 </nav>
 
+
 <header>
     <h1>With Scrappy you can easily search for the best deal of any product you want!</h1>
 </header>
+<hr/>
 
 <main class="content">
 
@@ -54,6 +56,7 @@
     </section>
 
     <section class="social-items">
+        <h6>Social elements</h6>
         <ul class="social-items-links">
             <li><a href="https://github.com/norbertvajko" target="_blank"><i class="fa fa-github fa-5x"></i></a></li>
             <li><a href="#"><i class="fa fa-linkedin fa-5x"></i></a></li>
@@ -97,12 +100,11 @@
                 <img src="https://s13emagst.akamaized.net/assets/ro/images/apple-store-badge.svg" alt="Store badge">
             </a>
         </div>
-    </section>
-
+    </section> <hr/>
 </main>
 
 <footer>
-    <p>Author:Vojko Norbert</p>
+    <p>Author:Vajko Norbert</p>
     <p><a href="mailto:hege@example.com">norbertvajko@yahoo.com</a></p>
     <p><a href="Favorites.php">Favorites</a></p>
 </footer>

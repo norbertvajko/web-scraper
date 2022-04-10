@@ -20,7 +20,7 @@
 <body>
 
 <nav>
-    <img id="logo" src="assets/new-logo.png" alt="logo-image">
+    <img id="logo" src="assets/images/new-logo.png" alt="logo-image">
 
     <ul class="nav-links">
         <li><i class="fa fa-home fa-2x"></i><a href="index.php">Home</a></li>
@@ -49,7 +49,7 @@
 <main class="content">
     <section>
         <h2>From here is the content</h2>
-        <img src="assets/empty-cart.jpg" alt="empty cart" id="empty-cart">
+        <img src="assets/images/empty-cart.jpg" alt="empty cart" id="empty-cart">
     </section>
 </main>
 
