@@ -12,7 +12,6 @@
 
     <link href="assets/css/contact-page.css" rel="stylesheet">
     <link href="assets/css/nav-bar.css" rel=stylesheet>
-    <link href="assets/css/body.css" rel="stylesheet">
     <link href="assets/css/footer.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
@@ -26,7 +25,7 @@
         <li><i class="fa fa-home fa-2x"></i><a href="index.php">Home</a></li>
         <li><i class="fa fa-heart-o fa-2x"></i><a href="Favorites.php">Favorites</a></li>
         <li><i class="fa fa-envelope-open fa-2x"></i><a href="Contact.php">Contact</a></li>
-        <li><a href="About us">About us</a></li>
+        <li><a href="About%20Us.php">About us</a></li>
         <li>
             <button type="button">Log In</button>
         </li>
