@@ -19,20 +19,21 @@
 
 <nav>
     <div class="nav-main">
-        <img id="logo" src="assets/images/new-logo.png" alt="logo-image">
 
-        <ul class="nav-links">
-            <li><i class="fa fa-home fa-2x"></i><a href="index.php">Home</a></li>
-            <li><i class="fa fa-heart-o fa-2x"></i><a href="Favorites.php">Favorites</a></li>
-            <li><i class="fa fa-envelope-open fa-2x"></i><a href="Contact.php">Contact</a></li>
-            <li><a href="About%20Us.php">About us</a></li>
-            <li>
-                <button type="button">Log In</button>
-            </li>
-            <li>
-                <button type="button">Register</button>
-            </li>
-        </ul>
+        <div class="nav-links">
+            <ul>
+                <li><a href="index.php"><i class="fa fa-home"></i><span>Home</span></a></li>
+                <li><a href="Favorites.php"><i class="fa fa-heart-o"></i><span>Favorites</span></a></li>
+                <li><a href="Contact.php"><i class="fa fa-envelope-open"></i><span>Contact</span></a></li>
+                <li><a href="About%20Us.php"><span>About us</span></a></li>
+            </ul>
+        </div>
+
+        <div class="sign-us">
+            <button type="button">Sign in</button>
+            <button type="button">Sign up</button>
+        </div>
+
     </div>
 </nav>
 
