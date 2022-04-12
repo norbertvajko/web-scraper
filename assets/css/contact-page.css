@@ -6,7 +6,7 @@ header {
 }
 html , body {
     min-height: 100%;
-    background: black;
+    background: transparent;
     background-size:cover;
     font-family: League Spartan,Helvetica,Arial,sans-serif;
     margin:0;
@@ -17,10 +17,19 @@ main {
     height: 800px;
 }
 main h1 {
-    color:white;
+    color:black;
     position:relative;
     left:40%;
 }
+.contact-us {
+    background-color: wheat;
+    width:80%;
+    margin:auto;
+    height:720px ;
+}
 .contact-us-form {
-
+    display:block;
+    background-color: orange;
+    width:700px;
+    margin:auto;
 }

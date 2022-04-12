@@ -1,9 +1,15 @@
 footer {
-    position:absolute;
-    bottom: 0;
     width: 100%;
     background: grey;
 }
 footer p {
     display: inline-block;
+}
+.footer-main {
+    display:flex;
+    width:80%;
+    background-color: wheat;
+    margin:auto;
+    align-items: center;
+    justify-content: space-around;
 }

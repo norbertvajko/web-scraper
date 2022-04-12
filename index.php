@@ -18,35 +18,40 @@
 <body>
 
 <nav>
-    <img id="logo" src="assets/images/new-logo.png" alt="logo-image">
+    <div class="nav-main">
+        <img id="logo" src="assets/images/new-logo.png" alt="logo-image">
 
-    <ul class="nav-links">
-        <li><i class="fa fa-home fa-2x"></i><a href="index.php">Home</a></li>
-        <li><i class="fa fa-heart-o fa-2x"></i><a href="Favorites.php">Favorites</a></li>
-        <li><i class="fa fa-envelope-open fa-2x"></i><a href="Contact.php">Contact</a></li>
-        <li><a href="About%20Us.php">About us</a></li>
-        <li>
-            <button type="button">Log In</button>
-        </li>
-        <li>
-            <button type="button">Register</button>
-        </li>
-    </ul>
+        <div class="nav-links">
+            <ul>
+                <li><a href="index.php"><i class="fa fa-home"></i>Home</a></li>
+                <li><a href="Favorites.php"><i class="fa fa-heart-o"></i>Favorites</a></li>
+                <li><a href="Contact.php"><i class="fa fa-envelope-open"></i>Contact</a></li>
+                <li><a href="About%20Us.php">About us</a></li>
+            </ul>
+        </div>
+
+        <div class="sign us">
+            <button type="button">Sign in</button>
+            <button type="button">Sign up</button>
+        </div>
+
+    </div>
 </nav>
-<hr/>
 
+<hr/>
 <header>
     <h1>With Scrappy you can easily search for the best deal of any product you want!</h1>
 </header>
 
-<hr/>
 <main class="content">
 
     <section class="product-search">
         <h2>Search your product!</h2>
         <div class="search">
-            <input class="input-box" placeholder="Search product.." type="text">
-            <button type="submit" class="submit-button"><i class="fa fa-search"></i></button>
+            <div class="position-relative">
+                <input class="input-box" placeholder="Search product.." type="text">
+                <button type="submit" class="submit-button"><i class="fa fa-search"></i></button>
+            </div>
         </div>
     </section>
 
@@ -76,16 +81,58 @@
                     <img src="assets/images/product1.jpg"/>
                     <hr/>
                 </div>
-                <div class="card-content">
-                    <ul>
-                        <li>IPHONE X</li>
-                        <li>SC ELECTRONIX SRL</li>
-                        <li>5 STARS</li>
-                        <li>View Reviews</li>
-                        <li>1000$</li>
-                    </ul>
-                    <button><a href="#">Buy Now!</a></button>
+                <div class="card-title">
+                    <a href="#">Telefon mobil Samsung Galaxy S21 FE, Dual SIM, 128GB, 6GB RAM, 5G, Olive</a>
                 </div>
+                <div class="card-rating">
+                    <p>rating ******</p>
+                </div>
+                <div class="card-price">
+                    <p>500 Lei</p>
+                </div>
+                <button><a href="#">Buy Now!</a></button>
+            </div>
+            <div class="card">
+                <div class="card-toolbox">
+                    <button type="button" class="add-to-favorite">
+                        <i class="fa fa-heart-o fa-2x"></i>
+                    </button>
+                </div>
+                <div class="card-info">
+                    <img src="assets/images/product1.jpg"/>
+                    <hr/>
+                </div>
+                <div class="card-title">
+                    <a href="#">Telefon mobil Samsung Galaxy S21 FE, Dual SIM, 128GB, 6GB RAM, 5G, Olive</a>
+                </div>
+                <div class="card-rating">
+                    <p>rating ******</p>
+                </div>
+                <div class="card-price">
+                    <p>500 Lei</p>
+                </div>
+                <button><a href="#">Buy Now!</a></button>
+            </div>
+            <div class="card">
+                <div class="card-toolbox">
+                    <button type="button" class="add-to-favorite">
+                        <i class="fa fa-heart-o fa-2x"></i>
+                    </button>
+                </div>
+                <div class="card-info">
+                    <img src="assets/images/product1.jpg"/>
+                    <hr/>
+                </div>
+                <div class="card-title">
+                    <a href="#">Telefon mobil Samsung Galaxy S21 FE, Dual SIM, 128GB, 6GB RAM, 5G, Olive</a>
+                </div>
+                <div class="card-rating">
+                    <p>rating ******</p>
+                </div>
+                <div class="card-price">
+                    <p>500 Lei</p>
+                </div>
+                <button><a href="#">Buy Now!</a></button>
             </div>
         </div>
     </section>
@@ -95,13 +142,17 @@
             <h5>Subscribe to our newsletter</h5>
         </div>
     </section>
+    <hr/>
 </main>
-<hr/>
 
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <footer>
-    <p>Author:Vajko Norbert</p>
-    <p><a href="mailto:hege@example.com">norbertvajko@yahoo.com</a></p>
-    <p><a href="Favorites.php">Favorites</a></p>
+    <div class="footer-main">
+        <p>Author:Vajko Norbert</p>
+        <p><a href="mailto:hege@example.com">norbertvajko@yahoo.com</a></p>
+        <p><a href="Contact.php">Contact</a></p>
+    </div>
 </footer>
 </body>
 </html>

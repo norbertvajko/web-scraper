@@ -1,14 +1,18 @@
 nav {
-    width: auto;
-    height:auto;
+    overflow: hidden;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    background-color: wheat;
+    z-index: 1;
 }
-nav ul {
-    float:right;
-    margin-right: 50px;
+.nav-links ul {
+    display:flex;
+    margin-left:auto;
 }
 nav ul li {
-    display:inline-block;
-    margin:0 50px;     /* space between nav-links */
+    display:flex;
+    margin:0 8px;     /* space between nav-links */
 }
 nav ul li i {
     margin:0 5px;
@@ -21,7 +25,29 @@ nav ul li a {
     font-size: 20px;
 }
 nav img {
+    display:flex;
     width:80px;
     height: 80px;
-    margin-left:100px;
+}
+.nav-main {
+    display:flex;
+    width:80%;
+    background-color: grey;
+    margin:auto;
+    align-items: center;
+}
+
+.dropdown-content  {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content-fav  {
+    display: none;
+    position: absolute;
+    background-color: wheat;
+    margin-top:38px;
+    z-index: 1;
+}
+.dropdown-content:hover .dropdown-content-fav {
+    display:block;
 }

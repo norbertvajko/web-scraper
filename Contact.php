@@ -19,20 +19,22 @@
 
 
 <nav>
-    <img id="logo" src="assets/images/new-logo.png" alt="logo-image">
+    <div class="nav-main">
+        <img id="logo" src="assets/images/new-logo.png" alt="logo-image">
 
-    <ul class="nav-links">
-        <li><i class="fa fa-home fa-2x"></i><a href="index.php">Home</a></li>
-        <li><i class="fa fa-heart-o fa-2x"></i><a href="Favorites.php">Favorites</a></li>
-        <li><i class="fa fa-envelope-open fa-2x"></i><a href="Contact.php">Contact</a></li>
-        <li><a href="About%20Us.php">About us</a></li>
-        <li>
-            <button type="button">Log In</button>
-        </li>
-        <li>
-            <button type="button">Register</button>
-        </li>
-    </ul>
+        <ul class="nav-links">
+            <li><i class="fa fa-home fa-2x"></i><a href="index.php">Home</a></li>
+            <li><i class="fa fa-heart-o fa-2x"></i><a href="Favorites.php">Favorites</a></li>
+            <li><i class="fa fa-envelope-open fa-2x"></i><a href="Contact.php">Contact</a></li>
+            <li><a href="About%20Us.php">About us</a></li>
+            <li>
+                <button type="button">Log In</button>
+            </li>
+            <li>
+                <button type="button">Register</button>
+            </li>
+        </ul>
+    </div>
 </nav>
 
 <header>
@@ -41,29 +43,31 @@
 
 <main class="content">
     <section>
-        <h1>Contact Us</h1>
+        <h1>Contact</h1>
+        <div class="contact-us">
         <form class="contact-us-form">
-            <label for="fname">First Name</label>
-            <input id="fname" name="firstname" placeholder="Norbert Vajko" type="text">
 
-            <label for="lname">Last Name</label>
-            <input id="lname" name="lastname" placeholder="Your last name" type="text">
+            <label for="fname">First Name</label>
+            <input id="fname" name="firstname" placeholder="Your name" type="text"> <br>
 
             <label for="email">E-mail</label>
-            <input id="email" name="mail" placeholder="Your E-mail" type="text">
+            <input id="email" name="mail" placeholder="Your E-mail" type="text"> <br>
 
             <label for="subject">Subject</label>
             <textarea id="subject" name="subject" placeholder="Leave us a message"></textarea>
             <input type="submit" value="Submit">
-
         </form>
+        </div>
     </section>
 </main>
 
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <footer>
-    <span>Author:Vojko Norbert</span>
-    <p><a href="mailto:hege@example.com">norbertvajko@yahoo.com</a></p>
-    <p><a href="Favorites.php">Favorites</a></p>
+    <div class="footer-main">
+        <p>Author:Vajko Norbert</p>
+        <p><a href="mailto:hege@example.com">norbertvajko@yahoo.com</a></p>
+        <p><a href="Contact.php">Contact</a></p>
+    </div>
 </footer>
 
 </body>
