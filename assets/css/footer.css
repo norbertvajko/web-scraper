@@ -1,15 +1,112 @@
 footer {
-    width: 100%;
-    background: black;
+    background-color:rgb(17,17,17);
+    height:auto;
+    padding:50px 100px 5px 100px;
+    display:flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+    border:2px solid red;
+    /*width:100%;*/
 }
 footer p {
-    display: inline-block;
+    color: rgb(153,153,153);
+}
+.footer-container h3 {
+    color:white;
+    font-weight: bold;
+    margin-bottom: 25px; /* distance to paragraph */
+}
+
+.footer-container {
+    display:flex;
+    border:2px solid blue;
+    width:80%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin:auto;
+    padding: 10px;
+}
+.about-section {
+    border:2px solid red;
+    width: 35%;
+    padding:10px 20px;
+}
+.social-links {
+    display: flex;
+    margin-top:25px;
+    padding-left:0;
+}
+.social-links li {
+    list-style: none;
+}
+.social-links li a {
+    display: flex;
+    width:30px;
+    height: 30px;
+    background-color: #222;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    text-decoration: none;
+    border-radius:5px;
+}
+.social-links li a:hover {
+    background-color: blue;
+}
+.social-links li a .fa{
+    color: white;
+    font-size: 20px;
+}
+.util-links-section {
+    border:2px solid green;
+    width: 25%;
+    padding:10px 20px;
+}
+.util-links-ref {       /*  ul  */
+    padding-left: 0;
+}
+.util-links-section li {
+    list-style: none; /* no list-points */
+}
+.util-links-section li a {
+    display: flex;
+    color: rgb(153,153,153);
+    text-decoration: none; /* no underline */
+    margin-bottom: 10px;
+    margin-left:0;
+    width: fit-content;
+}
+.util-links-section li a:hover {
     color:white;
 }
-.footer-main {
-    display:flex;
-    width:80%;
-    margin:auto;
+.contact-section {
+    border:2px solid purple;
+    padding: 15px;
+}
+.contact-info {
+    padding-left: 0;
+}
+.contact-info li {
+    list-style:none;
+}
+.contact-info li i {
+color: white;
+}
+.contact-info li a{
+    display:inline-flex;
+    color: beige;
+    text-decoration: none;
+    margin-bottom: 15px;
+    margin-left: 10px;
+}
+.copyright-section {
+    display:inline-flex;
+    border:2px solid aqua;
+    width:100%;
+    height: auto;
+    margin-top:15px;
+    justify-content: center;
     align-items: center;
-    justify-content: space-around;
+    margin-bottom: 0;
 }

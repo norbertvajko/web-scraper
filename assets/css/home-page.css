@@ -87,7 +87,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    color:white;
+    color:black;
     margin:auto;
 
 }
@@ -166,19 +166,21 @@ main {
     border-radius: 5px;
 }
 .grid {
-
     width:80%;
     display: grid;
     margin-left:auto;
     margin-right:auto;
-    border:1px solid white;
     grid-gap:15px;
     padding: 15px;
     grid-template-columns: repeat(2, 1fr);
 }
 .grid .col {
-    border:1px solid red;
+    padding: 3%;
 }
+.col-1-content {
+    padding:25px;
+}
+
 .col-1-content h1 {
     display:flex;
     color:white;
@@ -197,6 +199,17 @@ main {
 .col-1-content-list li {
     color:white;
     margin-bottom: 10px;
+}
+.col-2-content {
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.col-2-content img {
+    width:80%;
+    height: auto;
+    max-width: 250px;
 }
 
 @media screen and (max-width: 500px) {
