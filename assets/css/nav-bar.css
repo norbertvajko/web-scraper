@@ -3,10 +3,12 @@ nav {
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
-    background-color: #ffffffe0;
+    background-color: rgba(255, 255, 255, 0.95);
     /*background: rgb(55,194,164);*/
     /*background: linear-gradient(90deg, rgba(62,142,165,1) 30%, rgba(32,171,129,1) 67%, rgba(128,234,255,1) 92%);*/
     z-index: 1;
+    border-bottom: 1px solid black;
+
 }
 .nav-links ul {
     display:flex;
@@ -46,12 +48,50 @@ nav ul li a {
     margin-left: auto;
     gap:10px;
 }
+#sign-in-btn {
+    background: white;
+    border-radius: 50px;
+    color: rgb(25,208,230);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 18px;
+    border: none;
+    box-shadow: #5E5DF0 0 10px 20px -10px;
+}
+#sign-in-btn:hover {
+    box-shadow: none;
+}
+#sign-up-btn {
+    background: rgb(25,208,230);
+    background: linear-gradient(90deg, rgba(25,208,230,1) 0%, rgba(95,212,128,1) 100%);
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 18px;
+    border: none;
+}
+#sign-up-btn:hover {
+    box-shadow: #5E5DF0 0 10px 20px -10px;
+}
 
-@media screen and (max-width: 767px) {
+
+
+/* For tablet view */
+@media screen and (min-width: 768px) and (max-device-width: 1024px) {
+    nav {
+        background-color: white;
+    }
     nav ul {
-        height: 230px;
         flex-direction: column;
+    }
+    nav ul li {
+        margin:5px 0;
         text-align: center;
     }
-
+    .sign-us {
+        flex-direction: column;
+    }
 }

@@ -1,14 +1,14 @@
 footer {
     width: 100%;
-    background: grey;
+    background: black;
 }
 footer p {
     display: inline-block;
+    color:white;
 }
 .footer-main {
     display:flex;
     width:80%;
-    background-color: wheat;
     margin:auto;
     align-items: center;
     justify-content: space-around;

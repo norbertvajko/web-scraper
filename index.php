@@ -30,8 +30,8 @@
         </div>
 
         <div class="sign-us">
-            <button type="button">Sign in</button>
-            <button type="button">Sign up</button>
+            <button type="button" id="sign-in-btn">Log in</button>
+            <button type="button" id="sign-up-btn">Register</button>
         </div>
 
     </div>
@@ -88,6 +88,9 @@
         <h3>Results</h3>
         <div class="results-container">
             <div class="card">
+                <div class="card-badge-box">
+                    <span>Oferta Speciala!</span>
+                </div>
                 <div class="card-toolbox">
                     <button type="button" class="add-to-favorite">
                         <i class="fa fa-heart-o fa-2x"></i>

@@ -30,8 +30,8 @@
         </div>
 
         <div class="sign-us">
-            <button type="button">Sign in</button>
-            <button type="button">Sign up</button>
+            <button type="button" id="sign-in-btn">Log in</button>
+            <button type="button" id="sign-up-btn">Register</button>
         </div>
 
     </div>
