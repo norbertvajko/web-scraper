@@ -11,8 +11,9 @@ header h1 {
     text-align: center;
     color:black;
 }
-html {
+html , body {
     font-family: Avalon, Arial, serif;
+    overflow-x: hidden;
 }
 body {
     margin:0;
@@ -80,7 +81,7 @@ main {
 /*.social-items-links li a:hover {*/
 /*    color:white;*/
 /*}*/
-.results h3 {
+.results h3 {  //
     width: fit-content;
     padding-top: 20px;
     height: 50px;
@@ -105,31 +106,31 @@ main {
 .results-container {
     display:grid;
     border:2px solid red;
-    width:80%;
+    /*width:100%;*/
     height: fit-content;
     align-items: center;
     justify-content: center;
     margin-left:auto;
     margin-right:auto;
     padding: 15px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 15px;
 }
 .card {
-    width: 242px;
-    height: 442px;
+    height: auto;
+    width: 100%;
     padding-top:20px;
     text-align: center;
     border:1px solid black;
     border-radius:5px;
-    background-color: white;
+    background-color: #f2f2f7;
     position: relative;
     margin:auto;
-
 }
 
 .card-info img {
-    width:220px;
-    height:220px;
+    max-width:220px;
+    height:auto;
     border-radius:10%;
 }
 .card-title a {
@@ -170,9 +171,8 @@ main {
     display: grid;
     margin-left:auto;
     margin-right:auto;
-    grid-gap:15px;
     padding: 15px;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
 }
 .grid .col {
     padding: 3%;
@@ -212,13 +212,26 @@ main {
     max-width: 250px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 576px) {
     .grid {
+        margin-top: 20%;
         grid-template-columns: repeat(1, 1fr);
-        font-size:smaller;
+        font-size: x-large;
     }
     .col-1-content h1 {
-        font-size: medium;
+        font-size: xx-large;
+    }
+    .results-container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr))
+    }
+    .card {
+        margin-right: 5px;
+        margin-bottom: 5px;
+        width: fit-content
+    }
+    .search {
+        width: 70%;
+        margin: auto;
     }
 }
 @media screen and (min-width: 500px) and (max-width: 1000px) {
