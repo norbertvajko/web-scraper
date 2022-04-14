@@ -175,7 +175,7 @@
             <h3>Little description</h3>
             <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
             <ul class="social-links">
-                <li><a href="#"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                <li><a href="https://github.com/norbertvajko" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
                 <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
                 <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
             </ul>
@@ -184,9 +184,9 @@
             <h3>Page links</h3>
             <ul class="util-links-ref">
                 <li><a href="Contact.php">Contact</a></li>
-                <li><a href="Contact.php">Contact1</a></li>
-                <li><a href="Contact.php">Contact2</a></li>
-                <li><a href="Contact.php">Contact3</a></li>
+                <li><a href="Contact.php">Sfdsfsdfsdfdsfs</a></li>
+                <li><a href="Contact.php">FSFSDFDSFASD</a></li>
+                <li><a href="Contact.php">gsdgsdfdsfasfassaf</a></li>
             </ul>
         </div>
         <div class="contact-section">

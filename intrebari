@@ -1,0 +1,4 @@
+marginile de la tagul h sunt by default?orice tag are by default margini?
+pot avea mai multe display-uri pt un element? ex:display: flex , display: absolute
+(home-pace.css).search  -> este nevoie de poz flex?
+(footer.css) .contact-info  -> de unde am padding 40? rez ( * marg:0 ,padd:0 )

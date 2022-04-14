@@ -1,3 +1,7 @@
+/** {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*}*/
 footer {
     background-color:rgb(17,17,17);
     height:auto;
@@ -5,7 +9,7 @@ footer {
     display:flex;
     justify-content: space-between;
     flex-wrap:wrap;
-    border:2px solid red;
+    /*border:2px solid red;*/
     /*width:100%;*/
 }
 footer p {
@@ -19,7 +23,7 @@ footer p {
 
 .footer-container {
     display:flex;
-    border:2px solid blue;
+    /*border:2px solid blue;*/
     width:80%;
     flex-wrap: wrap;
     flex-direction: row;
@@ -28,7 +32,7 @@ footer p {
     padding: 10px;
 }
 .about-section {
-    border:2px solid red;
+    /*border:2px solid red;*/
     width: 35%;
     padding:10px 20px;
     overflow-wrap: break-word;
@@ -46,7 +50,7 @@ footer p {
     display: flex;
     width:30px;
     height: 30px;
-    background-color: #222;
+    /*background-color: #222;*/
     justify-content: center;
     align-items: center;
     margin-right: 15px;
@@ -61,7 +65,7 @@ footer p {
     font-size: 20px;
 }
 .util-links-section {
-    border:2px solid green;
+    /*border:2px solid green;*/
     width: 25%;
     padding:10px 20px;
     overflow-wrap: anywhere;
@@ -84,12 +88,12 @@ footer p {
     color:white;
 }
 .contact-section {
-    border:2px solid purple;
+    /*border:2px solid purple;*/
     padding: 15px;
     overflow-wrap: anywhere;
 }
 .contact-info {
-    padding-left: 0;
+    text-align: center;
 }
 .contact-info li {
     list-style:none;
@@ -106,7 +110,7 @@ color: white;
 }
 .copyright-section {
     display:inline-flex;
-    border:2px solid aqua;
+    /*border:2px solid aqua;*/
     width:100%;
     height: auto;
     margin-top:15px;
@@ -140,6 +144,9 @@ color: white;
     }
     .contact-section {
         width:100%;
-        padding-left: 40px;
+    }
+    .copyright-section {
+        margin-top:0;
+        font-size: smaller;
     }
 }
