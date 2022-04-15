@@ -1,7 +1,3 @@
-/** {*/
-/*    margin: 0;*/
-/*    padding: 0;*/
-/*}*/
 footer {
     background-color:rgb(17,17,17);
     height:auto;
@@ -93,7 +89,7 @@ footer p {
     overflow-wrap: anywhere;
 }
 .contact-info {
-    text-align: center;
+    text-align: left;
 }
 .contact-info li {
     list-style:none;
@@ -128,12 +124,20 @@ color: white;
     }
     .footer-container h3 {
     text-align: center;
+        font-size:14px;
     }
     .about-section {
         width:100%;
     }
+    .about-section p {
+        font-size:14px;
+    }
     .social-links {
         justify-content: center;
+    }
+    .social-links li a {
+        width:25px;
+        height:20px;
     }
     .util-links-section {
         width: 100%;
@@ -141,6 +145,12 @@ color: white;
     }
     .util-links-ref {
         display: inline-block;
+        font-size:13px;
+    }
+    .contact-info {
+        text-align: center;
+        font-size: 13px;
+        padding-left: 0;
     }
     .contact-section {
         width:100%;
@@ -148,5 +158,14 @@ color: white;
     .copyright-section {
         margin-top:0;
         font-size: smaller;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .contact-info {
+        padding-left: 0;
+    }
+    .footer-container h3 {
+        font-size:25px;
     }
 }

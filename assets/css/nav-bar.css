@@ -77,8 +77,6 @@ nav ul li a {
     box-shadow: #5E5DF0 0 10px 20px -10px;
 }
 
-
-
 /* For mobile view */
 @media screen and (max-width: 576px) {
     nav {
@@ -89,9 +87,26 @@ nav ul li a {
     }
     nav ul li {
         margin:5px 0;
-        text-align: center;
+        text-align: left;
+    }
+    .nav-links ul {
+        margin:auto;
+        padding-left:0;
+    }
+    nav ul li a {
+        font-size: 13px
     }
     .sign-us {
         flex-direction: column;
     }
+    #sign-up-btn {
+        padding: 2px 18px;
+        font-size:13px;
+    }
+    #sign-in-btn {
+        padding:3px 18px;
+        font-size:13px;
+    }
 }
+
+
