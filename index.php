@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
+
+
     <meta charset="UTF-8">
     <meta content="Search engine for IT products and compare them" name="description">
     <meta content="Best offer, IT Products , Scrape" name="keywords">
     <meta content="Vojko Norbert" name="author">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
 
     <title>Scrappy</title>
 
@@ -17,23 +24,26 @@
 </head>
 <body>
 
-<nav>
-    <div class="nav-main">
-
-        <div class="nav-links">
-            <ul>
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand m-4" href="#">Scrappy</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav px-5">
                 <li><a href="index.php"><i class="fa fa-home"></i><span>Home</span></a></li>
                 <li><a href="Favorites.php"><i class="fa fa-heart-o"></i><span>Favorites</span></a></li>
                 <li><a href="Contact.php"><i class="fa fa-envelope-open"></i><span>Contact</span></a></li>
                 <li><a href="About%20Us.php"><span>About us</span></a></li>
             </ul>
+            <div class="sign-us">
+                <button class="btn btn-primary" type="submit">Sign in</button>
+                <button class="btn btn-secondary" type="submit">Register</button>
+            </div>
         </div>
-
-        <div class="sign-us">
-            <button type="button" id="sign-in-btn">Log in</button>
-            <button type="button" id="sign-up-btn">Register</button>
-        </div>
-
     </div>
 </nav>
 
@@ -192,9 +202,12 @@
         <div class="contact-section">
             <h3>Contact Info</h3>
             <ul class="contact-info">
-                <li><i class="fa fa-map-marker" aria-hidden="true"><a href="https://www.google.com/maps/place/Strada+Nicolae+B%C4%83lcescu+22,+Arad/@46.1703727,21.3171513,17z/data=!3m1!4b1!4m5!3m4!1s0x474599016319a9b3:0xc7f128d36aedf597!8m2!3d46.170369!4d21.31934" target="_blank">Strada Nicolae Bălcescu 22, Arad</a></i> </li>
+                <li><i class="fa fa-map-marker" aria-hidden="true"><a
+                                href="https://www.google.com/maps/place/Strada+Nicolae+B%C4%83lcescu+22,+Arad/@46.1703727,21.3171513,17z/data=!3m1!4b1!4m5!3m4!1s0x474599016319a9b3:0xc7f128d36aedf597!8m2!3d46.170369!4d21.31934"
+                                target="_blank">Strada Nicolae Bălcescu 22, Arad</a></i></li>
                 <li><i class="fa fa-phone" aria-hidden="true"><a href="tel:123-456-7890">070-000-0000</a></i></li>
-                <li><i class="fa fa-envelope" aria-hidden="true"><a href="mailto:aaaa@email.com">norbertvajko@yahoo.com</a></i> </li>
+                <li><i class="fa fa-envelope" aria-hidden="true"><a
+                                href="mailto:aaaa@email.com">norbertvajko@yahoo.com</a></i></li>
             </ul>
         </div>
     </div>
@@ -202,5 +215,11 @@
         <p>Copyright © 2022 Scrappy. All rights reserved.</p>
     </div>
 </footer>
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
 </body>
 </html>

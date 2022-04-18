@@ -10,6 +10,10 @@
 
     <title>Contact</title>
 
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
     <link href="assets/css/contact-page.css" rel="stylesheet">
     <link href="assets/css/nav-bar.css" rel=stylesheet>
     <link href="assets/css/footer.css" rel="stylesheet">
@@ -18,23 +22,26 @@
 <body>
 
 
-<nav>
-    <div class="nav-main">
-
-        <div class="nav-links">
-            <ul>
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand m-4" href="#">Scrappy</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav px-5">
                 <li><a href="index.php"><i class="fa fa-home"></i><span>Home</span></a></li>
                 <li><a href="Favorites.php"><i class="fa fa-heart-o"></i><span>Favorites</span></a></li>
                 <li><a href="Contact.php"><i class="fa fa-envelope-open"></i><span>Contact</span></a></li>
                 <li><a href="About%20Us.php"><span>About us</span></a></li>
             </ul>
+            <div class="sign-us">
+                <button class="btn btn-primary" type="submit">Sign in</button>
+                <button class="btn btn-secondary" type="submit">Register</button>
+            </div>
         </div>
-
-        <div class="sign-us">
-            <button type="button" id="sign-in-btn">Log in</button>
-            <button type="button" id="sign-up-btn">Register</button>
-        </div>
-
     </div>
 </nav>
 
