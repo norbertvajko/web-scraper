@@ -22,27 +22,31 @@
 <body>
 
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
+
     <div class="container">
-        <div class="navbar-header">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="navbar-brand m-4" href="#">Scrappy</a>
+        <div class="nav-logo">
+            <a class="navbar-brand" href="index.php">Scrappy</a>
         </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav px-5">
-                <li><a href="index.php"><i class="fa fa-home"></i><span>Home</span></a></li>
-                <li><a href="Favorites.php"><i class="fa fa-heart-o"></i><span>Favorites</span></a></li>
-                <li><a href="Contact.php"><i class="fa fa-envelope-open"></i><span>Contact</span></a></li>
-                <li><a href="About%20Us.php"><span>About us</span></a></li>
+        <div class="navbar-searchbox">
+            <input type="text" placeholder="Search" size="70"/>
+        </div>
+        <div class="navbar-toolbox">
+            <ul class="list-group d-flex flex-row">
+                <li class="nav-item">
+                    <a class="nav-link" href="Compare.php"><span>Compare</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Favorites.php"><span>Favorites</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="About%20Us.php"><span>About us</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Contact.php"><span>Contact</span></a>
+                </li>
             </ul>
-            <div class="sign-us">
-                <button class="btn btn-primary" type="submit">Sign in</button>
-                <button class="btn btn-secondary" type="submit">Register</button>
-            </div>
         </div>
-    </div>
 </nav>
 
 <header>

@@ -1,1 +1,5 @@
 free-code-camp
+cum pot da padding la row din html
+gen : .banner-area .row {
+          padding:5% 0;
+      }

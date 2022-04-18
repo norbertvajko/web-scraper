@@ -1,8 +1,21 @@
-html , body {
-    min-height: 100%;
-    background: black;
-    background-size:cover;
-    font-family: League Spartan,Helvetica,Arial,sans-serif;
-    margin:0;
-    padding: 0;
+.page-header {
+    margin-top:57px;
+    background: rgb(62,142,152);
+    background: linear-gradient(90deg, rgba(62,142,152,1) 18%, rgba(67,203,162,1) 67%, rgba(128,234,255,1) 100%);
+    /*min-height: 50vh;*/
+}
+.page-header .site-title h1 {
+    color:white;
+    padding-top:15%;
+}
+
+.page-header .header-description {
+    list-style-type: none;
+    padding-top:80px;
+    padding-left: 0;
+
+}
+.page-header .header-description-list {
+    color:black;
+    margin-bottom: 10px;
 }

@@ -23,28 +23,62 @@
 <body>
 
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+<!--------------------------------------------- Start Nav Bar Area ---------------------------------------------------->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
+
     <div class="container">
-        <div class="navbar-header">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="navbar-brand m-4" href="#">Scrappy</a>
+        <div class="nav-logo">
+            <a class="navbar-brand" href="index.php">Scrappy</a>
         </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav px-5">
-                <li><a href="index.php"><i class="fa fa-home"></i><span>Home</span></a></li>
-                <li><a href="Favorites.php"><i class="fa fa-heart-o"></i><span>Favorites</span></a></li>
-                <li><a href="Contact.php"><i class="fa fa-envelope-open"></i><span>Contact</span></a></li>
-                <li><a href="About%20Us.php"><span>About us</span></a></li>
+        <div class="navbar-searchbox">
+            <input type="text" placeholder="Search" size="70"/>
+        </div>
+        <div class="navbar-toolbox">
+            <ul class="list-group d-flex flex-row">
+                <li class="nav-item">
+                    <a class="nav-link" href="Compare.php"><span>Compare</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Favorites.php"><span>Favorites</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="About%20Us.php"><span>About us</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Contact.php"><span>Contact</span></a>
+                </li>
             </ul>
-            <div class="sign-us">
-                <button class="btn btn-primary" type="submit">Sign in</button>
-                <button class="btn btn-secondary" type="submit">Register</button>
+        </div>
+</nav>
+<!--------------------------------------------- End Nav Bar Area ------------------------------------------------------>
+
+
+<!--------------------------------------------- Start Banner Area ----------------------------------------------------->
+<header class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 site-title">
+                <h1 class="title-text">What you can accomplish with Scrappy?</h1>
+                <ul class="header-description">
+                    <li class="header-description-list"><i class="fa fa-check" aria-hidden="true"></i>Gather data at
+                        scale from a majority of websites
+                    </li>
+                    <li class="header-description-list"><i class="fa fa-check" aria-hidden="true"></i>Real-time data
+                        collection in HTML format
+                    </li>
+                    <li class="header-description-list"><i class="fa fa-check" aria-hidden="true"></i>100% data delivery
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-6 col-md-12 header-image">
+                <img src="assets/images/web-crawl.png" alt="banner-img" class="img-fluid">
             </div>
         </div>
     </div>
-</nav>
+
+</header>
+<!----------------------------------------------- End Banner Area ----------------------------------------------------->
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <footer>

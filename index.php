@@ -24,77 +24,64 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="navbar-brand m-4" href="#">Scrappy</a>
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav px-5">
-                <li><a href="index.php"><i class="fa fa-home"></i><span>Home</span></a></li>
-                <li><a href="Favorites.php"><i class="fa fa-heart-o"></i><span>Favorites</span></a></li>
-                <li><a href="Contact.php"><i class="fa fa-envelope-open"></i><span>Contact</span></a></li>
-                <li><a href="About%20Us.php"><span>About us</span></a></li>
-            </ul>
-            <div class="sign-us">
-                <button class="btn btn-primary" type="submit">Sign in</button>
-                <button class="btn btn-secondary" type="submit">Register</button>
-            </div>
-        </div>
-    </div>
-</nav>
+<!--------------------------------------------- Start Nav Bar Area ---------------------------------------------------->
 
-<header>
-    <div class="grid">
-        <div class="col">
-            <div class="col-1-content">
-                <h1>What you can accomplish with Scrappy?</h1>
-                <ul class="col-1-content-list">
-                    <li><i class="fa fa-check" aria-hidden="true"></i>Gather data at scale from a majority of websites
-                    </li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i>Real-time data collection in HTML format</li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i>100% data delivery</li>
-                </ul>
-            </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
+
+    <div class="container">
+        <div class="nav-logo">
+            <a class="navbar-brand" href="index.php">Scrappy</a>
         </div>
-        <div class="col">
-            <div class="col-2-content">
-                    <img src="assets/images/web-crawl.png" alt="web-crawl-development">
+        <div class="navbar-searchbox">
+            <input type="text" placeholder="Search" size="70"/>
+        </div>
+        <div class="navbar-toolbox">
+            <ul class="list-group d-flex flex-row">
+                <li class="nav-item">
+                    <a class="nav-link" href="Compare.php"><span>Compare</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Favorites.php"><span>Favorites</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="About%20Us.php"><span>About us</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Contact.php"><span>Contact</span></a>
+                </li>
+            </ul>
+        </div>
+</nav>
+<!--------------------------------------------- End Nav Bar Area ------------------------------------------------------>
+
+
+<!--------------------------------------------- Start Banner Area ----------------------------------------------------->
+<header class="banner-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-xs-12 col-sm-12 banner-text">
+                <h1>Scrappy <br>
+                    Web Scraping tool</h1>
+                <p>kdasndasodnndadlkdnaadansakd <br>
+                    fdsnfsdkfnsflfsdfs</p>
+            </div>
+            <div class="terminal-banner col-lg-6 col-md-12 col-xs-12 col-sm-12">
+                <div class="terminal-header">
+                    <div class="terminal-icons">
+                        <div class="terminal-icon-close"></div>
+                        <div class="terminal-icon-min"></div>
+                        <div class="terminal-icon-max"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </header>
+<!----------------------------------------------- End Banner Area ----------------------------------------------------->
 
-<main class="content">
 
-    <section class="product-search">
-        <h2>Search your product!</h2>
-        <div class="search">
-            <div class="position-relative">
-                <label>
-                    <input class="input-box" placeholder="Search product.." type="text">
-                </label>
-                <button type="submit" class="submit-button"><i class="fa fa-search"></i></button>
-            </div>
-        </div>
-    </section>
-
-    <!--    <section class="social-items">-->
-    <!--        <h6>Social elements</h6>-->
-    <!--        <div class="social-items-container">-->
-    <!--            <ul class="social-items-links">-->
-    <!--                <li><a href="https://github.com/norbertvajko" target="_blank"><i class="fa fa-github fa-5x"></i></a>-->
-    <!--                </li>-->
-    <!--                <li><a href="#"><i class="fa fa-linkedin fa-5x"></i></a></li>-->
-    <!--                <li><a href="#"><i class="fa fa-twitter fa-5x"></i></a></li>-->
-    <!--                <li><a href="#"><i class="fa fa-facebook fa-5x"></i></a></li>-->
-    <!--            </ul>-->
-    <!--        </div>-->
-    <!--    </section>-->
-
+<!----------------------------------------------- Start Main Area ----------------------------------------------------->
+<main class="main-content">
     <section class="results">
         <h3>Results</h3>
         <div class="results-container">
@@ -170,22 +157,28 @@
         </div>
     </section>
 
-    <section class="newsletter">
-        <div class="subscribe">
-            <h5>Subscribe to our newsletter</h5>
+    <section class="newsletter-area">
+        <div class="container">
+
         </div>
     </section>
 </main>
+<!------------------------------------------------- End Main Area ----------------------------------------------------->
 
+<!----------------------------------------------- Start Footer Area --------------------------------------------------->
 
-<!--<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>-->
 <footer>
     <div class="footer-container">
         <div class="about-section">
             <h3>Little description</h3>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum."</p>
             <ul class="social-links">
-                <li><a href="https://github.com/norbertvajko" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                <li><a href="https://github.com/norbertvajko" target="_blank"><i class="fa fa-github"
+                                                                                 aria-hidden="true"></i></a></li>
                 <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
                 <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
             </ul>
@@ -215,6 +208,7 @@
         <p>Copyright © 2022 Scrappy. All rights reserved.</p>
     </div>
 </footer>
+<!------------------------------------------------ End Footer Area ---------------------------------------------------->
 
 <!-- Option 1: Bootstrap Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
