@@ -18,15 +18,21 @@
 
     <link rel="icon" type="image/x-icon" href="assets/images/spider-title-logo.png">
     <link href="assets/css/home-page.css" rel="stylesheet">
-    <link href="assets/css/nav-bar.css" rel=stylesheet>
-    <link href="assets/css/footer.css" rel="stylesheet">
+    <!--    <link href="assets/css/nav-bar.css" rel=stylesheet>-->
+    <!--    <link href="assets/css/footer.css" rel="stylesheet">-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+
 </head>
 <body>
 
 <!--------------------------------------------- Start Nav Bar Area ---------------------------------------------------->
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top position-relative ">
 
     <div class="container">
         <div class="nav-logo">
@@ -58,7 +64,7 @@
 <!--------------------------------------------- Start Banner Area ----------------------------------------------------->
 <header class="banner-area">
     <div class="container">
-        <div class="row">
+        <div class="row py-6">
             <div class="col-lg-6 col-md-12 col-xs-12 col-sm-12 banner-text">
                 <h1>Scrappy <br>
                     Web Scraping tool</h1>
@@ -82,84 +88,132 @@
 
 <!----------------------------------------------- Start Main Area ----------------------------------------------------->
 <main class="main-content">
-    <section class="results">
-        <h3>Results</h3>
-        <div class="results-container">
-            <div class="card">
-                <div class="card-badge-box">
-                    <span>Oferta Speciala!</span>
+    <section class="search-results py-6">
+        <div class="container">
+            <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 row-cols-xl-6">
+                <div class="col-mb-6 col-mx-lg-1 col-mx-md-4 col-mx-sm-4">
+                    <div class="card" style="width:13rem">
+                        <img class="card-img-top" src="assets/images/product1.jpg" alt="card-image-cap"/>
+                        <div class="card-body">
+                            <h6 class="card-title">Telefon mobil Samsung Galaxy A32, Dual SIM, 128GB, 4G, Black</h6>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Rating</li>
+                                <li class="list-group-item">500 lei</li>
+                                <li class="list-group-item button-list">
+                                    <button type="button" class="btn btn-primary btn-bg">Button</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-toolbox">
-                    <button type="button" class="add-to-favorite">
-                        <i class="fa fa-heart-o fa-2x"></i>
-                    </button>
+                <div class="col-mb-6 col-mx-lg-1 col-mx-md-4 col-mx-sm-4">
+                    <div class="card" style="width:13rem">
+                        <img class="card-img-top" src="assets/images/product1.jpg" alt="card-image-cap"/>
+                        <div class="card-body">
+                            <h6 class="card-title">Telefon mobil Samsung Galaxy A32, Dual SIM, 128GB, 4G, Black</h6>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Rating</li>
+                                <li class="list-group-item">500 lei</li>
+                                <li class="list-group-item button-list">
+                                    <button type="button" class="btn btn-primary btn-bg">Button</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-info">
-                    <img src="assets/images/product1.jpg" alt="product-image"/>
-                    <hr/>
+                <div class="col-mb-6 col-mx-lg-1 col-mx-md-4 col-mx-sm-4">
+                    <div class="card" style="width:13rem">
+                        <img class="card-img-top" src="assets/images/product1.jpg" alt="card-image-cap"/>
+                        <div class="card-body">
+                            <h6 class="card-title">Telefon mobil Samsung Galaxy A32, Dual SIM, 128GB, 4G, Black</h6>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Rating</li>
+                                <li class="list-group-item">500 lei</li>
+                                <li class="list-group-item button-list">
+                                    <button type="button" class="btn btn-primary btn-bg">Button</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-title">
-                    <a href="#">Telefon mobil Samsung Galaxy S21 FE, Dual SIM, 128GB, 6GB RAM, 5G, Olive</a>
+                <div class="col-mb-6 col-mx-lg-1 col-mx-md-4 col-mx-sm-4">
+                    <div class="card" style="width:13rem">
+                        <img class="card-img-top" src="assets/images/product1.jpg" alt="card-image-cap"/>
+                        <div class="card-body">
+                            <h6 class="card-title">Telefon mobil Samsung Galaxy A32, Dual SIM, 128GB, 4G, Black</h6>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Rating</li>
+                                <li class="list-group-item">500 lei</li>
+                                <li class="list-group-item button-list">
+                                    <button type="button" class="btn btn-primary btn-bg">Button</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-rating">
-                    <p>rating ******</p>
+                <div class="col-mb-6 col-mx-lg-1 col-mx-md-4 col-mx-sm-4">
+                    <div class="card" style="width:13rem">
+                        <img class="card-img-top" src="assets/images/product1.jpg" alt="card-image-cap"/>
+                        <div class="card-body">
+                            <h6 class="card-title">Telefon mobil Samsung Galaxy A32, Dual SIM, 128GB, 4G, Black</h6>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Rating</li>
+                                <li class="list-group-item">500 lei</li>
+                                <li class="list-group-item button-list">
+                                    <button type="button" class="btn btn-primary btn-bg">Button</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-price">
-                    <p>500 Lei</p>
+                <div class="col-mb-6 col-mx-lg-1 col-mx-md-4 col-mx-sm-4">
+                    <div class="card" style="width:13rem">
+                        <img class="card-img-top" src="assets/images/product1.jpg" alt="card-image-cap"/>
+                        <div class="card-body">
+                            <h6 class="card-title">Telefon mobil Samsung Galaxy A32, Dual SIM, 128GB, 4G, Black</h6>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Rating</li>
+                                <li class="list-group-item">500 lei</li>
+                                <li class="list-group-item button-list">
+                                    <button type="button" class="btn btn-primary btn-bg">Button</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <button>>Buy Now!</button>
-            </div>
-            <div class="card">
-                <div class="card-toolbox">
-                    <button type="button" class="add-to-favorite">
-                        <i class="fa fa-heart-o fa-2x"></i>
-                    </button>
+                <div class="col-mb-6 col-mx-lg-1 col-mx-md-4 col-mx-sm-4">
+                    <div class="card" style="width:13rem">
+                        <img class="card-img-top" src="assets/images/product1.jpg" alt="card-image-cap"/>
+                        <div class="card-body">
+                            <h6 class="card-title">Telefon mobil Samsung Galaxy A32, Dual SIM, 128GB, 4G, Black</h6>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Rating</li>
+                                <li class="list-group-item">500 lei</li>
+                                <li class="list-group-item button-list">
+                                    <button type="button" class="btn btn-primary btn-bg">Button</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-badge-box">
-                    <span>-20%</span>
-                </div>
-                <div class="card-info">
-                    <img src="assets/images/product1.jpg" alt="product-image"/>
-                    <hr/>
-                </div>
-                <div class="card-title">
-                    <a href="#">Telefon mobil Samsung Galaxy S21 FE, Dual SIM, 128GB, 6GB RAM, 5G, Olive</a>
-                </div>
-                <div class="card-rating">
-                    <p>rating ******</p>
-                </div>
-                <div class="card-price">
-                    <p>500 Lei</p>
-                </div>
-                <button>Buy Now!</button>
-            </div>
-            <div class="card">
-                <div class="card-toolbox">
-                    <button type="button" class="add-to-favorite">
-                        <i class="fa fa-heart-o fa-2x"></i>
-                    </button>
-                </div>
-                <div class="card-info">
-                    <img src="assets/images/product1.jpg" alt="product-img"/>
-                    <hr/>
-                </div>
-                <div class="card-title">
-                    <a href="#">Telefon mobil Samsung Galaxy S21 FE, Dual SIM, 128GB, 6GB RAM, 5G, Olive</a>
-                </div>
-                <div class="card-rating">
-                    <p>rating ******</p>
-                </div>
-                <div class="card-price">
-                    <p>500 Lei</p>
-                </div>
-                <button>Buy Now!</button>
             </div>
         </div>
     </section>
-
     <section class="newsletter-area">
-        <div class="container">
-
+        <div class="container my-3">
+            <div class="row">
+                <h3 class="subscribe-text">Subscribe to our newsletter to receive more product discounts ,best deals
+                    ... </h3>
+                <form>
+                    <div class="form-group my-4">
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    </div>
+                    <button type="submit" class="btn btn-primary my-4">Submit</button>
+                </form>
+            </div>
         </div>
     </section>
 </main>
@@ -209,11 +263,6 @@
     </div>
 </footer>
 <!------------------------------------------------ End Footer Area ---------------------------------------------------->
-
-<!-- Option 1: Bootstrap Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
 
 </body>
 </html>
