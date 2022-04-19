@@ -8,3 +8,12 @@
 .col-mb-6 {
     margin-bottom:1.5rem;
 }
+.w-45 {
+    width:45%;
+}
+.fw-500{
+    font-weight:500;
+}
+.bor-sha {
+    border-bottom: 1px solid black;
+}

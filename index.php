@@ -18,8 +18,6 @@
 
     <link rel="icon" type="image/x-icon" href="assets/images/spider-title-logo.png">
     <link href="assets/css/home-page.css" rel="stylesheet">
-    <!--    <link href="assets/css/nav-bar.css" rel=stylesheet>-->
-    <!--    <link href="assets/css/footer.css" rel="stylesheet">-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
@@ -32,31 +30,44 @@
 
 <!--------------------------------------------- Start Nav Bar Area ---------------------------------------------------->
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top position-relative ">
-
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top bor-sha">
     <div class="container">
-        <div class="nav-logo">
-            <a class="navbar-brand" href="index.php">Scrappy</a>
-        </div>
-        <div class="navbar-searchbox">
-            <input type="text" placeholder="Search" size="70"/>
-        </div>
-        <div class="navbar-toolbox">
-            <ul class="list-group d-flex flex-row">
+        <a class="navbar-brand" href="#">
+            <i class="navbar-logo mx-3 ps-1">Scrappy</i>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-menu" aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse navbar-menu" id="navbar1">
+            <form class="search-form me-3">
+                <div class="input-form w-100">
+                    <input type="search" class="form-control" placeholder="Search"/>
+                </div>
+            </form>
+            <ul class="navbar-nav fw-500">
                 <li class="nav-item">
-                    <a class="nav-link" href="Compare.php"><span>Compare</span></a>
+                    <a class="nav-link" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Favorites.php"><span>Favorites</span></a>
+                    <a class="nav-link" href="Favorites.php">Favorites</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="About%20Us.php"><span>About us</span></a>
+                    <a class="nav-link" href="About%20Us.php">About us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Contact.php"><span>Contact</span></a>
+                    <a class="nav-link" href="Contact.php">Contact</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav d-flex flex-row ms-auto">
+                <li class="nav-item me-3 me-lg-0">
+                    <a class="nav-link log-in" href="#" role="button">Log In</a>
+                </li>
+                <li class="nav-item me-3 me-lg-0 ">
+                    <a class="nav-link register" href="#" role="button">Register</a>
                 </li>
             </ul>
         </div>
+    </div>
 </nav>
 <!--------------------------------------------- End Nav Bar Area ------------------------------------------------------>
 
@@ -92,9 +103,9 @@
         <div class="container">
             <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 row-cols-xl-6">
                 <div class="col-mb-6 col-mx-lg-1 col-mx-md-4 col-mx-sm-4">
-                    <div class="card" style="width:13rem">
+                    <div class="card" style="width:12rem">
                         <img class="card-img-top" src="assets/images/product1.jpg" alt="card-image-cap"/>
-                        <div class="card-body">
+                        <div class="card-body p-0">
                             <h6 class="card-title">Telefon mobil Samsung Galaxy A32, Dual SIM, 128GB, 4G, Black</h6>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item">Rating</li>
@@ -107,9 +118,9 @@
                     </div>
                 </div>
                 <div class="col-mb-6 col-mx-lg-1 col-mx-md-4 col-mx-sm-4">
-                    <div class="card" style="width:13rem">
+                    <div class="card" style="width:12rem">
                         <img class="card-img-top" src="assets/images/product1.jpg" alt="card-image-cap"/>
-                        <div class="card-body">
+                        <div class="card-body p-0 ">
                             <h6 class="card-title">Telefon mobil Samsung Galaxy A32, Dual SIM, 128GB, 4G, Black</h6>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item">Rating</li>
@@ -122,9 +133,9 @@
                     </div>
                 </div>
                 <div class="col-mb-6 col-mx-lg-1 col-mx-md-4 col-mx-sm-4">
-                    <div class="card" style="width:13rem">
+                    <div class="card" style="width:12rem">
                         <img class="card-img-top" src="assets/images/product1.jpg" alt="card-image-cap"/>
-                        <div class="card-body">
+                        <div class="card-body p-0">
                             <h6 class="card-title">Telefon mobil Samsung Galaxy A32, Dual SIM, 128GB, 4G, Black</h6>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item">Rating</li>
@@ -137,9 +148,9 @@
                     </div>
                 </div>
                 <div class="col-mb-6 col-mx-lg-1 col-mx-md-4 col-mx-sm-4">
-                    <div class="card" style="width:13rem">
+                    <div class="card" style="width:12rem">
                         <img class="card-img-top" src="assets/images/product1.jpg" alt="card-image-cap"/>
-                        <div class="card-body">
+                        <div class="card-body p-0">
                             <h6 class="card-title">Telefon mobil Samsung Galaxy A32, Dual SIM, 128GB, 4G, Black</h6>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item">Rating</li>
@@ -152,9 +163,9 @@
                     </div>
                 </div>
                 <div class="col-mb-6 col-mx-lg-1 col-mx-md-4 col-mx-sm-4">
-                    <div class="card" style="width:13rem">
+                    <div class="card" style="width:12rem">
                         <img class="card-img-top" src="assets/images/product1.jpg" alt="card-image-cap"/>
-                        <div class="card-body">
+                        <div class="card-body p-0">
                             <h6 class="card-title">Telefon mobil Samsung Galaxy A32, Dual SIM, 128GB, 4G, Black</h6>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item">Rating</li>
@@ -167,9 +178,9 @@
                     </div>
                 </div>
                 <div class="col-mb-6 col-mx-lg-1 col-mx-md-4 col-mx-sm-4">
-                    <div class="card" style="width:13rem">
+                    <div class="card" style="width:12rem">
                         <img class="card-img-top" src="assets/images/product1.jpg" alt="card-image-cap"/>
-                        <div class="card-body">
+                        <div class="card-body p-0">
                             <h6 class="card-title">Telefon mobil Samsung Galaxy A32, Dual SIM, 128GB, 4G, Black</h6>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item">Rating</li>
@@ -182,9 +193,9 @@
                     </div>
                 </div>
                 <div class="col-mb-6 col-mx-lg-1 col-mx-md-4 col-mx-sm-4">
-                    <div class="card" style="width:13rem">
+                    <div class="card" style="width:12rem">
                         <img class="card-img-top" src="assets/images/product1.jpg" alt="card-image-cap"/>
-                        <div class="card-body">
+                        <div class="card-body p-0">
                             <h6 class="card-title">Telefon mobil Samsung Galaxy A32, Dual SIM, 128GB, 4G, Black</h6>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item">Rating</li>
