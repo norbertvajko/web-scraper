@@ -1,9 +1,13 @@
 @import "general.css";
 @import "nav-bar.css";
 @import "footer.css";
-
+@font-face {
+    font-family: "Fixedsys";
+    src: url("/assets/fonts/fixedsys/fsex300-webfont.ttf") format('truetype'),
+        url("/assets/fonts/fixedsys/fsex300-webfont.woff") format('truetype');
+}
 body {
-    font-family: monospace, monospace;
+    font-family: Fixedsys, monospace;
 }
 
 .banner-area {
