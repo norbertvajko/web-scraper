@@ -2,6 +2,10 @@
 @import "nav-bar.css";
 @import "footer.css";
 
+body {
+    font-family: monospace, monospace;
+}
+
 .banner-area {
     background: rgb(62,142,152);
     background: linear-gradient(90deg, rgba(62,142,152,1) 18%, rgba(67,203,162,1) 67%, rgba(128,234,255,1) 100%);
@@ -58,4 +62,54 @@
     background: rgb(25,208,230);
     background: linear-gradient(90deg, rgba(25,208,230,1) 41%, rgba(95,212,128,1) 54%);
 }
-
+.carousel {
+    margin:35px;
+}
+.carousel .item {
+    text-align: center;
+    overflow: hidden;
+}
+.carousel-control-prev {
+    height: 45px;
+    width:35px;
+    background-color: grey;
+    margin:auto 0;
+    text-decoration: none;
+    justify-content: center;
+}
+.carousel-control-next {
+    height: 45px;
+    width:35px;
+    background-color: grey;
+    margin:auto 0;
+    text-decoration: none;
+    justify-content: center;
+}
+.carousel-indicators li {
+    background:black;
+    border-radius:50%;
+    width: 10px;
+    height: 10px;
+    margin: 4px;
+    border-color: transparent;
+    cursor:pointer;
+}
+.thumb-wrapper {
+    position:relative;
+}
+.favorite-icon {
+    position:absolute;
+    top:0;
+    right:0;
+}
+.thumb-content {
+    padding:12px;
+    text-align: center;
+}
+.img-box img{
+    width:100%;
+    max-height:165px;
+}
+.thumb-content h6 {
+    font-size:12px;
+}

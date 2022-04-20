@@ -17,3 +17,7 @@
 .bor-sha {
     border-bottom: 1px solid black;
 }
+.px-py-88 {
+    padding-left:8%;
+    padding-right: 8%;
+}
