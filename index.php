@@ -99,131 +99,53 @@
 
 <!----------------------------------------------- Start Main Area ----------------------------------------------------->
 <main class="main-content">
-    <section class="search-results py-6">
+    <section class="carousel-best-offer">
         <div class="container">
-            <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 row-cols-xl-6">
-                <div class="col-mb-6 col-mx-lg-1 col-mx-md-4 col-mx-sm-4">
-                    <div class="card" style="width:12rem">
-                        <img class="card-img-top" src="assets/images/product1.jpg" alt="card-image-cap"/>
-                        <div class="card-body p-0">
-                            <h6 class="card-title">Telefon mobil Samsung Galaxy A32, Dual SIM, 128GB, 4G, Black</h6>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Rating</li>
-                                <li class="list-group-item">500 lei</li>
-                                <li class="list-group-item button-list">
-                                    <button type="button" class="btn btn-primary btn-bg">Button</button>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-mb-6 col-mx-lg-1 col-mx-md-4 col-mx-sm-4">
-                    <div class="card" style="width:12rem">
-                        <img class="card-img-top" src="assets/images/product1.jpg" alt="card-image-cap"/>
-                        <div class="card-body p-0 ">
-                            <h6 class="card-title">Telefon mobil Samsung Galaxy A32, Dual SIM, 128GB, 4G, Black</h6>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Rating</li>
-                                <li class="list-group-item">500 lei</li>
-                                <li class="list-group-item button-list">
-                                    <button type="button" class="btn btn-primary btn-bg">Button</button>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-mb-6 col-mx-lg-1 col-mx-md-4 col-mx-sm-4">
-                    <div class="card" style="width:12rem">
-                        <img class="card-img-top" src="assets/images/product1.jpg" alt="card-image-cap"/>
-                        <div class="card-body p-0">
-                            <h6 class="card-title">Telefon mobil Samsung Galaxy A32, Dual SIM, 128GB, 4G, Black</h6>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Rating</li>
-                                <li class="list-group-item">500 lei</li>
-                                <li class="list-group-item button-list">
-                                    <button type="button" class="btn btn-primary btn-bg">Button</button>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-mb-6 col-mx-lg-1 col-mx-md-4 col-mx-sm-4">
-                    <div class="card" style="width:12rem">
-                        <img class="card-img-top" src="assets/images/product1.jpg" alt="card-image-cap"/>
-                        <div class="card-body p-0">
-                            <h6 class="card-title">Telefon mobil Samsung Galaxy A32, Dual SIM, 128GB, 4G, Black</h6>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Rating</li>
-                                <li class="list-group-item">500 lei</li>
-                                <li class="list-group-item button-list">
-                                    <button type="button" class="btn btn-primary btn-bg">Button</button>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-mb-6 col-mx-lg-1 col-mx-md-4 col-mx-sm-4">
-                    <div class="card" style="width:12rem">
-                        <img class="card-img-top" src="assets/images/product1.jpg" alt="card-image-cap"/>
-                        <div class="card-body p-0">
-                            <h6 class="card-title">Telefon mobil Samsung Galaxy A32, Dual SIM, 128GB, 4G, Black</h6>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Rating</li>
-                                <li class="list-group-item">500 lei</li>
-                                <li class="list-group-item button-list">
-                                    <button type="button" class="btn btn-primary btn-bg">Button</button>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-mb-6 col-mx-lg-1 col-mx-md-4 col-mx-sm-4">
-                    <div class="card" style="width:12rem">
-                        <img class="card-img-top" src="assets/images/product1.jpg" alt="card-image-cap"/>
-                        <div class="card-body p-0">
-                            <h6 class="card-title">Telefon mobil Samsung Galaxy A32, Dual SIM, 128GB, 4G, Black</h6>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Rating</li>
-                                <li class="list-group-item">500 lei</li>
-                                <li class="list-group-item button-list">
-                                    <button type="button" class="btn btn-primary btn-bg">Button</button>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-mb-6 col-mx-lg-1 col-mx-md-4 col-mx-sm-4">
-                    <div class="card" style="width:12rem">
-                        <img class="card-img-top" src="assets/images/product1.jpg" alt="card-image-cap"/>
-                        <div class="card-body p-0">
-                            <h6 class="card-title">Telefon mobil Samsung Galaxy A32, Dual SIM, 128GB, 4G, Black</h6>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Rating</li>
-                                <li class="list-group-item">500 lei</li>
-                                <li class="list-group-item button-list">
-                                    <button type="button" class="btn btn-primary btn-bg">Button</button>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+            <div class="carousel-header">
+                <h3 class="carousel-title my-3">Oferta zilei</h3>
             </div>
-        </div>
-    </section>
-    <section class="newsletter-area">
-        <div class="container my-3">
             <div class="row">
-                <h3 class="subscribe-text">Subscribe to our newsletter to receive more product discounts ,best deals
-                    ... </h3>
-                <form>
-                    <div class="form-group my-4">
-                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your name">
+                <div class="col-md-12 product-item ">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
+                        <!-- Carousel indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ol>
+                        <!-- Wrapper for carousel items -->
+                        <div class="carousel-inner">
+                            <div class="item-active">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <div class="thumb-wrapper">
+                                            <div class="img-box">
+                                                <img src="assets/images/product1.jpg" class="img-fluid product-image"
+                                                     alt="product-image"/>
+                                            </div>
+                                            <div class="thumbnail-content">
+                                                <h6 class="thumbnail-title">Laptop HP 250 G8 cu procesor Intel Celeron
+                                                    N4020, 15.6", HD, 4GB, 256GB SSD, Intel UHD Graphics, Free DOS, Dark
+                                                    Ash Silver</h6>
+                                                <div class="star-rating">
+                                                    <ul class="list-inline">
+                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                                    </ul>
+                                                    <p class="item-price"><strike>$400.00</strike> <span>$369.00</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                    </div>
-                    <button type="submit" class="btn btn-primary my-4">Submit</button>
-                </form>
+                </div>
             </div>
         </div>
     </section>
