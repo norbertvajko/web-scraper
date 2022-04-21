@@ -117,3 +117,13 @@ body {
 .thumb-content h6 {
     font-size:12px;
 }
+
+.slide-progress-dots .container {
+    height: 500px;
+}
+.scrappy-benefits .container {
+    height:500px;
+}
+.nav-link {
+    color:blue;
+}

@@ -21,11 +21,14 @@
 
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
+    <!--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"-->
+    <!--            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"-->
+    <!--            crossorigin="anonymous"></script>-->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 
 </head>
 <body>
@@ -104,21 +107,23 @@
 
 <!----------------------------------------------- Start Main Area ----------------------------------------------------->
 <main class="main-content">
+        <section class="slide-progress-dots">
+            <div class="container">
+                <div class="slick-nav d-none d-lg-block">
+                    <h2>SLICK NAV DOTS AREA</h2>
+                </div>
+            </div>
+        </section>
+
+
     <section class="carousel-best-offer">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 ">
                     <div class="carousel-header">
-                        <h3 class="carousel-title my-3">Oferta zilei</h3>
+                        <h3 class="carousel-title my-3">Most searched products</h3>
                     </div>
-                    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
-                        <!-- Carousel indicators -->
-                        <ol class="carousel-indicators ">
-                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#myCarousel" data-slide-to="1"></li>
-                            <li data-target="#myCarousel" data-slide-to="2"></li>
-                        </ol>
-                        <!-- Wrapper for carousel items -->
+                    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner py-3 px-py-88">
                             <div class="carousel-item active">
                                 <div class="row">
@@ -422,7 +427,7 @@
                                     <div class="col-sm-3">
                                         <div class="thumb-wrapper">
                                             <div class="img-box">
-                                                <img src="assets/images/product2.jpg" class="img-fluid"
+                                                <img src="assets/images/product3.jpg" class="img-fluid"
                                                      alt="product-img">
                                             </div>
                                             <div class="thumb-content">
@@ -458,7 +463,7 @@
                                     <div class="col-sm-3">
                                         <div class="thumb-wrapper">
                                             <div class="img-box">
-                                                <img src="assets/images/product1.jpg" class="img-fluid"
+                                                <img src="assets/images/product3.jpg" class="img-fluid"
                                                      alt="product-img">
                                             </div>
                                             <div class="thumb-content">
@@ -484,7 +489,7 @@
                                                     </ul>
                                                 </div>
                                                 <p class="item-price">
-                                                    <span style="text-decoration: line-through;">500 lei</span>
+                                                    <del>500 lei</del>
                                                     <span>300 lei</span>
                                                 </p>
                                                 <i class="fa fa-heart favorite-icon" href="#"></i>
@@ -494,7 +499,7 @@
                                     <div class="col-sm-3">
                                         <div class="thumb-wrapper">
                                             <div class="img-box">
-                                                <img src="assets/images/product1.jpg" class="img-fluid"
+                                                <img src="assets/images/product3.jpg" class="img-fluid"
                                                      alt="product-img">
                                             </div>
                                             <div class="thumb-content">
@@ -565,21 +570,30 @@
                                     </div>
                                 </div>
                             </div>
+                            <button class="carousel-control-prev" type="button"
+                                    data-bs-target="#carouselExampleInterval"
+                                    data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                    data-bs-target="#carouselExampleInterval"
+                                    data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
                         </div>
-                        <!-- Carousel controls -->
-                        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-                            <i class="fa fa-angle-left"></i>
-                        </a>
-                        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-                            <i class="fa fa-angle-right"></i>
-                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class=""
+    <section class="scrappy-benefits">
+        <div class="container">
+            <h2>BENEFITS AREA</h2>
+        </div>
+    </section>
 </main>
 <!------------------------------------------------- End Main Area ----------------------------------------------------->
 
@@ -620,12 +634,11 @@
                 </ul>
             </div>
         </div>
-    </div>
-    <div class="container text-center copyright-section">
-        <p>Copyright © 2022 Scrappy. All rights reserved.</p>
+        <div class="container text-center copyright-section">
+            <p class="m-0">Copyright © 2022 Scrappy. All rights reserved.</p>
+        </div>
     </div>
 </footer>
 <!------------------------------------------------ End Footer Area ---------------------------------------------------->
-
 </body>
 </html>
