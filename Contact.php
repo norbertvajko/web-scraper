@@ -70,21 +70,85 @@
 </header>
 
 <main class="content">
-    <section>
-        <h1>Contact</h1>
-        <div class="contact-us">
-        <form class="contact-us-form">
-
-            <label for="fname">First Name</label>
-            <input id="fname" name="firstname" placeholder="Your name" type="text"> <br>
-
-            <label for="email">E-mail</label>
-            <input id="email" name="mail" placeholder="Your E-mail" type="text"> <br>
-
-            <label for="subject">Subject</label>
-            <textarea id="subject" name="subject" placeholder="Leave us a message"></textarea>
-            <input type="submit" value="Submit">
-        </form>
+    <section class="contact-us">
+        <div class="container">
+            <div class="col-lg-10">
+                <div class="wrapper">
+                    <div class="col-md-6 d-flex align-items-stretch">
+                        <div class="info-wrap w-100 p-md-5 p-4 py-5">
+                            <h3>Contact Info</h3>
+                            <div class="dbox w-100 d-flex align-items-start">
+                                <div class="icon d-flex align-items-center justify-content-center">
+                                    <span class="fa fa-map-marker"></span>
+                                </div>
+                                <div class="text pl-3">
+                                    <p><span>Address:</span> Strada G.Magheru kandoadna</p>
+                                </div>
+                            </div>
+                            <div class="dbox w-100 d-flex align-items-center">
+                                <div class="icon d-flex align-items-center justify-content-center">
+                                    <span class="fa fa-phone"></span>
+                                </div>
+                                <div class="text pl-3">
+                                    <p><span>Phone:</span> <a href="tel://1234567920">077000000</a></p>
+                                </div>
+                            </div>
+                            <div class="dbox w-100 d-flex align-items-center">
+                                <div class="icon d-flex align-items-center justify-content-center">
+                                    <span class="fa fa-paper-plane"></span>
+                                </div>
+                                <div class="text pl-3">
+                                    <p><span>Email:</span> <a href="mailto:info@yoursite.com">norbertvajko@yahoo.com</a></p>
+                                </div>
+                            </div>
+                            <div class="dbox w-100 d-flex align-items-center">
+                                <div class="icon d-flex align-items-center justify-content-center">
+                                    <span class="fa fa-globe"></span>
+                                </div>
+                                <div class="text pl-3">
+                                    <p><span>Website</span> <a href="index.php">rankingCoach</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 d-flex align-items-stretch">
+                        <div class="contact-wrap w-100 p-md-5 p-4 py-5">
+                            <h3 class="contact-title">Write us</h3>
+                            <div class="row">
+                                <div class="col-md-12 p-2">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="name" id="name"
+                                               placeholder="Name">
+                                    </div>
+                                </div>
+                                <div class="col-md-12 p-2">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" name="email" id="email"
+                                               placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="col-md-12 p-2">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="subject" id="subject"
+                                               placeholder="Subject">
+                                    </div>
+                                </div>
+                                <div class="col-md-12 p-2">
+                                    <div class="form-group">
+                                        <textarea name="message" class="form-control" id="message" cols="30" rows="6"
+                                                  placeholder="Message"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 p-2">
+                                    <div class="form-group">
+                                        <a href="#" role="button" class="submit-button">Send message</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 </main>

@@ -1,35 +1,20 @@
-header {
-    width: 100%;
-    height: 100px;
-    color:white;
-    text-align: center;
-}
-html , body {
-    min-height: 100%;
-    background: transparent;
-    background-size:cover;
-    font-family: League Spartan,Helvetica,Arial,sans-serif;
-    margin:0;
-    padding: 0;
-}
-main {
-    position:relative;
-    height: 800px;
-}
-main h1 {
+.submit-button {
+    text-decoration: none;
+    transition:0.5s;
+    font-size: 20px;
     color:black;
-    position:relative;
-    left:40%;
+    margin:15px;
 }
-.contact-us {
-    background-color: wheat;
-    width:80%;
-    margin:auto;
-    height:720px ;
+.submit-button:hover {
+    background: #730bec url(/assets/images/pixel2.png);
+    transition-delay: 0.8ms;
+    animation: animate 0.8s steps(8) forwards;
 }
-.contact-us-form {
-    display:block;
-    background-color: orange;
-    width:700px;
-    margin:auto;
+@keyframes animate {
+    0% {
+        background-position-y:0;
+    }
+    100% {
+        background-position-y:-480px;
+    }
 }

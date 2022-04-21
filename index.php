@@ -107,10 +107,22 @@
 
 <!----------------------------------------------- Start Main Area ----------------------------------------------------->
 <main class="main-content">
-        <section class="slide-progress-dots">
+        <section class="main-features">
             <div class="container">
-                <div class="slick-nav d-none d-lg-block">
-                    <h2>SLICK NAV DOTS AREA</h2>
+                <div class="row">
+                    <h2>MAIN FEATURES</h2>
+                </div>
+                <div class="col-12 col-sm-12 col-md-3 col-lg-3 ">
+                    <div class="price-comparassion my-5">
+                        <h5 class="price-comparassion-title ">Price comparasion</h5>
+                        <img src="assets/images/output-onlinepngtools.png">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-3 col-lg-3">
+
+                </div>
+                <div class="col-12 col-sm-12 col-md-3 col-lg-3">
+
                 </div>
             </div>
         </section>
@@ -594,6 +606,10 @@
             <h2>BENEFITS AREA</h2>
         </div>
     </section>
+
+    <section class="newsletter">
+
+    </section>
 </main>
 <!------------------------------------------------- End Main Area ----------------------------------------------------->
 
@@ -622,7 +638,7 @@
                 </ul>
             </div>
 
-            <div class="col-md-6 text-end contact-section">
+            <div class="col-md-6 text-end contact-section text-sm-center col text-center">
                 <h3>Contact Info</h3>
                 <ul class="contact-info">
                     <li><i class="fa fa-map-marker" aria-hidden="true"><a
@@ -634,6 +650,24 @@
                 </ul>
             </div>
         </div>
+
+        <div class="container  my-5">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="newsletter-header m-auto text-center">
+                        <h5>Do you want to receive smart shopping advice from us?</h5>
+                        <p>Then subscribe to our newsletter!</p>
+                    </div>
+                    <form class="">
+                        <div class="form-group d-flex justify-content-center">
+                            <input type="email" class="form-control w-25 mt-3 " placeholder="Enter e-mail">
+                            <button type="submit" class="subscribe-button d-flex flex-wrap ms-3 mt-3">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
         <div class="container text-center copyright-section">
             <p class="m-0">Copyright © 2022 Scrappy. All rights reserved.</p>
         </div>
