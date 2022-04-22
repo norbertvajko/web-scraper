@@ -7,7 +7,8 @@
         url("/assets/fonts/fixedsys/fsex300-webfont.woff") format('truetype');
 }
 body {
-    font-family: Fixedsys, monospace;
+    /*font-family: Fixedsys, monospace;*/
+    font-family: monospace;
 }
 
 .banner-area {
@@ -147,4 +148,18 @@ body {
     100% {
         background-position-y: -480px;
     }
+}
+.main-features {
+    background-color: rgb(245, 246, 250);
+}
+.price-comparassion {
+    border: 1px solid rgb(233, 233, 233);
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+.price-comparassion-list {
+    list-style-type: none;
+}
+.price-comparassion-list .fa {
+    color:rgb(35, 230, 168);
 }

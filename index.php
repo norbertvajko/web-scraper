@@ -57,7 +57,7 @@
                     <a class="nav-link" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Favorites.php">Favorites</a>
+                    <a class="nav-link" href="Products.php">Favorites</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="About%20Us.php">About us</a>
@@ -107,25 +107,73 @@
 
 <!----------------------------------------------- Start Main Area ----------------------------------------------------->
 <main class="main-content">
-        <section class="main-features">
-            <div class="container">
-                <div class="row">
-                    <h2>MAIN FEATURES</h2>
-                </div>
-                <div class="col-12 col-sm-12 col-md-3 col-lg-3 ">
-                    <div class="price-comparassion my-5">
-                        <h5 class="price-comparassion-title ">Price comparasion</h5>
-                        <img src="assets/images/output-onlinepngtools.png">
+    <section class="main-features p-3">
+        <div class="container p-4">
+            <div class="row">
+                <h2 class="main-features-title text-center">MAIN FEATURES</h2>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="price-comparassion p-3 my-3 ">
+                        <div class="price-comparassion-header d-flex justify-content-between align-items-center flex-lg-row flex-column" >
+                            <img src="assets/images/output-onlinepngtools.png " class="img-fluid price-comparassion-logo ">
+                            <h2 class="price-comparassion-title text-center ">Detailed price comparison</h2>
+                        </div>
+                        <div class="price-comparassion-description">
+                            <ul class="price-comparassion-list py-3">
+                                <li class="price-list "><i class="fa fa-check me-2" aria-hidden="true"></i>Gather data at
+                                    scale from a majority of websites
+                                </li>
+                                <li class="price-list"><i class="fa fa-check me-2" aria-hidden="true"></i>Real-time data
+                                    collection in HTML format
+                                </li>
+                                <li class="price-list"><i class="fa fa-check me-2" aria-hidden="true"></i>100% data delivery
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="col-12 col-sm-12 col-md-3 col-lg-3">
-
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="price-comparassion p-3 my-3 ">
+                        <div class="price-comparassion-header d-flex justify-content-between align-items-center flex-lg-row flex-column" >
+                            <img src="assets/images/price-alert.png " class="img-fluid price-comparassion-logo">
+                            <h2 class="price-comparassion-title text-center ">Price Change Alerts</h2>
+                        </div>
+                        <div class="price-comparassion-description">
+                            <ul class="price-comparassion-list py-3">
+                                <li class="price-list"><i class="fa fa-check me-2" aria-hidden="true"></i>Gather data at
+                                    scale from a majority of websites
+                                </li>
+                                <li class="price-list"><i class="fa fa-check me-2" aria-hidden="true"></i>Real-time data
+                                    collection in HTML format
+                                </li>
+                                <li class="price-list"><i class="fa fa-check me-2" aria-hidden="true"></i>100% data delivery
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-12 col-sm-12 col-md-3 col-lg-3">
-
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="price-comparassion p-3 my-3">
+                        <div class="price-comparassion-header d-flex justify-content-between align-items-center flex-lg-row flex-column" >
+                            <img src="assets/images/price-analyt.png " class="img-fluid price-comparassion-logo">
+                            <h2 class="price-comparassion-title text-center ">Reporting & Price Analytics</h2>
+                        </div>
+                        <div class="price-comparassion-description">
+                            <ul class="price-comparassion-list py-3">
+                                <li class="price-list"><i class="fa fa-check me-2" aria-hidden="true"></i>Gather data at
+                                    scale from a majority of websites
+                                </li>
+                                <li class="price-list"><i class="fa fa-check me-2" aria-hidden="true"></i>Real-time data
+                                    collection in HTML format
+                                </li>
+                                <li class="price-list"><i class="fa fa-check me-2" aria-hidden="true"></i>100% data delivery
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
 
     <section class="carousel-best-offer">
@@ -651,16 +699,16 @@
             </div>
         </div>
 
-        <div class="container  my-5">
+        <div class="newsletter-area container  my-5">
             <div class="row">
                 <div class="col-md-12">
                     <div class="newsletter-header m-auto text-center">
                         <h5>Do you want to receive smart shopping advice from us?</h5>
                         <p>Then subscribe to our newsletter!</p>
                     </div>
-                    <form class="">
-                        <div class="form-group d-flex justify-content-center">
-                            <input type="email" class="form-control w-25 mt-3 " placeholder="Enter e-mail">
+                    <form class="newsletter-form">
+                        <div class="d-flex justify-content-center flex-column flex-md-row w-50 align-items-center m-auto">
+                            <input type="email" class="form-control mt-3 " placeholder="Enter e-mail">
                             <button type="submit" class="subscribe-button d-flex flex-wrap ms-3 mt-3">Subscribe</button>
                         </div>
                     </form>
