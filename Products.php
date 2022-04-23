@@ -103,10 +103,10 @@
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
                                 </span>
-                                <span class="hidden-xs">(30 pareri)</span>
+                                <span class="d-none d-sm-block">(30 pareri)</span>
                             </a>
                         </div>
-                        <div class="product-description d-flex d-sm-none mt-5 ">
+                        <div class="product-description d-none d-sm-flex mt-5 ">
                             <ul class="detail-list w-50 d-flex justify-content-start flex-column" style="list-style: none">
                                 <li>"Design:" <b>Touch Screen</b></li>
                                 <li>"SIM:" <b>nano-SIM / eSIM</b></li>
