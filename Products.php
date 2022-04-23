@@ -17,18 +17,14 @@
 
     <link rel="icon" type="image/x-icon" href="assets/images/spider-title-logo.png">
     <link href="assets/css/home-page.css" rel="stylesheet">
+    <link href="assets/css/results-page.css " rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <!--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"-->
-    <!--            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"-->
-    <!--            crossorigin="anonymous"></script>-->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </head>
 
@@ -79,69 +75,71 @@
 
 <!----------------------------------------------- Start Main Area ----------------------------------------------------->
 <main class="main-content">
-    <div class="product-results container  p-5 m-5">
+    <div class="container py-5 my-5">
         <div class="row">
-            <div class="list-view">
-                <div class="product-box d-flex text-center justify-content-center  ">
-                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 d-flex justify-content-center align-items-center">
-                        <div class="img-container text-center">
-                            <img src="assets/images/result-product.jpg" class="product-image img-fluid">
+            <div class="results-box d-flex flex-row">
+                <div class="col my-auto mx-3">
+                    <div class="card secondary-card d-flex justify-content-start align-items-center h-75" id="secondaryProduct">
+                        <div class="image-box ">
+                            <img src="https://www.corsair.com/corsairmedia/sys_master/productcontent/CH-9300011-NA-M65_PRO_RGB_BLK_04.png"
+                                 alt="product-img" class="img-fluid mh-240">
                         </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-8  ">
-                        <div class="product-title-name text-center">
-                            <h1 class="product-title">
-                                <a href="#" class="title" style="text-decoration: none">Iphone XS 12 GB</a>
-                            </h1>
-                        </div>
-                        <div class="product-rating text-center">
-                            <a href="#" style="text-decoration: none;">
-                                <span class="product-review-stars">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </span>
-                                <span class="d-none d-sm-block">(30 pareri)</span>
-                            </a>
-                        </div>
-                        <div class="product-description d-none d-sm-flex mt-5 ">
-                            <ul class="detail-list w-50 d-flex justify-content-start flex-column" style="list-style: none">
-                                <li>"Design:" <b>Touch Screen</b></li>
-                                <li>"SIM:" <b>nano-SIM / eSIM</b></li>
-                                <li>"Nuclee proccesor:" <b>6 nuclee</b></li>
-                            </ul>
-                            <ul class="detail-list w-50"  style="list-style: none" >
-                                <li>"Frecventa procesor:" <b>2.66 GHz</b></li>
-                                <li>"RAM:" <b>4GB</b></li>
-                                <li>"Memorie interna:" <b>64 GB</b></li>
-                            </ul>
-
-                        </div>
-                        <div class="d-block d-sm-none">
-                            <div class="price">
-                                de la 2 345,00 RON
+                        <div class="card-content-box">
+                            <h1 class="product-title">Product name</h1>
+                            <div class="product-stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-o"></i>
+                                <span>(13)</span>
                             </div>
-                            <span class="review-offers">
-                                138 oferte
-                            </span>
+                            <h2 class="product-price">1099<sup>99</sup> lei</h2>
+                            <a href="#" class="product-offer">Offers</a>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-3 col-sm-3  d-none d-sm-block">
-                        <a href="#">
-                            Preturi de la 2 345,00 RON
-                        </a>
-                        <button class="btn btn-primary" type="button">Offers</button>
-                        <a class="offer-num" href="#">
-                            136 oferte
-                        </a>
+                </div>
+                <div class="col">
+                    <div class="card main-card d-flex justify-content-center align-items-center" id="mainProduct">
+                        <div class="image-box ">
+                            <img src="https://www.corsair.com/corsairmedia/sys_master/productcontent/CH-9300011-NA-M65_PRO_RGB_BLK_04.png"
+                                 alt="product-img" class="img-fluid mh-370">
+                        </div>
+                        <div class="card-content-box">
+                            <h1 class="product-title">Product name</h1>
+                            <div class="product-stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-o"></i>
+                                <span>(13)</span>
+                            </div>
+                            <h2 class="product-price">1099<sup>99</sup> lei</h2>
+                            <a href="#" class="product-offer">Offers</a>
+                        </div>
                     </div>
-                    <a href="#" class="mobile-overlay d-flex d-sm-none">
-                        <span class="mobile-arrow">
-                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                        </span>
-                    </a>
+                </div>
+                <div class="col  my-auto mx-3">
+                    <div class="card secondary-card d-flex justify-content-start align-items-center h-75" id="thirdProduct">
+                        <div class="image-box ">
+                            <img src="https://www.corsair.com/corsairmedia/sys_master/productcontent/CH-9300011-NA-M65_PRO_RGB_BLK_04.png"
+                                 alt="product-img" class="img-fluid mh-240">
+                        </div>
+                        <div class="card-content-box">
+                            <h1 class="product-title">Product name</h1>
+                            <div class="product-stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-o"></i>
+                                <span>(13)</span>
+                            </div>
+                            <h2 class="product-price">1099<sup>99</sup> lei</h2>
+                            <a href="#" class="product-offer">Offers</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -210,5 +208,14 @@
     </div>
 </footer>
 <!------------------------------------------------ End Footer Area ---------------------------------------------------->
+
+<script>
+    $(function(){
+        $('#mainProduct').hide().fadeIn(1000);
+        $('#secondaryProduct').hide().fadeIn(3000);
+        $('#thirdProduct').hide().fadeIn(3000);
+    });
+</script>
+
 </body>
 </html>

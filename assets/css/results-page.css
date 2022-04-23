@@ -1,0 +1,27 @@
+body {
+    background: linear-gradient(45deg, black, transparent);
+}
+
+.mh-370 {
+    max-height: 370px;
+}
+.mh-240 {
+    max-height: 240px;
+}
+.main-card {
+    width: 100%;
+    height: auto;
+    background: #191919;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid gold;
+    color:white;
+}
+.secondary-card {
+    width: 100%;
+    height: auto;
+    background: #191919;
+    border-radius: 20px;
+    overflow: hidden;
+    color:gray;
+}
