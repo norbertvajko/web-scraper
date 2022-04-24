@@ -105,23 +105,26 @@
                             <img src="https://www.corsair.com/corsairmedia/sys_master/productcontent/CH-9300011-NA-M65_PRO_RGB_BLK_04.png"
                                  alt="product-img" class="img-fluid mh-370">
                         </div>
-                        <div class="card-content-box">
-                            <h1 class="product-title">Product name</h1>
-                            <div class="product-stars">
+                        <div class="card-content-box position-relative">
+                            <h1 class="product-title my-3 mx-4">Laptop Huawei MateBook D15, Intel Core i3-10110U pana la
+                                4.1GHz, 15.6" Full HD, 8GB, SSD 256GB, Intel UHD Graphics, Windows 10 Home, Silver</h1>
+                            <div class="product-stars ms-4 fs-18">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star-o"></i>
-                                <span>(13)</span>
+                                <span><a href="#" class="text-decoration-none">(13)</a></span>
                             </div>
-                            <h2 class="product-price">1099<sup>99</sup> lei</h2>
-                            <a href="#" class="product-offer">Offers</a>
+                            <h2 class="product-price fs-4 ms-4 my-2">1099<sup>99</sup> lei
+                                <buttton type="button" class="btn btn-primary position-absolute r-17 t-55">Offers</buttton>
+                            </h2>
                         </div>
                     </div>
                 </div>
                 <div class="col  my-auto mx-3">
-                    <div class="card secondary-card d-flex justify-content-start align-items-center h-75" id="thirdProduct">
+                    <div class="card secondary-card d-flex justify-content-start align-items-center h-75"
+                         id="thirdProduct">
                         <div class="image-box ">
                             <img src="https://www.corsair.com/corsairmedia/sys_master/productcontent/CH-9300011-NA-M65_PRO_RGB_BLK_04.png"
                                  alt="product-img" class="img-fluid mh-240">
@@ -194,7 +197,9 @@
                     <form class="newsletter-form">
                         <div
                                 class="d-flex justify-content-center flex-column flex-md-row w-50 align-items-center m-auto">
-                            <input type="email" class="form-control mt-3 " placeholder="Enter e-mail">
+                            <label>
+                                <input type="email" class="form-control mt-3 " placeholder="Enter e-mail">
+                            </label>
                             <button type="submit" class="subscribe-button d-flex flex-wrap ms-3 mt-3">Subscribe</button>
                         </div>
                     </form>

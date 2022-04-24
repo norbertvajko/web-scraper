@@ -8,6 +8,15 @@ body {
 .mh-240 {
     max-height: 240px;
 }
+.fs-18 {
+    font-size:18px;
+}
+.r-17 {
+    right:17%;
+}
+.t-55 {
+    top:55%;
+}
 .main-card {
     width: 100%;
     height: auto;
@@ -24,4 +33,12 @@ body {
     border-radius: 20px;
     overflow: hidden;
     color:gray;
+}
+.card-content-box h1 {
+    font-size: 18px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
