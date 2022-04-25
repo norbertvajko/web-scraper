@@ -1,5 +1,7 @@
 body {
     background: linear-gradient(45deg, black, transparent);
+    background-size: cover;
+    font-family: monospace;
 }
 
 .mh-370 {

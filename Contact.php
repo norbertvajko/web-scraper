@@ -5,7 +5,6 @@
     <meta content="Free Web Scrape , Search products " name="description">
     <meta content="Scrape , Crawl , Web Scrape , Web Crawler" name="keywords">
     <meta content="Vajko Norbert" name="author">
-    <meta content="30" http-equiv="refresh">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <title>Contact</title>
@@ -15,8 +14,7 @@
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <link href="assets/css/contact-page.css" rel="stylesheet">
-    <link href="assets/css/nav-bar.css" rel=stylesheet>
-    <link href="assets/css/footer.css" rel="stylesheet">
+    <link href="assets/css/home-page.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
@@ -72,82 +70,34 @@
 <main class="content">
     <section class="contact-us">
         <div class="container">
-            <div class="col-lg-10">
-                <div class="wrapper">
-                    <div class="col-md-6 d-flex align-items-stretch">
-                        <div class="info-wrap w-100 p-md-5 p-4 py-5">
-                            <h3>Contact Info</h3>
-                            <div class="dbox w-100 d-flex align-items-start">
-                                <div class="icon d-flex align-items-center justify-content-center">
-                                    <span class="fa fa-map-marker"></span>
-                                </div>
-                                <div class="text pl-3">
-                                    <p><span>Address:</span> Strada G.Magheru kandoadna</p>
-                                </div>
-                            </div>
-                            <div class="dbox w-100 d-flex align-items-center">
-                                <div class="icon d-flex align-items-center justify-content-center">
-                                    <span class="fa fa-phone"></span>
-                                </div>
-                                <div class="text pl-3">
-                                    <p><span>Phone:</span> <a href="tel://1234567920">077000000</a></p>
-                                </div>
-                            </div>
-                            <div class="dbox w-100 d-flex align-items-center">
-                                <div class="icon d-flex align-items-center justify-content-center">
-                                    <span class="fa fa-paper-plane"></span>
-                                </div>
-                                <div class="text pl-3">
-                                    <p><span>Email:</span> <a href="mailto:info@yoursite.com">norbertvajko@yahoo.com</a></p>
-                                </div>
-                            </div>
-                            <div class="dbox w-100 d-flex align-items-center">
-                                <div class="icon d-flex align-items-center justify-content-center">
-                                    <span class="fa fa-globe"></span>
-                                </div>
-                                <div class="text pl-3">
-                                    <p><span>Website</span> <a href="index.php">rankingCoach</a></p>
-                                </div>
-                            </div>
+            <div class="contact-wrap">
+                <form class="contact-form w-100 d-flex flex-wrap justify-content-between pb-5">
+                    <h1 class="contact-form-title w-100 d-flex justify-content-start pb-5">Contact Us</h1>
+                    <div class="contact-form-row row w-100 d-flex flex-row">
+                        <div class="contact-input position-relative w-50">
+                            <span class="label-input">Your Name</span>
+                            <input class="input" type="text" name="name" id="formName" placeholder="Enter your name">
+                        </div>
+                        <div class="contact-input w-50">
+                            <span class="label-input">E-mail</span>
+                            <input class="input" type="email" name="email" id="formEmail" placeholder="Enter your e-mail">
                         </div>
                     </div>
-                    <div class="col-md-6 d-flex align-items-stretch">
-                        <div class="contact-wrap w-100 p-md-5 p-4 py-5">
-                            <h3 class="contact-title">Write us</h3>
-                            <div class="row">
-                                <div class="col-md-12 p-2">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" name="name" id="name"
-                                               placeholder="Name">
-                                    </div>
-                                </div>
-                                <div class="col-md-12 p-2">
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" name="email" id="email"
-                                               placeholder="Email">
-                                    </div>
-                                </div>
-                                <div class="col-md-12 p-2">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" name="subject" id="subject"
-                                               placeholder="Subject">
-                                    </div>
-                                </div>
-                                <div class="col-md-12 p-2">
-                                    <div class="form-group">
-                                        <textarea name="message" class="form-control" id="message" cols="30" rows="6"
-                                                  placeholder="Message"></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-md-12 p-2">
-                                    <div class="form-group">
-                                        <a href="#" role="button" class="submit-button">Send message</a>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="contact-form-row row w-100 d-flex flex-row">
+                        <div class="contact-input d-flex flex-column w-100 mt-40 ">
+                            <span class="label-input">Message</span>
+                            <textarea class="textarea-input" name="message" id="formMessage"
+                                      placeholder="Your message here..."></textarea>
                         </div>
                     </div>
-                </div>
+                    <div class="contact-form-button w-100 d-flex flex-wrap mt-40">
+                        <button class="button-form" onclick="submitPopUp()">
+                            <span>
+                                Submit
+                            </span>
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
@@ -177,7 +127,7 @@
                 </ul>
             </div>
 
-            <div class="col-md-6 text-end contact-section">
+            <div class="col-md-6 text-end contact-section text-sm-center col text-center">
                 <h3>Contact Info</h3>
                 <ul class="contact-info">
                     <li><i class="fa fa-map-marker" aria-hidden="true"><a
@@ -189,11 +139,41 @@
                 </ul>
             </div>
         </div>
-    </div>
-    <div class="container text-center copyright-section">
-        <p>Copyright © 2022 Scrappy. All rights reserved.</p>
+
+        <div class="newsletter-area container  my-5">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="newsletter-header m-auto text-center">
+                        <h5>Do you want to receive smart shopping advice from us?</h5>
+                        <p>Then subscribe to our newsletter!</p>
+                    </div>
+                    <form class="newsletter-form">
+                        <div class="d-flex justify-content-center flex-column flex-md-row w-50 align-items-center m-auto">
+                            <input type="email" class="form-control mt-3 " placeholder="Enter e-mail">
+                            <button type="submit" class="subscribe-button d-flex flex-wrap ms-3 mt-3">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="container text-center copyright-section">
+            <p class="m-0">Copyright © 2022 Scrappy. All rights reserved.</p>
+        </div>
     </div>
 </footer>
+
+<script>
+    function submitPopUp() {
+        let name = document.getElementById("formName").value;
+        let email = document.getElementById("formEmail").value;
+        let message = document.getElementById("formMessage").value;
+        const x = [name,email,message];
+        if (x != null) {
+            alert(x);
+        };
+    }
+</script>
 
 </body>
 </html>
