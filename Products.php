@@ -29,48 +29,49 @@
 </head>
 
 <!--------------------------------------------- Start Nav Bar Area ---------------------------------------------------->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top bor-sha">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <i class="navbar-logo mx-3 ps-1">Scrappy</i>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-menu"
-                    aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse navbar-menu" id="navbar1">
-                <form class="search-form me-3">
-                    <div class="input-form w-100">
-                        <label>
-                            <input type="search" class="form-control" placeholder="Search"/>
-                        </label>
-                    </div>
-                </form>
-                <ul class="navbar-nav fw-500">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.php">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Favorites.php">Favorites</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="About%20Us.php">About us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Contact.php">Contact</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav d-flex flex-row ms-auto">
-                    <li class="nav-item me-3 me-lg-0">
-                        <a class="nav-link log-in" href="#" role="button">Log In</a>
-                    </li>
-                    <li class="nav-item me-3 me-lg-0 ">
-                        <a class="nav-link register" href="#" role="button">Register</a>
-                    </li>
-                </ul>
-            </div>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top bor-sha">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <i class="navbar-logo mx-3 ps-1">Scrappy</i>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-menu"
+                aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse navbar-menu" id="navbar1">
+            <form class="search-form me-3">
+                <div class="input-form w-100">
+                    <label>
+                        <input type="search" class="form-control" placeholder="Search"/>
+                    </label>
+                </div>
+            </form>
+            <ul class="navbar-nav fw-500">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Products.php">Favorites</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="About%20Us.php">About us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Contact.php">Contact</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav d-flex flex-row ms-auto">
+                <li class="nav-item me-3 me-lg-0">
+                    <a class="nav-link log-in" href="#" role="button">Log In</a>
+                </li>
+                <li class="nav-item me-3 me-lg-0 ">
+                    <a class="nav-link register" href="#" role="button">Register</a>
+                </li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
 <!--------------------------------------------- End Nav Bar Area ------------------------------------------------------>
 
 <!----------------------------------------------- Start Main Area ----------------------------------------------------->

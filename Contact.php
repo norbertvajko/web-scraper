@@ -163,7 +163,7 @@
     </div>
 </footer>
 
-<script>
+<script>   //ex 1
     function submitPopUp() {
         let name = document.getElementById("formName").value;
         let email = document.getElementById("formEmail").value;
@@ -171,8 +171,27 @@
         const x = [name,email,message];
         if (x != null) {
             alert(x);
-        };
+        }
     }
+</script>
+<script> //ex 2
+    document.addEventListener('mouseleave' , () => console.log('Mouse left window'));
+    document.addEventListener('mouseenter' , () => console.log('Mouse entered window'));
+</script>
+
+<script> //ex 3
+
+    window.addEventListener('scroll',scrollEffect);
+
+    let winHeight = window.innerHeight/2;
+
+    function scrollEffect() {
+        if (window.scrollY > winHeight) {
+            console.log('You scrolled more than 50% height');
+            }
+    }
+
+
 </script>
 
 </body>
