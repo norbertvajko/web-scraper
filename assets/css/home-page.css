@@ -163,3 +163,18 @@ body {
 .price-comparassion-list .fa {
     color:rgb(35, 230, 168);
 }
+.terminal-question {
+    color:white;
+    background: transparent;
+    cursor: default;
+}
+.terminal-search {
+    position:absolute;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid green;
+    outline: transparent;
+    color:greenyellow;
+    top:80%;
+    left:7.8%;
+}

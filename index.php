@@ -98,6 +98,13 @@
                         <div class="terminal-icon-max"></div>
                     </div>
                 </div>
+                <div class="terminal-body position-relative">
+                    <div class="terminal-question px-5 py-5" id="msgText">
+                    </div>
+                    <div class="terminal-answer">
+                        <input type="search" class="terminal-search">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -730,7 +737,7 @@
 </footer>
 <!------------------------------------------------ End Footer Area ---------------------------------------------------->
 
-<script src="/js/accordion.js"></script>
+<script src="js/terminalText.js"></script>
 
 </body>
 </html>

@@ -187,9 +187,11 @@
 
     function scrollEffect() {
         if (window.scrollY > winHeight) {
-            console.log('You scrolled more than 50% height');
-            }
+            alert('You scrolled more than 50% height');
+                return;
+       }
     }
+
 
 
 </script>
