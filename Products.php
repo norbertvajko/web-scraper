@@ -86,16 +86,16 @@
                                  alt="product-img" class="img-fluid mh-240">
                         </div>
                         <div class="card-content-box">
-                            <h1 class="product-title">Product name</h1>
-                            <div class="product-stars">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
+                            <h1 class="product-title" id="productTitle"></h1>
+                            <div class="product-stars" id="produdctRate">
+<!--                                <i class="fa fa-star"></i>-->
+<!--                                <i class="fa fa-star"></i>-->
+<!--                                <i class="fa fa-star"></i>-->
+<!--                                <i class="fa fa-star"></i>-->
+<!--                                <i class="fa fa-star-o"></i>-->
                                 <span>(13)</span>
                             </div>
-                            <h2 class="product-price">1099<sup>99</sup> lei</h2>
+                            <h2 class="product-price" id="productPrice"></h2>
                             <a href="#" class="product-offer">Offers</a>
                         </div>
                     </div>

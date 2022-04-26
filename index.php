@@ -102,7 +102,7 @@
                     <div class="terminal-question px-5 py-5" id="msgText">
                     </div>
                     <div class="terminal-answer">
-                        <input type="search" class="terminal-search">
+                        <input type="text" id="inputText" class="terminal-search" />
                     </div>
                 </div>
             </div>
@@ -738,6 +738,6 @@
 <!------------------------------------------------ End Footer Area ---------------------------------------------------->
 
 <script src="js/terminalText.js"></script>
-
+<script src="js/request.js"></script>
 </body>
 </html>

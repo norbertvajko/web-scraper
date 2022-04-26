@@ -178,3 +178,7 @@ body {
     top:80%;
     left:7.8%;
 }
+.terminal-answer button {
+    position:absolute;
+    left:50%;
+}

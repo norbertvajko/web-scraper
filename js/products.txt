@@ -1,0 +1,20 @@
+var products = [
+    {
+        "name": "Iphone 12",
+        "rating": 5,
+        "color": "Red",
+        "price": 3055
+    },
+    {
+        "name": "Samsung A31",
+        "rating": 4.5,
+        "color": "Green",
+        "price": 2850
+    },
+    {
+        "name": "Samsung A31",
+        "rating": 4.5,
+        "color": "Green",
+        "price": 2850
+    }
+]
