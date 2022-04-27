@@ -45,13 +45,13 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse navbar-menu" id="navbar1">
-            <form class="search-form me-3">
-                <div class="input-form w-100">
-                    <label>
-                        <input type="search" class="form-control" placeholder="Search"/>
-                    </label>
-                </div>
-            </form>
+<!--            <form class="search-form me-3">-->
+<!--                <div class="input-form w-100">-->
+<!--                    <label>-->
+<!--                        <input type="search" class="form-control" placeholder="Search"/>-->
+<!--                    </label>-->
+<!--                </div>-->
+<!--            </form>-->
             <ul class="navbar-nav fw-500">
                 <li class="nav-item">
                     <a class="nav-link" href="index.php">Home</a>
@@ -69,6 +69,28 @@
             <ul class="navbar-nav d-flex flex-row ms-auto">
                 <li class="nav-item me-3 me-lg-0">
                     <a class="nav-link log-in" href="#" role="button">Log In</a>
+                    <div class="popup d-none">
+                        <div class="close-btn">&times;</div>
+                        <div class="form-element">
+                            <label for="email">E-mail</label>
+                            <input type="text" id="email" placeholder="E-mail">
+                        </div>
+                        <div class="form-element">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" placeholder="Enter password">
+                        </div>
+                        <div class="form-element">
+                            <input type="checkbox" id="remember-me">
+                            <label for="remember-me">Remember me</label>
+                        </div>
+                        <div class="form-element">
+                            <button>Sign in</button>
+                        </div>
+                        <div class="form-element">
+                            <a href="#">Forgot password</a>
+                        </div>
+                        <div
+                    </div>
                 </li>
                 <li class="nav-item me-3 me-lg-0 ">
                     <a class="nav-link register" href="#" role="button">Register</a>
@@ -102,7 +124,9 @@
                     <div class="terminal-question px-5 py-5" id="msgText">
                     </div>
                     <div class="terminal-answer">
-                        <input type="text" id="inputText" class="terminal-search" />
+<!--                       <form method="POST" action="Products.php>    -->
+                                <input type="text" id="inputText" class="terminal-search"/>
+<!--                        </form>-->
                     </div>
                 </div>
             </div>
@@ -737,7 +761,6 @@
 </footer>
 <!------------------------------------------------ End Footer Area ---------------------------------------------------->
 
-<script src="js/terminalText.js"></script>
-<script src="js/request.js"></script>
+<script src="assets/js/terminalText.js"></script>
 </body>
 </html>

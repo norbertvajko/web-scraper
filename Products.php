@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<body lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
 
@@ -9,7 +9,7 @@
     <meta content="Vojko Norbert" name="author">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Scrappy</title>
+    <title>Products</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -26,6 +26,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+
 </head>
 
 <!--------------------------------------------- Start Nav Bar Area ---------------------------------------------------->
@@ -41,10 +42,11 @@
         </button>
         <div class="collapse navbar-collapse navbar-menu" id="navbar1">
             <form class="search-form me-3">
-                <div class="input-form w-100">
-                    <label>
-                        <input type="search" class="form-control" placeholder="Search"/>
-                    </label>
+                <div class="input-form w-100 position-relative">
+                    <form id="getForm">
+                        <input type="text" class="form-control" placeholder="Search" id="inputText">
+                        <button type="button" id="button">get Data</button>
+                    </form>
                 </div>
             </form>
             <ul class="navbar-nav fw-500">
@@ -76,77 +78,73 @@
 
 <!----------------------------------------------- Start Main Area ----------------------------------------------------->
 <main class="main-content">
-    <div class="container py-5 my-5">
-        <div class="row">
-            <div class="results-box d-flex flex-row">
-                <div class="col my-auto mx-3">
-                    <div class="card secondary-card d-flex justify-content-start align-items-center h-75" id="secondaryProduct">
-                        <div class="image-box ">
-                            <img src="https://www.corsair.com/corsairmedia/sys_master/productcontent/CH-9300011-NA-M65_PRO_RGB_BLK_04.png"
-                                 alt="product-img" class="img-fluid mh-240">
-                        </div>
-                        <div class="card-content-box">
-                            <h1 class="product-title" id="productTitle"></h1>
-                            <div class="product-stars" id="produdctRate">
-<!--                                <i class="fa fa-star"></i>-->
-<!--                                <i class="fa fa-star"></i>-->
-<!--                                <i class="fa fa-star"></i>-->
-<!--                                <i class="fa fa-star"></i>-->
-<!--                                <i class="fa fa-star-o"></i>-->
-                                <span>(13)</span>
-                            </div>
-                            <h2 class="product-price" id="productPrice"></h2>
-                            <a href="#" class="product-offer">Offers</a>
-                        </div>
-                    </div>
+    <div class="products" id="products1">
+        <div class="card">
+            <img class="card-img"
+                 src="https://lcdn.altex.ro/media/catalog/product/T/e/Telefon_APPLE_iPhone_13_5G_128GB_Midnight_4_.jpg"
+                 alt="card-photo">
+            <div class="card-info">
+                <h1 class="card-title" id="cardTitle"></h1>
+                <span class="card-rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                    <a class="rating-number" href="#">(13)</a>
+                </span>
+                <div class="card-price">
+                    1209 lei
                 </div>
-                <div class="col">
-                    <div class="card main-card d-flex justify-content-center align-items-center" id="mainProduct">
-                        <div class="image-box ">
-                            <img src="https://www.corsair.com/corsairmedia/sys_master/productcontent/CH-9300011-NA-M65_PRO_RGB_BLK_04.png"
-                                 alt="product-img" class="img-fluid mh-370">
-                        </div>
-                        <div class="card-content-box position-relative">
-                            <h1 class="product-title my-3 mx-4">Laptop Huawei MateBook D15, Intel Core i3-10110U pana la
-                                4.1GHz, 15.6" Full HD, 8GB, SSD 256GB, Intel UHD Graphics, Windows 10 Home, Silver</h1>
-                            <div class="product-stars ms-4 fs-18">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                                <span><a href="#" class="text-decoration-none">(13)</a></span>
-                            </div>
-                            <h2 class="product-price fs-4 ms-4 my-2">1099<sup>99</sup> lei
-                                <buttton type="button" class="btn btn-primary position-absolute r-17 t-55">Offers</buttton>
-                            </h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="col  my-auto mx-3">
-                    <div class="card secondary-card d-flex justify-content-start align-items-center h-75"
-                         id="thirdProduct">
-                        <div class="image-box ">
-                            <img src="https://www.corsair.com/corsairmedia/sys_master/productcontent/CH-9300011-NA-M65_PRO_RGB_BLK_04.png"
-                                 alt="product-img" class="img-fluid mh-240">
-                        </div>
-                        <div class="card-content-box">
-                            <h1 class="product-title">Product name</h1>
-                            <div class="product-stars">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                                <span>(13)</span>
-                            </div>
-                            <h2 class="product-price">1099<sup>99</sup> lei</h2>
-                            <a href="#" class="product-offer">Offers</a>
-                        </div>
-                    </div>
+                <div class="card-offer">
+                    <a href="#" class="card-btn">Offers</a>
                 </div>
             </div>
         </div>
+<!--        <div class="card">-->
+<!--            <img class="card-img"-->
+<!--                 src="https://lcdn.altex.ro/media/catalog/product/T/e/Telefon_APPLE_iPhone_13_5G_128GB_Midnight_4_.jpg"-->
+<!--                 alt="card-photo">-->
+<!--            <div class="card-info">-->
+<!--                <h1 class="card-title">Iphone 13 MAX 12 GB</h1>-->
+<!--                <span class="card-rating">-->
+<!--                    <i class="fa fa-star"></i>-->
+<!--                    <i class="fa fa-star"></i>-->
+<!--                    <i class="fa fa-star"></i>-->
+<!--                    <i class="fa fa-star"></i>-->
+<!--                    <i class="fa fa-star-o"></i>-->
+<!--                    <a class="rating-number" href="#">(13)</a>-->
+<!--                </span>-->
+<!--                <div class="card-price">-->
+<!--                    1209 lei-->
+<!--                </div>-->
+<!--                <div class="card-offer">-->
+<!--                    <a href="#" class="card-btn">Offers</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="card">-->
+<!--            <img class="card-img"-->
+<!--                 src="https://lcdn.altex.ro/media/catalog/product/T/e/Telefon_APPLE_iPhone_13_5G_128GB_Midnight_4_.jpg"-->
+<!--                 alt="card-photo">-->
+<!--            <div class="card-info">-->
+<!--                <h1 class="card-title">Iphone 13 MAX 12 GBdsadasdsa dsadas dsa asdas das dsa as</h1>-->
+<!--                <span class="card-rating">-->
+<!--                    <i class="fa fa-star"></i>-->
+<!--                    <i class="fa fa-star"></i>-->
+<!--                    <i class="fa fa-star"></i>-->
+<!--                    <i class="fa fa-star"></i>-->
+<!--                    <i class="fa fa-star-o"></i>-->
+<!--                    <a class="rating-number" href="#">(13)</a>-->
+<!--                </span>-->
+<!--                <div class="card-price">-->
+<!--                    1209 lei-->
+<!--                </div>-->
+<!--                <div class="card-offer">-->
+<!--                    <a href="#" class="card-btn">Offers</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
     </div>
 </main>
 
@@ -215,13 +213,7 @@
 </footer>
 <!------------------------------------------------ End Footer Area ---------------------------------------------------->
 
-<script>
-    $(function(){
-        $('#mainProduct').hide().fadeIn(1000);
-        $('#secondaryProduct').hide().fadeIn(3000);
-        $('#thirdProduct').hide().fadeIn(3000);
-    });
-</script>
+<script src="assets/js/request.js"></script>
 
 </body>
 </html>

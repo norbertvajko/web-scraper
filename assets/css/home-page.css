@@ -167,6 +167,7 @@ body {
     color:white;
     background: transparent;
     cursor: default;
+    caret-color: greenyellow;
 }
 .terminal-search {
     position:absolute;
@@ -174,9 +175,9 @@ body {
     border: none;
     border-bottom: 1px solid green;
     outline: transparent;
-    color:greenyellow;
     top:80%;
     left:7.8%;
+    color:greenyellow;
 }
 .terminal-answer button {
     position:absolute;
