@@ -79,6 +79,15 @@
 <!--------------------------------------------- Start Banner Area ----------------------------------------------------->
 
 <header class="banner-area mt-56">
+
+    <div class="container">
+        <div class="row">
+            <div class="banner-title">
+                <h1>238 results for "X"</h1>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
         <form class="search-form ">
             <div class="input-form w-50 m-auto position-relative ">
@@ -89,6 +98,7 @@
             </div>
         </form>
     </div>
+
 </header>
 
 <!----------------------------------------------- End Banner Area ----------------------------------------------------->

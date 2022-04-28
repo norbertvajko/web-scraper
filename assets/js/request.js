@@ -14,6 +14,7 @@ btn.addEventListener('click',function () {
 });
 
 function renderHTML(ddata) {
+
     if (inputSearch.value){
         document.getElementById("products1").innerHTML = "";
         for (const item in ddata.products) {
@@ -40,7 +41,7 @@ function renderHTML(ddata) {
                         <div class="card-offer">
                             <a href="#" class="card-btn">Offers</a>
                         </div>
-                        <span class="card-badge"><i class="fa fa-heart-o"></i></span>
+                        <span class="card-badge"><i class="fa fa-heart-o favorite-icon"></i></span>
                     </div>
                 </div>`
                 document.getElementById("products1").innerHTML += card;

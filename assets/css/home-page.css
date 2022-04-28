@@ -1,14 +1,14 @@
 @import "general.css";
 @import "nav-bar.css";
 @import "footer.css";
-@font-face {
-    font-family: "Fixedsys";
-    src: url("/assets/fonts/fixedsys/fsex300-webfont.ttf") format('truetype'),
-        url("/assets/fonts/fixedsys/fsex300-webfont.woff") format('truetype');
-}
+@import "results.css";
+/*@font-face {*/
+/*    font-family: "Fixedsys";*/
+/*    src: url("/assets/fonts/fixedsys/fsex300-webfont.ttf") format('truetype'),*/
+/*        url("/assets/fonts/fixedsys/fsex300-webfont.woff") format('truetype');*/
+/*}*/
 body {
-    /*font-family: Fixedsys, monospace;*/
-    font-family: monospace;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
 }
 
 .banner-area {
@@ -128,27 +128,11 @@ body {
 .nav-link {
     color:blue;
 }
+
 .newsletter .container {
     background: rgb(217, 220, 218);
 }
-.subscribe-button {
-    width:110px;
-    height: 40px;
-}
-.subscribe-button:hover {
-    background: #730bec url(/assets/images/pixel2.png);
-    transition-delay: 1.1s;
-    background-size: 100px;
-    animation: anim 2.2s steps(20) forwards;
-}
-@keyframes anim {
-    0% {
-        background-position-y: 0;
-    }
-    100% {
-        background-position-y: -480px;
-    }
-}
+
 .main-features {
     background-color: rgb(245, 246, 250);
 }

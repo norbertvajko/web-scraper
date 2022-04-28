@@ -57,7 +57,7 @@
                     <a class="nav-link" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Products.php">Favorites</a>
+                    <a class="nav-link" href="Results.php">Favorites</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="About%20Us.php">About us</a>
@@ -747,7 +747,13 @@
                     <form class="newsletter-form">
                         <div class="d-flex justify-content-center flex-column flex-md-row w-50 align-items-center m-auto">
                             <input type="email" class="form-control mt-3 " placeholder="Enter e-mail">
-                            <button type="submit" class="subscribe-button d-flex flex-wrap ms-3 mt-3">Subscribe</button>
+                            <a href="#" class="subscribe-button position-relative d-flex flex-wrap ms-3 mt-3">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                Subscribe
+                            </a>
                         </div>
                     </form>
                 </div>
