@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<body lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
 
@@ -28,7 +28,7 @@
 
 
 </head>
-
+<body>
 <!--------------------------------------------- Start Nav Bar Area ---------------------------------------------------->
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top bor-sha">
@@ -41,14 +41,14 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse navbar-menu" id="navbar1">
-            <form class="search-form me-3">
-                <div class="input-form w-100 position-relative">
-                    <form id="getForm">
-                        <input type="text" class="form-control" placeholder="Search" id="inputText">
-                        <button type="button" id="button">get Data</button>
-                    </form>
-                </div>
-            </form>
+<!--            <form class="search-form me-3">-->
+<!--                <div class="input-form w-100 position-relative">-->
+<!--                    <form id="getForm">-->
+<!--                        <input type="text" class="form-control" placeholder="Search" id="inputText">-->
+<!--                        <button type="button" id="button">get Data</button>-->
+<!--                    </form>-->
+<!--                </div>-->
+<!--            </form>-->
             <ul class="navbar-nav fw-500">
                 <li class="nav-item">
                     <a class="nav-link" href="index.php">Home</a>
@@ -76,31 +76,48 @@
 </nav>
 <!--------------------------------------------- End Nav Bar Area ------------------------------------------------------>
 
+<!--------------------------------------------- Start Banner Area ----------------------------------------------------->
+
+<header class="banner-area mt-56">
+    <div class="container">
+        <form class="search-form ">
+            <div class="input-form w-50 m-auto position-relative ">
+                <form id="getForm">
+                    <input type="text" class="form-control" placeholder="Search" id="inputText">
+                    <button class="search-btn position-absolute" type="button" id="button"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </form>
+    </div>
+</header>
+
+<!----------------------------------------------- End Banner Area ----------------------------------------------------->
+
 <!----------------------------------------------- Start Main Area ----------------------------------------------------->
 <main class="main-content">
     <div class="products" id="products1">
-        <div class="card">
-            <img class="card-img"
-                 src="https://lcdn.altex.ro/media/catalog/product/T/e/Telefon_APPLE_iPhone_13_5G_128GB_Midnight_4_.jpg"
-                 alt="card-photo">
-            <div class="card-info">
-                <h1 class="card-title" id="cardTitle"></h1>
-                <span class="card-rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-                    <a class="rating-number" href="#">(13)</a>
-                </span>
-                <div class="card-price">
-                    1209 lei
-                </div>
-                <div class="card-offer">
-                    <a href="#" class="card-btn">Offers</a>
-                </div>
-            </div>
-        </div>
+<!--        <div class="card">-->
+<!--            <img class="card-img"-->
+<!--                 src="https://lcdn.altex.ro/media/catalog/product/T/e/Telefon_APPLE_iPhone_13_5G_128GB_Midnight_4_.jpg"-->
+<!--                 alt="card-photo">-->
+<!--            <div class="card-info">-->
+<!--                <h1 class="card-title" id="cardTitle"></h1>-->
+<!--                <span class="card-rating">-->
+<!--                    <i class="fa fa-star"></i>-->
+<!--                    <i class="fa fa-star"></i>-->
+<!--                    <i class="fa fa-star"></i>-->
+<!--                    <i class="fa fa-star"></i>-->
+<!--                    <i class="fa fa-star-o"></i>-->
+<!--                    <a class="rating-number" href="#">(13)</a>-->
+<!--                </span>-->
+<!--                <div class="card-price">-->
+<!--                    1209 lei-->
+<!--                </div>-->
+<!--                <div class="card-offer">-->
+<!--                    <a href="#" class="card-btn">Offers</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
 <!--        <div class="card">-->
 <!--            <img class="card-img"-->
 <!--                 src="https://lcdn.altex.ro/media/catalog/product/T/e/Telefon_APPLE_iPhone_13_5G_128GB_Midnight_4_.jpg"-->
