@@ -7,7 +7,7 @@
 
 body {
     background: linear-gradient(45deg, black, transparent);
-    background: white;
+    background: radial-gradient(black, transparent);
     background-size: cover;
     font-family: monospace;
     width:100%;
@@ -62,8 +62,8 @@ body {
     height: 100%;
     top: 0;
     left: 0;
-    background: rgb(84,78,77);
-    background: linear-gradient(180deg, rgba(84,78,77,1) 38%, rgba(244,230,255,1) 67%);
+    background: rgb(188,188,207);
+    background: linear-gradient(180deg, rgba(188,188,207,1) 0%, rgba(0,0,0,1) 48%);
     z-index: 2;
     transition: 0.5s all ease-in-out;
     opacity: 0.5;
@@ -100,7 +100,7 @@ body {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    color:black;
+    color:white;
 }
 .rating-number {
     text-decoration: none;
@@ -125,10 +125,11 @@ body {
 }
 .card-badge {
     position:absolute;
-    top:0;
+    top:-165px;
+    right:0;
 }
 .banner-area {
-    background: #999999;
+    background: transparent;
 }
 .search-btn {
     position:absolute;
