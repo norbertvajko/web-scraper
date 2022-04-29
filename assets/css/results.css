@@ -57,3 +57,16 @@ body {
     text-overflow: ellipsis;
     white-space:nowrap
 }
+
+.tab-content {
+    border: 1px solid rgb(233, 233, 233);
+    border-radius:5px;
+    border-top:none;
+    background-color: rgb(255, 255, 255);
+}
+.rest-offers-content {
+    border: 1px solid rgb(233, 233, 233);
+    border-radius:5px;
+    border-top:none;
+    background-color: rgb(255, 255, 255);
+}
