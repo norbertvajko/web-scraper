@@ -187,37 +187,28 @@
             <div class="container">
                 <div class="row mt-3">
                     <!-- Nav tabs -->
-                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <ul class="nav nav-tabs" id="nav-tab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="bestOfferTab" data-bs-toggle="tab"
-                                    data-bs-target="#home"
-                                    type="button" role="tab" aria-controls="home" aria-selected="true">Best offer
-                            </button>
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="contact" aria-selected="false">Best Offer</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="descriptionT" data-bs-toggle="tab" data-bs-target="#profile"
-                                    type="button" role="tab" aria-controls="profile" aria-selected="false">Description
-                            </button>
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="contact" aria-selected="false">Description</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="statisticT" data-bs-toggle="tab" data-bs-target="#contact"
-                                    type="button" role="tab" aria-controls="contact" aria-selected="false">Statistics
-                            </button>
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Statistics</button>
                         </li>
                     </ul>
                     <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade show active" id="bestOfferTab" role="tabpanel"
-                             aria-labelledby="home-tab">
-                            <div class="container">
-                                <h2>Oferte evidentiate</h2>
-                                <div class="row">
-                                    <div class="col best-offer-menu">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="container my-4 mx-2">
+                                <div class="row align-items-center my-2 mx-1">
+                                    <div class="col-2 best-offer-logo">
                                         <div class="offer-company-logo">
                                             <img src="https://p1.akcdn.net/partnerlogosmall/191379.jpg"
                                                  alt="company-logo">
                                         </div>
                                     </div>
-                                    <div class="col best-offer-menu">
+                                    <div class="col-2 best-offer-stars">
                                         <div class="offer-rating">
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
@@ -225,19 +216,18 @@
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star-o"></i>
                                         </div>
-                                        <span>(13 reviews)</span>
                                     </div>
-                                    <div class="col best-offer-menu">
+                                    <div class="col-4 best-offer-title ">
+                                        <h3>Apple Telefon mobil Apple iPhone 13, 128GB, 4GB RAM, 5G, Red</h3>
+                                    </div>
+                                    <div class="col-2 best-offer-price d-flex justify-content-end">
                                         <div class="offer-price">
-                            <span class="best-offer-price">
-                                3 810,00 RON
-                            </span>
+                                                <span class="best-offer-price">
+                                                     3 810,00 RON
+                                                  </span>
                                         </div>
-                                        <span class="best-offer-stock">
-                                In stock
-                            </span>
                                     </div>
-                                    <div class="col best-offer-menu">
+                                    <div class="col-2 best-offer-btn d-flex justify-content-end">
                                         <div class="best-to-shop">
                                             <button class="btn btn-primary">
                                                 to shop
@@ -246,14 +236,14 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col best-offer-menu">
+                                <div class="row align-items-center my-2 mx-1">
+                                    <div class="col-2 best-offer-logo">
                                         <div class="offer-company-logo">
                                             <img src="https://p1.akcdn.net/partnerlogosmall/36258.jpg"
                                                  alt="company-logo">
                                         </div>
                                     </div>
-                                    <div class="col best-offer-menu">
+                                    <div class="col-2 best-offer-stars">
                                         <div class="offer-rating">
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
@@ -261,19 +251,18 @@
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star-o"></i>
                                         </div>
-                                        <span>(13 reviews)</span>
                                     </div>
-                                    <div class="col best-offer-menu">
+                                    <div class="col-4 best-offer-title ">
+                                        <h3>Apple iPhone 13 128GB</h3>
+                                    </div>
+                                    <div class="col-2 best-offer-price d-flex justify-content-end">
                                         <div class="offer-price">
-                            <span class="best-offer-price">
-                                 4 429,99 RON
-                            </span>
+                                                <span class="best-offer-price">
+                                                    4 429,99 RON
+                                                  </span>
                                         </div>
-                                        <span class="best-offer-stock">
-                                In stock
-                            </span>
                                     </div>
-                                    <div class="col best-offer-menu">
+                                    <div class="col-2 best-offer-btn d-flex justify-content-end">
                                         <div class="best-to-shop">
                                             <button class="btn btn-primary">
                                                 to shop
@@ -282,14 +271,14 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col best-offer-menu">
+                                <div class="row align-items-center my-2 mx-1">
+                                    <div class="col-2 best-offer-logo">
                                         <div class="offer-company-logo">
                                             <img src="https://p1.akcdn.net/partnerlogosmall/165642.jpg"
                                                  alt="company-logo">
                                         </div>
                                     </div>
-                                    <div class="col best-offer-menu">
+                                    <div class="col-2 best-offer-stars">
                                         <div class="offer-rating">
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
@@ -297,19 +286,18 @@
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star-o"></i>
                                         </div>
-                                        <span>(13 reviews)</span>
                                     </div>
-                                    <div class="col best-offer-menu">
+                                    <div class="col-4 best-offer-title ">
+                                        <h3>Apple Smartphone iPhone 13 5G, 128GB, (PRODUCT)RED (MLPJ3ZD/A)</h3>
+                                    </div>
+                                    <div class="col-2 best-offer-price d-flex justify-content-end">
                                         <div class="offer-price">
-                            <span class="best-offer-price">
-                                5 088,99 RON
-                            </span>
+                                               <span class="best-offer-price">
+                                                   5 088,99 RON
+                                                </span>
                                         </div>
-                                        <span class="best-offer-stock">
-                                In stock
-                            </span>
                                     </div>
-                                    <div class="col best-offer-menu">
+                                    <div class="col-2 best-offer-btn d-flex justify-content-end">
                                         <div class="best-to-shop">
                                             <button class="btn btn-primary">
                                                 to shop
@@ -320,11 +308,10 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"></div>
+                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab"></div>
                     </div>
-                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="descriptionTab">...</div>
-                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="statisticsTab">...</div>
                 </div>
-            </div>
         </section>
 
         <section class="rest-offers">

@@ -70,3 +70,15 @@ body {
     border-top:none;
     background-color: rgb(255, 255, 255);
 }
+.best-offer-title h3 {
+    max-height: 2.3em;
+    overflow: hidden;
+    font-size: 0.9em;
+    line-height: 1.15em;
+    color: #223f95;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+}
