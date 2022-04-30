@@ -102,11 +102,6 @@ body {
 .thumb-wrapper {
     position:relative;
 }
-.favorite-icon {
-    position:absolute;
-    top:0;
-    right:0;
-}
 .thumb-content {
     padding:12px;
     text-align: center;

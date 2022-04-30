@@ -34,27 +34,19 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top bor-sha">
     <div class="container">
         <a class="navbar-brand" href="#">
-            <i class="navbar-logo mx-3 ps-1">Scrappy</i>
+            <img src="https://avatars.githubusercontent.com/u/28140896?s=200&v=4">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-menu"
                 aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse navbar-menu" id="navbar1">
-<!--            <form class="search-form me-3">-->
-<!--                <div class="input-form w-100 position-relative">-->
-<!--                    <form id="getForm">-->
-<!--                        <input type="text" class="form-control" placeholder="Search" id="inputText">-->
-<!--                        <button type="button" id="button">get Data</button>-->
-<!--                    </form>-->
-<!--                </div>-->
-<!--            </form>-->
-            <ul class="navbar-nav fw-500">
+            <ul class="navbar-nav col-md-5 fw-500 fb-fc">
                 <li class="nav-item">
                     <a class="nav-link" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Products.php">Favorites</a>
+                    <a class="nav-link" href="Results.php">Favorites</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="About%20Us.php">About us</a>
@@ -63,20 +55,26 @@
                     <a class="nav-link" href="Contact.php">Contact</a>
                 </li>
             </ul>
+            <form class="search-form mx-5 w-50 m-auto">
+                <div class="input-form">
+                    <label class="input-label w-100">
+                        <input type="search" class="form-control" placeholder="Search"/>
+                    </label>
+                </div>
+            </form>
+
             <ul class="navbar-nav d-flex flex-row ms-auto">
                 <li class="nav-item me-3 me-lg-0">
-                    <a class="nav-link log-in" href="#" role="button">Log In</a>
+                    <button type="button" class="log-in-btn">Log In</button>
                 </li>
                 <li class="nav-item me-3 me-lg-0 ">
-                    <a class="nav-link register" href="#" role="button">Register</a>
+                    <button type="button" class="register-btn">Register</button>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
 <!--------------------------------------------- End Nav Bar Area ------------------------------------------------------>
-
-<!--------------------------------------------- Start Banner Area ----------------------------------------------------->
 
 <header class="banner-area mt-56">
 
@@ -106,72 +104,72 @@
 <!----------------------------------------------- Start Main Area ----------------------------------------------------->
 <main class="main-content">
     <div class="products" id="products1">
-<!--        <div class="card">-->
-<!--            <img class="card-img"-->
-<!--                 src="https://lcdn.altex.ro/media/catalog/product/T/e/Telefon_APPLE_iPhone_13_5G_128GB_Midnight_4_.jpg"-->
-<!--                 alt="card-photo">-->
-<!--            <div class="card-info">-->
-<!--                <h1 class="card-title" id="cardTitle"></h1>-->
-<!--                <span class="card-rating">-->
-<!--                    <i class="fa fa-star"></i>-->
-<!--                    <i class="fa fa-star"></i>-->
-<!--                    <i class="fa fa-star"></i>-->
-<!--                    <i class="fa fa-star"></i>-->
-<!--                    <i class="fa fa-star-o"></i>-->
-<!--                    <a class="rating-number" href="#">(13)</a>-->
-<!--                </span>-->
-<!--                <div class="card-price">-->
-<!--                    1209 lei-->
-<!--                </div>-->
-<!--                <div class="card-offer">-->
-<!--                    <a href="#" class="card-btn">Offers</a>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="card">-->
-<!--            <img class="card-img"-->
-<!--                 src="https://lcdn.altex.ro/media/catalog/product/T/e/Telefon_APPLE_iPhone_13_5G_128GB_Midnight_4_.jpg"-->
-<!--                 alt="card-photo">-->
-<!--            <div class="card-info">-->
-<!--                <h1 class="card-title">Iphone 13 MAX 12 GB</h1>-->
-<!--                <span class="card-rating">-->
-<!--                    <i class="fa fa-star"></i>-->
-<!--                    <i class="fa fa-star"></i>-->
-<!--                    <i class="fa fa-star"></i>-->
-<!--                    <i class="fa fa-star"></i>-->
-<!--                    <i class="fa fa-star-o"></i>-->
-<!--                    <a class="rating-number" href="#">(13)</a>-->
-<!--                </span>-->
-<!--                <div class="card-price">-->
-<!--                    1209 lei-->
-<!--                </div>-->
-<!--                <div class="card-offer">-->
-<!--                    <a href="#" class="card-btn">Offers</a>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="card">-->
-<!--            <img class="card-img"-->
-<!--                 src="https://lcdn.altex.ro/media/catalog/product/T/e/Telefon_APPLE_iPhone_13_5G_128GB_Midnight_4_.jpg"-->
-<!--                 alt="card-photo">-->
-<!--            <div class="card-info">-->
-<!--                <h1 class="card-title">Iphone 13 MAX 12 GBdsadasdsa dsadas dsa asdas das dsa as</h1>-->
-<!--                <span class="card-rating">-->
-<!--                    <i class="fa fa-star"></i>-->
-<!--                    <i class="fa fa-star"></i>-->
-<!--                    <i class="fa fa-star"></i>-->
-<!--                    <i class="fa fa-star"></i>-->
-<!--                    <i class="fa fa-star-o"></i>-->
-<!--                    <a class="rating-number" href="#">(13)</a>-->
-<!--                </span>-->
-<!--                <div class="card-price">-->
-<!--                    1209 lei-->
-<!--                </div>-->
-<!--                <div class="card-offer">-->
-<!--                    <a href="#" class="card-btn">Offers</a>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
+        <div class="card">
+            <img class="card-img"
+                 src="https://lcdn.altex.ro/media/catalog/product/T/e/Telefon_APPLE_iPhone_13_5G_128GB_Midnight_4_.jpg"
+                 alt="card-photo">
+            <div class="card-info">
+                <h1 class="card-title" id="cardTitle"></h1>
+                <span class="card-rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                    <a class="rating-number" href="#">(13)</a>
+                </span>
+                <div class="card-price">
+                    1209 lei
+                </div>
+                <div class="card-offer">
+                    <a href="#" class="card-btn">Offers</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img"
+                 src="https://lcdn.altex.ro/media/catalog/product/T/e/Telefon_APPLE_iPhone_13_5G_128GB_Midnight_4_.jpg"
+                 alt="card-photo">
+            <div class="card-info">
+                <h1 class="card-title">Iphone 13 MAX 12 GB</h1>
+                <span class="card-rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                    <a class="rating-number" href="#">(13)</a>
+                </span>
+                <div class="card-price">
+                    1209 lei
+                </div>
+                <div class="card-offer">
+                    <a href="#" class="card-btn">Offers</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img"
+                 src="https://lcdn.altex.ro/media/catalog/product/T/e/Telefon_APPLE_iPhone_13_5G_128GB_Midnight_4_.jpg"
+                 alt="card-photo">
+            <div class="card-info">
+                <h1 class="card-title">Iphone 13 MAX 12 GBdsadasdsa dsadas dsa asdas das dsa as</h1>
+                <span class="card-rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                    <a class="rating-number" href="#">(13)</a>
+                </span>
+                <div class="card-price">
+                    1209 lei
+                </div>
+                <div class="card-offer">
+                    <a href="#" class="card-btn">Offers</a>
+                </div>
+            </div>
+        </div>
     </div>
 </main>
 

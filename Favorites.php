@@ -26,26 +26,19 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top bor-sha">
     <div class="container">
         <a class="navbar-brand" href="#">
-            <i class="navbar-logo mx-3 ps-1">Scrappy</i>
+            <img src="https://avatars.githubusercontent.com/u/28140896?s=200&v=4">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-menu"
                 aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse navbar-menu" id="navbar1">
-            <form class="search-form me-3">
-                <div class="input-form w-100">
-                    <label>
-                        <input type="search" class="form-control" placeholder="Search"/>
-                    </label>
-                </div>
-            </form>
-            <ul class="navbar-nav fw-500">
+            <ul class="navbar-nav col-md-5 fw-500 fb-fc">
                 <li class="nav-item">
                     <a class="nav-link" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Products.php">Favorites</a>
+                    <a class="nav-link" href="Results.php">Favorites</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="About%20Us.php">About us</a>
@@ -54,12 +47,20 @@
                     <a class="nav-link" href="Contact.php">Contact</a>
                 </li>
             </ul>
+            <form class="search-form mx-5 w-50 m-auto">
+                <div class="input-form">
+                    <label class="input-label w-100">
+                        <input type="search" class="form-control" placeholder="Search"/>
+                    </label>
+                </div>
+            </form>
+
             <ul class="navbar-nav d-flex flex-row ms-auto">
                 <li class="nav-item me-3 me-lg-0">
-                    <a class="nav-link log-in" href="#" role="button">Log In</a>
+                    <button type="button" class="log-in-btn">Log In</button>
                 </li>
                 <li class="nav-item me-3 me-lg-0 ">
-                    <a class="nav-link register" href="#" role="button">Register</a>
+                    <button type="button" class="register-btn">Register</button>
                 </li>
             </ul>
         </div>

@@ -82,3 +82,88 @@ body {
     text-overflow: ellipsis;
     white-space:nowrap;
 }
+.capacity-list {
+    list-style: none;
+}
+.capacity-list-items {
+    font-weight: 600;
+}
+.lowest-price {
+    color:black;
+}
+.lowest-price span {
+    color:#ef2809;
+}
+.product-price-alert {
+    list-style: none;
+}
+.product-price-alert a {
+    text-decoration: none;
+    color:darkgrey;
+    font-weight: bold;
+}
+.fa-exclamation-triangle {
+    color:red;
+}
+.fa-balance-scale {
+    color:blue;
+}
+
+
+
+
+
+
+
+.products {
+    width:100%;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 127px;
+}
+.card {
+    width:280px;
+    height:360px;
+    padding: 2rem 1rem;
+    position: relative;
+    display:flex;
+    justify-content: left;
+    box-shadow: 0 7px 10px rgb(0,0,0,0.5);
+    transition:0.5s ease-in-out;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 20px;
+}
+.card:hover {
+    transform:translateY(17px);
+}
+.card::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transition: 0.5s all ease-in-out;
+    opacity: 0.5;
+}
+.card:hover::before {
+    opacity:0.8;
+}
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.rest-offers-content {
+    border: 1px solid rgb(233, 233, 233);
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+}

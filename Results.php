@@ -38,26 +38,19 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top bor-sha">
     <div class="container">
         <a class="navbar-brand" href="#">
-            <i class="navbar-logo mx-3 ps-1">Scrappy</i>
+            <img src="https://avatars.githubusercontent.com/u/28140896?s=200&v=4">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-menu"
                 aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse navbar-menu" id="navbar1">
-            <!--            <form class="search-form me-3">-->
-            <!--                <div class="input-form w-100">-->
-            <!--                    <label>-->
-            <!--                        <input type="search" class="form-control" placeholder="Search"/>-->
-            <!--                    </label>-->
-            <!--                </div>-->
-            <!--            </form>-->
-            <ul class="navbar-nav fw-500">
+            <ul class="navbar-nav col-md-5 fw-500 fb-fc">
                 <li class="nav-item">
                     <a class="nav-link" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Products.php">Favorites</a>
+                    <a class="nav-link" href="Results.php">Favorites</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="About%20Us.php">About us</a>
@@ -66,39 +59,20 @@
                     <a class="nav-link" href="Contact.php">Contact</a>
                 </li>
             </ul>
-            <div class="form-outline">
-                <input type="text" id="form12" class="form-control" />
-                <label class="form-label" for="form12">Example label</label>
-            </div>
+            <form class="search-form mx-5 w-50 m-auto">
+                <div class="input-form">
+                    <label class="input-label w-100">
+                        <input type="search" class="form-control" placeholder="Search"/>
+                    </label>
+                </div>
+            </form>
 
             <ul class="navbar-nav d-flex flex-row ms-auto">
                 <li class="nav-item me-3 me-lg-0">
-                    <a class="nav-link log-in" href="#" role="button">Log In</a>
-                    <div class="popup d-none">
-                        <div class="close-btn">&times;</div>
-                        <div class="form-element">
-                            <label for="email">E-mail</label>
-                            <input type="text" id="email" placeholder="E-mail">
-                        </div>
-                        <div class="form-element">
-                            <label for="password">Password</label>
-                            <input type="password" id="password" placeholder="Enter password">
-                        </div>
-                        <div class="form-element">
-                            <input type="checkbox" id="remember-me">
-                            <label for="remember-me">Remember me</label>
-                        </div>
-                        <div class="form-element">
-                            <button>Sign in</button>
-                        </div>
-                        <div class="form-element">
-                            <a href="#">Forgot password</a>
-                        </div>
-                        <div
-                    </div>
+                    <button type="button" class="log-in-btn">Log In</button>
                 </li>
                 <li class="nav-item me-3 me-lg-0 ">
-                    <a class="nav-link register" href="#" role="button">Register</a>
+                    <button type="button" class="register-btn">Register</button>
                 </li>
             </ul>
         </div>
@@ -119,7 +93,7 @@
                          class="product-img ">
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-8 mx-auto product-details">
-                    <h1 class="d-none d-sm-block">Apple iPhone 13 128GB</h1>
+                    <h1 class="d-none d-sm-block mb-3">Apple iPhone 13 128GB</h1>
                     <div class="hidden-xs">
                         <div class="rating"
                         <i class="fa fa-star"></i>
@@ -131,49 +105,51 @@
                     </div>
                 </div>
 
-                <div class="user-functions ">
-                    <div class="product-description">
-                        <button class="btn btn-primary">Description</button>
-                    </div>
-                    <div class="product-gallery">
-                        <button class="btn btn-primary">Photo Gallery</button>
-                    </div>
-                    <div class="product-statistics">
-                        <button class="btn btn-primary">Price statistics</button>
-                    </div>
-                    <div class="product-price-alert">
-                        <button class="btn btn-primary">Price alert</button>
+                <div class="user-functions my-4 ">
+                    <ul class="product-description-list ps-20 ">
+                        <li class="product-description-items">
+                            Memorie interna: <span>64 GB</span>
+                        </li>
+                        <li class="product-description-items">
+                            Sistem de operare: <span>iOS</span>
+                        </li>
+                        <li class="product-description-items">
+                            Dimensiune ecran: <span>6.1 inch</span>
+                        </li>
+                        <li class="product-description-items">
+                            Numar nuclee: <span>6</span>
+                        </li>
+                        <li class="product-description-items">
+                            Model procesor: <span>Apple A14 Bionic</span>
+                        </li>
+                    </ul>
+                </div>
+                <h3 class="lowest-price">Lowest price:<span>3 534 00 RON</span></h3>
+
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 mx-auto  featured-offers-top hidden-xs ">
+                <div class="featured-content">
+                    <ul class="product-price-alert ps-0">
+                        <li>
+                            <a href="#">Price Alert
+                                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">Compare
+                                <i class="fa fa-balance-scale" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="product-btn-site ">
+                        <button type="button" class="btn btn-warning">to site
+                            <i class="fa fa-angle-double-right"></i>
+                        </button>
                     </div>
                 </div>
-                <span class="lowest-price" content="3680.00">Lowest price: 3 567 00 RON</span>
-
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 mx-auto  featured-offers-top hidden-xs">
-                <h4>Best offers</h4>
-                <ul class="marked-offerts">
-                    <li class="marked-list my-3">
-                        <a href="#">
-                            <img src="https://p1.akcdn.net/partnerlogosmall/191379.jpg" alt="company-logo">
-                            <span>3 810,00 RON</span>
-                        </a>
-                    </li>
-
-                    <li class="marked-list my-3">
-                        <a href="#">
-                            <img src="https://p1.akcdn.net/partnerlogosmall/36258.jpg" alt="company-logo">
-                            <span>4 429,99 RON</span>
-                        </a>
-                    </li>
-
-                    <li class="marked-list my-3">
-                        <a href="#">
-                            <img src="https://p1.akcdn.net/partnerlogosmall/165642.jpg" alt="company-logo">
-                            <span>5 088,99 RON</span>
-                        </a>
-                    </li>
-                </ul>
             </div>
         </div>
+        <i class="fa fa-heart-o favorite-icon"></i>
     </div>
 </header>
 <!----------------------------------------------- End Banner Area ----------------------------------------------------->
@@ -183,43 +159,57 @@
 <main class="main-results">
 
     <section class="offers">
-        <section class="tab-menu">
-            <div class="container">
-                <div class="row mt-3">
-                    <!-- Nav tabs -->
-                    <ul class="nav nav-tabs" id="nav-tab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="contact" aria-selected="false">Best Offer</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="contact" aria-selected="false">Description</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Statistics</button>
-                        </li>
-                    </ul>
-                    <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                            <div class="container my-4 mx-2">
-                                <div class="row align-items-center my-2 mx-1">
-                                    <div class="col-2 best-offer-logo">
-                                        <div class="offer-company-logo">
-                                            <img src="https://p1.akcdn.net/partnerlogosmall/191379.jpg"
-                                                 alt="company-logo">
-                                        </div>
+        <div class="container">
+            <div class="row mt-3">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="bestOffer-tab" data-bs-toggle="tab" data-bs-target="#bestOffer"
+                                type="button" role="tab" aria-controls="bestOffer" aria-selected="true">Best Offer
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="description-tab" data-bs-toggle="tab"
+                                data-bs-target="#description" type="button" role="tab" aria-controls="description"
+                                aria-selected="false">Description
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="statistics-tab" data-bs-toggle="tab"
+                                data-bs-target="#statistics" type="button" role="tab" aria-controls="statistics"
+                                aria-selected="false">Statistics
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="photo-gallery-tab" data-bs-toggle="tab"
+                                data-bs-target="#photoGallery" type="button" role="tab" aria-controls="photoGallery"
+                                aria-selected="false">Photos
+                        </button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="bestOffer" role="tabpanel"
+                         aria-labelledby="bestOffer-tab">
+                        <div class="container my-4 mx-2">
+                            <div class="row align-items-center my-2 mx-1">
+                                <div class="col-2 best-offer-logo">
+                                    <div class="offer-company-logo">
+                                        <img src="https://p1.akcdn.net/partnerlogosmall/191379.jpg"
+                                             alt="company-logo">
                                     </div>
-                                    <div class="col-2 best-offer-stars">
-                                        <div class="offer-rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-o"></i>
-                                        </div>
+                                </div>
+                                <div class="col-2 best-offer-stars">
+                                    <div class="offer-rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o"></i>
                                     </div>
-                                    <div class="col-4 best-offer-title ">
-                                        <h3>Apple Telefon mobil Apple iPhone 13, 128GB, 4GB RAM, 5G, Red</h3>
-                                    </div>
+                                </div>
+                                <div class="col-4 best-offer-title ">
+                                    <h3>Apple Telefon mobil Apple iPhone 13, 128GB, 4GB RAM, 5G, Red</h3>
+                                </div>
                                     <div class="col-2 best-offer-price d-flex justify-content-end">
                                         <div class="offer-price">
                                                 <span class="best-offer-price">
@@ -306,25 +296,108 @@
                                         </div>
                                     </div>
                                 </div>
+                        </div>
+                        <section class="rest-offers">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="rest-offers-content my-4">
+                                        <div class="rest-offers-header my-4">
+                                            <h3>Restul ofertelor</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="tab-pane fade" id="description" role="tabpanel" aria-labelledby="description-tab">
+                        <div class="container">
+                            <div class="row">
+                                <div class="description-header d-flex justify-content-center align-items-center p-3 my-5 da-border w-50 m-auto">
+                                    <h1 class="description-title">Apple iPhone 13 128GB</h1>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="description-photo da-border m-auto w-75 my-5 p-3 d-flex">
+                                    <div class="col w-50">
+                                        <div class="photo-wrap">
+                                            <img src="https://s13emagst.akamaized.net/products/40685/40684397/images/res_9aa260aaaa84abf7f2a3db2bd2f85a8e.jpg?width=450&height=450&hash=E0DAEFC55242E20912D93D61E9D3C782"
+                                                 class="img-fluid">
+                                        </div>
+                                    </div>
+                                    <div class="col w-50">
+                                        <div class="photo-wrap d-flex mx-3 my-4 ">
+                                            <img src="https://s13emagst.akamaized.net/products/40685/40684428/images/res_4ddfcf30bbe34261b9e32e2adccf07fb.jpg?width=450&height=450&hash=249094D6E4AB5AD0D0DBFD1C1D3F9269"
+                                                 class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="description-general">
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="descriptiom-util1 d-flex justify-content-center align-items-center flex-column p-3 my-5 da-border w-50 m-auto">
+                                    <div class="row">
+                                        <div class="col">
+                                            <h2 class="capacity-title">
+                                                Capacity
+                                            </h2>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <ul class="capacity-list my-2 mx-3 d-inline-flex w-100 ">
+                                                <li class="capacity-list-items mx-4">128 <span>GB</span></li>
+                                                <li class="capacity-list-items mx-4">256 <span>GB</span></li>
+                                                <li class="capacity-list-items mx-4">512 <span>GB</span></li>
+                                                <li class="capacity-list-items mx-4">1<span>TB</span></li>
+                                                <li class="capacity-list-items mx-4">2<span>TB</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"></div>
-                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab"></div>
                     </div>
-                </div>
-        </section>
-
-        <section class="rest-offers">
-            <div class="container">
-                <div class="row">
-                    <h3>Restul ofertelor</h3>
-                    <div class="rest-offers-content">
-
+                    <div class="tab-pane fade" id="statistics" role="tabpanel"
+                         aria-labelledby="statistics-tab"></div>
+                    <div class="tab-pane fade" id="photoGallery" role="tabpanel"
+                         aria-labelledby="photo-gallery-tab">
+                        <div class="container">
+                            <div class="products" id="products1">
+                                <div class="card">
+                                    <img class="card-img"
+                                         src="https://lcdn.altex.ro/media/catalog/product/T/e/Telefon_APPLE_iPhone_13_5G_128GB_Midnight_4_.jpg"
+                                         alt="card-photo">
+                                </div>
+                                <div class="card">
+                                    <img class="card-img"
+                                         src="https://lcdn.altex.ro/media/catalog/product/T/e/Telefon_APPLE_iPhone_13_5G_128GB_Midnight_4_.jpg"
+                                         alt="card-photo">
+                                </div>
+                                <div class="card">
+                                    <img class="card-img"
+                                         src="https://lcdn.altex.ro/media/catalog/product/T/e/Telefon_APPLE_iPhone_13_5G_128GB_Midnight_4_.jpg"
+                                         alt="card-photo">
+                                </div>
+                                <div class="card">
+                                    <img class="card-img"
+                                         src="https://lcdn.altex.ro/media/catalog/product/T/e/Telefon_APPLE_iPhone_13_5G_128GB_Midnight_4_.jpg"
+                                         alt="card-photo">
+                                </div>
+                                <div class="card">
+                                    <img class="card-img"
+                                         src="https://lcdn.altex.ro/media/catalog/product/T/e/Telefon_APPLE_iPhone_13_5G_128GB_Midnight_4_.jpg"
+                                         alt="card-photo">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-
+        </div>
     </section>
 </main>
 
