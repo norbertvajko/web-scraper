@@ -42,6 +42,9 @@
 .ps-20 {
     padding-left: 20px;
 }
+.ms-50 {
+    margin-left:50px;
+}
 .da-border {
     border-bottom: 0.5px solid darkgrey;
     border-bottom-width: thin;

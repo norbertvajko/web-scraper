@@ -45,7 +45,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse navbar-menu" id="navbar1">
-            <ul class="navbar-nav col-md-5 fw-500 fb-fc">
+            <ul class="navbar-nav col-md-5 fw-500 fb-fc ms-lg-5 ms-md-0 ms-sm-0">
                 <li class="nav-item">
                     <a class="nav-link" href="index.php">Home</a>
                 </li>
@@ -59,7 +59,7 @@
                     <a class="nav-link" href="Contact.php">Contact</a>
                 </li>
             </ul>
-            <form class="search-form mx-5 w-50 m-auto">
+            <form class="search-form d-md-block d-lg-none w-50 my-sm-4 my-md-4">
                 <div class="input-form">
                     <label class="input-label w-100">
                         <input type="search" class="form-control" placeholder="Search"/>
@@ -69,8 +69,32 @@
 
             <ul class="navbar-nav d-flex flex-row ms-auto">
                 <li class="nav-item me-3 me-lg-0">
-                    <button type="button" class="log-in-btn">Log In</button>
+                    <button type="button" class="log-in-btn" id="showLogin">Log In</button>
                 </li>
+                <div class="popup ">
+                    <div class="close-btn">&times;</div>
+                    <div class="form">
+                        <h3>Log In</h3>
+                        <div class="form-element d-flex flex-column">
+                            <label for="email">Email</label>
+                            <input type="text" id="email" placeholder="Enter email">
+                        </div>
+                        <div class="form-element d-flex flex-column">
+                            <label for="password">Password</label>
+                            <input type="text" id="password" placeholder="Enter password">
+                        </div>
+                        <div class="form-element">
+                            <input type="checkbox" id="remember-me">
+                            <label for="remember-me">Remember me</label>
+                        </div>
+                        <div class="form-element">
+                            <button>Sign In</button>
+                        </div>
+                        <div class="form-element">
+                            <a href="#">Forgot password?</a>
+                        </div>
+                    </div>
+                </div>
                 <li class="nav-item me-3 me-lg-0 ">
                     <button type="button" class="register-btn">Register</button>
                 </li>
@@ -747,5 +771,7 @@
 <!------------------------------------------------ End Footer Area ---------------------------------------------------->
 
 <script src="assets/js/terminalText.js"></script>
+<script src="assets/js/logInPopUp.js"></script>
+
 </body>
 </html>

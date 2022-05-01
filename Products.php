@@ -65,8 +65,32 @@
 
             <ul class="navbar-nav d-flex flex-row ms-auto">
                 <li class="nav-item me-3 me-lg-0">
-                    <button type="button" class="log-in-btn">Log In</button>
+                    <button type="button" class="log-in-btn" id="showLogin">Log In</button>
                 </li>
+                <div class="popup ">
+                    <div class="close-btn">&times;</div>
+                    <div class="form">
+                        <h3>Log In</h3>
+                        <div class="form-element d-flex flex-column">
+                            <label for="email">Email</label>
+                            <input type="text" id="email" placeholder="Enter email">
+                        </div>
+                        <div class="form-element d-flex flex-column">
+                            <label for="password">Password</label>
+                            <input type="text" id="password" placeholder="Enter password">
+                        </div>
+                        <div class="form-element">
+                            <input type="checkbox" id="remember-me">
+                            <label for="remember-me">Remember me</label>
+                        </div>
+                        <div class="form-element">
+                            <button>Sign In</button>
+                        </div>
+                        <div class="form-element">
+                            <a href="#">Forgot password?</a>
+                        </div>
+                    </div>
+                </div>
                 <li class="nav-item me-3 me-lg-0 ">
                     <button type="button" class="register-btn">Register</button>
                 </li>
@@ -239,6 +263,6 @@
 <!------------------------------------------------ End Footer Area ---------------------------------------------------->
 
 <script src="assets/js/request.js"></script>
-
+<script src="assets/js/logInPopUp.js"></script>
 </body>
 </html>

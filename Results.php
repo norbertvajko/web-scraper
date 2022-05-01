@@ -17,6 +17,7 @@
 
     <link rel="icon" type="image/x-icon" href="assets/images/spider-title-logo.png">
     <link href="assets/css/home-page.css" rel="stylesheet">
+    <link href="assets/css/results.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
 
@@ -45,7 +46,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse navbar-menu" id="navbar1">
-            <ul class="navbar-nav col-md-5 fw-500 fb-fc">
+            <ul class="navbar-nav col-md-5 fw-500 fb-fc ms-lg-5 ">
                 <li class="nav-item">
                     <a class="nav-link" href="index.php">Home</a>
                 </li>
@@ -67,10 +68,34 @@
                 </div>
             </form>
 
-            <ul class="navbar-nav d-flex flex-row ms-auto">
+            <ul class="navbar-nav d-flex flex-row  ms-lg-5 ms-md-0 ms-sm-0>
                 <li class="nav-item me-3 me-lg-0">
-                    <button type="button" class="log-in-btn">Log In</button>
+                    <button type="button" class="log-in-btn" id="showLogin">Log In</button>
                 </li>
+                <div class="popup ">
+                    <div class="close-btn">&times;</div>
+                    <div class="form">
+                        <h3>Log In</h3>
+                        <div class="form-element d-flex flex-column">
+                            <label for="email">Email</label>
+                            <input type="text" id="email" placeholder="Enter email">
+                        </div>
+                        <div class="form-element d-flex flex-column">
+                            <label for="password">Password</label>
+                            <input type="text" id="password" placeholder="Enter password">
+                        </div>
+                        <div class="form-element">
+                            <input type="checkbox" id="remember-me">
+                            <label for="remember-me">Remember me</label>
+                        </div>
+                        <div class="form-element">
+                            <button>Sign In</button>
+                        </div>
+                        <div class="form-element">
+                            <a href="#">Forgot password?</a>
+                        </div>
+                    </div>
+                </div>
                 <li class="nav-item me-3 me-lg-0 ">
                     <button type="button" class="register-btn">Register</button>
                 </li>
@@ -482,6 +507,6 @@
         });
     }
 </script>
-
+<script src="assets/js/logInPopUp.js"></script>
 </body>
 </html>
