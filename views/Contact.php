@@ -34,7 +34,7 @@
     <section class="contact-us">
         <div class="container">
             <div class="contact-wrap">
-                <form class="contact-form w-100 d-flex flex-wrap justify-content-between pb-5">
+                <form class="contact-form w-100 d-flex flex-wrap justify-content-between pb-5" action="components/contactForm.php" method="post">
                     <h1 class="contact-form-title w-100 d-flex justify-content-start pb-5">Contact Us</h1>
                     <div class="contact-form-row row w-100 d-flex flex-row">
                         <div class="contact-input position-relative w-50">
@@ -54,7 +54,7 @@
                         </div>
                     </div>
                     <div class="contact-form-button w-100 d-flex flex-wrap mt-40">
-                        <button class="button-form" onclick="submitPopUp()">
+                        <button class="button-form" type="submit" name="submit">
                             <span>
                                 Submit
                             </span>
@@ -73,38 +73,38 @@
 
 <!------------------------------------------------ End Footer Area ---------------------------------------------------->
 
-<script>   //ex 1
-    function submitPopUp() {
-        let name = document.getElementById("formName").value;
-        let email = document.getElementById("formEmail").value;
-        let message = document.getElementById("formMessage").value;
-        const x = [name,email,message];
-        if (x != null) {
-            alert(x);
-        }
-    }
-</script>
-<script> //ex 2
-    document.addEventListener('mouseleave' , () => console.log('Mouse left window'));
-    document.addEventListener('mouseenter' , () => console.log('Mouse entered window'));
-</script>
-
-<script> //ex 3
-
-    window.addEventListener('scroll',scrollEffect);
-
-    let winHeight = window.innerHeight/2;
-
-    function scrollEffect() {
-        if (window.scrollY > winHeight) {
-            alert('You scrolled more than 50% height');
-                return;
-       }
-    }
-
-
-
-</script>
+<!--<script>   //ex 1-->
+<!--    function submitPopUp() {-->
+<!--        let name = document.getElementById("formName").value;-->
+<!--        let email = document.getElementById("formEmail").value;-->
+<!--        let message = document.getElementById("formMessage").value;-->
+<!--        const x = [name,email,message];-->
+<!--        if (x != null) {-->
+<!--            alert(x);-->
+<!--        }-->
+<!--    }-->
+<!--</script>-->
+<!--<script> //ex 2-->
+<!--    document.addEventListener('mouseleave' , () => console.log('Mouse left window'));-->
+<!--    document.addEventListener('mouseenter' , () => console.log('Mouse entered window'));-->
+<!--</script>-->
+<!---->
+<!--<script> //ex 3-->
+<!---->
+<!--    window.addEventListener('scroll',scrollEffect);-->
+<!---->
+<!--    let winHeight = window.innerHeight/2;-->
+<!---->
+<!--    function scrollEffect() {-->
+<!--        if (window.scrollY > winHeight) {-->
+<!--            alert('You scrolled more than 50% height');-->
+<!--                return;-->
+<!--       }-->
+<!--    }-->
+<!---->
+<!---->
+<!---->
+<!--</script>-->
 <script src="../assets/js/logInPopUp.js"></script>
 </body>
 </html>

@@ -36,27 +36,29 @@
                 </li>
                 <div class="popup ">
                     <div class="close-btn">&times;</div>
-                    <div class="form">
-                        <h3>Log In</h3>
-                        <div class="form-element d-flex flex-column">
-                            <label for="email">Email</label>
-                            <input type="text" id="email" placeholder="Enter email">
+                    <form action="contactForm.php" method="post">
+                        <div class="form">
+                            <h3>Log In</h3>
+                            <div class="form-element d-flex flex-column">
+                                <label for="email">Username</label>
+                                <input type="text" name="uname" id="email" placeholder="Enter username">
+                            </div>
+                            <div class="form-element d-flex flex-column">
+                                <label for="password">Password</label>
+                                <input type="text" id="password" name="password" placeholder="Enter password">
+                            </div>
+                            <div class="form-element">
+                                <input type="checkbox" id="remember-me">
+                                <label for="remember-me">Remember me</label>
+                            </div>
+                            <div class="form-element">
+                                <button>Sign In</button>
+                            </div>
+                            <div class="form-element">
+                                <a href="#">Forgot password?</a>
+                            </div>
                         </div>
-                        <div class="form-element d-flex flex-column">
-                            <label for="password">Password</label>
-                            <input type="text" id="password" placeholder="Enter password">
-                        </div>
-                        <div class="form-element">
-                            <input type="checkbox" id="remember-me">
-                            <label for="remember-me">Remember me</label>
-                        </div>
-                        <div class="form-element">
-                            <button>Sign In</button>
-                        </div>
-                        <div class="form-element">
-                            <a href="#">Forgot password?</a>
-                        </div>
-                    </div>
+                    </form>
                 </div>
                 <li class="nav-item me-3 me-lg-0 ">
                     <button type="button" class="register-btn">Register</button>
