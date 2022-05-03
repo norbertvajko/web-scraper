@@ -204,3 +204,50 @@ echo '<br/>';
 //    2 => 'Payment declined',
 //    0 => 'Invalid Payment Status',
 //};
+
+//FUNCTIONS
+echo '<br/>';
+echo "Array Function" . '</br>';
+
+function sum(...$numbers) {
+//   $sum = 0;
+//
+//   foreach ($numbers as $number) {
+//       $sum += $number;
+//   }
+//
+//   return $sum;
+    return array_sum($numbers);
+}
+
+$a = 5;
+$b = 6;
+$lastThreeNumbers = [1,1,2];
+
+echo 'sum:' .' ' . sum($a,$b,1,1,1,1,1, ...$lastThreeNumbers) . '<br/>';
+
+echo '<br/>';
+echo "Variable Functions" . '<br/>';
+
+function summ(...$numberos) {
+    return array_sum($numberos);
+}
+    $z = 'sum';
+    if (is_callable($z)) {
+        echo 'sum:' . ' ' . $z(1, 2, 3);
+    } else {
+        echo 'Not Callable';
+    }
+
+
+echo '<br/>';
+echo "ARROW FUNCTIONS" . '<br/>';
+
+$array = [ 1, 2, 3, 4];
+$array2 = array_map(function($number) {
+    return $number * $number;
+} , $array);
+
+echo '<pre>';
+print_r($array2);
+echo '</pre>';

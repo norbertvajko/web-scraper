@@ -26,7 +26,7 @@
 
 <!--------------------------------------------- End Nav Bar Area ------------------------------------------------------>
 
-<header>
+<header class="contact-banner mt-100">
     <h1>Here is the header</h1>
 </header>
 
@@ -34,27 +34,35 @@
     <section class="contact-us">
         <div class="container">
             <div class="contact-wrap">
-                <form class="contact-form w-100 d-flex flex-wrap justify-content-between pb-5" action="components/contactForm.php" method="post">
+                <form class="contact-form w-100 d-flex flex-wrap justify-content-between pb-5"
+                      action="contact_components/contactForm.php" id="formID" method="post">
                     <h1 class="contact-form-title w-100 d-flex justify-content-start pb-5">Contact Us</h1>
                     <div class="contact-form-row row w-100 d-flex flex-row">
                         <div class="contact-input position-relative w-50">
-                            <span class="label-input">Your Name</span>
-                            <input class="input" type="text" name="name" id="formName" placeholder="Enter your name">
+                            <span class="label-input">Name</span>
+                            <input class="input form_data" type="text" name="name" id="formName"
+                                   placeholder="Enter your name">
+                            <span id="name_error" class="message-error"></span>
                         </div>
                         <div class="contact-input w-50">
                             <span class="label-input">E-mail</span>
-                            <input class="input" type="email" name="email" id="formEmail" placeholder="Enter your e-mail">
+                            <input class="input form_data" type="email" name="email" id="formEmail"
+                                   placeholder="Enter your e-mail">
+                            <span id="email_error" class="message-error"></span>
                         </div>
                     </div>
                     <div class="contact-form-row row w-100 d-flex flex-row">
                         <div class="contact-input d-flex flex-column w-100 mt-40 ">
-                            <span class="label-input">Message</span>
+                            <span class="label-input form_data">Message</span>
                             <textarea class="textarea-input" name="message" id="formMessage"
                                       placeholder="Your message here..."></textarea>
                         </div>
                     </div>
+                    <span id="message_error" class="message-error"></span>
+                    <span id="sucMessage"></span>
                     <div class="contact-form-button w-100 d-flex flex-wrap mt-40">
-                        <button class="button-form" type="submit" name="submit">
+                        <button class="button-form" id="submitButton" type="submit" name="submit"
+                                onclick="save_data(); return false;">
                             <span>
                                 Submit
                             </span>
@@ -105,6 +113,62 @@
 <!---->
 <!---->
 <!--</script>-->
-<script src="../assets/js/logInPopUp.js"></script>
+<script>
+
+    function save_data() {
+        var form_element = document.getElementsByClassName('form_data');
+
+        var form_data = new FormData();
+
+        for (var count = 0; count < form_element.length; count++) {
+            form_data.append(form_element[count].name, form_element[count].value);
+        }
+
+        document.getElementById('submitButton').disabled = true;
+
+        var ajax_request = new XMLHttpRequest();
+
+        ajax_request.open('POST', 'contact_components/contactForm.php', true);
+
+        ajax_request.send(form_data);
+
+        ajax_request.onreadystatechange = function () {
+            if (ajax_request.readyState === 4 && ajax_request.status === 200) {
+                document.getElementById('submitButton').disabled = false;
+
+                var response = JSON.parse(ajax_request.responseText);
+
+                if (response.success !== '') {
+                    document.getElementById('formID').reset();
+
+                    document.getElementById('sucMessage').innerHTML = response.success;
+
+                    setTimeout(function () {
+
+                        document.getElementById('sucMessage').innerHTML = '';
+
+                    }, 5000);
+
+                    document.getElementById('name_error').innerHTML = '';
+                    document.getElementById('email_error').innerHTML = '';
+                    document.getElementById('message_error').innerHTML = '';
+
+
+                } else {
+                    //display validation error
+                    document.getElementById('name_error').innerHTML = response.name_error;
+                    document.getElementById('email_error').innerHTML = response.email_error;
+                    document.getElementById('message_error').innerHTML = response.message_error;
+
+                }
+
+
+            }
+        }
+    }
+
+
+</script>
+
 </body>
 </html>

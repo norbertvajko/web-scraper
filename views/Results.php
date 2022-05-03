@@ -372,6 +372,5 @@
         });
     }
 </script>
-<script src="../assets/js/logInPopUp.js"></script>
 </body>
 </html>

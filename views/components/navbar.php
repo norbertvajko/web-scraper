@@ -36,7 +36,7 @@
                 </li>
                 <div class="popup ">
                     <div class="close-btn">&times;</div>
-                    <form action="contactForm.php" method="post">
+                    <form action="../contact_components/contactForm.php" method="post">
                         <div class="form">
                             <h3>Log In</h3>
                             <div class="form-element d-flex flex-column">
@@ -67,3 +67,5 @@
         </div>
     </div>
 </nav>
+
+<script src="/assets/js/logInPopUp.js"></script>

@@ -17,6 +17,8 @@ body {
     color: #999999;
     line-height: 1.5;
     padding-left: 5px;
+    display:block;
+    font-weight: bold;
 }
 .input {
     display: block;
@@ -55,4 +57,16 @@ body {
     color: #fff;
     line-height: 1.2;
     box-shadow: 0 10px 30px 0px rgb(18 117 216 / 50%);
+}
+
+.message-error{
+    color:red;
+    font-weight: bold;
+    margin-left:15px
+}
+#sucMessage {
+    color: green;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 25px;
 }

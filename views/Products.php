@@ -140,6 +140,5 @@
 <!------------------------------------------------ End Footer Area ---------------------------------------------------->
 
 <script src="../assets/js/request.js"></script>
-<script src="../assets/js/logInPopUp.js"></script>
 </body>
 </html>

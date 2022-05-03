@@ -65,3 +65,5 @@
         </div>
     </div>
 </nav>
+
+<script src="/assets/js/logInPopUp.js"></script>

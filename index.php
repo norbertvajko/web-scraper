@@ -1,82 +1,3 @@
-<?php ;
-    $main_header = "
-<div class=\"container p-4\">
-           <div class=\"row\">
-               <h2 class=\"main-features-title text-center\">MAIN FEATURES</h2>
-               <div class=\"col-12 col-md-6 col-lg-4\">
-                   <div class=\"price-comparassion p-3 my-3 \">
-                       <div class=\"price-comparassion-header d-flex justify-content-between align-items-center flex-lg-row flex-column\" >
-                           <img src=\"assets/images/output-onlinepngtools.png \" class=\"img-fluid price-comparassion-logo \">
-                           <h2 class=\"price-comparassion-title text-center \">Detailed price comparison</h2>
-                       </div>
-                       <div class=\"price-comparassion-description\">
-                           <ul class=\"price-comparassion-list py-3\">
-                               <li class=\"price-list \"><i class=\"fa fa-check me-2\" aria-hidden=\"true\"></i>Gather data at
-                                   scale from a majority of websites
-                               </li>
-                               <li class=\"price-list\"><i class=\"fa fa-check me-2\" aria-hidden=\"true\"></i>Real-time data
-                                   collection in HTML format
-                               </li>
-                               <li class=\"price-list\"><i class=\"fa fa-check me-2\" aria-hidden=\"true\"></i>100% data
-                                   delivery
-                               </li>
-                           </ul>
-                       </div>
-                   </div>
-               </div>
-               <div class=\"col-12 col-md-6 col-lg-4\">
-                   <div class=\"price-comparassion p-3 my-3 \">
-                       <div class=\"price-comparassion-header d-flex justify-content-between align-items-center flex-lg-row flex-column\">
-                           <img src=\"assets/images/price-alert.png \" class=\"img-fluid price-comparassion-logo\">
-                           <h2 class=\"price-comparassion-title text-center \">
-                               Price Change Alerts
-                           </h2>
-                       </div>
-                       <div class=\"price-comparassion-description\">
-                           <ul class=\"price-comparassion-list py-3\">
-                               <li class=\"price-list\"><i class=\"fa fa-check me-2\" aria-hidden=\"true\"></i>Gather
-                                   data at
-                                   scale from a majority of websites
-                               </li>
-                               <li class=\"price-list\"><i class=\"fa fa-check me-2\" aria-hidden=\"true\"></i>Real-time
-                                   data
-                                   collection in HTML format
-                               </li>
-                               <li class=\"price-list\"><i class=\"fa fa-check me-2\" aria-hidden=\"true\"></i>100% data
-                                   delivery
-                               </li>
-                           </ul>
-                       </div>
-                   </div>
-               </div>
-               <div class=\"col-12 col-md-12 col-lg-4\">
-                   <div class=\"price-comparassion p-3 my-3\">
-                       <div class=\"price-comparassion-header d-flex justify-content-between align-items-center flex-lg-row flex-column\">
-                           <img src=\"assets/images/price-analyt.png \" class=\"img-fluid price-comparassion-logo\">
-                           <h2 class=\"price-comparassion-title text-center \">Reporting & Price Analytics</h2>
-                       </div>
-                       <div class=\"price-comparassion-description\">
-                           <ul class=\"price-comparassion-list py-3\">
-                               <li class=\"price-list\"><i class=\"fa fa-check me-2\" aria-hidden=\"true\"></i>Gather data at
-                                   scale from a majority of websites
-                               </li>
-                               <li class=\"price-list\"><i class=\"fa fa-check me-2\" aria-hidden=\"true\"></i>Real-time data
-                                   collection in HTML format
-                               </li>
-                               <li class=\"price-list\"><i class=\"fa fa-check me-2\" aria-hidden=\"true\"></i>100% data
-                                   delivery
-                               </li>
-                           </ul>
-                       </div>
-                   </div>
-               </div>
-           </div>
-       </div>";
-
-    $main_body = include "views/components/carousel.php";
-?>
-
-
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -104,7 +25,6 @@
             crossorigin="anonymous">
     </script>
 
-    <!-- PHP -->
 
 
 
@@ -112,42 +32,21 @@
 <body>
 
 <!--------------------------------------------- Start Nav Bar Area ---------------------------------------------------->
+    <?php
 
-<?php include 'views/components/navbar.php'; ?>
+    include 'views/components/navbar.php';
 
+    ?>
 <!--------------------------------------------- End Nav Bar Area ------------------------------------------------------>
 
 
 <!--------------------------------------------- Start Banner Area ----------------------------------------------------->
 <header class="banner-area">
-    <div class="container">
-        <div class="row py-6">
-            <div class="col-lg-6 col-md-12 col-xs-12 col-sm-12 banner-text">
-                <h1>Scrappy <br>
-                    Web Scraping tool</h1>
-                <p>kdasndasodnndadlkdnaadansakd <br>
-                    fdsnfsdkfnsflfsdfs</p>
-            </div>
-            <div class="terminal-banner col-lg-6 col-md-12 col-xs-12 col-sm-12">
-                <div class="terminal-header">
-                    <div class="terminal-icons">
-                        <div class="terminal-icon-close"></div>
-                        <div class="terminal-icon-min"></div>
-                        <div class="terminal-icon-max"></div>
-                    </div>
-                </div>
-                <div class="terminal-body position-relative">
-                    <div class="terminal-question px-5 py-5" id="msgText">
-                    </div>
-                    <div class="terminal-answer">
-<!--                       <form method="POST" action="Products.php>    -->
-                                <input type="text" id="inputText" class="terminal-search"/>
-<!--                        </form>-->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <?php
+
+    include "views/components/home_banner.php";
+
+    ?>
 </header>
 <!----------------------------------------------- End Banner Area ----------------------------------------------------->
 
@@ -156,32 +55,39 @@
 
 <main class="main-content">
 
-    <section class="main-features p-3">
-            <?php echo $main_header ?>
+    <section class="main-header main-features p-3">
+        <?php
+
+        include "views/components/main_header.php";
+
+        ?>
     </section>
 
 
-    <section class="carousel-best-offer">
-        <?php echo $main_body ?>
+    <section class="main-body carousel-best-offer">
+        <?php
+
+        include "views/components/carousel.php";
+
+        ?>
     </section>
 
-    <section class="scrappy-benefits">
+    <section class="main-footer scrappy-benefits">
 
     </section>
-
 
 
 </main>
 <!------------------------------------------------- End Main Area ----------------------------------------------------->
 
 <!----------------------------------------------- Start Footer Area --------------------------------------------------->
+    <?php
 
-<?php include "views/components/footer.php"; ?>
+    include "views/components/footer.php";
 
+    ?>
 <!------------------------------------------------ End Footer Area ---------------------------------------------------->
 
-<script src="assets/js/terminalText.js"></script>
-<script src="assets/js/logInPopUp.js"></script>
 
 </body>
 </html>
