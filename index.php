@@ -41,7 +41,7 @@
 
 
 <!--------------------------------------------- Start Banner Area ----------------------------------------------------->
-<header class="banner-area">
+<header class="banner-area mt-80">
     <?php
 
     include "views/components/home_banner.php";

@@ -22,7 +22,7 @@
                     <a class="nav-link" href="/views/Contact.php">Contact</a>
                 </li>
             </ul>
-            <form class="search-form mx-5 w-50 m-auto">
+            <form class="search-form w-50 my-sm-4 my-md-4 my-lg-0 mx-lg-3">
                 <div class="input-form">
                     <label class="input-label w-100">
                         <input type="search" class="form-control" placeholder="Search"/>

@@ -36,6 +36,9 @@
 .mt-100 {
     margin-top:100px;
 }
+.mt-80 {
+    margin-top:80px;
+}
 .fb-fc {
     flex-basis: fit-content;
 }

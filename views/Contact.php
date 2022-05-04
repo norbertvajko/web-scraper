@@ -16,8 +16,15 @@
     <link href="../assets/css/contact-page.css" rel="stylesheet">
     <link href="../assets/css/home-page.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous">
+    </script>
+
 </head>
 <body>
+
 
 
 <!--------------------------------------------- Start Nav Bar Area ---------------------------------------------------->
@@ -53,8 +60,8 @@
                     </div>
                     <div class="contact-form-row row w-100 d-flex flex-row">
                         <div class="contact-input d-flex flex-column w-100 mt-40 ">
-                            <span class="label-input form_data">Message</span>
-                            <textarea class="textarea-input" name="message" id="formMessage"
+                            <span class="label-input">Message</span>
+                            <textarea class="textarea-input form_data" name="message" id="formMessage"
                                       placeholder="Your message here..."></textarea>
                         </div>
                     </div>
@@ -113,20 +120,22 @@
 <!---->
 <!---->
 <!--</script>-->
+
+
 <script>
 
     function save_data() {
-        var form_element = document.getElementsByClassName('form_data');
 
-        var form_data = new FormData();
+        let form_element = document.getElementsByClassName('form_data');
 
-        for (var count = 0; count < form_element.length; count++) {
+        let form_data = new FormData();
+
+        for (let count = 0; count < form_element.length; count++) {
             form_data.append(form_element[count].name, form_element[count].value);
+
         }
 
-        document.getElementById('submitButton').disabled = true;
-
-        var ajax_request = new XMLHttpRequest();
+        let ajax_request = new XMLHttpRequest();
 
         ajax_request.open('POST', 'contact_components/contactForm.php', true);
 
@@ -134,9 +143,8 @@
 
         ajax_request.onreadystatechange = function () {
             if (ajax_request.readyState === 4 && ajax_request.status === 200) {
-                document.getElementById('submitButton').disabled = false;
 
-                var response = JSON.parse(ajax_request.responseText);
+                let response = JSON.parse(ajax_request.responseText);
 
                 if (response.success !== '') {
                     document.getElementById('formID').reset();
@@ -160,8 +168,9 @@
                     document.getElementById('email_error').innerHTML = response.email_error;
                     document.getElementById('message_error').innerHTML = response.message_error;
 
-                }
+                    console.log(response.name_error,'\n',response.email_error,'\n',response.message_error);
 
+                }
 
             }
         }
