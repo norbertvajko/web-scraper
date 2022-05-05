@@ -163,3 +163,9 @@ body {
     position:absolute;
     left:50%;
 }
+.blur {
+    display:block;
+}
+.blur.active {
+    filter: blur(3px);
+}

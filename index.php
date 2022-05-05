@@ -41,47 +41,50 @@
 
 
 <!--------------------------------------------- Start Banner Area ----------------------------------------------------->
-<header class="banner-area mt-80">
-    <?php
 
-    include "views/components/home_banner.php";
+<div class="blur" id="blur">
 
-    ?>
+    <header class="banner-area mt-80 ">
+        <?php
+
+        include "views/index_components/home_banner.php";
+
+        ?>
 </header>
 <!----------------------------------------------- End Banner Area ----------------------------------------------------->
 
 
 <!----------------------------------------------- Start Main Area ----------------------------------------------------->
 
-<main class="main-content">
+    <main class="main-content">
 
-    <section class="main-header main-features p-3">
-        <?php
+        <section class="main-header main-features p-3">
+            <?php
 
-        include "views/components/main_header.php";
+            include "views/index_components/main_header.php";
 
-        ?>
-    </section>
-
-
-    <section class="main-body carousel-best-offer">
-        <?php
-
-        include "views/components/carousel.php";
-
-        ?>
-    </section>
-
-    <section class="main-footer scrappy-benefits">
-
-    </section>
+            ?>
+        </section>
 
 
-</main>
+        <section class="main-body carousel-best-offer">
+            <?php
+
+            include "views/index_components/carousel.php";
+
+            ?>
+        </section>
+
+        <section class="main-footer scrappy-benefits">
+
+        </section>
+
+    </main>
+</div>
 <!------------------------------------------------- End Main Area ----------------------------------------------------->
 
 <!----------------------------------------------- Start Footer Area --------------------------------------------------->
-    <?php
+<?php
 
     include "views/components/footer.php";
 

@@ -10,7 +10,7 @@ function save_data() {
 
     let ajax_request = new XMLHttpRequest();
 
-    ajax_request.open('POST', 'contact_components/contactForm.php', true);
+    ajax_request.open('POST', '/includes/contactValidation.php', true);
 
     ajax_request.send(form_data);
 
@@ -40,9 +40,6 @@ function save_data() {
                 document.getElementById('name_error').innerHTML = response.name_error;
                 document.getElementById('email_error').innerHTML = response.email_error;
                 document.getElementById('message_error').innerHTML = response.message_error;
-
-                console.log(response.name_error,'\n',response.email_error,'\n',response.message_error);
-
             }
 
         }

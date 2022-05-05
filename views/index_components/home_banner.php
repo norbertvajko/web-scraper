@@ -18,9 +18,10 @@
                 <div class="terminal-question px-5 py-5" id="msgText">
                 </div>
                 <div class="terminal-answer">
-                    <!--                       <form method="POST" action="Products.php>    -->
                     <input type="text" id="inputText" class="terminal-search"/>
-                    <!--                        </form>-->
+                </div>
+                <div class="arrow-icon "<a href="#">
+                    <div class="arrow"></div>
                 </div>
             </div>
         </div>

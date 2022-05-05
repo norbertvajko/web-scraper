@@ -33,16 +33,25 @@
 
 <!--------------------------------------------- End Nav Bar Area ------------------------------------------------------>
 
+<!--------------------------------------------- Start Banner Area ----------------------------------------------------->
+
+<div class="blur" id="blur">
+
 <header class="contact-banner mt-100">
     <h1>Here is the header</h1>
 </header>
+
+<!----------------------------------------------- End Banner Area ----------------------------------------------------->
+
+
+<!----------------------------------------------- Start Main Area ----------------------------------------------------->
 
 <main class="content">
     <section class="contact-us">
         <div class="container">
             <div class="contact-wrap">
                 <form class="contact-form w-100 d-flex flex-wrap justify-content-between pb-5"
-                      action="contact_components/contactForm.php" id="formID" method="post">
+                      action="../includes/contactValidation.php" id="formID" method="post">
                     <h1 class="contact-form-title w-100 d-flex justify-content-start pb-5">Contact Us</h1>
                     <div class="contact-form-row row w-100 d-flex flex-row">
                         <div class="contact-input position-relative w-50">
@@ -81,6 +90,11 @@
     </section>
 </main>
 
+
+
+</div>
+
+<!------------------------------------------------- End Main Area ----------------------------------------------------->
 
 <!----------------------------------------------- Start Footer Area --------------------------------------------------->
 

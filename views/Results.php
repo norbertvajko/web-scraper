@@ -35,6 +35,9 @@
 <!--------------------------------------------- End Nav Bar Area ------------------------------------------------------>
 
 <!--------------------------------------------- Start Banner Area ----------------------------------------------------->
+
+<div class="blur" id="blur">
+
 <header class="banner-results mt-100">
     <div class="container p-3">
         <div class="box position-relative">
@@ -275,13 +278,13 @@
                                     <div class="col w-50">
                                         <div class="photo-wrap">
                                             <img src="https://s13emagst.akamaized.net/products/40685/40684397/images/res_9aa260aaaa84abf7f2a3db2bd2f85a8e.jpg?width=450&height=450&hash=E0DAEFC55242E20912D93D61E9D3C782"
-                                                 class="img-fluid">
+                                                 class="img-fluid" alt="">
                                         </div>
                                     </div>
                                     <div class="col w-50">
                                         <div class="photo-wrap d-flex mx-3 my-4 ">
                                             <img src="https://s13emagst.akamaized.net/products/40685/40684428/images/res_4ddfcf30bbe34261b9e32e2adccf07fb.jpg?width=450&height=450&hash=249094D6E4AB5AD0D0DBFD1C1D3F9269"
-                                                 class="img-fluid">
+                                                 class="img-fluid" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -354,6 +357,8 @@
         </div>
     </section>
 </main>
+
+</div>
 
 <!------------------------------------------------- End Main Area ----------------------------------------------------->
 
