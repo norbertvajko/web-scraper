@@ -1,5 +1,16 @@
 function save_data() {
 
+    const loginForm = document.getElementById('loginFormID');
+    const  successMessage = document.getElementById('sucLogin');
+
+    const username = document.getElementById('uname');
+    const password = document.getElementById('password');
+
+    const usernameError = document.getElementById('username_error');
+    const passwordError = document.getElementById('password_error');
+
+
+
     let form_element = document.getElementsByClassName('login_data');
 
     let login_data = new FormData();
@@ -20,25 +31,32 @@ function save_data() {
             let response = JSON.parse(ajax_request.responseText);
 
             if (response.success !== '') {
-                document.getElementById('loginFormID').reset();
 
-                document.getElementById('sucLogin').innerHTML = response.success;
+                loginForm.reset();
+                successMessage.innerHTML = response.success;
 
                 setTimeout(function () {
 
-                    document.getElementById('sucLogin').innerHTML = '';
+                    successMessage.innerHTML = '';
 
                 }, 5000);
 
-                document.getElementById('uname').innerHTML = '';
-                document.getElementById('password').innerHTML = '';
+                username.innerHTML = '';
+                password.innerHTML = '';
+
+                usernameError.innerHTML = '';
+                passwordError.innerHTML = '';
 
             } else {
                 //display validation error
-                document.getElementById('username_error').innerHTML = response.username_error;
-                document.getElementById('password_error').innerHTML = response.password_error;
+                usernameError.innerHTML = response.username_error;
+                passwordError.innerHTML = response.password_error;
             }
 
         }
     }
+}
+function resetErrors() {
+    usernameError.innerHTML = '';
+    passwordError.innerHTML = '';
 }

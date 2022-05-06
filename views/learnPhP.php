@@ -183,19 +183,12 @@ echo "SWITCH" . '<br/>';
 
 $paymentStatus = 2;
 
-switch ($paymentStatus) {
-    case 1:
-        echo "Paid";
-        break;
-    case 2:
-        echo 'Payment declined';
-        break;
-    case 0:
-        echo 'Invalid Payment Status';
-        break;
-    default:
-        echo "Unknown Payment Status";
-}
+echo match ($paymentStatus) {
+    1 => "Paid",
+    2 => 'Payment declined',
+    0 => 'Invalid Payment Status',
+    default => "Unknown Payment Status",
+};
 echo '<br/>';
 
 //echo "MATCH" . '<br/>';

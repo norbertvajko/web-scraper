@@ -1,4 +1,20 @@
 function save_register() {
+
+    const registerForm = document.getElementById('registerFormID');
+    const messageSuccess =  document.getElementById('sucRegister');
+
+    const fullName = document.getElementById('fullName');
+    const email = document.getElementById('remail');
+    const password = document.getElementById('rpassword');
+    const correctPassword = document.getElementById('crpassword');
+
+    const fullNameError = document.getElementById('fullName_error');
+    const emailError = document.getElementById('register_email_error');
+    const passwordError = document.getElementById('register_password_error');
+    const correctPasswordError = document.getElementById('cr_password_error');
+
+
+
     let form_element = document.getElementsByClassName('register_data');
 
     let registerData = new FormData();
@@ -20,27 +36,32 @@ function save_register() {
 
 
             if (response.success !== '') {
-                document.getElementById('registerFormID').reset();
 
-                document.getElementById('sucRegister').innerHTML = response.success;
+                registerForm.reset();
+
+                messageSuccess.innerHTML = "Success";
 
                 setTimeout(function () {
 
-                    document.getElementById('sucRegister').innerHTML = '';
-
+                    messageSuccess.innerHTML = '';
                 }, 2000);
 
-                document.getElementById('fullName').innerHTML = '';
-                document.getElementById('remail').innerHTML = '';
-                document.getElementById('rpassword').innerHTML = '';
-                document.getElementById('crpassword').innerHTML = '';
+                fullName.innerHTML = '';
+                email.innerHTML = '';
+                password.innerHTML = '';
+                correctPassword.innerHTML = '';
+
+                fullNameError.innerHTML = '';
+                emailError.innerHTML = '';
+                passwordError.innerHTML = '';
+                correctPasswordError.innerHTML = '';
 
             } else {
                 //display validation error
-                document.getElementById('fullName_error').innerHTML = response.name_error;
-                document.getElementById('register_email_error').innerHTML = response.email_error;
-                document.getElementById('register_password_error').innerHTML = response.password_error;
-                document.getElementById('cr_password_error').innerHTML = response.correctPassword_error;
+                fullNameError.innerHTML = response.name_error;
+                emailError.innerHTML = response.email_error;
+                passwordError.innerHTML = response.password_error;
+                correctPasswordError.innerHTML = response.correctPassword_error;
             }
 
         }

@@ -1,5 +1,13 @@
 function save_data() {
 
+    const contactForm = document.getElementById('formID');
+    const messageSuccess = document.getElementById('sucMessage');
+
+    const nameError = document.getElementById('name_error');
+    const emailError = document.getElementById('email_error');
+    const messageError = document.getElementById('message_error');
+
+
     let form_element = document.getElementsByClassName('form_data');
 
     let form_data = new FormData();
@@ -20,26 +28,27 @@ function save_data() {
             let response = JSON.parse(ajax_request.responseText);
 
             if (response.success !== '') {
-                document.getElementById('formID').reset();
 
-                document.getElementById('sucMessage').innerHTML = response.success;
+               contactForm.reset();
+
+                messageSuccess.innerHTML = "Message Sent";
 
                 setTimeout(function () {
 
-                    document.getElementById('sucMessage').innerHTML = '';
+                    messageSuccess.innerHTML = '';
 
                 }, 5000);
 
-                document.getElementById('name_error').innerHTML = '';
-                document.getElementById('email_error').innerHTML = '';
-                document.getElementById('message_error').innerHTML = '';
+                nameError.innerHTML = '';
+                emailError.innerHTML = '';
+                messageError.innerHTML = '';
 
 
             } else {
                 //display validation error
-                document.getElementById('name_error').innerHTML = response.name_error;
-                document.getElementById('email_error').innerHTML = response.email_error;
-                document.getElementById('message_error').innerHTML = response.message_error;
+                nameError.innerHTML = response.name_error;
+                emailError.innerHTML = response.email_error;
+                messageError.innerHTML = response.message_error;
             }
 
         }

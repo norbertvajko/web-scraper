@@ -7,5 +7,5 @@ $db = "n_vajko";
 
 $conn = mysqli_connect("$host", '$uname' , '$dbPass' , '$db')
                or die ("DB Connection Error");
-?>
+
 

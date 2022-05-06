@@ -1,7 +1,17 @@
+const loginButton = document.querySelector("#showLogin");
+const closeButton = document.querySelector(".popup .close-btn");
+const loginPopup = document.querySelector(".popup");
+const loginForm = document.getElementById('loginFormID');
+
+const usernameError = document.getElementById('username_error');
+//const passwordError = document.getElementById('password_error');
+
+
 
 //Enter Login
-document.querySelector("#showLogin").addEventListener("click",function() {
-    document.querySelector(".popup").classList.add("active");
+loginButton.addEventListener("click",function() {
+
+    loginPopup.classList.add("active");
 
     //add blur
     document.querySelector(".blur").classList.add("active");
@@ -10,15 +20,17 @@ document.querySelector("#showLogin").addEventListener("click",function() {
 
 
 //Exit Login
-document.querySelector(".popup .close-btn").addEventListener("click",function() {
+closeButton.addEventListener("click",function() {
 
-    document.querySelector(".popup").classList.remove("active");
+    loginPopup.classList.remove("active");
 
     //reset form after close
-    document.getElementById('loginFormID').reset();
+    loginForm.reset();
 
+    //reset error messages
+    usernameError.innerHTML = "";
+    passwordError.innerHTML = "";
 
     //exit blur
     document.querySelector('#blur').classList.remove("active");
-
 });

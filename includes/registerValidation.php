@@ -2,6 +2,7 @@
 
 $registerComplete = true;
 
+
 $fullName = $_POST["fullName"];
 $registerEmail = $_POST["remail"];
 $registerPassword = $_POST["rpassword"];
@@ -57,8 +58,11 @@ if (empty($correctPassword)) {
 }
 
 if ($registerComplete) {
-    $response['success'] = "Welcome";
+    $success = "Successs";
+    echo json_encode($success);
 }
 
 //transform into json obj
-echo json_encode($response);
+else {
+    echo json_encode($response);
+}
