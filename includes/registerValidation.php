@@ -49,20 +49,16 @@ if (!$uppercase || !$lowercase || !$number || !$specialchars || strlen($register
     at least one upper case letter, one number, and one special character.";
     $registerComplete = false;
 }
-if (empty($correctPassword)) {
-    $response['correctPassword_error'] = "Field required";
-    $registerComplete = false;
-} elseif (!$correctPassword == $registerPassword) {
-    $response['correctPassword_error'] = "Passwords must match!";
-    $registerComplete = false;
-}
+
+//if (!strcmp($registerPassword,$correctPassword) == 0) {
+//    $response['correctPassword_error'] = "Passwords must match!";
+//    $registerComplete = false;
+//}
 
 if ($registerComplete) {
     $success = "Successs";
     echo json_encode($success);
-}
-
-//transform into json obj
+} //transform into json obj
 else {
     echo json_encode($response);
 }

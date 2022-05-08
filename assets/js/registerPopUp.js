@@ -25,16 +25,21 @@ document.querySelector(".popupRegister .close-btn").addEventListener("click", fu
 
     registerPopUp.classList.remove("active");
 
+    //exit blur
+    document.querySelector('.blur').classList.remove("active");
+
     //reset form after close
     registerForm.reset();
 
     //reset error messages
-    for(let i=0 ;i<errorMessages.length; i++) {
-        console.log(errorMessages);
-        errorMessages[i].remove();
-    }
+    // for(let i=0 ;i<errorMessages.length; i++) {
+    //     console.log(errorMessages);
+    //     errorMessages[i].remove();
+    // }
+    fullNameError.innerHTML = '';
+    emailError.innerHTML = '';
+    passwordError.innerHTML = '';
+    correctPasswordError = '';
 
-    //exit blur
-    document.querySelector('.blur').classList.remove("active");
 
 });

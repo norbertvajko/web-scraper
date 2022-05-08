@@ -11,6 +11,9 @@
 
     <title>Scrappy</title>
 
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -32,11 +35,13 @@
 <body>
 
 <!--------------------------------------------- Start Nav Bar Area ---------------------------------------------------->
-    <?php
 
-    include 'views/components/navbar.php';
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top bor-sha">
+        <?php
+           include 'views/components/navbar.php';
+        ?>
+    </nav>
 
-    ?>
 <!--------------------------------------------- End Nav Bar Area ------------------------------------------------------>
 
 
@@ -44,11 +49,9 @@
 
 <div class="blur" id="blur">
 
-    <header class="banner-area mt-80 ">
+    <header class="banner-area mt-62 ">
         <?php
-
-        include "views/index_components/home_banner.php";
-
+           include "views/index_components/home_banner.php";
         ?>
 </header>
 <!----------------------------------------------- End Banner Area ----------------------------------------------------->
@@ -60,18 +63,14 @@
 
         <section class="main-header main-features p-3">
             <?php
-
-            include "views/index_components/main_header.php";
-
+               include "views/index_components/main_header.php";
             ?>
         </section>
 
 
         <section class="main-body carousel-best-offer">
             <?php
-
-            include "views/index_components/carousel.php";
-
+                include "views/index_components/carousel.php";
             ?>
         </section>
 

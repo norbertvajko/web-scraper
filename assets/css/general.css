@@ -11,6 +11,9 @@
 .w-45 {
     width:45%;
 }
+.w-53 {
+  width:53%;
+}
 .fw-500{
     font-weight:500;
 }
@@ -29,6 +32,9 @@
 }
 .mt-56 {
     margin-top:56px;
+}
+.mt-62 {
+    margin-top:62px;
 }
 .ps-87 {
     padding-left:87px;

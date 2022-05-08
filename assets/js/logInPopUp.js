@@ -4,7 +4,7 @@ const loginPopup = document.querySelector(".popup");
 const loginForm = document.getElementById('loginFormID');
 
 const usernameError = document.getElementById('username_error');
-//const passwordError = document.getElementById('password_error');
+const passError = document.getElementById('password_error');
 
 
 
@@ -29,7 +29,7 @@ closeButton.addEventListener("click",function() {
 
     //reset error messages
     usernameError.innerHTML = "";
-    passwordError.innerHTML = "";
+    passError.innerHTML = "";
 
     //exit blur
     document.querySelector('#blur').classList.remove("active");
