@@ -1,3 +1,7 @@
+<?php
+//    include 'includes/connDB.php'
+//?>
+
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -12,7 +16,9 @@
     <title>Scrappy</title>
 
     <!-- Icons -->
-    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet"
+          href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -20,7 +26,6 @@
 
     <link rel="icon" type="image/x-icon" href="assets/images/spider-title-logo.png">
     <link href="assets/css/home-page.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
@@ -82,12 +87,11 @@
 </div>
 <!------------------------------------------------- End Main Area ----------------------------------------------------->
 
+
 <!----------------------------------------------- Start Footer Area --------------------------------------------------->
 <?php
-
     include "views/components/footer.php";
-
-    ?>
+?>
 <!------------------------------------------------ End Footer Area ---------------------------------------------------->
 
 

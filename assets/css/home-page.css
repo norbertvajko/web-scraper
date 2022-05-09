@@ -136,6 +136,11 @@ body {
     border: 1px solid rgb(233, 233, 233);
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
+    transition: 1s;
+}
+.price-comparassion:hover {
+    box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
 }
 .price-comparassion-list {
     list-style-type: none;
@@ -168,4 +173,7 @@ body {
 }
 .blur.active {
     filter: blur(3px);
+}
+.main-features-title {
+    display: none !important;
 }

@@ -1,26 +1,23 @@
 <?php
 
-$registerComplete = true;
+//include('connDB.php');
 
+$registerComplete = true;
 
 $fullName = $_POST["fullName"];
 $registerEmail = $_POST["remail"];
 $registerPassword = $_POST["rpassword"];
 $correctPassword = $_POST["crpassword"];
 
+$hashedPassword = md5($registerPassword);
+
 $response = [
     'success' => '',
     'name_error' => '',
     'email_error' => '',
     'password_error' => '',
-    'correctPassword_error' => '',
-
+    'correctPassword_error' => ''
 ];
-
-$uppercase = preg_match('@[A-Z]@', $registerPassword, $correctPassword);
-$lowercase = preg_match('@[a-z]@', $registerPassword, $correctPassword);
-$number = preg_match('@[0-9]@', $registerPassword, $correctPassword);
-$specialchars = preg_match('@[^\w]@', $registerPassword, $correctPassword);
 
 if (empty($fullName)) {
     $response['name_error'] = 'Field required';
@@ -40,25 +37,42 @@ if(empty($registerEmail)) {
     $response['email_error'] = 'Invalid email format';
     $registerComplete = false;
 }
+
+$uppercase = preg_match('@[A-Z]@', $registerPassword, $correctPassword);
+$lowercase = preg_match('@[a-z]@', $registerPassword, $correctPassword);
+$number = preg_match('@[0-9]@', $registerPassword, $correctPassword);
+$specialchars = preg_match('@[^\w]@', $registerPassword, $correctPassword);
+
+
 if (empty($registerPassword)) {
     $response['password_error'] = 'Field Required';
     $registerComplete = false;
-}
-if (!$uppercase || !$lowercase || !$number || !$specialchars || strlen($registerPassword) < 8) {
+} elseif (!$uppercase || !$lowercase || !$number || !$specialchars || strlen($registerPassword) < 8) {
     $response['password_error'] = "Password should be at least 8 characters in length , and should include
     at least one upper case letter, one number, and one special character.";
     $registerComplete = false;
 }
+if (empty($correctPassword)) {
+    $response['correctPassword_error'] = "Field Required";
+    $registerComplete = false;
+} elseif ($_POST['rpassword'] !== $_POST['crpassword']) {
+    $response['correctPassword_error'] = "Passwords do not match! Try again";
+    $registerComplete = false;
+}
 
-//if (!strcmp($registerPassword,$correctPassword) == 0) {
-//    $response['correctPassword_error'] = "Passwords must match!";
-//    $registerComplete = false;
-//}
+// Check to see if the user already registered
+
+
+//Insert a new user
+//$stmt = $mysqli->prepare("INSERT INTO users (id, full_name , email , password) VALUES (null, ? , ? , ?)");
+//$stmt->bind_param("sss", $fullName , $registerEmail , $hashedPassword);
+//$result = $stmt->execute();
 
 if ($registerComplete) {
     $success = "Successs";
     echo json_encode($success);
-} //transform into json obj
+}
+//transform into json obj
 else {
     echo json_encode($response);
 }

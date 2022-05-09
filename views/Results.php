@@ -11,6 +11,11 @@
 
     <title>Results</title>
 
+    <!-- Icons -->
+    <link rel="stylesheet"
+          href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -22,7 +27,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-            crossorigin="anonymous"></script>
+            crossorigin="anonymous">
+    </script>
 
 
 </head>
@@ -30,26 +36,27 @@
 
 <!--------------------------------------------- Start Nav Bar Area ---------------------------------------------------->
 
-<?php include "components/searchNavBar.php"; ?>
-
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top bor-sha">
+    <?php include "components/navbar.php"; ?>
+</nav>
 <!--------------------------------------------- End Nav Bar Area ------------------------------------------------------>
 
 <!--------------------------------------------- Start Banner Area ----------------------------------------------------->
 
 <div class="blur" id="blur">
 
-<header class="banner-results mt-100">
-    <div class="container p-3">
-        <div class="box position-relative">
-            <div class="row product-page-top">
-                <h1 class="d-block d-sm-none">
+    <header class="banner-results mt-100">
+        <div class="container p-3">
+            <div class="box">
+                <div class="row product-page-top">
+                <h1 class="d-block d-sm-none text-center p-3 ">
                     Apple iPhone 13 128GB
                 </h1>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-5 d-flex justify-content-center product-image">
+                <div class="col-lg-4 col-md-3 col-sm-6 col-xs-5 d-flex justify-content-center product-image">
                     <img src="https://p1.akcdn.net/mid/859255347.apple-iphone-13-128gb.jpg" alt="product-img img-fluid"
                          class="product-img ">
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-8 mx-auto product-details">
+                <div class="d-flex flex-column justify-content-center align-items-center col-lg-4 col-md-5 col-sm-6 col-xs-8 product-details pt-2">
                     <h1 class="d-none d-sm-block mb-3">Apple iPhone 13 128GB</h1>
                     <div class="hidden-xs">
                         <div class="rating"
@@ -81,11 +88,11 @@
                         </li>
                     </ul>
                 </div>
-                <h3 class="lowest-price">Lowest price:<span>3 534 00 RON</span></h3>
+                <h3 class="lowest-price d-flex flex-md-wrap">Lowest price:<span>3 534 00 RON</span></h3>
 
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 mx-auto  featured-offers-top hidden-xs ">
-                <div class="featured-content">
+            <div class="col-xs-12 col-sm-12 col-md-3 featured-offers">
+                <div class="featured-content d-xs-flex justify-content-between d-sm-flex justify-content-between d-md-block h-100 p-4">
                     <ul class="product-price-alert ps-0">
                         <li>
                             <a href="#">Price Alert
@@ -141,6 +148,12 @@
                         <button class="nav-link" id="photo-gallery-tab" data-bs-toggle="tab"
                                 data-bs-target="#photoGallery" type="button" role="tab" aria-controls="photoGallery"
                                 aria-selected="false">Photos
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="reviews-tab" data-bs-toggle="tab"
+                                data-bs-target="#reviews" type="button" role="tab" aria-controls="reviews"
+                                aria-selected="false">Reviews
                         </button>
                     </li>
                 </ul>
@@ -324,33 +337,36 @@
                          aria-labelledby="photo-gallery-tab">
                         <div class="container">
                             <div class="products" id="products1">
-                                <div class="card">
+                                <div class="card photos-card">
                                     <img class="card-img"
                                          src="https://lcdn.altex.ro/media/catalog/product/T/e/Telefon_APPLE_iPhone_13_5G_128GB_Midnight_4_.jpg"
                                          alt="card-photo">
                                 </div>
-                                <div class="card">
+                                <div class="card photos-card">
                                     <img class="card-img"
                                          src="https://lcdn.altex.ro/media/catalog/product/T/e/Telefon_APPLE_iPhone_13_5G_128GB_Midnight_4_.jpg"
                                          alt="card-photo">
                                 </div>
-                                <div class="card">
+                                <div class="card photos-card">
                                     <img class="card-img"
                                          src="https://lcdn.altex.ro/media/catalog/product/T/e/Telefon_APPLE_iPhone_13_5G_128GB_Midnight_4_.jpg"
                                          alt="card-photo">
                                 </div>
-                                <div class="card">
+                                <div class="card photos-card">
                                     <img class="card-img"
                                          src="https://lcdn.altex.ro/media/catalog/product/T/e/Telefon_APPLE_iPhone_13_5G_128GB_Midnight_4_.jpg"
                                          alt="card-photo">
                                 </div>
-                                <div class="card">
+                                <div class="card photos-card">
                                     <img class="card-img"
                                          src="https://lcdn.altex.ro/media/catalog/product/T/e/Telefon_APPLE_iPhone_13_5G_128GB_Midnight_4_.jpg"
                                          alt="card-photo">
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="tab-pane fade" id="reviews" role="tabpanel">
+
                     </div>
                 </div>
             </div>

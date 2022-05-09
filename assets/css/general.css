@@ -1,7 +1,9 @@
 .py-6 {
     padding: 7% 0;
 }
-
+.p-35 {
+    padding:35px;
+}
 .fa-star {
     color: orange;
 }
@@ -13,6 +15,9 @@
 }
 .w-53 {
   width:53%;
+}
+.w-90 {
+    width:90%;
 }
 .fw-500{
     font-weight:500;
@@ -47,6 +52,9 @@
 }
 .mb-60 {
     margin-bottom: 60px;
+}
+.ms-35 {
+    margin-left:35px;
 }
 .fb-fc {
     flex-basis: fit-content;

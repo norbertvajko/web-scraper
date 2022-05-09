@@ -31,15 +31,10 @@ document.querySelector(".popupRegister .close-btn").addEventListener("click", fu
     //reset form after close
     registerForm.reset();
 
-    //reset error messages
-    // for(let i=0 ;i<errorMessages.length; i++) {
-    //     console.log(errorMessages);
-    //     errorMessages[i].remove();
-    // }
-    fullNameError.innerHTML = '';
-    emailError.innerHTML = '';
-    passwordError.innerHTML = '';
-    correctPasswordError = '';
-
+  // reset error messages
+    for(let i=0 ;i<errorMessages.length; i++) {
+        console.log(errorMessages);
+        errorMessages[i].innerHTML = '';
+    }
 
 });

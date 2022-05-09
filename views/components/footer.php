@@ -43,7 +43,9 @@
                     </div>
                     <form class="newsletter-form">
                         <div class="d-flex justify-content-center flex-column flex-md-row w-50 align-items-center m-auto">
-                            <input type="email" class="form-control mt-3 " placeholder="Enter e-mail">
+                            <label class="w-100">
+                                <input type="email" class="form-control mt-3 " placeholder="Enter e-mail">
+                            </label>
                             <a href="#" class="subscribe-button position-relative d-flex flex-wrap ms-3 mt-3">
                                 <span></span>
                                 <span></span>

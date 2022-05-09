@@ -1,11 +1,11 @@
 <div class="container p-4">
     <div class="row">
-        <h2 class="main-features-title text-center">MAIN FEATURES</h2>
+        <h2 class="main-features-title text-center ">MAIN FEATURES</h2>
         <div class="col-12 col-md-6 col-lg-4">
-            <div class="price-comparassion p-3 my-3 ">
+            <div class="price-comparassion p-3 my-3">
                 <div class="price-comparassion-header d-flex justify-content-between align-items-center flex-lg-row flex-column">
-                    <img src="assets/images/output-onlinepngtools.png " class=\"img-fluid
-                         price-comparassion-logo \">
+                    <img src="/assets/images/output-onlinepngtools.png" alt="" class="img-fluid
+                         price-comparassion-logo">
                     <h2 class="price-comparassion-title text-center ">Detailed price comparison</h2>
                 </div>
                 <div class="price-comparassion-description">
@@ -24,10 +24,10 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-4">
+        <div class="col-12 col-md-6 col-lg-4 ">
             <div class="price-comparassion p-3 my-3 ">
                 <div class="price-comparassion-header d-flex justify-content-between align-items-center flex-lg-row flex-column">
-                    <img src="assets/images/price-alert.png" class="img-fluid price-comparassion-logo">
+                     <img src="/assets/images/price-alert.png" class="img-fluid price-comparassion-logo " alt="" >
                     <h2 class="price-comparassion-title text-center">
                         Price Change Alerts
                     </h2>
@@ -49,10 +49,10 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 col-md-12 col-lg-4">
+        <div class="col-12 col-md-12 col-lg-4 ">
             <div class="price-comparassion p-3 my-3">
                 <div class="price-comparassion-header d-flex justify-content-between align-items-center flex-lg-row flex-column">
-                    <img src="assets/images/price-analyt.png" class="img-fluid price-comparassion-logo">
+                    <img src="/assets/images/price-analyt.png" class="img-fluid price-comparassion-logo" alt="">
                     <h2 class="price-comparassion-title text-center">Reporting & Price Analytics</h2>
                 </div>
                 <div class="price-comparassion-description">
