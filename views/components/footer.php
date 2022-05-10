@@ -42,7 +42,7 @@
                         <p>Then subscribe to our newsletter!</p>
                     </div>
 
-                    <form class="newsletter-form" action="/includes/newsLetterForm.php" method="post" id="newsLetterForm">
+                    <form class="newsletter-form" action="/includes/newsLetterValidation.php" method="post" id="newsLetterForm">
                         <div class="d-flex justify-content-center flex-column flex-md-row w-50 align-items-center m-auto">
                             <label class="w-100">
                                 <input type="email" class="form-control mt-3 " placeholder="Enter e-mail" id="newsletterEmail" name="newsLetterName">
