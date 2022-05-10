@@ -70,7 +70,7 @@
                     <h3>Log In</h3>
                     <div class="form-element d-flex flex-column">
                         <label>
-                            <input type="text" class="inputs login_data" name="uname" id="uname" placeholder="Username">
+                            <input type="text" class="inputs login_data" name="uname" id="uname" placeholder="E-mail">
                         </label>
                         <span id="username_error" class="message-error"></span>
                     </div>

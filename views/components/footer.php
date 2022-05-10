@@ -41,18 +41,26 @@
                         <h5>Do you want to receive smart shopping advice from us?</h5>
                         <p>Then subscribe to our newsletter!</p>
                     </div>
-                    <form class="newsletter-form">
+
+                    <form class="newsletter-form" action="/includes/newsLetterForm.php" method="post" id="newsLetterForm">
                         <div class="d-flex justify-content-center flex-column flex-md-row w-50 align-items-center m-auto">
                             <label class="w-100">
-                                <input type="email" class="form-control mt-3 " placeholder="Enter e-mail">
+                                <input type="email" class="form-control mt-3 " placeholder="Enter e-mail" id="newsletterEmail" name="newsLetterName">
                             </label>
-                            <a href="#" class="subscribe-button position-relative d-flex flex-wrap ms-3 mt-3">
+                            <a  onclick="newsLetterPopup(); save_newsletter();return false;" class="subscribe-button position-relative d-flex flex-wrap ms-3 mt-3">
                                 <span></span>
                                 <span></span>
                                 <span></span>
                                 <span></span>
                                 Subscribe
                             </a>
+                        </div>
+                        <div class="newsletter-popup" id="newsLetterPopup">
+                            <div class="overlay" onclick="newsLetterPopup();"></div>
+                            <div class="content">
+                                <div class="close-btn" onclick="newsLetterPopup();">&times;</div>
+                                <h6 id="newsletterSuccess"></h6>
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -64,3 +72,6 @@
         </div>
     </div>
 </footer>
+
+<script src="/assets/js/newsLetterForm.js"></script>
+<script src="/assets/js/newsLetterPopup.js"></script>

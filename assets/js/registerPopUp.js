@@ -15,9 +15,15 @@ registerButton.addEventListener("click", function () {
 
     registerPopUp.classList.add("active");
 
-
     //add blur
     document.querySelector(".blur").classList.add("active");
+
+    //if login button is clicked while register active
+    loginButton.onclick = function() {
+        registerPopUp.classList.remove("active");
+    }
+
+    //click outside popUp
 
 
 });

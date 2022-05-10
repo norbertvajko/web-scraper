@@ -56,7 +56,3 @@ function save_data() {
         }
     }
 }
-function resetErrors() {
-    usernameError.innerHTML = '';
-    passwordError.innerHTML = '';
-}

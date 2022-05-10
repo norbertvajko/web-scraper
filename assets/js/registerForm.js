@@ -16,7 +16,6 @@ function save_register() {
 
 
     let form_element = document.getElementsByClassName('register_data');
-
     let registerData = new FormData();
 
     for (let count = 0; count < form_element.length; count++) {
@@ -24,9 +23,7 @@ function save_register() {
     }
 
     let ajax_request = new XMLHttpRequest();
-
     ajax_request.open('POST', '/includes/registerValidation.php', true);
-
     ajax_request.send(registerData);
 
     ajax_request.onreadystatechange = function () {
@@ -39,6 +36,7 @@ function save_register() {
 
                 registerForm.reset();
 
+                //SCHIMBA successu
                 messageSuccess.innerHTML = "Success";
 
                 setTimeout(function () {

@@ -68,12 +68,21 @@ if (empty($correctPassword)) {
 }
 
 // Check to see if the user already registered
+// Check username
+$sql = "SELECT full_name FROM users WHERE full_name='$fullName'";
+$result = mysqli_query($conn,$sql) or die("Query unsuccessful") ;
+if (mysqli_num_rows($result) > 0) {
+    $response['name_error'] = "Username already exists.";
+    $registerComplete = false;
+}
 
+//Check email
+$check_email = mysqli_query($conn, "SELECT email FROM users where email = '$registerEmail'");
+if(mysqli_num_rows($check_email) > 0){
+    $response['email_error'] = "E-mail already exists";
+    $registerComplete = false;
+}
 
-//Insert a new user
-//$stmt = $mysqli->prepare("INSERT INTO users (id, full_name , email , password) VALUES (null, ? , ? , ?)");
-//$stmt->bind_param("sss", $fullName , $registerEmail , $hashedPassword);
-//$result = $stmt->execute();
 
 if ($registerComplete) {
     $success = "Register Completed";
