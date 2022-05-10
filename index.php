@@ -1,5 +1,5 @@
 <?php
-//    include 'includes/connDB.php'
+    include 'includes/connDB.php'
 //?>
 
 <!DOCTYPE html>

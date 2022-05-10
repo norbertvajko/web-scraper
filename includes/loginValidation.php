@@ -5,6 +5,8 @@ $loginComplete = true;
 $username = $_POST["uname"];
 $password = $_POST["password"];
 
+$hashedPassword = md5($password);
+
 $response = [
     'success' => '',
     'username_error' => '',
@@ -29,16 +31,11 @@ elseif(!$password == 'aaa') {
     $loginComplete = false;
 }
 
-//if (!$uppercase || !$lowercase || !$number || !$specialchars || strlen($password) < 8) {
-//    $response['password_error'] = "Password should be at least 8 characters in length , and should include
-//    at least one upper case letter, one number, and one special character.";
-//    $loginComplete = false;
-//}
 
 if ($loginComplete) {
+
     $response['success'] = "Welcome";
 }
-
 
 //transform into json obj
 echo json_encode($response);

@@ -16,6 +16,7 @@ loginButton.addEventListener("click",function() {
     //add blur
     document.querySelector(".blur").classList.add("active");
 
+
 });
 
 

@@ -1,10 +1,14 @@
 <?php
 
-    $uname = "n_vajko";
+    $userName = "n.vajko";
     $dbPass = "PQqNVaYk9V9ZWet";
-    $host = "https://n_vajko.internship.rankingcoach.com";
+    $hostname = "internship.rankingcoach.com:13306";
     $db = "n_vajko";
 
-    $conn = mysqli_connect("$host", '$uname', '$dbPass', '$db')
+
+    $conn = mysqli_connect($hostname, $userName, $dbPass, $db)
     or die ("DB Connection Error");
+
+
+
 

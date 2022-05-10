@@ -15,8 +15,10 @@ registerButton.addEventListener("click", function () {
 
     registerPopUp.classList.add("active");
 
+
     //add blur
     document.querySelector(".blur").classList.add("active");
+
 
 });
 

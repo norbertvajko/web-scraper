@@ -177,3 +177,22 @@ body {
 .main-features-title {
     display: none !important;
 }
+
+
+
+
+
+
+
+
+@media screen and (max-width: 576px) {
+    .banner-text {
+        text-align: center;
+        margin-bottom:15px;
+    }
+    .terminal-banner {
+
+
+    }
+
+}

@@ -1,6 +1,13 @@
 <?php
 
-//include('connDB.php');
+//Database Conn
+$userName = "n.vajko";
+$dbPass = "PQqNVaYk9V9ZWet";
+$hostname = "internship.rankingcoach.com:13306";
+$db = "n_vajko";
+
+$conn = mysqli_connect($hostname, $userName, $dbPass, $db)
+or die ("DB Connection Error");
 
 $registerComplete = true;
 
@@ -69,8 +76,12 @@ if (empty($correctPassword)) {
 //$result = $stmt->execute();
 
 if ($registerComplete) {
-    $success = "Successs";
+    $success = "Register Completed";
     echo json_encode($success);
+
+    $query = "INSERT INTO users (full_name, email, password) 
+  			  VALUES('$fullName', '$registerEmail', '$hashedPassword')";
+    mysqli_query($conn, $query);
 }
 //transform into json obj
 else {
