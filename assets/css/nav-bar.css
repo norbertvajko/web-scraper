@@ -64,7 +64,7 @@
     visibility: hidden;
     transition: top 0ms ease-in-out 500ms,
                 opacity 500ms ease-in-out 0ms,
-                transform 20ms ease-in-out 0ms;
+                transform 500ms ease-in-out 0ms;
 }
 .popup.active {
     top: 50%;
@@ -75,10 +75,9 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    /*backdrop-filter: blur(5px);*/
-    /*transition: top 0ms ease-in-out 0ms,*/
-    /*            opacity 200ms ease-in-out 0ms,*/
-    /*            transform 20ms ease-in-out 0ms;*/
+    transition: top 0ms ease-in-out 0ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 500ms ease-in-out 0ms;
 }
 .popup .close-btn {
     position: absolute;

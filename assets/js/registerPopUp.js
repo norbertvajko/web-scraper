@@ -13,7 +13,7 @@ let errorMessages = [fullNameError , emailError , passwordError , correctPasswor
 //Enter Register
 registerButton.addEventListener("click", function () {
 
-    registerPopUp.classList.add("active");
+    showRegisterPopUp();
 
     //add blur
     document.querySelector(".blur").classList.add("active");
@@ -23,8 +23,13 @@ registerButton.addEventListener("click", function () {
         registerPopUp.classList.remove("active");
     }
 
-    //click outside popUp
-
+    //click outside popUp to close
+    // document.addEventListener('mouseup', function (e) {
+    //     if (!registerPopUp.contains(e.target)) {
+    //         registerPopUp.style.display = 'none';
+    //         removeBlur();
+    //     }
+    // });
 
 });
 
@@ -48,5 +53,7 @@ document.querySelector(".popupRegister .close-btn").addEventListener("click", fu
 });
 
 function showRegisterPopUp() {
-
+    registerPopUp.classList.add("active");
+    registerPopUp.style.display = 'block';
+    addBlur();
 }

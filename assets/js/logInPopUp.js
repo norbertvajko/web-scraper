@@ -1,45 +1,42 @@
-const loginButton = document.querySelector("#showLogin");
-const closeButton = document.querySelector(".popup .close-btn");
-const loginPopup = document.querySelector(".popup");
-const loginForm = document.getElementById('loginFormID');
+    const loginButton = document.querySelector("#showLogin");
+    const closeButton = document.querySelector(".popup .close-btn");
+    const loginPopup = document.querySelector(".popup");
+    const loginForm = document.getElementById('loginFormID');
 
-const usernameError = document.getElementById('username_error');
-const passError = document.getElementById('password_error');
-const succError = document.getElementById('sucError');
-
+    const usernameError = document.getElementById('username_error');
+    const passError = document.getElementById('password_error');
+    const succError = document.getElementById('sucError');
 
 
 //Enter LoginPopUp
-loginButton.addEventListener("click",function() {
+    loginButton.addEventListener("click", function () {
 
-    showLoginPopUp();
+        showLoginPopUp();
 
-
-    //if register button is clicked while login active
-    registerButton.onclick = function () {
-        loginPopup.classList.remove("active");
-    }
-
-  //  click outside popUp close
-    document.addEventListener('mouseup', function (e) {
-        if (!loginPopup.contains(e.target)) {
-            loginPopup.style.display = 'none';
-            removeBlur();
+        //if register button is clicked while login active
+        registerButton.onclick = function () {
+            loginPopup.classList.remove("active");
         }
-    });
 
-});
+        //click outside popUp close
+        // document.addEventListener('mouseup', function (e) {
+        //     if (!loginPopup.contains(e.target)) {
+        //         loginPopup.style.display = 'none';
+        //         removeBlur();
+        //     }
+        // });
+
+    });
 
 
 //Exit Login
-closeButton.addEventListener("click",function() {
+    closeButton.addEventListener("click", function () {
 
-    loginForm.reset();   // ??
+        loginForm.reset();   // ??
 
-    closeLoginPopUp();
+        closeLoginPopUp();
 
-});
-
+    });
 
 function addBlur() {
     document.querySelector(".blur").classList.add("active");
