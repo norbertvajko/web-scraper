@@ -9,12 +9,14 @@ $db = "n_vajko";
 $conn = mysqli_connect($hostname, $userName, $dbPass, $db)
 or die ("DB Connection Error");
 
+
 $registerComplete = true;
 
 $fullName = $_POST["fullName"];
 $registerEmail = $_POST["remail"];
 $registerPassword = $_POST["rpassword"];
 $correctPassword = $_POST["crpassword"];
+
 
 $hashedPassword = md5($registerPassword);
 
@@ -45,10 +47,10 @@ if(empty($registerEmail)) {
     $registerComplete = false;
 }
 
-$uppercase = preg_match('@[A-Z]@', $registerPassword, $correctPassword);
-$lowercase = preg_match('@[a-z]@', $registerPassword, $correctPassword);
-$number = preg_match('@[0-9]@', $registerPassword, $correctPassword);
-$specialchars = preg_match('@[^\w]@', $registerPassword, $correctPassword);
+$uppercase = preg_match('@[A-Z]@', $registerPassword);
+$lowercase = preg_match('@[a-z]@', $registerPassword);
+$number = preg_match('@[0-9]@', $registerPassword);
+$specialchars = preg_match('@[^\w]@', $registerPassword);
 
 
 if (empty($registerPassword)) {
@@ -66,6 +68,8 @@ if (empty($correctPassword)) {
     $response['correctPassword_error'] = "Passwords do not match! Try again";
     $registerComplete = false;
 }
+
+
 
 // Check to see if the user already registered
 // Check username

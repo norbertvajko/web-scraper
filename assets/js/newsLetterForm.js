@@ -1,15 +1,14 @@
 function save_newsletter() {
 
     const newsletterForm = document.getElementById('newsLetterForm');
-    const messageSuccess =  document.getElementById('newsLetterPopup');
-    const newsletterEmail = document.getElementById('newsLetterName');
+    const messageSuccess =  document.getElementById('newsletterSuccess');
+    const newsletterEmail = document.getElementById('newsletterEmail');
 
     const emailError = document.getElementById('newsletterError');
 
-    let form_element = document.getElementById('newsletterEmail');
     let registerData = new FormData();
 
-    registerData.append(form_element.name, form_element.value);
+    registerData.append(newsletterEmail.name, newsletterEmail.value);
 
     let ajax_request = new XMLHttpRequest();
     ajax_request.open('POST', '/includes/newsLetterValidation.php', true);
@@ -23,23 +22,26 @@ function save_newsletter() {
             if (response.success !== '') {
 
                 newsletterForm.reset();
+                newsLetterPopup();
 
                 messageSuccess.innerHTML = response.success;
 
-                // setTimeout(function () {
-                //
-                //     form_element.innerHTML = '';
-                //
-                // }, 5000);
 
-                //clean inputs
+                setTimeout(function () {
+
+                    messageSuccess.innerHTML = '';
+
+                }, 1000);
+
+                //clear inputs
+
                 newsletterEmail.innerHTML = "";
-
                 emailError.innerHTML = "";
 
             } else {
                 //display validation error
-                emailError.innerHTML = response.email_error;
+                document.getElementById('newsletterEmail').placeholder = response.email_error;
+                // emailError.innerHTML = response.email_error;
             }
 
         }

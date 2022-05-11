@@ -12,25 +12,37 @@ or die ("DB Connection Error");
 $newsLetterComplete = true;
 
 $newsletterEmail = $_POST["newsLetterName"];
+$subscribeButton = $_POST["subscribeButton"];
 
 $response = [
     'success' => '',
     'email_error' => ''
 ];
 
-if(empty($newsletterEmail)) {
+if (empty($newsletterEmail)) {
     $response['email_error'] = "Field required";
     $newsLetterComplete = false;
-} elseif(!filter_var($newsletterEmail, FILTER_VALIDATE_EMAIL)) {
+} elseif (!filter_var($newsletterEmail, FILTER_VALIDATE_EMAIL)) {
     $response['email_error'] = 'Invalid email format';
     $newsLetterComplete = false;
 }
 
-if ($newsLetterComplete) {
-    $query = "INSERT INTO newsletter (email) VALUES('$newsletterEmail')";
-    mysqli_query($conn, $query);
 
-    $newsLetterComplete = true;
+//if ($newsLetterComplete) {
+//
+//    $query = "INSERT INTO newsletter (email) VALUES('$newsletterEmail')";
+//    mysqli_query($conn, $query);
+//
+//    $newsLetterComplete = true;
+//    $response['success'] = 'You have succesfully subscribed to our newsletter';
+//
+//}
+
+if ($newsLetterComplete) {
     $response['success'] = 'You have succesfully subscribed to our newsletter';
 
+    $query = "INSERT INTO newsletter (email) VALUES('$newsletterEmail')";
+    mysqli_query($conn, $query);
 }
+//transform into json obj
+echo json_encode($response);

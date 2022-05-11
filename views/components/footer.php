@@ -46,8 +46,9 @@
                         <div class="d-flex justify-content-center flex-column flex-md-row w-50 align-items-center m-auto">
                             <label class="w-100">
                                 <input type="email" class="form-control mt-3 " placeholder="Enter e-mail" id="newsletterEmail" name="newsLetterName">
+                                <span id="newsletterError"></span>
                             </label>
-                            <a  onclick="newsLetterPopup(); save_newsletter();return false;" class="subscribe-button position-relative d-flex flex-wrap ms-3 mt-3">
+                            <a  onclick=" save_newsletter();return false;" class="subscribe-button position-relative d-flex flex-wrap ms-3 mt-3" id="subscribeButton">
                                 <span></span>
                                 <span></span>
                                 <span></span>
@@ -58,7 +59,7 @@
                         <div class="newsletter-popup" id="newsLetterPopup">
                             <div class="overlay" onclick="newsLetterPopup();"></div>
                             <div class="content">
-                                <div class="close-btn" onclick="newsLetterPopup();">&times;</div>
+                                <div class="close-btn">&times;</div>
                                 <h6 id="newsletterSuccess"></h6>
                             </div>
                         </div>
