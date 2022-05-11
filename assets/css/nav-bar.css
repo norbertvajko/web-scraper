@@ -55,7 +55,7 @@
     top: 50%;
     left: 50%;
     transform:translate(-50%, -50%) scale(1.25);
-    max-width: 380px;
+    max-width: 300px;
     padding:20px 30px;
     background: #FFFFFF;
     box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.15);
@@ -138,14 +138,19 @@
     text-decoration: none;
     font-weight: 600;
 }
+.popupRegister {
+    max-width: 380px;
+}
 
 #sucLogin {
     color:green;
     font-weight: bold;
+    font-size:14px;
 }
 #sucRegister {
     color:red;
     font-weight: bold;
+    font-size:14px;
 }
 .message-error {
     color:red;
@@ -257,5 +262,9 @@ font-size:15px;
 #termsID {
     text-align: center;
     font-size: 10px;
+}
+#sucError {
+    color:red;
+    font-size:14px;
 }
 

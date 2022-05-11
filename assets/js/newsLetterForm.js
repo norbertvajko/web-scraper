@@ -26,22 +26,20 @@ function save_newsletter() {
 
                 messageSuccess.innerHTML = response.success;
 
-
-                setTimeout(function () {
-
-                    messageSuccess.innerHTML = '';
-
-                }, 1000);
-
-                //clear inputs
+                //clear inputs & message errors
 
                 newsletterEmail.innerHTML = "";
                 emailError.innerHTML = "";
 
+                document.getElementById('newsletterEmail').style.border = "none";
+                document.getElementById('newsletterEmail').placeholder = "Enter e-mail";
+
             } else {
                 //display validation error
                 document.getElementById('newsletterEmail').placeholder = response.email_error;
-                // emailError.innerHTML = response.email_error;
+
+                //add red border
+                document.getElementById('newsletterEmail').style.border = "2px solid #cc3333";
             }
 
         }

@@ -1,4 +1,4 @@
-function save_data() {
+function save_contact() {
 
     const contactForm = document.getElementById('formID');
     const messageSuccess = document.getElementById('sucMessage');
@@ -31,13 +31,13 @@ function save_data() {
 
                contactForm.reset();
 
-                messageSuccess.innerHTML = "Message Sent";
+                messageSuccess.innerHTML = response.success;
 
                 setTimeout(function () {
 
                     messageSuccess.innerHTML = '';
 
-                }, 5000);
+                }, 4000);
 
                 nameError.innerHTML = '';
                 emailError.innerHTML = '';
@@ -53,4 +53,5 @@ function save_data() {
 
         }
     }
+
 }

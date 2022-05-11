@@ -83,7 +83,7 @@
                     <span id="sucMessage"></span>
                     <div class="contact-form-button w-100 d-flex flex-wrap mt-40">
                         <button class="button-form" id="submitButton" type="submit" name="submit"
-                                onclick="save_data(); return false;">
+                                onclick="save_contact(); return false;">
                             <span>
                                 Submit
                             </span>

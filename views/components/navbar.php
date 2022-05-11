@@ -82,6 +82,7 @@
                         <span id="password_error" class="message-error"></span>
                     </div>
                     <span id="sucLogin"></span>
+                    <span id="sucError"></span>
                     <div class="form-element">
                         <input type="checkbox" id="remember-me">
                         <label for="remember-me">Remember me</label>

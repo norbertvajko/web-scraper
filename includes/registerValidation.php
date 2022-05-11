@@ -89,14 +89,11 @@ if(mysqli_num_rows($check_email) > 0){
 
 
 if ($registerComplete) {
-    $success = "Register Completed";
-    echo json_encode($success);
+    $response['success'] = 'Register Completed';
 
     $query = "INSERT INTO users (full_name, email, password) 
   			  VALUES('$fullName', '$registerEmail', '$hashedPassword')";
     mysqli_query($conn, $query);
 }
 //transform into json obj
-else {
-    echo json_encode($response);
-}
+echo json_encode($response);

@@ -5,21 +5,28 @@ const loginForm = document.getElementById('loginFormID');
 
 const usernameError = document.getElementById('username_error');
 const passError = document.getElementById('password_error');
+const succError = document.getElementById('sucError');
 
 
 
-//Enter Login
+//Enter LoginPopUp
 loginButton.addEventListener("click",function() {
 
-    loginPopup.classList.add("active");
+    showLoginPopUp();
 
-    //add blur
-    document.querySelector(".blur").classList.add("active");
 
     //if register button is clicked while login active
-    registerButton.onclick = function() {
+    registerButton.onclick = function () {
         loginPopup.classList.remove("active");
     }
+
+  //  click outside popUp close
+    document.addEventListener('mouseup', function (e) {
+        if (!loginPopup.contains(e.target)) {
+            loginPopup.style.display = 'none';
+            removeBlur();
+        }
+    });
 
 });
 
@@ -27,15 +34,37 @@ loginButton.addEventListener("click",function() {
 //Exit Login
 closeButton.addEventListener("click",function() {
 
-    loginPopup.classList.remove("active");
+    loginForm.reset();   // ??
 
-    //reset form after close
-    loginForm.reset();
+    closeLoginPopUp();
+
+});
+
+
+function addBlur() {
+    document.querySelector(".blur").classList.add("active");
+}
+
+function removeBlur() {
+    document.querySelector('#blur').classList.remove("active");
+}
+
+function showLoginPopUp() {
+    loginPopup.classList.add("active");
+    loginPopup.style.display = 'block';
+    addBlur();
+}
+
+function closeLoginPopUp() {
+    loginPopup.classList.remove("active");
+    removeBlur();
 
     //reset error messages
+    clearErrors()
+}
+
+function clearErrors() {
     usernameError.innerHTML = "";
     passError.innerHTML = "";
-
-    //exit blur
-    document.querySelector('#blur').classList.remove("active");
-});
+    succError.innerHTML = "";
+}

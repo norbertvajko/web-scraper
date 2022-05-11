@@ -28,16 +28,6 @@ if (empty($newsletterEmail)) {
 }
 
 
-//if ($newsLetterComplete) {
-//
-//    $query = "INSERT INTO newsletter (email) VALUES('$newsletterEmail')";
-//    mysqli_query($conn, $query);
-//
-//    $newsLetterComplete = true;
-//    $response['success'] = 'You have succesfully subscribed to our newsletter';
-//
-//}
-
 if ($newsLetterComplete) {
     $response['success'] = 'You have succesfully subscribed to our newsletter';
 

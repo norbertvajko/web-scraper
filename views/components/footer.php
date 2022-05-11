@@ -59,7 +59,7 @@
                         <div class="newsletter-popup" id="newsLetterPopup">
                             <div class="overlay" onclick="newsLetterPopup();"></div>
                             <div class="content">
-                                <div class="close-btn">&times;</div>
+                                <div class="close-btn" id="newsLettCloseButton">&times;</div>
                                 <h6 id="newsletterSuccess"></h6>
                             </div>
                         </div>

@@ -1,16 +1,25 @@
 <?php
 
-    $formComplete = true;
+//Database Conn
+$userName = "n.vajko";
+$dbPass = "PQqNVaYk9V9ZWet";
+$hostname = "internship.rankingcoach.com:13306";
+$db = "n_vajko";
 
-    $name = $_POST["name"];
-    $email = $_POST["email"];
-    $message = $_POST["message"];
+$conn = mysqli_connect($hostname, $userName, $dbPass, $db)
+or die ("DB Connection Error");
 
-    $response = [
-        'success' => '',
-        'name_error' => '',
-        'email_error' => '',
-        'message_error' => ''
+$formComplete = true;
+
+$name = $_POST["name"];
+$email = $_POST["email"];
+$message = $_POST["message"];
+
+$response = [
+    'success' => '',
+    'name_error' => '',
+    'email_error' => '',
+    'message_error' => ''
     ];
 
     if (empty($name)) {
@@ -33,20 +42,17 @@
         $formComplete = false;
     }
 
-    if ($formComplete) {
-        $response['success'] = '<span id="sucMessage">Message Sent</span>';
-    }
-
 
 if ($formComplete) {
-    $success = "Successs";
-    echo json_encode($success);
+    $response['success'] = 'Message Sent';
+
+    $query = "INSERT INTO contact (name , email , message) VALUES('$name','$email','$message')";
+    mysqli_query($conn, $query);
 }
 
 //transform into json obj
-else {
-    echo json_encode($response);
-}
+echo json_encode($response);
+
 
 
 

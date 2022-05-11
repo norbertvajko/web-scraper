@@ -34,25 +34,22 @@ function save_register() {
 
             if (response.success !== '') {
 
-                registerForm.reset();
+                // registerForm.reset();
 
-                //SCHIMBA successu
-                messageSuccess.innerHTML = "Success";
+                //show success message if all good
+                messageSuccess.innerHTML = response.success;
 
                 setTimeout(function () {
-
                     messageSuccess.innerHTML = '';
+                    registerPopUp.classList.remove('active');
                 }, 2000);
 
-                fullName.innerHTML = '';
-                email.innerHTML = '';
-                password.innerHTML = '';
-                correctPassword.innerHTML = '';
+                //empty fields/errors
+                emptyFields();
+                emptyErrorMessages();
 
-                fullNameError.innerHTML = '';
-                emailError.innerHTML = '';
-                passwordError.innerHTML = '';
-                correctPasswordError.innerHTML = '';
+                //after complete register show login
+                showLoginPopUp();
 
             } else {
                 //display validation error
@@ -63,5 +60,21 @@ function save_register() {
             }
 
         }
+        function showErrorMessages() {
+
+        }
     }
+    function emptyFields() {
+        fullName.innerHTML = '';
+        email.innerHTML = '';
+        password.innerHTML = '';
+        correctPassword.innerHTML = '';
+    }
+    function emptyErrorMessages() {
+        fullNameError.innerHTML = '';
+        emailError.innerHTML = '';
+        passwordError.innerHTML = '';
+        correctPasswordError.innerHTML = '';
+    }
+
 }

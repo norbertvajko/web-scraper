@@ -21,6 +21,7 @@ $response = [
     'success' => '',
     'username_error' => '',
     'password_error' => '',
+    'success_error' => ''
 ];
 
 $uppercase     =    preg_match('@[A-Z]@', $password);
@@ -48,7 +49,7 @@ if ($loginComplete) {
         $response['success'] = "You are now logged in";
     }
     else {
-        $response['success'] = "Wrong email/password";
+        $response['success_error'] = "Wrong email/password";
     }
 }
 

@@ -46,3 +46,7 @@ document.querySelector(".popupRegister .close-btn").addEventListener("click", fu
     }
 
 });
+
+function showRegisterPopUp() {
+
+}

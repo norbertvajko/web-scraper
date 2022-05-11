@@ -1,10 +1,12 @@
 function save_data() {
 
-    const loginForm = document.getElementById('loginFormID');
-    const  successMessage = document.getElementById('sucLogin');
 
-    const username = document.getElementById('uname');
-    const password = document.getElementById('password');
+    const loginForm = document.getElementById('loginFormID');
+    const successMessage = document.getElementById('sucLogin');
+    const successError = document.getElementById('sucError');
+
+    // const username = document.getElementById('uname');
+    // const password = document.getElementById('password');
 
     const usernameError = document.getElementById('username_error');
     const passwordError = document.getElementById('password_error');
@@ -32,27 +34,37 @@ function save_data() {
 
             if (response.success !== '') {
 
-                loginForm.reset();
                 successMessage.innerHTML = response.success;
 
                 setTimeout(function () {
 
-                    successMessage.innerHTML = '';
 
-                }, 5000);
+                    successMessage.innerHTML = ''; //clear success message
+                    loginPopup.classList.remove('active'); //exit loginPopup
+                    document.querySelector(".blur").classList.remove("active"); //exit blur
 
-                username.innerHTML = '';
-                password.innerHTML = '';
+                }, 2000);
 
-                usernameError.innerHTML = '';
-                passwordError.innerHTML = '';
+                // username.innerHTML = '';
+                // password.innerHTML = '';
+
+                loginForm.reset();
+                clearErrors();
 
             } else {
                 //display validation error
+                successError.innerHTML = response.success_error;
                 usernameError.innerHTML = response.username_error;
                 passwordError.innerHTML = response.password_error;
             }
 
         }
     }
+
+    function clearErrors() {
+        usernameError.innerHTML = '';
+        passwordError.innerHTML = '';
+        successError.innerHTML = '';
+    }
+
 }
