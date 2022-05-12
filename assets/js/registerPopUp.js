@@ -21,6 +21,8 @@ registerButton.addEventListener("click", function () {
     //if login button is clicked while register active
     loginButton.onclick = function() {
         registerPopUp.classList.remove("active");
+        emptyErrorMessages();
+        registerForm.reset();
     }
 
     //click outside popUp to close
@@ -44,13 +46,15 @@ document.querySelector(".popupRegister .close-btn").addEventListener("click", fu
     //reset form after close
     registerForm.reset();
 
-  // reset error messages
+});
+
+function emptyErrorMessages() {
+
     for(let i=0 ;i<errorMessages.length; i++) {
         console.log(errorMessages);
         errorMessages[i].innerHTML = '';
     }
-
-});
+}
 
 function showRegisterPopUp() {
     registerPopUp.classList.add("active");
