@@ -19,7 +19,7 @@ function save_newsletter() {
 
             let response = JSON.parse(ajax_request.responseText);
 
-        // console.log(typeof response );
+            // console.log(typeof response );
             if (response.success !== '') {
 
                 newsletterForm.reset();
@@ -28,7 +28,6 @@ function save_newsletter() {
                 messageSuccess.innerHTML = response.success;
 
                 //clear inputs & message errors
-
                 newsletterEmail.innerHTML = "";
                 emailError.innerHTML = "";
 
