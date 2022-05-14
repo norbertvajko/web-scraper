@@ -1,42 +1,35 @@
 <?php
 
-//$request_url = 'https://www.flanco.ro';
-$request_url = 'https://www.cel.ro';
+$curl = curl_init();
 
-$ch = curl_init();
-$userAgent = "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.13) Gecko/20080311 Firefox/2.0.0.13";
+$url = 'https://www.flanco.ro/telefoane-tablete/smartphone/p/1.html';
 
-curl_setopt($ch, CURLOPT_URL, $request_url);    // The url to get links from
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);    // We want to get the respone
-curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
-curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, true);
-curl_setopt($ch, CURLOPT_USERAGENT, $userAgent);
-curl_setopt($ch, CURLOPT_VERBOSE, true);
+curl_setopt($curl, CURLOPT_URL , $url);
+curl_setopt($curl , CURLOPT_RETURNTRANSFER, true);
+
+$result = curl_exec($curl);
+
+$products = array();
+
+# Match phones name
+$regex_title = '!<h2>.*?<\/h2>!';
+preg_match_all($regex_title,$result,$match);
+$phones['name'] = $match[0];
+//print_r($phones['name']);
 
 
-$result = curl_exec($ch);
+# Match phone price
+$regex_price = '!<span class="special-price"><span class="price">(.*?)(?:,)<sup class="decimal">(.*?)<\/sup> lei<\/span><\/span>!';
+preg_match_all($regex_price,$result,$match);
+$phones['price'] = $match[1] . '.' . $match[2];
+//print_r($phones['price']);
 
-echo $result;
 
-$info = curl_getinfo($ch);
-$err = curl_error($ch);
-$ern = curl_errno($ch);
+# Match phone rating
+$regex_rating = '!<span><span>(.*?)<\/span><\/span>!';
+preg_match_all($regex_rating , $result , $match);
+$phones['rating'] = $match[0];
+print_r($phones['rating']);
 
-if ($ern) {
-    printf("An error occurred: (%d) %s\n", $ern, $err);
-    exit(1);
-}
-//curl_close($ch);
 
-//printf("Response body size: %d\n", $info["size_download"]);
-//
-//echo $result;
-//
-//$regex = '/EM.listingGlobals.items\s=\s(.*])/';
-//preg_match_all($regex, $result, $parts);
-//$links = $parts[0];
-//foreach ($links as $link) {
-//    echo $link . "<br>";
-//}
-curl_close($ch);
+
