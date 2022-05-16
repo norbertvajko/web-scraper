@@ -1,57 +1,74 @@
 <?php
 
-$curl = curl_init();
 
-$url = 'https://www.flanco.ro/telefoane-tablete/smartphone/p/9.html';
+for ($page = 0; $page < 13; $page++) {
 
-curl_setopt($curl, CURLOPT_URL , $url);
-curl_setopt($curl , CURLOPT_RETURNTRANSFER, true);
+    $curl = curl_init();
+    $urls = 'https://www.flanco.ro/telefoane-tablete/smartphone/p/' . $page . '.html';
 
-$result = curl_exec($curl);
+    curl_setopt($curl, CURLOPT_URL, $urls);
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
-$phones = array();
+    $result = curl_exec($curl);
 
+    $phones = array();
 
 # Match phones name
-$regex_title = '!<h2>(.*?)<\/h2>!';
-preg_match_all($regex_title,$result,$match);
-$phones['name'] = $match[1];
-//print_r($phones['name']);
+
+//    $regex_title = '!<h2>(.*?)<\/h2>!';
+//    $regex_rating = '!<div class="rating-result" id="rating-result_.*?"><span><span>(.*?)(?:%)<\/span><\/span><\/div>!';
+//    $regex_stock = '!<div class="produs-status">.*>(.*?)<\/span>  <\/div> <\/div>!';
+//    $regex_image = '!<span class=""><img class=""  src="(.*?)" .*"\/><\/span><\/span>!';
+    $regex_price = '!<span class="special-price"><span class="price">(.*?)(?:,)<|<span class="singlePrice"><span class="price">(.*?)(?:,)<!';
+
+//    $phones['name'] = scrape_data($regex_title,$result);
+//    $phones['rating'] = scrape_data($regex_rating,$result);
+//    $phones['inStock'] = scrape_data($regex_stock,$result);
+//    $phones['image'] = scrape_data($regex_image,$result);
+    $phones['price'] = scrape_data($regex_price,$result);
+//    $phones['price'][$i]
 
 
 # Match phone price block
-preg_match_all('!<div class="price-box price-final_price" data-role="priceBox" data-product-id=".*?" data-price-box="product-id-.*?">(.*)!',$result , $match);
+//    preg_match_all('!<div class="price-box price-final_price" data-role="priceBox" data-product-id=".*?" data-price-box="product-id-.*?">(.*)!', $result, $match);
 
 # Match prices individually
-$first_price = '!<span class="special-price"><span class="price">(.*?)(?:,)<!';
-$second_price = '!<span class="singlePrice"><span class="price">(.*?)(?:,)<!';
-
-for ($i=0; $i<count($match[1]); $i++) {
-    if (preg_match($first_price, $match[1][$i], $nPhones_price)) {
-        $phones['price'][$i] = $nPhones_price[1];
-    }
-    elseif (preg_match($second_price, $match[1][$i], $nPhones_price)) {
-        $phones['price'][$i] = $nPhones_price[1];
-    }
-}
+//    $first_price = '!<span class="special-price"><span class="price">(.*?)(?:,)<!';
+//    $second_price = '!<span class="singlePrice"><span class="price">(.*?)(?:,)<!';
 
 
-# Match phone rating
-$regex_rating = '!<div class="rating-result" id="rating-result_.*?"><span><span>(.*?)(?:%)<\/span><\/span><\/div>!';
-preg_match_all($regex_rating , $result , $match);
-$phones['rating'] = $match[1];
-//print_r($phones['rating']);
-
+//    for ($i = 0; $i < count($match[1]); $i++) {
+//        if (preg_match($first_price, $match[1][$i], $nPhones_price)) {
+//            $phones['price'][$i] = str_replace('.', '', $nPhones_price[1]);
+//        if (preg_match($second_price, $match[1][$i], $nPhones_price)) {
+//            $phones['price'][$i] = str_replace('.', '', $nPhones_price[1]);;
+//        }
+//    }
 
 # Match stock
-$regex_stock = '!<div class="produs-status">.*>(.*?)<\/span>  <\/div> <\/div>!';
-preg_match_all($regex_stock , $result , $match);
-$phones['inStock'] = $match[1];
 
 
 # Match image
-$regex_image = '!<span class=""><img class=""  src="(.*?)" .*"\/><\/span><\/span>!';
-preg_match_all($regex_image , $result , $match);
-$phones['image'] = $match[1];
 
-print_r($phones);
+//    $phones['shop'] = "Flanco";
+
+    print_r($phones);
+    curl_close($curl);
+}
+
+function scrape_data($regex_stock, $result) {
+    preg_match_all($regex_stock, $result, $match);
+    $full_match = $match[1];
+    if (count($match) >= 3){
+        var_dump(count($match));
+        for ($i = 0; $i <=count($match); $i++) {
+            for ($j = 0; $j <=count($match[$i]); $j++) {
+                if ($full_match[$i] == '' && !empty($match[$i])) {
+                    $full_match[$j] = $match[$i][$j];
+                }
+            }
+        }
+      //  return $full_match;
+    }
+    return $full_match;
+}
