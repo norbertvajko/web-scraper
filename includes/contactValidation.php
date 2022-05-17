@@ -1,13 +1,6 @@
 <?php
 
-//Database Conn
-$userName = "n.vajko";
-$dbPass = "PQqNVaYk9V9ZWet";
-$hostname = "internship.rankingcoach.com:13306";
-$db = "n_vajko";
-
-$conn = mysqli_connect($hostname, $userName, $dbPass, $db)
-or die ("DB Connection Error");
+include "connDB.php";
 
 $formComplete = true;
 
@@ -47,7 +40,7 @@ if ($formComplete) {
     $response['success'] = 'Message Sent';
 
     $query = "INSERT INTO contact (name , email , message) VALUES('$name','$email','$message')";
-    mysqli_query($conn, $query);
+    mysqli_query($GLOBALS['conn'], $query);
 }
 
 //transform into json obj

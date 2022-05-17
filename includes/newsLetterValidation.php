@@ -1,13 +1,6 @@
 <?php
 
-//Database Conn
-$userName = "n.vajko";
-$dbPass = "PQqNVaYk9V9ZWet";
-$hostname = "internship.rankingcoach.com:13306";
-$db = "n_vajko";
-
-$conn = mysqli_connect($hostname, $userName, $dbPass, $db)
-or die ("DB Connection Error");
+include "connDB.php";
 
 $newsLetterComplete = true;
 
@@ -32,7 +25,7 @@ if ($newsLetterComplete) {
     $response['success'] = 'You have succesfully subscribed to our newsletter';
 
     $query = "INSERT INTO newsletter (email) VALUES('$newsletterEmail')";
-    mysqli_query($conn, $query);
+    mysqli_query($GLOBALS['conn'], $query);
 }
 //transform into json obj
 echo json_encode($response);

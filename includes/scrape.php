@@ -1,32 +1,45 @@
 <?php
 
-for ($page = 1; $page < 13; $page++) {
+include "connDB.php";
 
-    $curl = curl_init();
-    $urls = 'https://www.flanco.ro/telefoane-tablete/smartphone/p/' . $page . '.html';
+function web_crawl($pageSt , $pageIndex ) {
+    for ($page = $pageSt; $page < $pageIndex; $page++) {
 
-    curl_setopt($curl, CURLOPT_URL, $urls);
-    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+        $result = curl_data(
+            [
+                '0' => [
+                    'option_name' => CURLOPT_URL,
+                    'option_value' => 'https://www.flanco.ro/telefoane-tablete/smartphone/p/' . $page . '.html'
+                ],
+                '1' => [
+                    'option_name' => CURLOPT_RETURNTRANSFER,
+                    'option_value' => true
+                ],
+            ]
+        );
 
-    $result = curl_exec($curl);
+        $regexName = '!<h2>(.*?)<\/h2>!';
+        $regexRating = '!<div class="rating-result" id="rating-result_.*?"><span><span>(.*?)(?:%)<\/span><\/span><\/div>!';
+        $regexStock = '!<div class="produs-status">.*>(.*?)<\/span>  <\/div> <\/div>!';
+        $regexImage = '!<span class=""><img class=""  src="(.*?)" .*"\/><\/span><\/span>!';
+        $regexPrice = '!<span class="special-price"><span class="price">(.*?)(?:,)<|<span class="singlePrice"><span class="price">(.*?)(?:,)<!';
 
+        $phones = [
+            'name' => scrape_data($regexName, $result),
+            'rating' => scrape_data($regexRating, $result),
+            'inStock' => scrape_data($regexStock, $result),
+            'images' => scrape_data($regexImage, $result),
+            'price' => scrape_data($regexPrice, $result),
+//        'description' => scrape_data($regexDescription, $result),
+//        'link' => scrape_data(link, $result)
+        ];
 
-    $regexName = '!<h2>(.*?)<\/h2>!';
-    $regexRating = '!<div class="rating-result" id="rating-result_.*?"><span><span>(.*?)(?:%)<\/span><\/span><\/div>!';
-    $regexStock = '!<div class="produs-status">.*>(.*?)<\/span>  <\/div> <\/div>!';
-    $regexImage = '!<span class=""><img class=""  src="(.*?)" .*"\/><\/span><\/span>!';
-    $regexPrice = '!<span class="special-price"><span class="price">(.*?)(?:,)<|<span class="singlePrice"><span class="price">(.*?)(?:,)<!';
+        $obj = json_encode($phones);
+        $test = json_decode($obj);
 
-    $phones = [
-        'name' => scrape_data($regexName, $result),
-        'rating' => scrape_data($regexRating, $result),
-        'inStock' => scrape_data($regexStock, $result),
-        'images' => scrape_data($regexImage, $result),
-        'price' => scrape_data($regexPrice, $result)
-    ];
-
-    print_r($phones);
-    curl_close($curl);
+        for ($i = 0; $i < count($test->name); $i++)
+            upload_data($test, $i);
+    }
 }
 
 function scrape_data($regex_stock, $result)
@@ -41,3 +54,34 @@ function scrape_data($regex_stock, $result)
 
     return $match[1];
 }
+
+function upload_data($phones, $index)
+{
+    $phoneName = $phones->name[$index];
+    $phoneReviews = $phones->rating[$index];
+    $phonePrice = $phones->price[$index];
+    $phoneInStock = $phones->inStock[$index];
+    $phoneImages = $phones->images[$index];
+
+    $query = "INSERT INTO products (shop_id, category_id, name, description, reviews, price, in_stock, images)
+  			  VALUES('4', '1', '$phoneName', 'fdsfsd', '$phoneReviews', '$phonePrice', '$phoneInStock', '$phoneImages')";
+
+    if (!mysqli_query($GLOBALS['conn'], $query))
+        echo mysqli_error($GLOBALS['conn']) . '<br>';
+
+}
+
+function curl_data($options)
+{
+    $curl = curl_init();
+
+    for ($i = 0; $i < count($options); $i++) {
+        curl_setopt($curl, $options[$i]['option_name'], $options[$i]['option_value']);
+    }
+    return curl_exec($curl);
+}
+
+
+
+
+web_crawl(1,5, );

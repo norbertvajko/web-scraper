@@ -10,4 +10,4 @@
 
 
 
-
+$GLOBALS['conn'] = $conn;
