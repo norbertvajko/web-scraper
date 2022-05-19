@@ -52,11 +52,11 @@
                 <div class="row product-page-top">
                 <h1 class="d-block d-sm-none text-center p-3 "></h1>
                 <div class="col-lg-4 col-md-3 col-sm-6 col-xs-5 d-flex justify-content-center product-image">
-                    <img src="https://p1.akcdn.net/mid/859255347.apple-iphone-13-128gb.jpg" alt="product-img img-fluid"
-                         class="product-img ">
+                    <img src="" alt="" id="productImage"
+                         class="product-img img-fluid ">
                 </div>
                 <div class="d-flex flex-column justify-content-center align-items-center col-lg-4 col-md-5 col-sm-6 col-xs-8 product-details pt-2">
-                    <h1 class="d-none d-sm-block mb-3">Apple iPhone 13 128GB</h1>
+                    <h1 class="prod-title d-none d-sm-block mb-3" id="productTitle" ></h1>
                     <div class="hidden-xs">
                         <div class="rating"
                         <i class="fa fa-star"></i>
@@ -65,6 +65,10 @@
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star-o"></i>
                         <a href="#">(13)</a>
+                    </div>
+                    <div class="offer-instock">
+                        <span>Stoc:<span id="productInStock"></span></span>
+
                     </div>
                 </div>
 
@@ -87,7 +91,7 @@
                         </li>
                     </ul>
                 </div>
-                <h3 class="lowest-price d-flex flex-md-wrap">Lowest price:<span>3 534 00 RON</span></h3>
+                <h3 class="lowest-price d-flex flex-md-wrap">Lowest price:<span id="productPrice"></span></h3>
 
             </div>
             <div class="col-xs-12 col-sm-12 col-md-3 featured-offers">
@@ -105,9 +109,9 @@
                         </li>
                     </ul>
                     <div class="product-btn-site ">
-                        <button type="button" class="btn btn-warning">to site
-                            <i class="fa fa-angle-double-right"></i>
-                        </button>
+                        <form action="" id="productLink">
+                            <input type="submit" value="to site" />
+                        </form>
                     </div>
                 </div>
             </div>
@@ -175,6 +179,7 @@
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star-o"></i>
                                     </div>
+
                                 </div>
                                 <div class="col-4 best-offer-title ">
                                     <h3>Apple Telefon mobil Apple iPhone 13, 128GB, 4GB RAM, 5G, Red</h3>

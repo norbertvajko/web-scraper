@@ -2,16 +2,16 @@
 
 include "connDB.php";
 
-//$flancoProducts = [
-//    'name' => '!<h2>(.*?)<\/h2>!',
-//    'price' => '!<span class="special-price"><span class="price">(.*?)(?:,)<|<span class="singlePrice"><span class="price">(.*?)(?:,)<!',
-//    'rating' => '!<div class="rating-result" id="rating-result_.*?"><span><span>(.*?)(?:%)<\/span><\/span><\/div>!',
-//    'inStock' => '!<div class="produs-status">.*>(.*?)<\/span>  <\/div> <\/div>!',
-//    'images' => '!<span class=""><img class=""  src="(.*?)" .*"\/><\/span><\/span>!',
-//    'link' => '!<a class="product-item-link" href="(.*?)">!'
-//];
-//
-//for ($page = 1; $page < 13; $page++) { webCrawl('https://www.flanco.ro/telefoane-tablete/smartphone/p/' . $page. '.html', $flancoProducts); }
+$flancoProducts = [
+    'name' => '!<h2>(.*?)<\/h2>!',
+    'price' => '!<span class="special-price"><span class="price">(.*?)(?:,)<|<span class="singlePrice"><span class="price">(.*?)(?:,)<!',
+    'rating' => '!<div class="rating-result" id="rating-result_.*?"><span><span>(.*?)(?:%)<\/span><\/span><\/div>!',
+    'inStock' => '!<div class="produs-status">.*>(.*?)<\/span>  <\/div> <\/div>!',
+    'images' => '!<span class=""><img class=""  src="(.*?)" .*"\/><\/span><\/span>!',
+    'link' => '!<a class="product-item-link" href="(.*?)">!'
+];
+
+for ($page = 1; $page < 13; $page++) { webCrawl('https://www.flanco.ro/telefoane-tablete/smartphone/p/' . $page. '.html', $flancoProducts); }
 //
 //
 //
@@ -112,9 +112,9 @@ function webCrawl($url, $products)
     $obj = json_encode($products);
     $test = json_decode($obj);
 
-//    for ($i = 0; $i < count($test->price); $i++) {
-//        upload_data($test, $i);
-//    }
+    for ($i = 0; $i < count($test->price); $i++) {
+        upload_data($test, $i);
+    }
 }
 
 

@@ -1,6 +1,6 @@
 <div class="container">
     <a class="navbar-brand" href="/index.php">
-        <img src="https://avatars.githubusercontent.com/u/28140896?s=200&v=4" alt="">
+        <img src="https://avatars.githubusercontent.com/u/28140896?s=200&v=4" alt="" id="productImage">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-menu"
             aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation">
@@ -8,15 +8,15 @@
     </button>
     <div class="collapse navbar-collapse navbar-menu" id="navbar1">
 
-        <form action="" class="search-box w-53 ms-3" method="post" action="">
+        <form action="" class="search-box w-53 ms-3" method="post" >
             <div class="bg-light rounded rounded-pill shadow-sm ">
                 <div class="input-group ps-3">
                     <label class="w-90">
-                        <input type="text" name="valueToSearch" placeholder="What're you searching for?" aria-describedby="button-addon1"
-                               class="form-control border-0 bg-light">
+                        <input type="text" id="valueToSearch" name="valueToSearch" placeholder="What're you searching for?" aria-describedby="button-addon1"
+                               class="form-control border-0 bg-light" ">
                     </label>
                     <div class="input-group-append position-absolute end-0">
-                        <button id="button-addon1" type="submit" class="btn btn-link text-primary">
+                        <button id="button-addon1" type="button" name="searchProducts" class="btn btn-link text-primary" onclick="load_data()">
                             <i class="fa fa-search"></i>
                         </button>
                     </div>
@@ -145,6 +145,7 @@
     </div>
 </div>
 
+<script src="/assets/js/searchResults.js"></script>
 <script src="/assets/js/logInPopUp.js"></script>
 <script src="/assets/js/registerPopUp.js"></script>
 <script src="/assets/js/loginForm.js"></script>
