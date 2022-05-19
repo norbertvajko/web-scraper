@@ -1,3 +1,7 @@
+<?php
+include ('./includes/searchProducts.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -49,9 +53,7 @@
         <div class="container p-3">
             <div class="box">
                 <div class="row product-page-top">
-                <h1 class="d-block d-sm-none text-center p-3 ">
-                    Apple iPhone 13 128GB
-                </h1>
+                <h1 class="d-block d-sm-none text-center p-3 "></h1>
                 <div class="col-lg-4 col-md-3 col-sm-6 col-xs-5 d-flex justify-content-center product-image">
                     <img src="https://p1.akcdn.net/mid/859255347.apple-iphone-13-128gb.jpg" alt="product-img img-fluid"
                          class="product-img ">

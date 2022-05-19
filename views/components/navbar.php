@@ -8,11 +8,11 @@
     </button>
     <div class="collapse navbar-collapse navbar-menu" id="navbar1">
 
-        <form action="" class="search-box w-53 ms-3">
+        <form action="" class="search-box w-53 ms-3" method="post" action="">
             <div class="bg-light rounded rounded-pill shadow-sm ">
                 <div class="input-group ps-3">
                     <label class="w-90">
-                        <input type="search" placeholder="What're you searching for?" aria-describedby="button-addon1"
+                        <input type="text" name="valueToSearch" placeholder="What're you searching for?" aria-describedby="button-addon1"
                                class="form-control border-0 bg-light">
                     </label>
                     <div class="input-group-append position-absolute end-0">

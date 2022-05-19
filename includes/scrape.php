@@ -1,7 +1,7 @@
 <?php
 
 include "connDB.php";
-//
+
 //$flancoProducts = [
 //    'name' => '!<h2>(.*?)<\/h2>!',
 //    'price' => '!<span class="special-price"><span class="price">(.*?)(?:,)<|<span class="singlePrice"><span class="price">(.*?)(?:,)<!',
@@ -13,49 +13,55 @@ include "connDB.php";
 //
 //for ($page = 1; $page < 13; $page++) { webCrawl('https://www.flanco.ro/telefoane-tablete/smartphone/p/' . $page. '.html', $flancoProducts); }
 //
+//
+//
+//
 //$ideallProducts = [
 //    'name' => '!<a href="\/.*?\/.*" title=".*">(.*?)<\/a>!',
 //    'price' => '!<span class=".*?">(.*?)<sup>.*?<\/sup>.*?<\/span>!',
 //    'rating' => '!!',
 //    'inStock' => '!<span class="category-delivery-text">(.*?)<\/span>|<div class="category-delivery-container">
 //
-//.*<span class="">(.*?)<\/span>
+//                    .*<span class="">(.*?)<\/span>
 //
 //                        <\/div>!',
 //    'images' => '!<img src="(.*?)\?w=200&h=200" id=".*?"!',
-//    'link' => '!!'
+//    'link' => '!<span class="titlewrapper">
+//               .*<a href="(.*?)" title=".*<\/a>
+//               .*<\/span>!'
 //];
-//for ($page = 1; $page <27; $page++) { webCrawl('https://www.ideall.ro/magazin-telefoane-mobile?pag='.$page , $ideallProducts); }
-
-//$celProducts = [
-//    'name' => '!class="productListing-data-b product_link product_name"><span >(.*?)<\/span>!'
-//];
-//webCrawl('https://www.cel.ro/telefoane-mobile/',$celProducts);
-
+//for ($page = 1; $page < 27; $page++) { webCrawl('https://www.ideall.ro/magazin-telefoane-mobile?pag=' . $page, $ideallProducts); }
+//
+//
 //$quickProducts = [
-//    'name' => '!<a\s\shref=".*?"\s>
-//.*?<div class="card-product-title" translate="no" style="white-space: nowrap; max-width: 200px; overflow: hidden;">
-//.*?.*?
-//.*?<\/div>
-//.*?<div class="card-product-description ">
-//.*?(.*?)
-//.*?<\/div>
-//.*?<\/a>!',
+//    'name' => '!<div class="card-product-description ">
+//                (.*?)
+//            <\/div>!',
 //    'price' => '!<div class="priceFormat card-price" translate="no">(.*?)<sup>.*?<\/sup><sub>Lei<\/sub><\/div>!'
 //];
 //webCrawl('https://www.quickmobile.ro/telefoane-si-accesorii/telefoane-mobile', $quickProducts);
-
-//$altexProducts = [
-//  'name' => '!<h2 class="Product-nameHeading leading-20 text-sm truncate-3-lines min-h-60px">(.*?)<\/h2>!',
-//    'price' => '!<span class="Price-int leading-none">(.*?)<\/span>!'
-//];
-//webCrawl('https://altex.ro/telefoane/cpl/',$altexProducts);
-
+//
 //$emagProducts = [
 //    'name' => '!class="card-v2-title semibold mrg-btm-xxs js-product-url" data-zone="title">(.*?)<\/a>!',
 //    'reviews' => '!<span class="average-rating semibold">(.*?)<\/span>!'
 //];
-//webCrawl('https://www.emag.ro/telefoane-mobile/c?tree_ref=13&ref=cat_tree_93',$emagProducts);
+//webCrawl('https://www.emag.ro/telefoane-mobile/p2/c',$emagProducts);
+//
+//$evoProducts = [
+//    'name' => '!<h2>
+//            <a href=".*?"> (.*?)<\/a>        <\/h2>!',
+//    'price' => '!<div style=".*?"><span class="real_price">(.*?) .*<\/span><\/div>!',
+//    'rating' => '!<div class="rating-result" id="rating-result_.*?"><span><span>(.*?)(?:%)<\/span><\/span><\/div>!',
+//    'inStock' => '!class="stock_instocmagazin">
+//                    .(.*?).\/span>!',
+//    'images' => '!<span class=""><img class=""  src="(.*?)" .*"\/><\/span><\/span>!',
+//    'link' => '! <a href="(.*?)"> .*<\/a>        <\/h2>!'
+//
+//
+//];
+//var_dump($evoProducts);
+//webCrawl('https://www.evomag.ro/solutii-mobile-telefoane-mobile/', $evoProducts);
+
 
 function webCrawl($url, $products)
 {
@@ -106,10 +112,12 @@ function webCrawl($url, $products)
     $obj = json_encode($products);
     $test = json_decode($obj);
 
-//    for ($i = 0; $i < count($test->name); $i++) {
+//    for ($i = 0; $i < count($test->price); $i++) {
 //        upload_data($test, $i);
 //    }
 }
+
+
 function scrape_data($regex_stock, $result)
 {
     preg_match_all($regex_stock, $result, $match);
@@ -126,7 +134,8 @@ function upload_data($phones, $index)
 {
     $phoneName = $phones->name[$index];
     $phoneReviews = $phones->rating[$index];
-    $phonePrice = str_replace(',', '', $phones->price[$index]);
+    $phonePrice = str_replace('.', '', $phones->price[$index]);
+    $phonePrice = str_replace(',', '.', $phonePrice);
     $phoneInStock = $phones->inStock[$index];
     $phoneImages = $phones->images[$index];
     $phoneLink = $phones->link[$index];
