@@ -1,11 +1,8 @@
-<?php
-include ('./includes/searchProducts.php');
-?>
+<?php include './../includes/searchProducts.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-
 
     <meta charset="UTF-8">
     <meta content="Search engine for IT products and compare them" name="description">

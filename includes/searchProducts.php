@@ -11,12 +11,10 @@ if (isset($_POST['submit'])) {
     if (mysqli_num_rows($result) > 0) {
         $count = 0;
         while ($row = mysqli_fetch_assoc($result)) {
-            echo "<br>";
-            $count++;
+
         }
     } else exit();
 
-} else exit(); // The user accessed the script directly
-
+}
 
 
