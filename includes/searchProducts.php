@@ -2,17 +2,26 @@
 
 include "connDB.php";
 
-$valueToSearch = $_GET['$valueToSearch'];
+if (isset($_GET['valueToSearch'])) {
 
-$sql = "SELECT * FROM products WHERE name LIKE '%$valueToSearch%' OR price LIKE '%$valueToSearch%' OR in_stock LIKE '%$valueToSearch%' OR link LIKE '%$valueToSearch%'";
-$result = mysqli_query($GLOBALS['conn'], $sql) or die("Query Failed");
+    $searchInput = $_GET['valueToSearch'];
 
-if ($result->num_rows >= 1) {
-    while ($row = mysqli_fetch_array($result)) {
-        $productName = $row['name'];
-        $productPrice = $row['price'];
-        $productImage = $row['image'];
-        $productLink = $row['link'];
-        $productReviews = $row['reviews'];
+    var_dump($searchInput);
+
+    $sql = "SELECT name FROM products WHERE name LIKE '%$searchInput%'";
+    $result = mysqli_query($GLOBALS['conn'], $sql) or die("Query Failed");
+
+    echo json_encode(mysqli_fetch_array($result));
+
+    if (mysqli_num_rows($result) > 0) {
+        $respone = array();
+        while ($row = mysqli_fetch_array($result)) {
+//            array_push($respone,$row);
+            echo $row['name'];
+
+        }
+        var_dump($respone);
     }
+
+
 }

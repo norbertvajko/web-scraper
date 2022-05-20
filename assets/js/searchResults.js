@@ -13,10 +13,17 @@ function load_data() {
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState === XMLHttpRequest.DONE) {
             if (xmlhttp.status === 200) {
-
                 //convert JSON back to array
-                let response = JSON.parse(xmlhttp.responseText);
-                productTitle.innerHTML = this.response;
+                // let response = JSON.parse(xmlhttp.responseText);
+
+                console.log(xmlhttp.responseText);
+
+                // if (user_input != "") {
+                //
+                // }
+
+
+
 
             }
             else if (xmlhttp.status === 400) {
@@ -28,6 +35,6 @@ function load_data() {
         }
     };
 
-    xmlhttp.open("GET", '/includes/searchProducts.php', true);
+    xmlhttp.open("GET", `/includes/searchProducts.php?valueToSearch=${user_input}`, true);
     xmlhttp.send();
 }
