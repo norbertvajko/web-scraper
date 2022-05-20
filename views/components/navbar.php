@@ -13,10 +13,10 @@
                 <div class="input-group ps-3">
                     <label class="w-90">
                         <input type="text" id="valueToSearch" name="valueToSearch" placeholder="What're you searching for?" aria-describedby="button-addon1"
-                               class="form-control border-0 bg-light" ">
+                               class="form-control border-0 bg-light" />
                     </label>
                     <div class="input-group-append position-absolute end-0">
-                        <button id="button-addon1" type="button" name="searchProducts" class="btn btn-link text-primary" onclick="load_data()">
+                        <button id="button-addon1" type="button" name="searchProducts" class="btn btn-link text-primary" onclick="load_data();">
                             <i class="fa fa-search"></i>
                         </button>
                     </div>

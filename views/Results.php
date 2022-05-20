@@ -48,9 +48,9 @@
 
     <header class="banner-results mt-100">
         <div class="container p-3">
-            <div class="box">
+            <div class="box" id="containerBox">
                 <div class="row product-page-top">
-                <h1 class="d-block d-sm-none text-center p-3 "></h1>
+                <h1 class="product-up-title d-block d-sm-none text-center p-3 "></h1>
                 <div class="col-lg-4 col-md-3 col-sm-6 col-xs-5 d-flex justify-content-center product-image">
                     <img src="" alt="" id="productImage"
                          class="product-img img-fluid ">
@@ -397,5 +397,6 @@
         });
     }
 </script>
+<script src="/assets/js/searchResults.js"></script>
 </body>
 </html>

@@ -2,26 +2,26 @@
 
 include "connDB.php";
 
-if (isset($_GET['valueToSearch'])) {
+if (isset($_POST['user_input'])) {
 
-    $searchInput = $_GET['valueToSearch'];
 
-    var_dump($searchInput);
+    $data = array();
+    $condition = preg_replace('/[^A-Za-z0-9\- ]/', '', $_POST['user_input']);
+    $query = "SELECT name FROM products 
+              WHERE name LIKE '%".$condition."%' 
+              ORDER BY price ASC LIMIT 2";
+    $result = mysqli_query($GLOBALS['conn'], $query);
+    $replace_string = '<b>'.$condition.'</b>';
 
-    $sql = "SELECT name FROM products WHERE name LIKE '%$searchInput%'";
-    $result = mysqli_query($GLOBALS['conn'], $sql) or die("Query Failed");
 
-    echo json_encode(mysqli_fetch_array($result));
 
-    if (mysqli_num_rows($result) > 0) {
-        $respone = array();
-        while ($row = mysqli_fetch_array($result)) {
-//            array_push($respone,$row);
-            echo $row['name'];
+    foreach ($result as $row) {
+        $data[] = array(
+            'post_title' => str_ireplace($condition,$replace_string,$row['name']),
+            'post_price' => $row['price']
+        );
 
-        }
-        var_dump($respone);
     }
-
-
+    echo json_encode($data);
 }
+?>
