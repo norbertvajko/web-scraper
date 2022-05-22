@@ -174,7 +174,7 @@ body {
 }
 .product-btn-site {
     display: flex;
-    align-items: center;
+    align-items: end;
     justify-content: center;
     height: 50%;
 }
@@ -184,6 +184,49 @@ body {
 .lowest-price {
     font-size:24px;
 }
+
+#productLink {
+    position: relative;
+    width:120px;
+    background: #0082e6;
+    height:40px;
+    line-height: 40px;
+    margin-bottom:30px;
+    text-align:center;
+    color:#fff;
+    text-decoration: none;
+}
+
+/*arrow*/
+#productLink:after {
+    content: "";
+    position: absolute;
+    right: -20px;
+    top: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #0082e6;
+}
+#productLink:hover {
+    box-shadow: #0082e6 0 10px 20px -14px;
+}
+
+.product-logo {
+    display: flex;
+    align-items: center;
+    height: 50%;
+    justify-content: center;
+}
+.best-offer-title {
+    width: fit-content;
+}
+
+@media (min-width: 768px) {
+    .button-51 {
+        padding: 16px 32px;
+    }
+}
+
 
 @media screen and (max-width: 576px) {
     .btn-warning {

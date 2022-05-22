@@ -16,6 +16,7 @@
     <link rel="stylesheet"
           href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -50,88 +51,93 @@
         <div class="container p-3">
             <div class="box" id="containerBox">
                 <div class="row product-page-top">
-                <h1 class="product-up-title d-block d-sm-none text-center p-3 "></h1>
-                <div class="col-lg-4 col-md-3 col-sm-6 col-xs-5 d-flex justify-content-center product-image">
-                    <img src="" alt="" id="productImage"
-                         class="product-img img-fluid ">
-                </div>
-                <div class="d-flex flex-column justify-content-center align-items-center col-lg-4 col-md-5 col-sm-6 col-xs-8 product-details pt-2">
-                    <h1 class="prod-title d-none d-sm-block mb-3" id="productTitle" ></h1>
-                    <div class="hidden-xs">
-                        <div class="rating"
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                        <a href="#">(13)</a>
+                    <h1 class="product-up-title d-block d-sm-none text-center p-3"></h1>
+                    <div class="col-lg-4 col-md-3 col-sm-6 col-xs-5 d-flex justify-content-center product-image">
+                        <img id="productImagee" src="" alt=""
+                             class="product-img img-fluid ">
                     </div>
-                    <div class="offer-instock">
-                        <span>Stoc:<span id="productInStock"></span></span>
+                    <div class="d-flex flex-column justify-content-center align-items-center col-lg-4 col-md-5 col-sm-6 col-xs-8 product-details pt-2">
+                        <h1 class="prod-title d-none d-sm-block mb-3" id="productTitle"></h1>
+                        <div class="hidden-xs">
+                            <div class="stars-outer">
+                                <!--                        <i class="fa fa-star"></i>-->
+                                <!--                        <i class="fa fa-star"></i>-->
+                                <!--                        <i class="fa fa-star"></i>-->
+                                <!--                        <i class="fa fa-star"></i>-->
+                                <!--                        <i class="fa fa-star-o"></i>-->
+                                <!--                        <a href="#">(13)</a>-->
+                                <div class="stars-inner" id="productReviews">
+
+                                </div>
+
+                            </div>
+                            <div class="offer-instock">
+                                <span id="productInStock"></span>
+
+                            </div>
+                        </div>
+
+                        <div class="user-functions my-4 ">
+                            <ul class="product-description-list ps-20 ">
+                                <li class="product-description-items">
+                                    Memorie interna: <span>64 GB</span>
+                                </li>
+                                <li class="product-description-items">
+                                    Sistem de operare: <span>iOS</span>
+                                </li>
+                                <li class="product-description-items">
+                                    Dimensiune ecran: <span>6.1 inch</span>
+                                </li>
+                                <li class="product-description-items">
+                                    Numar nuclee: <span>6</span>
+                                </li>
+                                <li class="product-description-items">
+                                    Model procesor: <span>Apple A14 Bionic</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <h3 class="lowest-price d-flex flex-md-wrap">Lowest price:<span id="productPrice"></span></h3>
 
                     </div>
+                    <div class="col-xs-12 col-sm-12 col-md-3 featured-offers">
+                        <div class="featured-content d-xs-flex justify-content-between d-sm-flex justify-content-between d-md-block h-100 p-4">
+                            <!--                    <ul class="product-price-alert ps-0">-->
+                            <!--                        <li>-->
+                            <!--                            <a href="#">Price Alert-->
+                            <!--                                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>-->
+                            <!--                            </a>-->
+                            <!--                        </li>-->
+                            <!--                        <li>-->
+                            <!--                            <a href="#">Compare-->
+                            <!--                                <i class="fa fa-balance-scale" aria-hidden="true"></i>-->
+                            <!--                            </a>-->
+                            <!--                        </li>-->
+                            <!--                    </ul>-->
+                            <div class="product-logo">
+                                <img src="" id="productLogo" alt="">
+                            </div>
+                            <div class="product-btn-site">
+                                <a href="" class="to-site-link" id="productLink" target="_blank">to site</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="user-functions my-4 ">
-                    <ul class="product-description-list ps-20 ">
-                        <li class="product-description-items">
-                            Memorie interna: <span>64 GB</span>
-                        </li>
-                        <li class="product-description-items">
-                            Sistem de operare: <span>iOS</span>
-                        </li>
-                        <li class="product-description-items">
-                            Dimensiune ecran: <span>6.1 inch</span>
-                        </li>
-                        <li class="product-description-items">
-                            Numar nuclee: <span>6</span>
-                        </li>
-                        <li class="product-description-items">
-                            Model procesor: <span>Apple A14 Bionic</span>
-                        </li>
-                    </ul>
-                </div>
-                <h3 class="lowest-price d-flex flex-md-wrap">Lowest price:<span id="productPrice"></span></h3>
-
+                <i class="fa fa-heart-o favorite-icon"></i>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-3 featured-offers">
-                <div class="featured-content d-xs-flex justify-content-between d-sm-flex justify-content-between d-md-block h-100 p-4">
-                    <ul class="product-price-alert ps-0">
-                        <li>
-                            <a href="#">Price Alert
-                                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">Compare
-                                <i class="fa fa-balance-scale" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="product-btn-site ">
-                        <form action="" id="productLink">
-                            <input type="submit" value="to site" />
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <i class="fa fa-heart-o favorite-icon"></i>
-    </div>
-</header>
-<!----------------------------------------------- End Banner Area ----------------------------------------------------->
+    </header>
+    <!----------------------------------------------- End Banner Area ----------------------------------------------------->
 
-<!----------------------------------------------- Start Main Area ----------------------------------------------------->
+    <!----------------------------------------------- Start Main Area ----------------------------------------------------->
 
-<main class="main-results">
+    <main class="main-results">
 
-    <section class="offers">
-        <div class="container">
-            <div class="row mt-3">
-                <!-- Nav tabs -->
-                <ul class="nav nav-tabs" id="nav-tab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="bestOffer-tab" data-bs-toggle="tab" data-bs-target="#bestOffer"
+        <section class="offers">
+            <div class="container">
+                <div class="row mt-3">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="bestOffer-tab" data-bs-toggle="tab" data-bs-target="#bestOffer"
                                 type="button" role="tab" aria-controls="bestOffer" aria-selected="true">Best Offer
                         </button>
                     </li>
@@ -159,124 +165,92 @@
                                 aria-selected="false">Reviews
                         </button>
                     </li>
-                </ul>
-                <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="bestOffer" role="tabpanel"
-                         aria-labelledby="bestOffer-tab">
-                        <div class="container my-4 mx-2">
-                            <div class="row align-items-center my-2 mx-1">
-                                <div class="col-2 best-offer-logo">
-                                    <div class="offer-company-logo">
-                                        <img src="https://p1.akcdn.net/partnerlogosmall/191379.jpg"
-                                             alt="company-logo">
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="bestOffer" role="tabpanel"
+                             aria-labelledby="bestOffer-tab">
+                            <div class="container my-4 mx-2">
+                                <div class="row align-items-center my-2 mx-1 ">
+                                    <div class="col-2 best-offer-logo w-fc">
+                                        <div class="offer-company-logo">
+                                            <img src="" id="companyLogoOne" class="mw-120 img-fluid"
+                                                 alt="company-logo">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-2 best-offer-stars">
-                                    <div class="offer-rating">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </div>
+                                    <div class="col-2 best-offer-stars w-fc d-none d-lg-block">
+                                        <div class="offer-rating" id="offerRatingOne">
 
-                                </div>
-                                <div class="col-4 best-offer-title ">
-                                    <h3>Apple Telefon mobil Apple iPhone 13, 128GB, 4GB RAM, 5G, Red</h3>
-                                </div>
-                                    <div class="col-2 best-offer-price d-flex justify-content-end">
+                                        </div>
+
+                                    </div>
+                                    <div class="col-6 best-offer-title ">
+                                        <h3 id="offerNameOne"></h3>
+                                    </div>
+                                    <div class="col-2 best-offer-price w-fc d-flex justify-content-end">
                                         <div class="offer-price">
-                                                <span class="best-offer-price">
-                                                     3 810,00 RON
-                                                  </span>
-                                        </div>
-                                    </div>
-                                    <div class="col-2 best-offer-btn d-flex justify-content-end">
-                                        <div class="best-to-shop">
-                                            <button class="btn btn-primary">
-                                                to shop
-                                                <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row align-items-center my-2 mx-1">
-                                    <div class="col-2 best-offer-logo">
-                                        <div class="offer-company-logo">
-                                            <img src="https://p1.akcdn.net/partnerlogosmall/36258.jpg"
-                                                 alt="company-logo">
-                                        </div>
-                                    </div>
-                                    <div class="col-2 best-offer-stars">
-                                        <div class="offer-rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-o"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col-4 best-offer-title ">
-                                        <h3>Apple iPhone 13 128GB</h3>
-                                    </div>
-                                    <div class="col-2 best-offer-price d-flex justify-content-end">
-                                        <div class="offer-price">
-                                                <span class="best-offer-price">
-                                                    4 429,99 RON
-                                                  </span>
-                                        </div>
-                                    </div>
-                                    <div class="col-2 best-offer-btn d-flex justify-content-end">
-                                        <div class="best-to-shop">
-                                            <button class="btn btn-primary">
-                                                to shop
-                                                <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row align-items-center my-2 mx-1">
-                                    <div class="col-2 best-offer-logo">
-                                        <div class="offer-company-logo">
-                                            <img src="https://p1.akcdn.net/partnerlogosmall/165642.jpg"
-                                                 alt="company-logo">
-                                        </div>
-                                    </div>
-                                    <div class="col-2 best-offer-stars">
-                                        <div class="offer-rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-o"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col-4 best-offer-title ">
-                                        <h3>Apple Smartphone iPhone 13 5G, 128GB, (PRODUCT)RED (MLPJ3ZD/A)</h3>
-                                    </div>
-                                    <div class="col-2 best-offer-price d-flex justify-content-end">
-                                        <div class="offer-price">
-                                               <span class="best-offer-price">
-                                                   5 088,99 RON
+                                                <span class="best-offer-price" id="offerPriceOne">
+
                                                 </span>
                                         </div>
                                     </div>
-                                    <div class="col-2 best-offer-btn d-flex justify-content-end">
-                                        <div class="best-to-shop">
-                                            <button class="btn btn-primary">
-                                                to shop
-                                                <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                                            </button>
+
+                                </div>
+                                <div class="row align-items-center my-2 mx-1 ">
+                                    <div class="col-2 best-offer-logo w-fc">
+                                        <div class="offer-company-logo">
+                                            <img src="" id="companyLogoTwo" class="mw-120 img-fluid"
+                                                 alt="company-logo">
                                         </div>
                                     </div>
+                                    <div class="col-2 best-offer-stars w-fc d-none d-lg-block">
+                                        <div class="offer-rating" id="offerRatingTwo">
+
+                                        </div>
+
+                                    </div>
+                                    <div class="col-6 best-offer-title ">
+                                        <h3 id="offerNameTwo"></h3>
+                                    </div>
+                                    <div class="col-2 best-offer-price w-fc d-flex justify-content-end">
+                                        <div class="offer-price">
+                                                <span class="best-offer-price" id="offerPriceTwo">
+
+                                                </span>
+                                        </div>
+                                    </div>
+
                                 </div>
-                        </div>
-                        <section class="rest-offers">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="rest-offers-content my-4">
-                                        <div class="rest-offers-header my-4">
-                                            <h3>Restul ofertelor</h3>
+                                <div class="row align-items-center my-2 mx-1 ">
+                                    <div class="col-2 best-offer-logo w-fc ">
+                                        <div class="offer-company-logo">
+                                            <img src="" id="companyLogoThree" class="mw-120 img-fluid"
+                                                 alt="company-logo">
+                                        </div>
+                                    </div>
+                                    <div class="col-2 w-fc best-offer-stars d-none d-lg-block">
+                                        <div class="offer-rating" id="offerRatingThree">
+
+                                        </div>
+                                    </div>
+                                    <div class="col-6 best-offer-title">
+                                        <h3 id="offerNameThree"></h3>
+                                    </div>
+                                    <div class="col-2 w-fc best-offer-price d-flex justify-content-end">
+                                        <div class="offer-price">
+                                               <span class="best-offer-price" id="offerPriceThree">
+
+                                                </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <section class="rest-offers">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="rest-offers-content my-4">
+                                            <div class="rest-offers-header my-4">
+                                                <h3>Restul ofertelor</h3>
                                         </div>
                                     </div>
                                 </div>
@@ -387,16 +361,16 @@
 <?php include "components/footer.php"; ?>
 
 <!------------------------------------------------ End Footer Area ---------------------------------------------------->
-<script>
-    function myFunction() {
-        const searchButton = document.getElementById('search-button');
-        const searchInput = document.getElementById('search-input');
-        searchButton.addEventListener('click', () => {
-            const inputValue = searchInput.value;
-            alert(inputValue);
-        });
-    }
-</script>
+<!--<script>-->
+<!--    function myFunction() {-->
+<!--        const searchButton = document.getElementById('search-button');-->
+<!--        const searchInput = document.getElementById('search-input');-->
+<!--        searchButton.addEventListener('click', () => {-->
+<!--            const inputValue = searchInput.value;-->
+<!--            alert(inputValue);-->
+<!--        });-->
+<!--    }-->
+<!--</script>-->
 <script src="/assets/js/searchResults.js"></script>
 </body>
 </html>

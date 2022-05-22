@@ -8,7 +8,8 @@ $flancoProducts = [
     'rating' => '!<div class="rating-result" id="rating-result_.*?"><span><span>(.*?)(?:%)<\/span><\/span><\/div>!',
     'inStock' => '!<div class="produs-status">.*>(.*?)<\/span>  <\/div> <\/div>!',
     'images' => '!<span class=""><img class=""  src="(.*?)" .*"\/><\/span><\/span>!',
-    'link' => '!<a class="product-item-link" href="(.*?)">!'
+    'link' => '!<a class="product-item-link" href="(.*?)">!',
+    'logo' => '!aria-label="store logo"><img src="(.*?)"!'
 ];
 
 for ($page = 1; $page < 13; $page++) { webCrawl('https://www.flanco.ro/telefoane-tablete/smartphone/p/' . $page. '.html', $flancoProducts); }
@@ -112,7 +113,7 @@ function webCrawl($url, $products)
     $obj = json_encode($products);
     $test = json_decode($obj);
 
-    for ($i = 0; $i < count($test->price); $i++) {
+    for ($i = 0; $i < count($test->name); $i++) {
         upload_data($test, $i);
     }
 }
@@ -139,9 +140,11 @@ function upload_data($phones, $index)
     $phoneInStock = $phones->inStock[$index];
     $phoneImages = $phones->images[$index];
     $phoneLink = $phones->link[$index];
+    $phoneLogo = $phones->logo[0];
 
-    $query = "INSERT INTO products (shop_id, category_id, name, description, reviews, price, in_stock, images , link)
-  			  VALUES('4', '1', '$phoneName', 'fdsfsd', '$phoneReviews', '$phonePrice', '$phoneInStock', '$phoneImages', '$phoneLink')";
+
+    $query = "INSERT INTO products (shop_id, category_id, name, description, reviews, price, in_stock, images , link, logo)
+  			  VALUES('4', '1', '$phoneName', 'fdsfsd', '$phoneReviews', '$phonePrice', '$phoneInStock', '$phoneImages', '$phoneLink', '$phoneLogo')";
 
     if (!mysqli_query($GLOBALS['conn'], $query))
         echo mysqli_error($GLOBALS['conn']) . '<br>';
@@ -159,7 +162,10 @@ function curl_data($options)
         echo "Page not reached!";
         exit();
     }
+
+
     return curl_exec($curl);
+
 }
 
 
