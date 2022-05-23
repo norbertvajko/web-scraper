@@ -5,6 +5,7 @@ include "connDB.php";
 if (isset($_POST['user_input'])) {
 
 
+
     $data = array();
     $condition = preg_replace('/[^A-Za-z0-9\- ]/', '', $_POST['user_input']);
     $query = "SELECT name, price, images, in_stock, reviews, link, logo FROM products 

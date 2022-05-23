@@ -46,8 +46,6 @@ function load_data() {
                         productLink.setAttribute('href',response[0].post_link);
 
 
-
-
                         document.getElementById('offerNameOne').innerHTML = response[0].post_title;
                         document.getElementById('offerNameTwo').innerHTML = response[1].post_title;
                         document.getElementById('offerNameThree').innerHTML = response[2].post_title;
