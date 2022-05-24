@@ -7,7 +7,26 @@ interface productParts {
     function closePhone();
 }
 
-class Productss implements productParts {
+abstract class Product {
+
+    protected $ramMemo = 5;
+
+    abstract public function type();
+    protected function ramMemory()
+    {
+       return $this->ramMemo;
+    }
+
+}
+
+class tuningProduct extends buildProduct {
+
+    public function ramMemory() {
+        return 2;
+    }
+}
+
+class buildProduct extends Product implements productParts {
 
         const PRICE_LIMIT = 10000;
 
@@ -17,7 +36,7 @@ class Productss implements productParts {
         public $reviews;
         public $inStock;
 
-        function __construct($name , $price , $image , $reviews , $inStock)
+        public function __construct($name , $price , $image , $reviews , $inStock)
         {
             $this->name = $name;
             $this->price = $price;
@@ -76,11 +95,25 @@ class Productss implements productParts {
     public function startPhone()
     {
         // TODO: Implement startPhone() method.
-        echo "Phone has started";
+        echo "Phone has started".'<br>';
     }
     public function closePhone()
     {
         // TODO: Implement closePhone() method.
         echo "Phone closed!";
     }
+
+    public function type()
+    {
+        // TODO: Implement type() method.
+        echo "Product type:".'<br>';
+        return "SMARTPHONE";
+    }
+     function ramMemory()
+    {
+        // TODO: Implement ramMemory() method.
+        echo "Ram Memory:".'<br>';
+        return parent::ramMemory();
+    }
+
 }
