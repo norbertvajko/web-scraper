@@ -2,6 +2,7 @@
 
 include "connDB.php";
 
+
 $flancoProducts = [
     'name' => '!<h2>(.*?)<\/h2>!',
     'price' => '!<span class="special-price"><span class="price">(.*?)(?:,)<|<span class="singlePrice"><span class="price">(.*?)(?:,)<!',
@@ -9,10 +10,13 @@ $flancoProducts = [
     'inStock' => '!<div class="produs-status">.*>(.*?)<\/span>  <\/div> <\/div>!',
     'images' => '!<span class=""><img class=""  src="(.*?)" .*"\/><\/span><\/span>!',
     'link' => '!<a class="product-item-link" href="(.*?)">!',
-    'logo' => '!aria-label="store logo"><img src="(.*?)"!'
+    'logo' => '!aria-label="store logo"><img src="(.*?)"!',
+
 ];
 
-for ($page = 1; $page < 13; $page++) { webCrawl('https://www.flanco.ro/telefoane-tablete/smartphone/p/' . $page. '.html', $flancoProducts); }
+for ($page = 1; $page < 13; $page++) {
+
+    webCrawl('https://www.flanco.ro/telefoane-tablete/smartphone/p/' . $page. '.html', $flancoProducts); }
 //
 //
 //
@@ -119,7 +123,7 @@ function webCrawl($url, $products)
 }
 
 
-function scrape_data($regex_stock, $result)
+function scrape_data($regex_stock, $result, $secondPageContent)
 {
     preg_match_all($regex_stock, $result, $match);
 
@@ -127,6 +131,7 @@ function scrape_data($regex_stock, $result)
         if ($match[1][$i] == '') {
             $match[1][$i] = $match[2][$i];
         }
+
     }
 
     return $match[1];
@@ -143,11 +148,11 @@ function upload_data($phones, $index)
     $phoneLogo = $phones->logo[0];
 
 
-    $query = "INSERT INTO products (shop_id, category_id, name, description, reviews, price, in_stock, images , link, logo)
-  			  VALUES('4', '1', '$phoneName', 'fdsfsd', '$phoneReviews', '$phonePrice', '$phoneInStock', '$phoneImages', '$phoneLink', '$phoneLogo')";
-
-    if (!mysqli_query($GLOBALS['conn'], $query))
-        echo mysqli_error($GLOBALS['conn']) . '<br>';
+//    $query = "INSERT INTO products (shop_id, category_id, name, description, reviews, price, in_stock, images , link, logo)
+//  			  VALUES('4', '1', '$phoneName', 'fdsfsd', '$phoneReviews', '$phonePrice', '$phoneInStock', '$phoneImages', '$phoneLink', '$phoneLogo')";
+//
+//    if (!mysqli_query($GLOBALS['conn'], $query))
+//        echo mysqli_error($GLOBALS['conn']) . '<br>';
 
 }
 function curl_data($options)
@@ -167,5 +172,3 @@ function curl_data($options)
     return curl_exec($curl);
 
 }
-
-

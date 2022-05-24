@@ -2,6 +2,8 @@
 
 include "connDB.php";
 
+require_once 'classes/Productss.php';
+
 if (isset($_POST['user_input'])) {
 
 
@@ -24,6 +26,7 @@ if (isset($_POST['user_input'])) {
             'post_reviews' => $row['reviews'],
             'post_link' => $row['link'],
             'post_logo' => $row['logo']
+
         );
 
     }
