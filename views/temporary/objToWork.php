@@ -25,7 +25,19 @@ $productOne->startPhone().'<br>';
 echo $productOne->type().'<br>';
 echo $productOne->ramMemory().'<br>';
 
+
 $tProduct = new tuningProduct('Iphone',432,'/images',4.0,true);
-foreach ($tProduct as $item) {
-    echo $item.PHP_EOL;
-}
+//var_dump($tProduct);
+//foreach ($tProduct as $item) {
+//    echo $item;
+//}
+echo $tProduct->ramMemory().'<br>';
+
+//24
+$string = $tProduct->productDescription();
+
+//25
+echo Util::switchCaseOfWords('cerul este albastru',1).'<br>';
+
+//26
+echo Util::switchCaseOfWords($string,0).'<br>';
