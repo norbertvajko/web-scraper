@@ -1,41 +1,33 @@
 function load_data() {
 
-    var user_input = document.getElementById('valueToSearch').value;
-    var product_price = document.getElementById('productPrice');
-    var product_title = document.getElementById('productTitle');
-    var product_image = document.getElementById('productImagee');
-    var product_stock = document.getElementById('productInStock');
-    var product_rating = document.getElementById('productReviews');
-    var product_link = document.getElementById('productLink');
-    var product_logo = document.getElementById('productLogo');
+    const user_input = document.getElementById('valueToSearch').value;
+    const product_price = document.getElementById('productPrice');
+    const product_title = document.getElementById('productTitle');
+    const product_image = document.getElementById('productImagee');
+    const product_stock = document.getElementById('productInStock');
+    const product_rating = document.getElementById('productReviews');
+    const product_link = document.getElementById('productLink');
+    const product_logo = document.getElementById('productLogo');
 
 
     if (user_input.length > 2) {
 
-        var form_data = new FormData();
+        const form_data = new FormData();
         form_data.append('user_input', user_input);
-        form_data.append('product_price',product_price);
-        form_data.append('product_image',product_image);
-        form_data.append('product_stock', product_stock);
-        form_data.append('product_rating', product_rating);
-        form_data.append('product_link', product_link);
-        form_data.append('product_logo', product_logo);
 
-
-        var ajax_request = new XMLHttpRequest();
-        ajax_request.open("POST", '/includes/searchProducts.php', true);
+        const ajax_request = new XMLHttpRequest();
+        ajax_request.open("POST", "/includes/getProducts.php", true);
         ajax_request.send(form_data);
 
         ajax_request.onreadystatechange = function () {
             if (ajax_request.readyState == 4 && ajax_request.status == 200) {
-
-                //    convert JSON back to array
-                var response = JSON.parse(ajax_request.responseText);
-                console.log(response);
+                //convert JSON back to array
+                const response = JSON.parse(ajax_request.responseText);
+                // console.log(response);
 
 
                 if (response.length > 0) {
-                    for (var i = 0; i <response.length; i++) {
+                    for (let i = 0; i <response.length; i++) {
                         product_title.innerHTML = response[0].post_title;
                         product_price.innerHTML = response[0].post_price;
                         product_image.src= response[0].post_image;
@@ -102,8 +94,4 @@ function getStars(rating) {
         output.push('<i class="fa fa-star-o" aria-hidden="true" style="color: gold;"></i>&nbsp;');
 
     return output.join('');
-}
-
-function dynamicUrl() {
-
 }

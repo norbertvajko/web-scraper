@@ -1,6 +1,7 @@
 <?php
 
 include "connDB.php";
+include "test.php";
 
 
 $flancoProducts = [
@@ -11,7 +12,6 @@ $flancoProducts = [
     'images' => '!<span class=""><img class=""  src="(.*?)" .*"\/><\/span><\/span>!',
     'link' => '!<a class="product-item-link" href="(.*?)">!',
     'logo' => '!aria-label="store logo"><img src="(.*?)"!',
-
 ];
 
 for ($page = 1; $page < 13; $page++) {
@@ -110,7 +110,7 @@ function webCrawl($url, $products)
     $result = curl_data($curlOptions);
 
     foreach ($products as $key => $value) {
-        $products[$key] = scrape_data($value, $result);
+        $products[$key] = scrape_data($value, $result, $key);
     }
     print_r($products);
 
@@ -123,7 +123,7 @@ function webCrawl($url, $products)
 }
 
 
-function scrape_data($regex_stock, $result, $secondPageContent)
+function scrape_data($regex_stock, $result, $key)
 {
     preg_match_all($regex_stock, $result, $match);
 
@@ -131,9 +131,13 @@ function scrape_data($regex_stock, $result, $secondPageContent)
         if ($match[1][$i] == '') {
             $match[1][$i] = $match[2][$i];
         }
-
+        if ($key == "link"){
+            var_dump($match[1][$i]);
+//            np_get_contents_curl($match[1][$i],'<a class="product-item-link" href="(.*?)">','!(<div class="spec-table-col">.*<\/div>)!');
+            var_dump(np_get_contents_curl($match[1][$i],'<a class="product-item-link" href="(.*?)">','!(<div class="spec-table-col">.*<\/div>)!'));
+            die;
+        }
     }
-
     return $match[1];
 }
 function upload_data($phones, $index)

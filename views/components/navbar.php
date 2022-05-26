@@ -1,3 +1,5 @@
+
+
 <div class="container">
     <a class="navbar-brand" href="/index.php">
         <img src="https://avatars.githubusercontent.com/u/28140896?s=200&v=4" alt="" id="productImage">

@@ -28,9 +28,9 @@
 //    }
 
 
-np_get_contents_curl('https://www.flanco.ro/telefoane-tablete/smartphone.html',
-    '<a class="product-item-link" href="(.*?)">',
-    '!(<div class="spec-table-col">.*<\/div>)!');
+//np_get_contents_curl('https://www.flanco.ro/telefoane-tablete/smartphone.html',
+//    '<a class="product-item-link" href="(.*?)">',
+//    '!(<div class="spec-table-col">.*<\/div>)!');
 
 
 function np_get_contents_curl($url,$secondPageLink,$secondPageContent)

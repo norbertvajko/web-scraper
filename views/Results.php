@@ -135,59 +135,85 @@
             <div class="container">
                 <div class="row mt-3">
                     <!-- Nav tabs -->
-                    <ul class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <ul class="nav nav-tabs position-relative" id="nav-tab" role="tablist">
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" id="bestOffer-tab" data-bs-toggle="tab" data-bs-target="#bestOffer"
-                                type="button" role="tab" aria-controls="bestOffer" aria-selected="true">Best Offer
-                        </button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="description-tab" data-bs-toggle="tab"
-                                data-bs-target="#description" type="button" role="tab" aria-controls="description"
-                                aria-selected="false">Description
-                        </button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="statistics-tab" data-bs-toggle="tab"
-                                data-bs-target="#statistics" type="button" role="tab" aria-controls="statistics"
-                                aria-selected="false">Statistics
-                        </button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="photo-gallery-tab" data-bs-toggle="tab"
-                                data-bs-target="#photoGallery" type="button" role="tab" aria-controls="photoGallery"
-                                aria-selected="false">Photos
-                        </button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="reviews-tab" data-bs-toggle="tab"
-                                data-bs-target="#reviews" type="button" role="tab" aria-controls="reviews"
-                                aria-selected="false">Reviews
-                        </button>
-                    </li>
-                    </ul>
-                    <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade show active" id="bestOffer" role="tabpanel"
-                             aria-labelledby="bestOffer-tab">
-                            <div class="container my-4 mx-2">
-                                <div class="row align-items-center my-2 mx-1 ">
-                                    <div class="col-2 best-offer-logo w-fc">
-                                        <div class="offer-company-logo">
-                                            <img src="" id="companyLogoOne" class="mw-120 img-fluid"
-                                                 alt="company-logo">
-                                        </div>
-                                    </div>
-                                    <div class="col-2 best-offer-stars w-fc d-none d-lg-block">
-                                        <div class="offer-rating" id="offerRatingOne">
+                                    type="button" role="tab" aria-controls="bestOffer" aria-selected="true">Best Offer
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="description-tab" data-bs-toggle="tab"
+                                    data-bs-target="#description" type="button" role="tab" aria-controls="description"
+                                    aria-selected="false">Description
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="statistics-tab" data-bs-toggle="tab"
+                                    data-bs-target="#statistics" type="button" role="tab" aria-controls="statistics"
+                                    aria-selected="false">Statistics
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="photo-gallery-tab" data-bs-toggle="tab"
+                                    data-bs-target="#photoGallery" type="button" role="tab" aria-controls="photoGallery"
+                                    aria-selected="false">Photos
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="reviews-tab" data-bs-toggle="tab"
+                                    data-bs-target="#reviews" type="button" role="tab" aria-controls="reviews"
+                                    aria-selected="false">Reviews
+                            </button>
+                        </li>
+                        <li>
+                            <div class="filter">
+                                <a href="#" class="btn btn-default btn-sm order hidden-xs dropdown-toggle "
+                                   data-toggle="dropdown" id="order-dropdown">
+                                    <span class="icon-order"></span> Filter
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="order-dropdown">
+                                    <ul class="">
+                                        <li class="">
+                                            <button type="button" class="ratings-button">No of ratings</button>
+                                        </li>
+                                        <li class="">
+                                            <button type="button" class="ratings-price-asc">price ASC</button>
+                                        </li>
+                                        <li class="">
+                                            <button type="button" class="ratings-price-des">price DES</button>
+                                        </li>
+                                        <li class="">
+                                            <button type="button" class="ratings-in-stock">In stock</button>
+                                        </li>
+                                    </ul>
+                                </div>
 
-                                        </div>
+                            </div>
+
+                </div>
+
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="bestOffer" role="tabpanel"
+                         aria-labelledby="bestOffer-tab">
+                        <div class="container my-4 mx-2 ">
+                            <div class="row align-items-center my-2 mx-1 ">
+                                <div class="col-2 best-offer-logo w-fc">
+                                    <div class="offer-company-logo">
+                                        <img src="" id="companyLogoOne" class="mw-120 img-fluid"
+                                             alt="company-logo">
+                                    </div>
+                                </div>
+                                <div class="col-2 best-offer-stars w-fc d-none d-lg-block">
+                                    <div class="offer-rating" id="offerRatingOne">
 
                                     </div>
-                                    <div class="col-6 best-offer-title ">
-                                        <h3 id="offerNameOne"></h3>
-                                    </div>
-                                    <div class="col-2 best-offer-price w-fc d-flex justify-content-end">
-                                        <div class="offer-price">
+
+                                </div>
+                                <div class="col-6 best-offer-title ">
+                                    <h3 id="offerNameOne"></h3>
+                                </div>
+                                <div class="col-2 best-offer-price w-fc d-flex justify-content-end">
+                                    <div class="offer-price">
                                                 <span class="best-offer-price" id="offerPriceOne">
 
                                                 </span>
