@@ -10,6 +10,7 @@ function load_data() {
     const product_logo = document.getElementById('productLogo');
 
 
+
     if (user_input.length > 2) {
 
         const form_data = new FormData();
@@ -53,6 +54,10 @@ function load_data() {
                         document.getElementById('companyLogoOne').src = response[0].post_logo;
                         document.getElementById('companyLogoTwo').src = response[1].post_logo;
                         document.getElementById('companyLogoThree').src = response[2].post_logo;
+
+                        document.getElementById('companyLogoRest').src= response[i].post_logo;
+                        document.getElementById('offerRatingRest').innerHTML = response[i].post_reviews;
+                        document.getElementById('offerPriceRest').innerHTML = response[i].post_price;
                     }// }else {
                     //     //if not found
                     // }

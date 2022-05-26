@@ -1,9 +1,6 @@
 <?php
 
-include "connDB.php";
-include "test.php";
-
-
+for ($page = 1; $page < 13; $page++) {
 $flancoProducts = [
     'name' => '!<h2>(.*?)<\/h2>!',
     'price' => '!<span class="special-price"><span class="price">(.*?)(?:,)<|<span class="singlePrice"><span class="price">(.*?)(?:,)<!',
@@ -12,11 +9,13 @@ $flancoProducts = [
     'images' => '!<span class=""><img class=""  src="(.*?)" .*"\/><\/span><\/span>!',
     'link' => '!<a class="product-item-link" href="(.*?)">!',
     'logo' => '!aria-label="store logo"><img src="(.*?)"!',
+    'description' => $GLOBALS['description'],
+
 ];
+//    var_dump($flancoProducts['description']);
 
-for ($page = 1; $page < 13; $page++) {
-
-    webCrawl('https://www.flanco.ro/telefoane-tablete/smartphone/p/' . $page. '.html', $flancoProducts); }
+    webCrawl('https://www.flanco.ro/telefoane-tablete/smartphone/p/' . $page. '.html', $flancoProducts);
+}
 //
 //
 //
@@ -131,13 +130,15 @@ function scrape_data($regex_stock, $result, $key)
         if ($match[1][$i] == '') {
             $match[1][$i] = $match[2][$i];
         }
-        if ($key == "link"){
-            var_dump($match[1][$i]);
-//            np_get_contents_curl($match[1][$i],'<a class="product-item-link" href="(.*?)">','!(<div class="spec-table-col">.*<\/div>)!');
-            var_dump(np_get_contents_curl($match[1][$i],'<a class="product-item-link" href="(.*?)">','!(<div class="spec-table-col">.*<\/div>)!'));
-            die;
+        if ($key == "link") {
+//            var_dump($match[1][$i]);
+
+          $pageTwo = get_contents($match[1][$i]);
+             preg_match_all('!(<div class="spec-table-col">.*<\/div>)!',$pageTwo,$description);
+            var_dump($description[1]);die;
         }
     }
+
     return $match[1];
 }
 function upload_data($phones, $index)
@@ -175,4 +176,17 @@ function curl_data($options)
 
     return curl_exec($curl);
 
+}
+function get_contents($url) {
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_AUTOREFERER, TRUE);
+    curl_setopt($ch, CURLOPT_HEADER, 0);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);
+
+    $result = curl_exec($ch);
+
+//    var_dump($result);
+    return $result;
 }

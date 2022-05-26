@@ -268,19 +268,51 @@
                                                 </span>
                                         </div>
                                     </div>
-
                                 </div>
-                            </div>
-                            <section class="rest-offers">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="rest-offers-content my-4">
-                                            <div class="rest-offers-header my-4">
-                                                <h3>Restul ofertelor</h3>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="rest-offers-content my-4">
+                                        <div class="rest-offers-header my-4">
+                                            <h3>Restul ofertelor</h3>
+                                            <div class="row align-items-center my-2 mx-1 ">
+                                                <div class="col-2 best-offer-logo w-fc ">
+                                                    <div class="offer-company-logo">
+                                                        <img src="" id="companyLogoRest" class="mw-120 img-fluid"
+                                                             alt="company-logo">
+                                                    </div>
+                                                </div>
+                                                <div class="col-2 w-fc best-offer-stars d-none d-lg-block">
+                                                    <div class="offer-rating" id="offerRatingRest">
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 best-offer-title">
+                                                    <h3 id="offerNameThree"></h3>
+                                                </div>
+                                                <div class="col-2 w-fc best-offer-price d-flex justify-content-end">
+                                                    <div class="offer-price">
+                                               <span class="best-offer-price" id="offerPriceRest">
+
+                                                </span>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <section class="rest-offers">
+<!--                            <div class="container">-->
+<!--                                <div class="row">-->
+<!--                                    <div class="rest-offers-content my-4">-->
+<!--                                        <div class="rest-offers-header my-4">-->
+<!--                                            <h3>Restul ofertelor</h3>-->
+<!---->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
                         </section>
                     </div>
                     <div class="tab-pane fade" id="description" role="tabpanel" aria-labelledby="description-tab">

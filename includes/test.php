@@ -28,17 +28,18 @@
 //    }
 
 
-//np_get_contents_curl('https://www.flanco.ro/telefoane-tablete/smartphone.html',
-//    '<a class="product-item-link" href="(.*?)">',
-//    '!(<div class="spec-table-col">.*<\/div>)!');
+np_get_contents_curl('https://www.flanco.ro/telefoane-tablete/smartphone.html',
+    '<a class="product-item-link" href="(.*?)">',
+    '!(<div class="spec-table-col">.*<\/div>)!');
 
 
 function np_get_contents_curl($url,$secondPageLink,$secondPageContent)
 {
 
     $result = get_contents($url);
-    sec_page($secondPageLink,$result,$secondPageContent);
 
+
+    return sec_page($secondPageLink,$result,$secondPageContent);
 }
 
 function get_contents($url) {
@@ -51,6 +52,7 @@ function get_contents($url) {
 
     $result = curl_exec($ch);
 
+//    var_dump($result);
     return $result;
 }
 function sec_page($secondPageLink,$result,$secondPageContent) {
@@ -65,6 +67,6 @@ function sec_page($secondPageLink,$result,$secondPageContent) {
         echo $descriptions[$i][1];
 
     }
-
+//    var_dump($descriptions[1]);
     return $matches[1];
 }

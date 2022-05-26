@@ -1,7 +1,7 @@
 <?php
 
 //include "connDB.php";
-include "classes/Database.php";
+include "Database.php";
 
 class SearchProduct extends Database
 {
@@ -67,4 +67,6 @@ class SearchProduct extends Database
 //    }
 //    echo json_encode($data);
 //}
-//?>
+
+?>
+
