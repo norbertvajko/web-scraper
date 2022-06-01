@@ -1,5 +1,5 @@
 <div class="container">
-    <a class="navbar-brand" href="/project/index.php">
+    <a class="navbar-brand" href="/index.php">
         <img src="https://avatars.githubusercontent.com/u/28140896?s=200&v=4" alt="" id="productImage">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-menu"
@@ -49,13 +49,13 @@
                 </li>
 
                 <li class="list-links mx-3">
-                    <a href="/project/views/Results.php">
+                    <a href="/views/Results.php">
                         <i class="fa fa-heart-o" style="font-size:22px"></i>
                         Favorites
                     </a>
                 </li>
                 <li class="list-links mx-2">
-                    <a href="/project/views/Contact.php">
+                    <a href="/views/Contact.php">
                         <i class="lar la-address-book"></i>
                         Contact
                     </a>
@@ -65,7 +65,7 @@
 
         <div class="popup">
             <div class="close-btn">&times;</div>
-            <form action="../../../project/includes/loginValidation.php" method="post" id="loginFormID">
+            <form action="/includes/loginValidation.php" method="post" id="loginFormID">
                 <div class="form">
                     <h3>Log In</h3>
                     <div class="form-element d-flex flex-column">
@@ -98,7 +98,7 @@
         </div>
         <div class="popupRegister popup">
             <div class="close-btn">&times;</div>
-            <form action="../../../project/includes/registerValidation.php" method="post" id="registerFormID">
+            <form action="/includes/registerValidation.php" method="post" id="registerFormID">
                 <div class="form">
                     <h3>Register</h3>
                     <p>Create your free account to get started</p>
@@ -145,8 +145,8 @@
     </div>
 </div>
 
-<script src="/project/assets/js/searchResults.js"></script>
-<script src="/project/assets/js/logInPopUp.js"></script>
-<script src="/project/assets/js/registerPopUp.js"></script>
-<script src="/project/assets/js/loginForm.js"></script>
-<script src="/project/assets/js/registerForm.js"></script>
+<script src="/assets/js/searchResults.js"></script>
+<script src="/assets/js/logInPopUp.js"></script>
+<script src="/assets/js/registerPopUp.js"></script>
+<script src="/assets/js/loginForm.js"></script>
+<script src="/assets/js/registerForm.js"></script>

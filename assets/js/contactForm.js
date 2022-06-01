@@ -18,7 +18,7 @@ function save_contact() {
 
     let ajax_request = new XMLHttpRequest();
 
-    ajax_request.open('POST', 'project/includes/contactValidation.php', true);
+    ajax_request.open('POST', '/includes/contactValidation.php', true);
 
     ajax_request.send(form_data);
 

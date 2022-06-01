@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+<!--    <meta http-equiv="content-type" content="text/html; charset=utf-8" />-->
     <meta content="Free Web Scrape , Search products " name="description">
     <meta content="Scrape , Crawl , Web Scrape , Web Crawler" name="keywords">
     <meta content="Vajko Norbert" name="author">
@@ -56,7 +57,7 @@
         <div class="container">
             <div class="contact-wrap">
                 <form class="contact-form w-100 d-flex flex-wrap justify-content-between pb-5"
-                      action="../includes/contactValidation.php" id="formID" method="post">
+                      action="emailTemplate.php" id="formID" method="post">
                     <h1 class="contact-form-title w-100 d-flex justify-content-start pb-5">Contact Us</h1>
                     <div class="contact-form-row row w-100 d-flex flex-row">
                         <div class="contact-input position-relative w-50">
@@ -71,6 +72,12 @@
                                    placeholder="Enter your e-mail">
                             <span id="email_error" class="message-error"></span>
                         </div>
+                        <div class="contact-input w-50 m-auto">
+                            <span class="label-input">Subject</span>
+                            <input class="input form_data" type="text" name="subject" id="formSubject"
+                                   placeholder="Subject">
+<!--                            <span id="email_error" class="message-error"></span>-->
+                        </div>
                     </div>
                     <div class="contact-form-row row w-100 d-flex flex-row">
                         <div class="contact-input d-flex flex-column w-100 mt-40 ">
@@ -82,8 +89,8 @@
                     <span id="message_error" class="message-error"></span>
                     <span id="sucMessage"></span>
                     <div class="contact-form-button w-100 d-flex flex-wrap mt-40">
-                        <button class="button-form" id="submitButton" type="submit" name="submit"
-                                onclick="save_contact(); return false;">
+                        <button class="btn-primary" id="submitButton" type="submit" name="submit">
+<!--                                onclick="save_contact(); return false;">-->
                             <span>
                                 Submit
                             </span>
@@ -91,6 +98,11 @@
                     </div>
                 </form>
             </div>
+        </div>
+    </section>
+    <section class="contact-map">
+        <div class="map-location">
+            <iframe width="100%" height="600" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2763.0142178006136!2d21.317151315851984!3d46.17037269406537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x474599016319a9b3%3A0xc7f128d36aedf597!2sStrada%20Nicolae%20B%C4%83lcescu%2022%2C%20Arad!5e0!3m2!1sen!2sro!4v1654098908600!5m2!1sen!2sro" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>
 </main>
@@ -141,7 +153,7 @@
 <!--</script>-->
 
 
-<script src="/project/assets/js/contactForm.js"></script>
+<script src="/assets/js/contactForm.js"></script>
 
 </body>
 </html>
