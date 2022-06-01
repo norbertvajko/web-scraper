@@ -52,7 +52,7 @@
 
     <header class="banner-area mt-62 ">
         <?php
-           include "views/index_components/home_banner.php";
+           include "views/components/index_components/home_banner.php";
         ?>
 </header>
 <!----------------------------------------------- End Banner Area ----------------------------------------------------->
@@ -64,14 +64,14 @@
 
         <section class="main-header main-features p-3">
             <?php
-               include "views/index_components/main_header.php";
+               include "views/components/index_components/main_header.php";
             ?>
         </section>
 
 
         <section class="main-body carousel-best-offer">
             <?php
-                include "views/index_components/carousel.php";
+                include "views/components/index_components/carousel.php";
             ?>
         </section>
 

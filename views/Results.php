@@ -1,4 +1,4 @@
-<?php include './../includes/searchProducts.php'; ?>
+<?php include './../includes/classes/searchProducts.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">

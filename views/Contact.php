@@ -141,7 +141,7 @@
 <!--</script>-->
 
 
-<script src="/assets/js/contactForm.js"></script>
+<script src="/project/assets/js/contactForm.js"></script>
 
 </body>
 </html>
