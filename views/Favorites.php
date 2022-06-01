@@ -54,7 +54,10 @@
                         <img src="https://s13emagst.akamaized.net/layout/ro/static-upload/icon_guest.png" alt="" class="img-fluid">
                     </div>
                     <div class="menu-user-body-title">
-                        <h3>Hello , please sign in to track your favorite products!</h3>
+                        <h5 class="text-center">
+                            Hello , please sign in
+                            <h6 class="text-center">in order to have full control with our offers</h6>
+                            </h5>
                     </div>
                     <div class="menu-user-footer d-flex flex-column">
                         <button>Login</button>

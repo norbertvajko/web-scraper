@@ -267,3 +267,21 @@ font-size:15px;
     font-size:14px;
 }
 
+
+@media screen and (max-width: 592px) {
+    .navbar-collapse {
+        /*height: 100vh;*/
+    }
+    .search-box{
+        margin-top:27px;
+        width:100%;
+    }
+
+}
+@media screen and (max-width: 996px) {
+    .search-box{
+        margin-top:10px;
+        width:100%;
+    }
+
+}
