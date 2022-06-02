@@ -39,8 +39,8 @@ $response = [
 if ($formComplete) {
     $response['success'] = 'Message Sent';
 
-    $query = "INSERT INTO contact (name , email , message) VALUES('$name','$email','$message')";
-    mysqli_query($GLOBALS['conn'], $query);
+//    $query = "INSERT INTO contact (name , email , message) VALUES('$name','$email','$message')";
+//    mysqli_query($GLOBALS['conn'], $query);
 }
 
 //transform into json obj

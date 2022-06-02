@@ -3,6 +3,7 @@ function save_contact() {
     const contactForm = document.getElementById('formID');
     const messageSuccess = document.getElementById('sucMessage');
 
+    const subjectError = document.getElementById('subject_error');
     const nameError = document.getElementById('name_error');
     const emailError = document.getElementById('email_error');
     const messageError = document.getElementById('message_error');
@@ -18,7 +19,7 @@ function save_contact() {
 
     let ajax_request = new XMLHttpRequest();
 
-    ajax_request.open('POST', '/includes/contactValidation.php', true);
+    ajax_request.open('POST', '../../views/emailAction.php', true);
 
     ajax_request.send(form_data);
 
@@ -42,6 +43,7 @@ function save_contact() {
                 nameError.innerHTML = '';
                 emailError.innerHTML = '';
                 messageError.innerHTML = '';
+                subjectError.innerHTML = '';
 
 
             } else {
@@ -49,6 +51,7 @@ function save_contact() {
                 nameError.innerHTML = response.name_error;
                 emailError.innerHTML = response.email_error;
                 messageError.innerHTML = response.message_error;
+                subjectError.innerHTML = response.subject_error;
             }
 
         }

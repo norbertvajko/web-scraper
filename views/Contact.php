@@ -57,7 +57,7 @@
         <div class="container">
             <div class="contact-wrap">
                 <form class="contact-form w-100 d-flex flex-wrap justify-content-between pb-5"
-                      action="emailTemplate.php" id="formID" method="post">
+<!--                      action="emailTemplate.php" id="formID" method="post">-->
                     <h1 class="contact-form-title w-100 d-flex justify-content-start pb-5">Contact Us</h1>
                     <div class="contact-form-row row w-100 d-flex flex-row">
                         <div class="contact-input position-relative w-50">
@@ -76,7 +76,7 @@
                             <span class="label-input">Subject</span>
                             <input class="input form_data" type="text" name="subject" id="formSubject"
                                    placeholder="Subject">
-<!--                            <span id="email_error" class="message-error"></span>-->
+                            <span id="subject_error" class="message-error"></span>
                         </div>
                     </div>
                     <div class="contact-form-row row w-100 d-flex flex-row">
@@ -89,8 +89,8 @@
                     <span id="message_error" class="message-error"></span>
                     <span id="sucMessage"></span>
                     <div class="contact-form-button w-100 d-flex flex-wrap mt-40">
-                        <button class="btn-primary" id="submitButton" type="submit" name="submit">
-<!--                                onclick="save_contact(); return false;">-->
+                        <button class="btn-primary" id="submitButton" type="submit" name="submit"
+                                onclick="save_contact(); return false;">
                             <span>
                                 Submit
                             </span>
