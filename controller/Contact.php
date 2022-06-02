@@ -7,23 +7,21 @@ require_once '../system/View.php';
 
 class Controller_Contact extends Controller {
 
-  public function sendMail() {
+    public function sendMail() {
 
-       $to = 'norbertvajko@yahoo.com';
-       $from = $_POST['email'];
-       $name = $_POST['name'];
-       $subject = $_POST['subject'];
-       $message = $_POST['message'];
+        $emailSender = new Model_Contact();
 
-       $emailSender = new Model_Contact();
-       $response = $emailSender->checkErrors($name,$subject,$message,$from);
+        $to = 'norbertvajko@yahoo.com';
+        $from = $_POST['email'];
+        $name = $_POST['name'];
+        $subject = $_POST['subject'];
+        $message = $_POST['message'];
 
-       if (!empty($response['success'])) {
-           $emailSender->sendEmail($to, $subject, $message, $from);
-       }
+        $emailSender->checkErrors($name,$subject,$message,$from);
+      $emailSender->sendEmail($to, $subject, $message, $from);
 
-      return $response;
-  }
+    }
+
 
   public function displayEmailTemplate() {
 
