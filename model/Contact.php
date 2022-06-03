@@ -20,14 +20,22 @@ class Model_Contact extends Model {
         return $result;
     }
 
-    public function sendEmail($to, $subject, $message, $from)
+    public function sendEmail($to, $subject, $message, $fromEmail)
     {
-        $header = "From: ".$from." \r\n";
-//        $header .= "Cc:afgh@somedomain.com \r\n";
-        $header .= "MIME-Version: 1.0\r\n";
-        $header .= "Content-type: text/html\r\n";
+//        $header = "From: ".$from." \r\n";
+////        $header .= "Cc:afgh@somedomain.com \r\n";
+//        $header .= "MIME-Version: 1.0\r\n";
+//        $header .= "Content-type: text/html\r\n";
 
-        mail($to, $subject, $message, $header);
+        // Additional headers
+        $headers = 'To: <'.$to.'>, <kelly@example.com>' . "\r\n";
+        $headers .= 'From: '.$fromEmail.' <birthday@example.com>' . "\r\n";
+//        $headers .= 'Cc: birthdayarchive@example.com' . "\r\n";
+//        $headers .= 'Bcc: birthdaycheck@example.com' . "\r\n";
+
+
+
+       mail($to, $subject, $message, $headers);  
     }
 
     public function checkErrors($name,$subject,$message,$email) {

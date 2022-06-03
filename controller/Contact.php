@@ -17,7 +17,7 @@ class Controller_Contact extends Controller {
         $subject = $_POST['subject'];
         $message = $_POST['message'];
 
-        $emailSender->checkErrors($name,$subject,$message,$from);
+      $emailSender->checkErrors($name,$subject,$message,$from);
       $emailSender->sendEmail($to, $subject, $message, $from);
 
     }
