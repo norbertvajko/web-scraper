@@ -266,7 +266,31 @@ font-size:15px;
     color:red;
     font-size:14px;
 }
-
+.user-dropdown-content {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    margin-top: 20px;
+    margin-bottom: 4px;
+    font-size: 17px;
+}
+#usernameDropdown {
+   color:rgb(0, 17, 255);
+    font-size:17px;
+}
+.user-dropdown-item {
+    cursor:pointer;
+    margin-bottom:5px;
+    text-decoration: none;
+    color:lightgrey;
+}
+#log-out-user {
+    margin-top:20px;
+}
 
 @media screen and (max-width: 592px) {
     .navbar-collapse {

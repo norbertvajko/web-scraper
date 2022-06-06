@@ -33,20 +33,16 @@ function save_data() {
             let response = JSON.parse(ajax_request.responseText);
 
             if (response.success !== '') {
-
                 successMessage.innerHTML = response.success;
 
                 setTimeout(function () {
 
-
                     successMessage.innerHTML = ''; //clear success message
                     loginPopup.classList.remove('active'); //exit loginPopup
                     document.querySelector(".blur").classList.remove("active"); //exit blur
+                    window.location.href = '../../index.php';
 
                 }, 2000);
-
-                // username.innerHTML = '';
-                // password.innerHTML = '';
 
                 loginForm.reset();
                 clearErrors();
@@ -68,3 +64,4 @@ function save_data() {
     }
 
 }
+

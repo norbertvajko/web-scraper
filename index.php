@@ -61,6 +61,9 @@
 <!----------------------------------------------- Start Main Area ----------------------------------------------------->
 
     <main class="main-content">
+        <?php
+        print_r($_COOKIE);
+        ?>
 
         <section class="main-header main-features p-3">
             <?php
@@ -77,6 +80,12 @@
 
         <section class="main-footer scrappy-benefits">
 
+        </section>
+
+        <section class="consent">
+            <?php
+                include "views/components/consent_cookie.php";
+            ?>
         </section>
 
     </main>

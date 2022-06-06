@@ -3,10 +3,12 @@
 include "connDB.php";
 
 
+
 $loginComplete = true;
 
-$username = $_POST["uname"];
+$username = $_POST['uname'];
 $password = $_POST["password"];
+//$remember = $_POST["remember"];
 
 $hashedPassword = md5($password);
 
@@ -38,8 +40,35 @@ if ($loginComplete) {
     $query = "SELECT * FROM users WHERE email = '$username' AND password='$password'";
     $results = mysqli_query($GLOBALS['conn'], $query);
 
-    if (mysqli_num_rows($results) == 1) {
-        $response['success'] = "You are now logged in";
+    if (mysqli_num_rows($results)) {
+
+        while ($row = mysqli_fetch_assoc($results)) {
+
+            $username_db = $row['full_name'];
+            $password_db = $row['password'];
+
+            if ($hashedPassword == $password_db) {
+
+//                $_SESSION['username'] = $username;
+//                $_SESSION['password'] = $password;
+
+                if (!empty($_POST['remember'])) {
+
+                    $remember_checkbox = $_POST['remember'];
+
+                    setcookie('username' , $username_db , time() + 86400 * 14);
+                    setcookie('password', $password_db, time() + 86400 * 14);
+                    setcookie('userlogin',$remember_checkbox,time() + 86400 * 14);
+                } else {
+                    setcookie('username' , $username_db , 30);
+                    setcookie('password', $password_db, 30);
+                }
+                session_start();
+                $_SESSION['username'] = $username;
+            }
+
+            $response['success'] = "You are now logged in";
+        }
     }
     else {
         $response['success_error'] = "Wrong email/password";

@@ -1,3 +1,15 @@
+<?php
+if (isset($_COOKIE['username']) and isset($_COOKIE['password'])) {
+    $username = $_COOKIE['username'];
+    $password = $_COOKIE['password'];
+
+    echo "<script>
+        document.getElementById('uname').value = $username;
+        document.getElementById('password').value = $password;
+        </script>";
+    }
+?>
+
 <div class="container">
     <a class="navbar-brand" href="/index.php">
         <img src="https://avatars.githubusercontent.com/u/28140896?s=200&v=4" alt="" id="productImage">
@@ -31,19 +43,34 @@
                         <a href="#" class="dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
                             <i class="las la-user"></i>Account
                         </a>
-                        <div class="dropdown-content">
-                            <span class="small">Login into your account to have full control over the offers!</span>
-                            <hr>
-                            <div class="dropdown-body mx-auto mt-3 mb-2">
-                                <ul class="navbar-nav d-flex flex-row ">
-                                    <li class="nav-item me-3 me-lg-0">
-                                        <button type="button" class="log-in-btn" id="showLogin">Log In</button>
-                                    </li>
-                                    <li class="nav-item me-3 me-lg-0 ">
-                                        <button type="button" class="register-btn" id="showRegister">Register</button>
-                                    </li>
+                        <div class="dropdown-content" id="dropdown_content">
+                            <?php if (isset($_SESSION['username']) || isset($_COOKIE['username'])) { ?>
+                                <span><h6>Welcome</h6> <span id="usernameDropdown"><?= $_SESSION['username']; ?></span> </span>
+                                <ul class="user-dropdown-content">
+                                    <li class="user-dropdown-item"><a href="#">Favorites</a></li>
+                                    <li class="user-dropdown-item"><a href="#">History</a></li>
+                                    <li class="user-dropdown-item"><a href="#">Settings</a></li>
+                                    <li class="user-dropdown-item" id="log-out-user"><a href="/views/logout.php">Log out</a></li>
                                 </ul>
-                            </div>
+                                <?php
+                            } else {
+                                ?>
+                                <span class="small">Login into your account to have full control over the offers!</span>
+                                <hr>
+                                <div class="dropdown-body mx-auto mt-3 mb-2">
+                                    <ul class="navbar-nav d-flex flex-row ">
+                                        <li class="nav-item me-3 me-lg-0">
+                                            <button type="button" class="log-in-btn" id="showLogin">Log In</button>
+                                        </li>
+                                        <li class="nav-item me-3 me-lg-0 ">
+                                            <button type="button" class="register-btn" id="showRegister">Register
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <?php
+                            }
+                            ?>
                         </div>
                     </div>
                 </li>
@@ -70,25 +97,28 @@
                     <h3>Log In</h3>
                     <div class="form-element d-flex flex-column">
                         <label>
-                            <input type="text" class="inputs login_data" name="uname" id="uname" placeholder="E-mail">
+                            <input type="text" class="inputs login_data" name="uname" id="uname" placeholder="E-mail"
+                                   value="<?php if(isset($_COOKIE['username'])) {echo $_COOKIE['username'];}; ?>">
+
                         </label>
                         <span id="username_error" class="message-error"></span>
                     </div>
                     <div class="form-element d-flex flex-column">
                         <label>
-                            <input type="password" class="inputs login_data" id="password" name="password"
-                                   placeholder="Password">
+                            <input type="password" class="inputs login_data" id="password" name="password" placeholder="Password"
+                                   value="<?php if(isset($_COOKIE['password'])) {echo $_COOKIE['password'];}; ?>">
                         </label>
                         <span id="password_error" class="message-error"></span>
                     </div>
                     <span id="sucLogin"></span>
                     <span id="sucError"></span>
                     <div class="form-element">
-                        <input type="checkbox" id="remember-me">
+                        <input type="checkbox" id="remember-me" name="remember"
+                               <?php if(isset($_COOKIE['userlogin'])) {echo "checked";}; ?>">
                         <label for="remember-me">Remember me</label>
                     </div>
                     <div class="form-element">
-                        <button onclick="save_data(); return false;">Sign In</button>
+                        <button onclick="save_data(); return false;" value="Login">Sign In</button>
                     </div>
                     <div class="form-element">
                         <a href="#">Forgot password?</a>
@@ -111,14 +141,14 @@
                     </div>
                     <div class="form-element d-flex flex-column">
                         <label>
-                            <input type="email" class="inputs register_data" id="remail" name="remail"
+                            <input type="email" class="inputs register_data" id="remail" name="remail" value=""
                                    placeholder="E-mail">
                         </label>
                         <span id="register_email_error" class="message-error"></span>
                     </div>
                     <div class="form-element d-flex flex-column">
                         <label>
-                            <input type="password" class="inputs register_data" id="rpassword" name="rpassword"
+                            <input type="password" class="inputs register_data" id="rpassword" name="rpassword" value=""
                                    placeholder="Password">
                         </label>
                         <span id="register_password_error" class="message-error"></span>
