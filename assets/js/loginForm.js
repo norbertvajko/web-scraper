@@ -40,11 +40,12 @@ function save_data() {
                     successMessage.innerHTML = ''; //clear success message
                     loginPopup.classList.remove('active'); //exit loginPopup
                     document.querySelector(".blur").classList.remove("active"); //exit blur
-                    window.location.href = '../../index.php';
+                    // window.location.href = '../../index.php';
+                    location.reload();
 
                 }, 2000);
 
-                loginForm.reset();
+                // loginForm.reset();
                 clearErrors();
 
             } else {

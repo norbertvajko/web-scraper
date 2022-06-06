@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+$value = 101;
+setcookie("myCookie", "COOKIE ACCEPTED");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -34,7 +42,6 @@
 
 </head>
 <body>
-
 <!--------------------------------------------- Start Nav Bar Area ---------------------------------------------------->
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top bor-sha">
@@ -63,6 +70,7 @@
     <main class="main-content">
         <?php
         print_r($_COOKIE);
+        print_r($_SESSION);
         ?>
 
         <section class="main-header main-features p-3">

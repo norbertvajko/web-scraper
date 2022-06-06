@@ -1,14 +1,3 @@
-<?php
-if (isset($_COOKIE['username']) and isset($_COOKIE['password'])) {
-    $username = $_COOKIE['username'];
-    $password = $_COOKIE['password'];
-
-    echo "<script>
-        document.getElementById('uname').value = $username;
-        document.getElementById('password').value = $password;
-        </script>";
-    }
-?>
 
 <div class="container">
     <a class="navbar-brand" href="/index.php">
@@ -97,24 +86,24 @@ if (isset($_COOKIE['username']) and isset($_COOKIE['password'])) {
                     <h3>Log In</h3>
                     <div class="form-element d-flex flex-column">
                         <label>
-                            <input type="text" class="inputs login_data" name="uname" id="uname" placeholder="E-mail"
-                                   value="<?php if(isset($_COOKIE['username'])) {echo $_COOKIE['username'];}; ?>">
+                            <input type="text" class="inputs login_data" name="uname" id="uname" placeholder="E-mail">
 
                         </label>
                         <span id="username_error" class="message-error"></span>
                     </div>
                     <div class="form-element d-flex flex-column">
                         <label>
-                            <input type="password" class="inputs login_data" id="password" name="password" placeholder="Password"
-                                   value="<?php if(isset($_COOKIE['password'])) {echo $_COOKIE['password'];}; ?>">
+                            <input type="password" class="inputs login_data" id="password" name="password"
+                                   placeholder="Password">
+
                         </label>
                         <span id="password_error" class="message-error"></span>
                     </div>
                     <span id="sucLogin"></span>
                     <span id="sucError"></span>
                     <div class="form-element">
-                        <input type="checkbox" id="remember-me" name="remember"
-                               <?php if(isset($_COOKIE['userlogin'])) {echo "checked";}; ?>">
+                        <input type="checkbox" id="remember-me" name="remember">
+
                         <label for="remember-me">Remember me</label>
                     </div>
                     <div class="form-element">
@@ -175,6 +164,7 @@ if (isset($_COOKIE['username']) and isset($_COOKIE['password'])) {
     </div>
 </div>
 
+<script src="/assets/js/logOut.js"></script>
 <script src="/assets/js/searchResults.js"></script>
 <script src="/assets/js/logInPopUp.js"></script>
 <script src="/assets/js/registerPopUp.js"></script>

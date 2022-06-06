@@ -1,6 +1,6 @@
 
 .cookie-container  {
-    display: initial;
+    display:none;
 }
 .cookie-container.active {
     position: fixed;
@@ -9,6 +9,7 @@
     right:0;
     background: rgba(0, 0, 0, 0.9);
     padding: 0 32px;
+    display: block;
 }
 .consent-description a {
     color:#5CC8FD;

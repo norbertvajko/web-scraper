@@ -1,7 +1,7 @@
 <?php
 
 include "connDB.php";
-
+session_start();
 
 
 $loginComplete = true;
@@ -49,25 +49,33 @@ if ($loginComplete) {
 
             if ($hashedPassword == $password_db) {
 
+//                $remember_checkbox = $_POST['remember'];
+
+                $_SESSION['username'] = $username_db;
+                $_SESSION['password'] = $password;
+
+
+//                setcookie('username' , $username_db , time() + 86400 * 14);
+//                setcookie('password', $password_db, time() + 86400 * 14);
+                setcookie('remember_me', 'test');
+//                setcookie('userlogin',$remember_checkbox,time() + 86400 * 14);
+
+//                if (!empty($_POST['remember'])) {
+//
+//                    $remember_checkbox = $_POST['remember'];
+//
+//                    setcookie('username' , $username_db , time() + 86400 * 14);
+//                    setcookie('password', $password_db, time() + 86400 * 14);
+//                    setcookie('userlogin',$remember_checkbox,time() + 86400 * 14);
+//                } else {
+//                    setcookie('username' , $username_db , 30);
+//                    setcookie('password', $password_db, 30);
+//                }
+//                session_start();
 //                $_SESSION['username'] = $username;
-//                $_SESSION['password'] = $password;
-
-                if (!empty($_POST['remember'])) {
-
-                    $remember_checkbox = $_POST['remember'];
-
-                    setcookie('username' , $username_db , time() + 86400 * 14);
-                    setcookie('password', $password_db, time() + 86400 * 14);
-                    setcookie('userlogin',$remember_checkbox,time() + 86400 * 14);
-                } else {
-                    setcookie('username' , $username_db , 30);
-                    setcookie('password', $password_db, 30);
-                }
-                session_start();
-                $_SESSION['username'] = $username;
             }
 
-            $response['success'] = "You are now logged in";
+            $response['success'] = "Logging in...";
         }
     }
     else {

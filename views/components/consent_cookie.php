@@ -17,7 +17,12 @@
         </p>
     </div>
     <div class="consent-button">
-        <button class="btn-accept-cookies" id="consentButton">Allow cookies</button>
+<!--        --><?php
+//            if ($_POST('acceptCookies') !== null) {
+//                setcookie('consent_cookie','User consented',time()+4800);
+//            }
+//        ?>
+        <button class="btn-accept-cookies" id="consentButton" name="acceptCookies">Allow cookies</button>
     </div>
 </div>
 <script src="../../assets/js/consentPopUp.js"></script>
