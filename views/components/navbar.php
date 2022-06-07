@@ -39,7 +39,7 @@
                                     <li class="user-dropdown-item"><a href="#">Favorites</a></li>
                                     <li class="user-dropdown-item"><a href="#">History</a></li>
                                     <li class="user-dropdown-item"><a href="#">Settings</a></li>
-                                    <li class="user-dropdown-item" id="log-out-user"><a href="/views/logout.php">Log out</a></li>
+                                    <li class="user-dropdown-item" id="log-out-user">Log out</li>
                                 </ul>
                                 <?php
                             } else {

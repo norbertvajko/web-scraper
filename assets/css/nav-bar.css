@@ -290,6 +290,8 @@ font-size:15px;
 }
 #log-out-user {
     margin-top:20px;
+    color:black;
+    font-weight: 500;
 }
 
 @media screen and (max-width: 592px) {

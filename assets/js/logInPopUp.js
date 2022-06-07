@@ -9,28 +9,29 @@
 
 
     //Enter LoginPopUp
-    loginButton.addEventListener("click", function () {
+    if (loginButton) {
+        loginButton.addEventListener("click", function () {
 
-        showLoginPopUp();
+            showLoginPopUp();
 
-        //if register button is clicked while login active
-        registerButton.onclick = function () {
-            loginPopup.classList.remove("active");
-            clearErrors();
-            loginForm.reset();
-        }
+            //if register button is clicked while login active
+            registerButton.onclick = function () {
+                loginPopup.classList.remove("active");
+                clearErrors();
+                loginForm.reset();
+            }
 
 
-        // clicks anywhere outside of the modal, close it
-        // window.onclick = function (event) {
-        //     if (event.target === loginPopup) {
-        //        closeLoginPopUp();
-        //     }
-        //     console.log(event.target);
-        // }
+            // clicks anywhere outside of the modal, close it
+            // window.onclick = function (event) {
+            //     if (event.target === loginPopup) {
+            //        closeLoginPopUp();
+            //     }
+            //     console.log(event.target);
+            // }
 
-    });
-
+        });
+    }
 
 //Exit Login
     closeButton.addEventListener("click", function () {

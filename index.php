@@ -1,10 +1,8 @@
 <?php
 session_start();
 
-$value = 101;
-setcookie("myCookie", "COOKIE ACCEPTED");
-
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -38,17 +36,16 @@ setcookie("myCookie", "COOKIE ACCEPTED");
     </script>
 
 
-
-
 </head>
 <body>
+
 <!--------------------------------------------- Start Nav Bar Area ---------------------------------------------------->
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top bor-sha">
-        <?php
-           include 'views/components/navbar.php';
-        ?>
-    </nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top bor-sha">
+    <?php
+    include 'views/components/navbar.php';
+    ?>
+</nav>
 
 <!--------------------------------------------- End Nav Bar Area ------------------------------------------------------>
 
@@ -59,13 +56,13 @@ setcookie("myCookie", "COOKIE ACCEPTED");
 
     <header class="banner-area mt-62 ">
         <?php
-           include "views/components/index_components/home_banner.php";
+        include "views/components/index_components/home_banner.php";
         ?>
-</header>
-<!----------------------------------------------- End Banner Area ----------------------------------------------------->
+    </header>
+    <!----------------------------------------------- End Banner Area ----------------------------------------------------->
 
 
-<!----------------------------------------------- Start Main Area ----------------------------------------------------->
+    <!----------------------------------------------- Start Main Area ----------------------------------------------------->
 
     <main class="main-content">
         <?php
@@ -75,14 +72,14 @@ setcookie("myCookie", "COOKIE ACCEPTED");
 
         <section class="main-header main-features p-3">
             <?php
-               include "views/components/index_components/main_header.php";
+            include "views/components/index_components/main_header.php";
             ?>
         </section>
 
 
         <section class="main-body carousel-best-offer">
             <?php
-                include "views/components/index_components/carousel.php";
+            include "views/components/index_components/carousel.php";
             ?>
         </section>
 
@@ -103,7 +100,7 @@ setcookie("myCookie", "COOKIE ACCEPTED");
 
 <!----------------------------------------------- Start Footer Area --------------------------------------------------->
 <?php
-    include "views/components/footer.php";
+include "views/components/footer.php";
 ?>
 <!------------------------------------------------ End Footer Area ---------------------------------------------------->
 

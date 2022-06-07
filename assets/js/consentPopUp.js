@@ -1,10 +1,20 @@
 const cookieContainer = document.getElementById('cookieContainer');
 const cookieButton = document.getElementById('consentButton');
 
-cookieButton.addEventListener("click", () => {
-    cookieContainer.classList.remove("active");
-});
+if (cookieContainer) {
+    setTimeout(() => {
+        cookieContainer.classList.toggle("active");
+    }, 2000);
 
-setTimeout( () => {
-   cookieContainer.classList.toggle("active");
-},2000);
+}
+
+if (cookieButton) {
+    cookieButton.addEventListener("click", (e) => {
+
+        let request = new XMLHttpRequest();
+        request.open('POST', '../../includes/consentCookieAccepted.php');
+        e.preventDefault();
+        cookieContainer.classList.remove("active");
+        request.send();
+    });
+}

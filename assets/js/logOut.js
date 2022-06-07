@@ -1,12 +1,14 @@
-
 const logoutButton = document.getElementById('log-out-user');
 
-logoutButton.addEventListener('click',function (event) {
+if (logoutButton) {
+    logoutButton.addEventListener('click', (event) => {
 
+        let request = new XMLHttpRequest();
+        request.open('POST', '../../includes/logout.php');
+        event.preventDefault();
 
-    let request = new XMLHttpRequest();
-    request.open('POST' , '../../views/logout.php');
-    event.preventDefault();
-    location.reload();
-    request.send();
-});
+        location.reload();
+
+        request.send();
+    });
+}

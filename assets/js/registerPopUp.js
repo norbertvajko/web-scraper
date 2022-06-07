@@ -11,30 +11,31 @@ let correctPasswordError = document.getElementById('cr_password_error');
 let errorMessages = [fullNameError , emailError , passwordError , correctPasswordError];
 
 //Enter Register
-registerButton.addEventListener("click", function () {
+if (registerButton) {
+    registerButton.addEventListener("click", function () {
 
-    showRegisterPopUp();
+        showRegisterPopUp();
 
-    //add blur
-    document.querySelector(".blur").classList.add("active");
+        //add blur
+        document.querySelector(".blur").classList.add("active");
 
-    //if login button is clicked while register active
-    loginButton.onclick = function() {
-        registerPopUp.classList.remove("active");
-        emptyErrorMessages();
-        registerForm.reset();
-    }
+        //if login button is clicked while register active
+        loginButton.onclick = function () {
+            registerPopUp.classList.remove("active");
+            emptyErrorMessages();
+            registerForm.reset();
+        }
 
-    //click outside popUp to close
-    // document.addEventListener('mouseup', function (e) {
-    //     if (!registerPopUp.contains(e.target)) {
-    //         registerPopUp.style.display = 'none';
-    //         removeBlur();
-    //     }
-    // });
+        //click outside popUp to close
+        // document.addEventListener('mouseup', function (e) {
+        //     if (!registerPopUp.contains(e.target)) {
+        //         registerPopUp.style.display = 'none';
+        //         removeBlur();
+        //     }
+        // });
 
-});
-
+    });
+}
 //Exit Register
 document.querySelector(".popupRegister .close-btn").addEventListener("click", function () {
 

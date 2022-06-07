@@ -8,7 +8,6 @@ $loginComplete = true;
 
 $username = $_POST['uname'];
 $password = $_POST["password"];
-//$remember = $_POST["remember"];
 
 $hashedPassword = md5($password);
 
@@ -46,33 +45,16 @@ if ($loginComplete) {
 
             $username_db = $row['full_name'];
             $password_db = $row['password'];
+            $id_db = $row['ID'];
+
 
             if ($hashedPassword == $password_db) {
 
-//                $remember_checkbox = $_POST['remember'];
+                $isLoggedIn = true;
 
                 $_SESSION['username'] = $username_db;
-                $_SESSION['password'] = $password;
+                $_SESSION['id'] = $id_db;
 
-
-//                setcookie('username' , $username_db , time() + 86400 * 14);
-//                setcookie('password', $password_db, time() + 86400 * 14);
-                setcookie('remember_me', 'test');
-//                setcookie('userlogin',$remember_checkbox,time() + 86400 * 14);
-
-//                if (!empty($_POST['remember'])) {
-//
-//                    $remember_checkbox = $_POST['remember'];
-//
-//                    setcookie('username' , $username_db , time() + 86400 * 14);
-//                    setcookie('password', $password_db, time() + 86400 * 14);
-//                    setcookie('userlogin',$remember_checkbox,time() + 86400 * 14);
-//                } else {
-//                    setcookie('username' , $username_db , 30);
-//                    setcookie('password', $password_db, 30);
-//                }
-//                session_start();
-//                $_SESSION['username'] = $username;
             }
 
             $response['success'] = "Logging in...";
