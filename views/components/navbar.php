@@ -33,7 +33,7 @@
                             <i class="las la-user"></i>Account
                         </a>
                         <div class="dropdown-content" id="dropdown_content">
-                            <?php if (isset($_SESSION['username']) || isset($_COOKIE['username'])) { ?>
+                            <?php if (isset($_SESSION['user_id'])) { ?>
                                 <span><h6>Welcome</h6> <span id="usernameDropdown"><?= $_SESSION['username']; ?></span> </span>
                                 <ul class="user-dropdown-content">
                                     <li class="user-dropdown-item"><a href="#">Favorites</a></li>
@@ -103,11 +103,10 @@
                     <span id="sucError"></span>
                     <div class="form-element">
                         <input type="checkbox" id="remember-me" name="remember">
-
                         <label for="remember-me">Remember me</label>
                     </div>
                     <div class="form-element">
-                        <button onclick="save_data(); return false;" value="Login">Sign In</button>
+                        <button onclick="save_data(); return false;" value="Login" id="loginButton">Sign In</button>
                     </div>
                     <div class="form-element">
                         <a href="#">Forgot password?</a>
@@ -163,6 +162,7 @@
         </div>
     </div>
 </div>
+
 
 <script src="/assets/js/logOut.js"></script>
 <script src="/assets/js/searchResults.js"></script>

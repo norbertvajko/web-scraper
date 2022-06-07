@@ -4,7 +4,7 @@ function save_data() {
     const loginForm = document.getElementById('loginFormID');
     const successMessage = document.getElementById('sucLogin');
     const successError = document.getElementById('sucError');
-
+    const checkBox = document.getElementById('remember-me');
     // const username = document.getElementById('uname');
     // const password = document.getElementById('password');
 
@@ -32,8 +32,19 @@ function save_data() {
 
             let response = JSON.parse(ajax_request.responseText);
 
+
+
             if (response.success !== '') {
                 successMessage.innerHTML = response.success;
+
+                if (checkBox.checked) {
+                    let newHXR = new XMLHttpRequest();
+                    newHXR.open('POST', '../../includes/rememberMe.php');
+
+
+                    newHXR.send();
+                }
+
 
                 setTimeout(function () {
 
@@ -44,6 +55,8 @@ function save_data() {
                     location.reload();
 
                 }, 2000);
+
+
 
                 // loginForm.reset();
                 clearErrors();
@@ -63,6 +76,8 @@ function save_data() {
         passwordError.innerHTML = '';
         successError.innerHTML = '';
     }
+
+
 
 }
 

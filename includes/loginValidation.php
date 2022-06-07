@@ -43,21 +43,25 @@ if ($loginComplete) {
 
         while ($row = mysqli_fetch_assoc($results)) {
 
+            $verified = $row['verified'];
+
             $username_db = $row['full_name'];
             $password_db = $row['password'];
             $id_db = $row['ID'];
 
 
-            if ($hashedPassword == $password_db) {
-
-                $isLoggedIn = true;
+            if ($hashedPassword == $password_db && $verified == 1) {
 
                 $_SESSION['username'] = $username_db;
-                $_SESSION['id'] = $id_db;
+                $_SESSION['user_id'] = $id_db;
 
+
+                $response['success'] = "Logging in...";
+            } else {
+                $response['success_error'] = "Please verify your e-mail!";
             }
 
-            $response['success'] = "Logging in...";
+
         }
     }
     else {

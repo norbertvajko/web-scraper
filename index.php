@@ -1,6 +1,25 @@
 <?php
 session_start();
 
+
+
+
+//include 'includes/connDB.php';
+//$conn = $GLOBALS['conn'];
+//
+//
+//if(!isset($_SESSION['user_id']) && isset($_COOKIE['remember_me'])) {
+//    $sql = "SELECT * FROM users WHERE email = '" . $_COOKIE['remember_me'] . "'";
+//    $result = mysqli_query($conn, $sql);
+//    $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+//
+//
+//
+//
+//    $_SESSION['email'] = $row['email'];
+//    $_SESSION['userid'] = $row['id'];
+
+//}
 ?>
 
 

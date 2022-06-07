@@ -42,7 +42,7 @@ function save_register() {
                 setTimeout(function () {
                     messageSuccess.innerHTML = '';
                     registerPopUp.classList.remove('active');
-                }, 2000);
+                }, 3000);
 
                 //empty fields/errors
                 emptyFields();

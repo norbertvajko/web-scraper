@@ -9,8 +9,8 @@ $registerEmail = $_POST["remail"];
 $registerPassword = $_POST["rpassword"];
 $correctPassword = $_POST["crpassword"];
 
-
 $hashedPassword = md5($registerPassword);
+$vkey = md5(time() . $fullName);
 
 $response = [
     'success' => '',
@@ -81,11 +81,26 @@ if(mysqli_num_rows($check_email) > 0){
 
 
 if ($registerComplete) {
-    $response['success'] = 'Register Completed';
 
-    $query = "INSERT INTO users (full_name, email, password) 
-  			  VALUES('$fullName', '$registerEmail', '$hashedPassword')";
-    mysqli_query($conn, $query);
+
+    $query = "INSERT INTO users (full_name, email, password, vkey) 
+  			  VALUES('$fullName', '$registerEmail', '$hashedPassword', '$vkey')";
+    $insert = mysqli_query($conn, $query);
+    if ($insert) {
+        $to = $registerEmail;
+        $subject = "Email Verification";
+        $message = "<a href='https://n_vajko.internship.rankingcoach.com/includes/verificationEmail.php?vkey=$vkey'>Register Account</a>";
+        $headers[] = 'MIME-Version: 1.0';
+        $headers[] = 'Content-type: text/html; charset=iso-8859-1';
+        $headers[] = 'From: Scrappy <scrappy@example.com>';
+
+        mail($to, $subject, $message, implode("\r\n", $headers));
+
+        $response['success'] = 'Register Completed. An e-mail was sent in order to verify your account. Please check your inbox';
+    } else {
+        echo 'Failed';
+    }
+
 }
 //transform into json obj
 echo json_encode($response);
