@@ -7,6 +7,7 @@
     <file url="file://$PROJECT_DIR$/includes/newsLetterValidation.php" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/includes/registerValidation.php" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/includes/scrape.php" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/includes/verificationEmail.php" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/views/Results.php" dialect="GenericSQL" />
   </component>
 </project>

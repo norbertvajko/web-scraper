@@ -33,7 +33,7 @@
                             <i class="las la-user"></i>Account
                         </a>
                         <div class="dropdown-content" id="dropdown_content">
-                            <?php if (isset($_SESSION['user_id'])) { ?>
+                            <?php if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) { ?>
                                 <span><h6>Welcome</h6> <span id="usernameDropdown"><?= $_SESSION['username']; ?></span> </span>
                                 <ul class="user-dropdown-content">
                                     <li class="user-dropdown-item"><a href="#">Favorites</a></li>
@@ -108,8 +108,9 @@
                     <div class="form-element">
                         <button onclick="save_data(); return false;" value="Login" id="loginButton">Sign In</button>
                     </div>
+
                     <div class="form-element">
-                        <a href="#">Forgot password?</a>
+                        <a href="#" type="button">Forgot password?</a>
                     </div>
                 </div>
             </form>
