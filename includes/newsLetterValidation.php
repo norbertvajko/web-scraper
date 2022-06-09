@@ -5,7 +5,6 @@ include "connDB.php";
 $newsLetterComplete = true;
 
 $newsletterEmail = $_POST["newsLetterName"];
-//$subscribeButton = $_POST["subscribeButton"];
 
 $response = [
     'success' => '',

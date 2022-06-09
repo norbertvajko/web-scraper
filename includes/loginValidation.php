@@ -26,6 +26,9 @@ $specialchars  =    preg_match('@[^\w]@', $password);
 if (empty($username)) {
     $response['username_error'] = 'Field required';
     $loginComplete = false;
+}elseif(!filter_var($username, FILTER_VALIDATE_EMAIL)) {
+    $response['username_error'] = 'Invalid email format';
+    $loginComplete = false;
 }
 if (empty($password)) {
     $response['password_error'] = 'Field Required';

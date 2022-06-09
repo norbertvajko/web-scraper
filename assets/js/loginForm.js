@@ -58,7 +58,7 @@ function save_data() {
 
 
 
-                // loginForm.reset();
+                loginForm.reset();
                 clearErrors();
 
             } else {

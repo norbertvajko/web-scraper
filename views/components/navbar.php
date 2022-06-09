@@ -95,7 +95,6 @@
                         <label>
                             <input type="password" class="inputs login_data" id="password" name="password"
                                    placeholder="Password">
-
                         </label>
                         <span id="password_error" class="message-error"></span>
                     </div>
@@ -110,8 +109,11 @@
                     </div>
 
                     <div class="form-element">
-                        <a href="#" type="button">Forgot password?</a>
+                        <a id="forgottenPasswordLink" type="button">Forgot Password?</a>
+                        <!--                        return false will prevent browser from following the link-->
+
                     </div>
+
                 </div>
             </form>
         </div>
@@ -155,8 +157,33 @@
                         <button onclick="save_register(); return false;">Register</button>
                     </div>
                     <div id="terms">
-                        <p id="termsID">By registering in any way to Scrappy, you accept the Terms and conditions and Privacy
+                        <p id="termsID">By registering in any way to Scrappy, you accept the Terms and conditions and
+                            Privacy
                             Policy</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="popup forgot-password" id="forgotPasswordPopUp">
+            <div class="close-btn">&times;</div>
+            <form action="" method="post" id="forgotPasswordForm">
+                <div class="form">
+                    <h3>Reset Password</h3>
+                    <p id="resetPassDescription">Please, provide your e-mail address in order to reset your
+                        password.</p>
+                    <div class="form-element d-flex flex-column">
+                        <label>
+                            <input type="email" class="inputs login_data" name="forgottenemail" id="forgottenemail"
+                                   placeholder="E-mail">
+                        </label>
+                        <span id="forgotEmailError" class="message-error"></span>
+                        <div id="forgotEmailSuccess" class="message-success"></div>
+                        <div id="ten-countdown"></div>
+
+
+                    </div>
+                    <div class="form-element">
+                        <button id="continueBtn" onclick="save_forgot_pass(); return false;">Continue</button>
                     </div>
                 </div>
             </form>
@@ -164,7 +191,8 @@
     </div>
 </div>
 
-
+<script src="/assets/js/forgotPasswordForm.js"></script>
+<script src="/assets/js/forgotPasswordPopUp.js"></script>
 <script src="/assets/js/logOut.js"></script>
 <script src="/assets/js/searchResults.js"></script>
 <script src="/assets/js/logInPopUp.js"></script>

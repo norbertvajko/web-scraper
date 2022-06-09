@@ -64,6 +64,10 @@ body {
     font-weight: bold;
     margin-left:15px
 }
+.message-success {
+    color:green;
+    font-weight: bold;
+}
 #sucMessage {
     color: green;
     font-weight: bold;

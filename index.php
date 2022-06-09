@@ -84,10 +84,10 @@ session_start();
     <!----------------------------------------------- Start Main Area ----------------------------------------------------->
 
     <main class="main-content">
-        <?php
-        print_r($_COOKIE);
-        print_r($_SESSION);
-        ?>
+<!--        --><?php
+//        print_r($_COOKIE);
+//        print_r($_SESSION);
+//        ?>
 
         <section class="main-header main-features p-3">
             <?php

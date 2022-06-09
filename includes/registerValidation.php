@@ -87,6 +87,7 @@ if ($registerComplete) {
   			  VALUES('$fullName', '$registerEmail', '$hashedPassword', '$vkey')";
     $insert = mysqli_query($conn, $query);
     if ($insert) {
+
         $to = $registerEmail;
         $subject = "Email Verification";
         $message = "<a href='https://n_vajko.internship.rankingcoach.com/includes/verificationEmail.php?vkey=$vkey'>Register Account</a>";
@@ -97,8 +98,6 @@ if ($registerComplete) {
         mail($to, $subject, $message, implode("\r\n", $headers));
 
         $response['success'] = 'Register Completed. An e-mail was sent in order to verify your account. Please check your inbox';
-    } else {
-        echo 'Failed';
     }
 
 }

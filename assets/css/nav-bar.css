@@ -147,14 +147,15 @@
     font-size:14px;
 }
 #sucRegister {
-    color:red;
+    color:green;
     font-weight: bold;
-    font-size:14px;
+    font-size:13px;
 }
 .message-error {
     color:red;
     font-size: 11px;
 }
+
 /*.form p:nth-child(1) {*/
 /*    font-size: 10px;*/
 /*    font-weight: lighter;*/
@@ -293,7 +294,25 @@ font-size:15px;
     color:black;
     font-weight: 500;
 }
+#resetPassDescription {
+    font-size:12px;
+}
+#continueBtn {
+    display:block;
+}
 
+#ten-countdown {
+    text-align: center;
+    border: 1px solid #004853;
+    display: none;
+    padding: 5px;
+    color: #004853;
+    font-family: Verdana, sans-serif, Arial;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    height: 44px;
+}
 @media screen and (max-width: 592px) {
     .navbar-collapse {
         /*height: 100vh;*/
