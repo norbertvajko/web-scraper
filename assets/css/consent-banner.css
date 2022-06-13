@@ -55,3 +55,20 @@
 .btn-accept-cookies:hover {
     opacity: 1.0;
 }
+
+@media screen and (max-width: 986px) {
+
+    .consent-description {
+        text-align: center;
+        padding:0;
+        width: 100%;
+    }
+    .consent-description p {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+    .consent-title h1 {
+        font-size: 23px;
+    }
+
+}

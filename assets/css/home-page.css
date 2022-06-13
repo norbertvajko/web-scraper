@@ -26,6 +26,7 @@ body {
     min-height:350px;
     border-radius:15px;
     padding:0;
+
 }
 .banner-area .terminal-banner .terminal-header {
     background-color:rgb(14,20,34);
@@ -193,6 +194,23 @@ body {
     .terminal-banner {
 
 
+    }
+
+}
+
+@media screen and (max-width: 620px) {
+
+    .banner-area .terminal-banner {
+        background-color: rgb(14,20,26);
+        min-height: 350px;
+        border-radius: 15px;
+        padding: 0;
+        /* padding: 11px; */
+        /* margin-left: 50px; */
+        margin: auto;
+        /* padding-left: 6px; */
+        width: 85%;
+        /* margin-right: 50px; */
     }
 
 }

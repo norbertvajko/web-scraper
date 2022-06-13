@@ -39,7 +39,7 @@ function save_newsletter() {
                 document.getElementById('newsletterEmail').placeholder = response.email_error;
 
                 //add red border
-                document.getElementById('newsletterEmail').style.border = "3px solid #cc3333";
+                document.getElementById('newsletterEmail').style.color = "3px solid #cc3333";
             }
 
         }

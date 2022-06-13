@@ -27,21 +27,36 @@ if(empty($forgetEmail)) {
 
 if ($forgetPasswordComplete) {
 
-//    $query = "INSERT INTO users (full_name, email, password, vkey)
-//  			  VALUES('$fullName', '$registerEmail', '$hashedPassword', '$vkey')";
-//    $insert = mysqli_query($GLOBALS['conn'], $query);
+    if (isset($forgetEmail)) {
 
-    $to = $forgetEmail;
-    $subject = "Email Password Change";
-    $message = "aaa";
-    $headers[] = 'MIME-Version: 1.0';
-    $headers[] = 'Content-type: text/html; charset=iso-8859-1';
-    $headers[] = 'From: Scrappy <scrappy@example.com>';
+//        var_dump($forgetEmail);die('s');
 
-    mail($to, $subject, $message, implode("\r\n", $headers));
+        $emailCheckQuery = "SELECT * FROM uesrs WHERE email = '$forgetEmail'";
+        $emailCheckResult = mysqli_query($GLOBALS['conn'], $emailCheckQuery);
 
-    $response['success'] = 'An e-mail was sent in order to reset your password. Please check your inbox';
-    // NU VINE response span
+
+        $expire = time() + (60 * 1);
+        $code = rand(10000000, 99999999);
+        $updateQuery = "UPDATE users SET password_code_reset = '$code' WHERE email = '$forgetEmail'";
+        $update = mysqli_query($GLOBALS['conn'], $updateQuery);
+
+        if ($update) {
+            $to = $forgetEmail;
+            $subject = "Email Password Change";
+            $message = "Hello, your 8-digit code is: <b>$code</b>";
+            $headers[] = 'MIME-Version: 1.0';
+            $headers[] = 'Content-type: text/html; charset=iso-8859-1';
+            $headers[] = 'From: Scrappy <scrappy@example.com>';
+
+            mail($to, $subject, $message, implode("\r\n", $headers));
+        }
+
+        $response['success'] = 'An e-mail was sent in order to reset your password. Please check your inbox';
+    }
+
+
+
+
 }
 
 echo json_encode($response);

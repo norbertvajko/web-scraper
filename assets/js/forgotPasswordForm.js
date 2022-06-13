@@ -4,6 +4,7 @@ function save_forgot_pass() {
     const forgotPassForm = document.getElementById('forgotPasswordForm');
     const successFP = document.getElementById('forgotEmailSuccess');
     const errorFP = document.getElementById('forgotEmailError');
+    const descriptionFP = document.getElementById('resetPassDescription');
 
 
     const continueButton = document.getElementById('continueBtn');
@@ -26,22 +27,28 @@ function save_forgot_pass() {
             if (response.success !== '') {
 
 
+                fpInput.placeholder = "";
+                fpInput.classList.add("numberCircle");
+                // fpInput.name("code");
+                fpInput.maxLength = 8;
 
-                setTimeout(function () {
-                    document.getElementById('ten-countdown').classList.add("active");
-                    // successFP.innerHTML = ''; //clear success message
-                    // forgotPasswordPopUp.classList.remove('active'); //exit fp popup
-                    removeBlur();
+                descriptionFP.innerHTML = 'Please enter the 8-digit code was sent at ' + '<b class="c-siena ">' + fpInput.value + '</b>';
+                fpInput.value = "";
+
+                var fifteenMinutes = 60 * 15,
+                    display = document.querySelector('#time');
+                startTimer(fifteenMinutes, display);
 
 
 
-                }, 2000 * 6000);
+                document.getElementById('ten-countdown').classList.add("active");
+                successFP.innerHTML = ''; //clear success message
+                // forgotPasswordPopUp.classList.remove('active'); //exit fp popup
 
 
                 continueButton.style.display = 'none';
                 clearFPErrors();
-                let countdownbtn = document.getElementById('ten-countdown').style.display = 'inline';
-                countdown( countdownbtn, 10, 0 );
+                document.getElementById('ten-countdown').style.display = 'inline';
                 // forgotPassForm.reset();
 
             } else {
@@ -53,32 +60,22 @@ function save_forgot_pass() {
     }
 }
 
-function countdown( elementName, minutes, seconds )
-{
-    var element, endTime, hours, mins, msLeft, time;
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
 
-    function twoDigits( n )
-    {
-        return (n <= 9 ? "0" + n : n);
-    }
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
 
-    function updateTimer()
-    {
-        msLeft = endTime - (+new Date);
-        if ( msLeft < 1000 ) {
-            element.innerHTML = "Time is up!";
-        } else {
-            time = new Date( msLeft );
-            hours = time.getUTCHours();
-            mins = time.getUTCMinutes();
-            element.innerHTML = (hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
-            setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            timer = duration;
         }
-    }
-
-    element = document.getElementById(elementName);
-    endTime = (+new Date) + 1000 * (60*minutes + seconds) + 500;
-    updateTimer();
+    }, 1000);
 }
+
 
 

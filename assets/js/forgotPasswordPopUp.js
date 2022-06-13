@@ -43,6 +43,7 @@ forgottenCloseButton.addEventListener("click", function () {
     forgotPasswordForm.reset();
     closeForgotPasswordPopUp();
 
+
 });
 
 

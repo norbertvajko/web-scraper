@@ -178,8 +178,7 @@
                         </label>
                         <span id="forgotEmailError" class="message-error"></span>
                         <div id="forgotEmailSuccess" class="message-success"></div>
-                        <div id="ten-countdown"></div>
-
+                        <div class="countdown-time mt-3" id="ten-countdown">Reset password authentification token expires in <span id="time">15:00</span> minutes!</div>
 
                     </div>
                     <div class="form-element">
