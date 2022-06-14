@@ -163,6 +163,11 @@
     color:red;
     font-size: 11px;
 }
+.message-success {
+    color:green;
+    font-size: 11px;
+    margin-top:5px;
+}
 
 /*.form p:nth-child(1) {*/
 /*    font-size: 10px;*/

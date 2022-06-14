@@ -35,7 +35,7 @@ if ($forgetPasswordComplete) {
         $emailCheckResult = mysqli_query($GLOBALS['conn'], $emailCheckQuery);
 
 
-        $expire = time() + (60 * 1);
+        $expire = time() + (15 * 1);
         $code = rand(10000000, 99999999);
         $updateQuery = "UPDATE users SET password_code_reset = '$code' WHERE email = '$forgetEmail'";
         $update = mysqli_query($GLOBALS['conn'], $updateQuery);

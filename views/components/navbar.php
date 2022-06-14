@@ -184,6 +184,7 @@
                                    placeholder="8-digit code" maxlength="8">
                         </label>
                         <span id="codeError" class="message-error"></span>
+                        <div id="codeSuccess" class="message-success"></div>
 
                         <button type="button" class="hide-c mt-3" id="resetPassB"  name="resetPassB" onclick="new_password(); return false;">Reset Password</button>
 
@@ -194,6 +195,32 @@
                     </div>
                     <div class="form-element">
                         <button id="continueBtn" onclick="save_forgot_pass(); return false;">Continue</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="popup reset-password" id="resetPasswordPopUp">
+            <div class="close-btn">&times;</div>
+            <form action="" method="post" id="resetPasswordForm">
+                <div class="form">
+                    <h3>Reset Password</h3>
+                    <div class="form-element d-flex flex-column">
+                        <label>
+                            <input type="password" class="inputs-n login_data" name="reset_passwd" id="resetPassWd"
+                                   placeholder="Password">
+                        </label>
+                        <span id="resetPassError" class="message-error"></span>
+                        <div id="resetPassSuccess" class="message-success"></div>
+                        <label>
+
+                            <input type="password" class="inputs-n login_data" name="reset_passwd_cor" id="resetPassWdCorr"
+                                   placeholder="Retype password">
+                        </label>
+                        <span id="retypeError" class="message-error"></span>
+                        <div id="retypeSuccess" class="message-success"></div>
+
+
+                        <button type="button" class="mt-3" id="resetPassBFinish"  name="resetPassBFinish">Reset Password</button>
                     </div>
                 </div>
             </form>
