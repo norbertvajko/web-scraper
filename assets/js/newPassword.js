@@ -58,16 +58,18 @@ function new_password() {
                             let response = JSON.parse(newHXR.responseText);
 
                             if (response.success !== '') {
+                                resetPassError.innerHTML = "";
+                                retypePassError.innerHTML = "";
 
+                                retypeSuccess.innerHTML = response.success;
                                 setTimeout(() => {
-                                    resetPassError.innerHTML = "";
-                                    retypePassError.innerHTML = "";
 
-                                    retypeSuccess.innerHTML = response.success;
-
+                                    resetPassPop.classList.remove("active");
+                                    resetPassPop.style.display = 'none';
+                                    showLoginPopUp();
                                 }, 2000);
-                                resetPassPop.classList.remove("active");
-                                resetPassPop.style.display = 'none';
+
+
                             } else {
                                 resetPassError.innerHTML = response.new_pass_error;
                                 retypePassError.innerHTML = response.new_pass_error_correct;
