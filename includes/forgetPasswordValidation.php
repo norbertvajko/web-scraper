@@ -50,11 +50,8 @@ if ($forgetPasswordComplete) {
 
             mail($to, $subject, $message, implode("\r\n", $headers));
         }
-
         $response['success'] = 'An e-mail was sent in order to reset your password. Please check your inbox';
     }
-
-
 
 
 }

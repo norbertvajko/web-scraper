@@ -113,6 +113,14 @@
     border-bottom: 1px dashed gray;
     outline: none;
 }
+.inputs-n {
+    margin-top:5px;
+    width: 100%;
+    padding:10px;
+    border: none;
+    border-bottom: 1px dashed gray;
+    outline: none;
+}
 
 .popup .form .form-element input[type="checkbox"] {
     margin-right: 5px;

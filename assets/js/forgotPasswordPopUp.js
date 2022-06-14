@@ -4,6 +4,7 @@ const forgotPasswordPopUp = document.querySelector(".forgot-password");
 const forgotPasswordForm = document.getElementById('forgotPasswordForm');
 const forgottenEmailError = document.getElementById('forgotEmailError');
 
+
 const forgottenSuccess = document.getElementById('forgotEmailSuccess');
 
 

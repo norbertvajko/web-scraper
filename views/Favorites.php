@@ -51,17 +51,18 @@
             <div class="menu-user-container d-flex">
                 <div class="menu-user-header p-5 w-25 ">
                     <div class="menu-user-logo text-center p-3">
-                        <img src="https://s13emagst.akamaized.net/layout/ro/static-upload/icon_guest.png" alt="" class="img-fluid">
+                        <img src="https://s13emagst.akamaized.net/layout/ro/static-upload/icon_guest.png" alt=""
+                             class="img-fluid">
                     </div>
                     <div class="menu-user-body-title">
                         <h5 class="text-center">
                             Hello , please sign in
                             <h6 class="text-center">in order to have full control with our offers</h6>
-                            </h5>
+                        </h5>
                     </div>
                     <div class="menu-user-footer d-flex flex-column">
-                        <button>Login</button>
-                        <button>Register</button>
+                        <button type="button" class="btn btn-primary mb-2" id="loginBTN">Login</button>
+                        <button type="button" class="btn btn-primary" id="registerBTN">Register</button>
                     </div>
                 </div>
                 <div class="menu-user-body ms-35">
@@ -82,11 +83,12 @@
                             <div class="recomndation-p d-flex justify-content-center">
                                 <p>Go take a look at the most popular products</p>
                             </div>
-                            <div class="recomandation-btn d-flex justify-content-center"">
-                                <button>See oferts</button>
-                            </div>
+                            <div class="recomandation-btn d-flex justify-content-center"
+                            ">
+                            <button type="button" class="btn btn-primary">See offers</button>
                         </div>
                     </div>
+                </div>
             </div>
         </section>
     </div>
@@ -100,6 +102,19 @@
 
 <!------------------------------------------------ End Footer Area ---------------------------------------------------->
 
+<script>
+
+    const logIN = document.getElementById('loginBTN');
+    const register = document.getElementById('registerBTN')
+
+    logIN.addEventListener("click", () => {
+        showLoginPopUp();
+    });
+    register.addEventListener("click", () => {
+       showRegisterPopUp();
+    });
+
+</script>
 
 </body>
 </html>

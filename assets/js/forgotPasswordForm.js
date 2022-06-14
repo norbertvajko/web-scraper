@@ -6,6 +6,9 @@ function save_forgot_pass() {
     const errorFP = document.getElementById('forgotEmailError');
     const descriptionFP = document.getElementById('resetPassDescription');
 
+    const forgottenCode = document.getElementById('forgottencode');
+    const resetBtn = document.getElementById('resetPassB');
+
 
     const continueButton = document.getElementById('continueBtn');
 
@@ -27,13 +30,15 @@ function save_forgot_pass() {
             if (response.success !== '') {
 
 
-                fpInput.placeholder = "";
-                fpInput.classList.add("numberCircle");
-                // fpInput.name("code");
-                fpInput.maxLength = 8;
+                // fpInput.placeholder = "";
+                // fpInput.classList.add("numberCircle");
+                // fpInput.maxLength = 8;
 
                 descriptionFP.innerHTML = 'Please enter the 8-digit code was sent at ' + '<b class="c-siena ">' + fpInput.value + '</b>';
-                fpInput.value = "";
+                // fpInput.value = "";
+                fpInput.classList.toggle("hide-c");
+                forgottenCode.classList.toggle("hide-c");
+                resetBtn.classList.toggle("hide-c");
 
                 var fifteenMinutes = 60 * 15,
                     display = document.querySelector('#time');

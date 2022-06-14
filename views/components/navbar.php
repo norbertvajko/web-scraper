@@ -65,7 +65,7 @@
                 </li>
 
                 <li class="list-links mx-3">
-                    <a href="/views/Results.php">
+                    <a href="/views/Favorites.php">
                         <i class="fa fa-heart-o" style="font-size:22px"></i>
                         Favorites
                     </a>
@@ -173,11 +173,22 @@
                         password.</p>
                     <div class="form-element d-flex flex-column">
                         <label>
-                            <input type="email" class="inputs login_data" name="forgottenemail" id="forgottenemail"
+                            <input type="email" class="inputs-n login_data" name="forgottenemail" id="forgottenemail"
                                    placeholder="E-mail">
                         </label>
                         <span id="forgotEmailError" class="message-error"></span>
                         <div id="forgotEmailSuccess" class="message-success"></div>
+                        <label>
+
+                            <input type="text" class="inputs-n login_data hide-c" name="forgottencode" id="forgottencode"
+                                   placeholder="8-digit code" maxlength="8">
+                        </label>
+                        <span id="codeError" class="message-error"></span>
+
+                        <button type="button" class="hide-c mt-3" id="resetPassB"  name="resetPassB" onclick="new_password(); return false;">Reset Password</button>
+
+
+
                         <div class="countdown-time mt-3" id="ten-countdown">Reset password authentification token expires in <span id="time">15:00</span> minutes!</div>
 
                     </div>
@@ -189,7 +200,7 @@
         </div>
     </div>
 </div>
-
+<script src="/assets/js/newPassword.js"></script>
 <script src="/assets/js/forgotPasswordForm.js"></script>
 <script src="/assets/js/forgotPasswordPopUp.js"></script>
 <script src="/assets/js/logOut.js"></script>
