@@ -6,7 +6,7 @@ $newPasswordComplete = true;
 $newPassword = $_POST['reset_passwd'];
 //$newPasswordCorrect = $_POST['reset_passwd_cor'];
 
-$hashedPass = md5($newPassword);
+
 
 $response = [
     'new_pass_error' => '',
@@ -28,7 +28,7 @@ if (empty($newPassword)) {
     at least one upper case letter, one number, and one special character.";
     $newPasswordComplete = false;
 }
-if (empty($_POST['reset_passwd'])) {
+if (empty($_POST['reset_passwd_cor'])) {
     $response['new_pass_error_correct'] = "Field Required";
     $newPasswordComplete = false;
 } elseif ($_POST['reset_passwd'] !== $_POST['reset_passwd_cor']) {
@@ -37,17 +37,18 @@ if (empty($_POST['reset_passwd'])) {
 }
 
 if ($newPasswordComplete) {
-    if (isset($_POST['resetPassBFinish'])) {
-        $query = "UPDATE users SET password = '$hashedPass' WHERE password_code_reset = 1 ";
-        $queryRun = mysqli_query($GLOBALS['conn'], $query);
-        if ($queryRun) {
-            $newQ = "UPDATE users SET password_code_reset = 0 WHERE password_code_reset = 1 ";
-            mysqli_query($GLOBALS['conn'], $newQ);
-        }
+
+    $hashedPass = md5($newPassword);
+    $newQuery = "UPDATE users SET password = '$hashedPass' WHERE password_code_reset = 1";
+    $result = mysqli_query($GLOBALS['conn'], $newQuery);
+
+    if ($result) {
+        $delQ = "UPDATE users SET password_code_reset = 0 WHERE password_code_reset = 1";
+        mysqli_query($GLOBALS['conn'], $delQ);
     }
 
     $response['success'] = "Password Changed";
-}
+    }
 
 //transform into json obj
 echo json_encode($response);

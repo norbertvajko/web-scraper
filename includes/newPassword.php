@@ -30,10 +30,9 @@ if (empty($code)) {
 
 if ($forgetPasswordComplete) {
 
-
-
     $newQuery = "UPDATE users SET password_code_reset = 1 WHERE password_code_reset = '$code'";
     mysqli_query($GLOBALS['conn'], $newQuery);
+
 
     $response['success'] = 'Success';
 }

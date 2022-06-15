@@ -36,12 +36,14 @@ function new_password() {
 
 
                     closeForgotPasswordPopUp();
+                    addBlur();
                     resetPassPop.classList.add("active");
                     resetPassPop.style.display = 'block';
 
 
                 }, 2000);
                 showForgotPasswordPopUp();
+
                 resetFinishButton.addEventListener('click', () => {
 
                     let rData = new FormData();
