@@ -1,8 +1,39 @@
 <?php include './../includes/classes/searchProducts.php'; ?>
 <?php
+
+include '../includes/connDB.php';
+
 //preia product id din url
 $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+
 //var_dump($actual_link);
+$url_components = parse_url($actual_link);
+
+// Use parse_str() function to parse the
+// string passed via URL
+parse_str($url_components['query'], $params);
+$idParam = $params['productId'];
+
+$sql = " SELECT name, price, images, in_stock, reviews, link, logo FROM products WHERE id = '$idParam' ";
+$result = mysqli_query($GLOBALS['conn'],$sql);
+
+if ($result) {
+    foreach ($result as $row) {
+
+        $data[] = [
+            'post_title' => $row['name'],
+            'post_price' => $row['price'],
+            'post_image' => $row['images'],
+            'post_stock' => $row['in_stock'],
+            'post_reviews' => $row['reviews'],
+            'post_link' => $row['link'],
+            'post_logo' => $row['logo']
+        ];
+    }
+
+}
+//echo json_encode($data);
+
 ?>
 
 <!DOCTYPE html>
@@ -55,14 +86,16 @@ $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
     <header class="banner-results mt-100">
         <div class="container p-3">
             <div class="box" id="containerBox">
-                <div class="row product-page-top">
-                    <h1 class="product-up-title d-block d-sm-none text-center p-3"></h1>
+                <div class="row product-page-top position-relative">
+                    <i class="fa fa-heart-o fa-2x fav-ico-results"></i>
+                    <h1 class="product-up-title d-block d-sm-none text-center p-3"><?php echo $row['name'] ?></h1>
                     <div class="col-lg-4 col-md-3 col-sm-6 col-xs-5 d-flex justify-content-center product-image">
-                        <img id="productImagee" src="" alt=""
+                        <img id="productImagee" src="<?php echo $row['images'] ?>" alt=""
                              class="product-img img-fluid ">
                     </div>
                     <div class="d-flex flex-column justify-content-center align-items-center col-lg-4 col-md-5 col-sm-6 col-xs-8 product-details pt-2">
-                        <h1 class="prod-title d-none d-sm-block mb-3" id="productTitle"></h1>
+
+                        <h1 class="prod-title d-none d-sm-block mb-3" id="productTitle" style="font-size: 17px;font-weight: bold;"><?php echo $row['name'] ?></h1>
                         <div class="hidden-xs">
                             <div class="stars-outer">
                                 <!--                        <i class="fa fa-star"></i>-->
@@ -72,13 +105,11 @@ $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
                                 <!--                        <i class="fa fa-star-o"></i>-->
                                 <!--                        <a href="#">(13)</a>-->
                                 <div class="stars-inner" id="productReviews">
-
+                                    <?php echo $row['reviews'] ?>
                                 </div>
-
                             </div>
                             <div class="offer-instock">
-                                <span id="productInStock"></span>
-
+                                <span id="productInStock"><b><?php echo $row['in_stock']?></b></span>
                             </div>
                         </div>
 
@@ -101,7 +132,7 @@ $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
                                 </li>
                             </ul>
                         </div>
-                        <h3 class="lowest-price d-flex flex-md-wrap">Lowest price:<span id="productPrice"></span></h3>
+                        <h3 class="lowest-price d-flex flex-md-wrap">Lowest price:<span id="productPrice"><?php echo $row['price'] ?></span></h3>
 
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-3 featured-offers">
@@ -119,10 +150,10 @@ $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
                             <!--                        </li>-->
                             <!--                    </ul>-->
                             <div class="product-logo">
-                                <img src="" id="productLogo" alt="">
+                                <img src="<?php echo $row['logo'] ?>" id="productLogo" alt="">
                             </div>
                             <div class="product-btn-site">
-                                <a href="" class="to-site-link" id="productLink" target="_blank">to site</a>
+                                <a href="<?php echo $row['link'] ?>" class="to-site-link" id="productLink" target="_blank">to site</a>
                             </div>
                         </div>
                     </div>
@@ -204,23 +235,23 @@ $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
                             <div class="row align-items-center my-2 mx-1 ">
                                 <div class="col-2 best-offer-logo w-fc">
                                     <div class="offer-company-logo">
-                                        <img src="" id="companyLogoOne" class="mw-120 img-fluid"
+                                        <img src="<?php echo $row['logo'][0] ?>" id="companyLogoOne" class="mw-120 img-fluid"
                                              alt="company-logo">
                                     </div>
                                 </div>
                                 <div class="col-2 best-offer-stars w-fc d-none d-lg-block">
                                     <div class="offer-rating" id="offerRatingOne">
-
+                                        <?php echo $row['reviews'] ?>
                                     </div>
 
                                 </div>
                                 <div class="col-6 best-offer-title ">
-                                    <h3 id="offerNameOne"></h3>
+                                    <h3 id="offerNameOne"><?php echo $row['name'] ?></h3>
                                 </div>
                                 <div class="col-2 best-offer-price w-fc d-flex justify-content-end">
                                     <div class="offer-price">
                                                 <span class="best-offer-price" id="offerPriceOne">
-
+                                                    <?php echo $row['price'] ?>
                                                 </span>
                                         </div>
                                     </div>
@@ -434,6 +465,37 @@ $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 <!--        });-->
 <!--    }-->
 <!--</script>-->
+
+<script>
+    function getStars(rating) {
+
+        const totalStars = 5;
+
+        // Round to nearest half
+        rating = Math.round(rating * totalStars) / 100;
+        console.log(rating);
+        let output = [];
+
+        // Append all the filled whole stars
+        for (var i = rating; i >= 1; i--)
+            output.push('<i class="fa fa-star" aria-hidden="true" style="color: gold;"></i>&nbsp;');
+
+        // If there is a half a star, append it
+        // if (i == .5)  output.push('<i class="fa fa-star-half-o" aria-hidden="true" style="color: gold;"></i>&nbsp;');
+        if(i >= .1) { output.push('<i class="fa fa-star-half-o" aria-hidden="true" style="color: gold;"></i>&nbsp;'); }
+
+        // if(i < .5)  output.pop('<i class="fa fa-star-half-o" aria-hidden="true" style="color: gold;"></i>&nbsp;');
+
+
+        // Fill the empty stars
+        for (let i = (5 - rating); i >=1; i--)
+            output.push('<i class="fa fa-star-o" aria-hidden="true" style="color: gold;"></i>&nbsp;');
+
+        return output.join('');
+    }
+</script>
+
+
 <script src="/assets/js/searchResults.js"></script>
 </body>
 </html>

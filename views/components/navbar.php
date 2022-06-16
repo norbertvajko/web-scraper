@@ -8,7 +8,7 @@
     </button>
     <div class="collapse navbar-collapse navbar-menu" id="navbar1">
 
-        <form action="../../includes/liveSearch.php" class="search-box w-53 ms-3" method="post">
+        <form action="../../includes/liveSearch.php" class="search-box  w-53 ms-3" method="post">
             <div class="bg-light rounded rounded-pill shadow-sm ">
                 <div class="input-group ps-3">
                     <label class="w-90">

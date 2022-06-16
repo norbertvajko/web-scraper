@@ -113,13 +113,13 @@ body {
 .fa-balance-scale {
     color:blue;
 }
-
-
-
-
-
-
-
+.fav-ico-results {
+    position: absolute;
+    right: 0;
+    width: fit-content;
+    color: red;
+    font-size: 28px;
+}
 .products {
     width:100%;
     display:flex;
