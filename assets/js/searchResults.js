@@ -1,3 +1,8 @@
+function searchProd() {
+    // window.location.replace("https://n_vajko.internship.rankingcoach.com/views/Results.php");
+    load_data();
+}
+
 function load_data() {
 
     const user_input = document.getElementById('valueToSearch').value;
@@ -8,7 +13,6 @@ function load_data() {
     const product_rating = document.getElementById('productReviews');
     const product_link = document.getElementById('productLink');
     const product_logo = document.getElementById('productLogo');
-
 
 
     if (user_input.length > 2) {
@@ -23,12 +27,22 @@ function load_data() {
         ajax_request.onreadystatechange = function () {
             if (ajax_request.readyState == 4 && ajax_request.status == 200) {
                 //convert JSON back to array
+
+
                 const response = JSON.parse(ajax_request.responseText);
                 // console.log(response);
 
 
                 if (response.length > 0) {
+                    const liveSearchResult = document.getElementById('live-search-result');
+                    const divSearchResult  = document.querySelector('.live-search-result .search-result');
+
+                    let html = `<li style="padding: 8px 12px; font-weight: bold">Sam pham</li>`;
+
+
+
                     for (let i = 0; i <response.length; i++) {
+
                         product_title.innerHTML = response[0].post_title;
                         product_price.innerHTML = response[0].post_price;
                         product_image.src= response[0].post_image;
@@ -58,7 +72,11 @@ function load_data() {
                         document.getElementById('companyLogoRest').src= response[i].post_logo;
                         document.getElementById('offerRatingRest').innerHTML = response[i].post_reviews;
                         document.getElementById('offerPriceRest').innerHTML = response[i].post_price;
-                    }// }else {
+
+
+
+                    }
+                    // }else {
                     //     //if not found
                     // }
                     // html += '</div>';
@@ -70,9 +88,6 @@ function load_data() {
         // product_title.innerHTML = '';
     }
 }
-
-
-// document.getElementById("productReviews").innerHTML = getStars(3.6);
 
 function getStars(rating) {
 
@@ -101,42 +116,42 @@ function getStars(rating) {
     return output.join('');
 }
 
-function renderHTML(ddata) {
-
-    if (document.getElementById('valueToSearch').value){
-        document.getElementById("products1").innerHTML = "";
-        for (const item in ddata.products) {
-            if (ddata.products[item].title.toLowerCase().includes(inputSearch.value.toLowerCase())) {
-                let myProducts = [ddata.products[item].title, ddata.products[item].rating, ddata.products[item].price, ddata.products[item].images];
-                console.log(myProducts);
-                let card = `<div class="card">
-                    <img class="card-img" src="${ddata.products[item].images[0]}">
-                    <div class="card-info">
-                        <h1 class="card-title" id="cardTitle">
-                             ${ddata.products[item].title}
-                        </h1>
-                        <span class="card-rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-o"></i>
-                            <a class="rating-number" href="#">(13)</a>
-                        </span>
-                        <div class="card-price">
-                            ${ddata.products[item].price} lei
-                        </div>
-                        <div class="card-offer">
-                            <a href="#" class="card-btn">Offers</a>
-                        </div>
-                        <span class="card-badge"><i class="fa fa-heart-o favorite-icon"></i></span>
-                    </div>
-                </div>`
-                document.getElementById("products1").innerHTML += card;
-
-            }
-        }
-    } else{
-        document.getElementById("products1").innerHTML = 'no results'
-    }
-}
+// function renderHTML(ddata) {
+//
+//     if (document.getElementById('valueToSearch').value){
+//         document.getElementById("products1").innerHTML = "";
+//         for (const item in ddata.products) {
+//             if (ddata.products[item].title.toLowerCase().includes(inputSearch.value.toLowerCase())) {
+//                 let myProducts = [ddata.products[item].title, ddata.products[item].rating, ddata.products[item].price, ddata.products[item].images];
+//                 console.log(myProducts);
+//                 let card = `<div class="card">
+//                     <img class="card-img" src="${ddata.products[item].images[0]}">
+//                     <div class="card-info">
+//                         <h1 class="card-title" id="cardTitle">
+//                              ${ddata.products[item].title}
+//                         </h1>
+//                         <span class="card-rating">
+//                             <i class="fa fa-star"></i>
+//                             <i class="fa fa-star"></i>
+//                             <i class="fa fa-star"></i>
+//                             <i class="fa fa-star"></i>
+//                             <i class="fa fa-star-o"></i>
+//                             <a class="rating-number" href="#">(13)</a>
+//                         </span>
+//                         <div class="card-price">
+//                             ${ddata.products[item].price} lei
+//                         </div>
+//                         <div class="card-offer">
+//                             <a href="#" class="card-btn">Offers</a>
+//                         </div>
+//                         <span class="card-badge"><i class="fa fa-heart-o favorite-icon"></i></span>
+//                     </div>
+//                 </div>`
+//                 document.getElementById("products1").innerHTML += card;
+//
+//             }
+//         }
+//     } else{
+//         document.getElementById("products1").innerHTML = 'no results'
+//     }
+// }

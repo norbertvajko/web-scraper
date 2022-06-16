@@ -10,6 +10,7 @@ class SearchProduct extends Database
         if (isset($_POST['user_input'])) {
 
 
+
             $data = array();
             $condition = preg_replace('/[^A-Za-z0-9\- ]/', '', $_POST['user_input']);
             $replace_string = '<b>' . $condition . '</b>';
@@ -23,6 +24,7 @@ class SearchProduct extends Database
 //            $result = $this->connect()->query($query);
             $result = mysqli_query($this->connect(), $query);
             if ($result) {
+
                 foreach ($result as $row) {
 
                     $data[] = [
@@ -36,8 +38,10 @@ class SearchProduct extends Database
                     ];
                 }
             }
+
             return json_encode($data);
         }
+
     }
 }
 

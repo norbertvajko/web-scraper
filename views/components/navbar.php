@@ -1,4 +1,3 @@
-
 <div class="container">
     <a class="navbar-brand" href="/index.php">
         <img src="https://avatars.githubusercontent.com/u/28140896?s=200&v=4" alt="" id="productImage">
@@ -9,21 +8,44 @@
     </button>
     <div class="collapse navbar-collapse navbar-menu" id="navbar1">
 
-        <form action="/views/Results.php" class="search-box w-53 ms-3" method="post" >
+        <form action="../../includes/liveSearch.php" class="search-box w-53 ms-3" method="post">
             <div class="bg-light rounded rounded-pill shadow-sm ">
                 <div class="input-group ps-3">
                     <label class="w-90">
-                        <input type="text" id="valueToSearch" name="valueToSearch" placeholder="What're you searching for?" aria-describedby="button-addon1"
-                               class="form-control border-0 bg-light" />
+                        <input type="text" id="valueToSearch" name="valueToSearch"
+                               placeholder="What're you searching for?" aria-describedby="button-addon1"
+                               onkeyup="imu(this.value)"
+                               class="form-control border-0 bg-light"/>
+
+                        <!--                        <input type="text" id="product" name="product" onkeyup="onKeyUp();">-->
+                        <!--                        <input type="hidden" id="productCode" name="productCode">-->
+
                     </label>
+
                     <div class="input-group-append position-absolute end-0">
-                        <button id="button-addon1" type="button" name="searchProducts" class="btn btn-link text-primary" onclick="load_data();">
+                        <button id="button-addon1" type="button" name="searchProducts" class="btn btn-link text-primary"
+                                onclick="searchProd(); return false;">
                             <i class="fa fa-search"></i>
                         </button>
                     </div>
+
+
                 </div>
+
             </div>
+
         </form>
+        <div id="products-list">
+            <div class="row">
+                <div id="img-drop"></div>
+                <div id="title-drop"></div>
+            </div>
+        </div>
+        <!--                    <div class="live-search-result">-->
+        <!--                        <ul class="search-result">-->
+        <!--                            <li class="prod"></li>-->
+        <!--                        </ul>-->
+        <!--                    </div>-->
 
         <div class="navbar-links ms-auto">
             <ul class="navbar-list-links m-0 d-flex justify-content-center align-items-center ">
@@ -213,25 +235,49 @@
                         <div id="resetPassSuccess" class="message-success"></div>
                         <label>
 
-                            <input type="password" class="inputs-n login_data" name="reset_passwd_cor" id="resetPassWdCorr"
+                            <input type="password" class="inputs-n login_data" name="reset_passwd_cor"
+                                   id="resetPassWdCorr"
                                    placeholder="Retype password">
                         </label>
                         <span id="retypeError" class="message-error"></span>
                         <div id="retypeSuccess" class="message-success"></div>
 
 
-                        <button type="button" class="mt-3" id="resetPassBFinish"  name="resetPassBFinish">Reset Password</button>
+                        <button type="button" class="mt-3" id="resetPassBFinish" name="resetPassBFinish">Reset
+                            Password
+                        </button>
                     </div>
                 </div>
             </form>
         </div>
     </div>
 </div>
+
+<script>
+    let dropDownList = document.getElementById('products-list');
+
+    function imu(x) {
+        if (x.length == 0) {
+            dropDownList.innerHTML = '';
+        } else {
+            let XML = new XMLHttpRequest();
+            XML.onreadystatechange = function () {
+                if (XML.readyState == 4 && XML.status == 200) {
+                    dropDownList.innerHTML = XML.responseText;
+                }
+            };
+            XML.open('GET', '../../includes/liveSearch.php?data=' + x, true);
+            XML.send();
+        }
+    }
+
+</script>
+
 <script src="/assets/js/newPassword.js"></script>
 <script src="/assets/js/forgotPasswordForm.js"></script>
 <script src="/assets/js/forgotPasswordPopUp.js"></script>
 <script src="/assets/js/logOut.js"></script>
-<script src="/assets/js/searchResults.js"></script>
+<!--<script src="/assets/js/searchResults.js"></script>-->
 <script src="/assets/js/logInPopUp.js"></script>
 <script src="/assets/js/registerPopUp.js"></script>
 <script src="/assets/js/loginForm.js"></script>

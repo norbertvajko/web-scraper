@@ -168,6 +168,29 @@
     font-size: 11px;
     margin-top:5px;
 }
+#products-list {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* justify-content: right; */
+    /* align-items: center; */
+    position: absolute;
+    margin-top: 380px;
+    background: white;
+    margin-left: 18px;
+}
+
+#pic {
+    vertical-align: middle;
+}
+#user {
+    margin:3px;
+}
+/*#img-drop {*/
+/*    width: 90px;*/
+/*    height: 100px;*/
+/*}*/
+
 
 /*.form p:nth-child(1) {*/
 /*    font-size: 10px;*/
