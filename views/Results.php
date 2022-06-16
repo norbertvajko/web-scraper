@@ -1,4 +1,9 @@
 <?php include './../includes/classes/searchProducts.php'; ?>
+<?php
+//preia product id din url
+$actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+//var_dump($actual_link);
+?>
 
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">

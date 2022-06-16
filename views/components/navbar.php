@@ -36,10 +36,8 @@
 
         </form>
         <div id="products-list">
-            <div class="row">
                 <div id="img-drop"></div>
                 <div id="title-drop"></div>
-            </div>
         </div>
         <!--                    <div class="live-search-result">-->
         <!--                        <ul class="search-result">-->
@@ -262,11 +260,12 @@
         } else {
             let XML = new XMLHttpRequest();
             XML.onreadystatechange = function () {
+
                 if (XML.readyState == 4 && XML.status == 200) {
                     dropDownList.innerHTML = XML.responseText;
                 }
             };
-            XML.open('GET', '../../includes/liveSearch.php?data=' + x, true);
+            XML.open('GET', '../../includes/liveSearch.php?q=' + x, true);
             XML.send();
         }
     }

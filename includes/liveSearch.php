@@ -6,22 +6,19 @@ $data = "k";
 if (isset($_GET['q'])) {
     $data = $_GET['q'];
 }
-//$condition = preg_replace('/[^A-Za-z0-9\- ]/', '', $_POST['valueToSearch']);
-//$replace_string = '<b>' . $condition . '</b>';
 
-$query = "SELECT name, images FROM products WHERE name LIKE '%" . $data . "%' LIMIT 3";
+$query = "SELECT name, images, id FROM products WHERE name LIKE '%" . $data . "%' ORDER BY price ASC LIMIT 3";
 $result = mysqli_query($GLOBALS['conn'],$query);
 
 if ($result) {
 
 //    $row = $result->fetch_assoc();
-
-
-
     foreach ($result as $row) {
 
+        echo "<div class='drop-items d-flex flex-row align-items-center'>";
         echo "<div id='img-drop'><img src='".$row['images']."' style='height: 90px; width: 90px;' /></div>";
-        echo "<div id='title-drop'>".$row['name']."</div>";
+        echo "<div id='title-drop' style='padding-left: 13px;padding-top: 7px;'><a href='/views/Results.php?productId=" . $row['id'] . "'>".$row['name']."</a></div>";
+        echo "</div>";
     }
 
 }

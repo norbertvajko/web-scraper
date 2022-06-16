@@ -31,15 +31,15 @@ function save_newsletter() {
                 newsletterEmail.innerHTML = "";
                 emailError.innerHTML = "";
 
-                document.getElementById('newsletterEmail').style.border = "none";
-                document.getElementById('newsletterEmail').placeholder = "Enter e-mail";
+                newsletterEmail.style.border = "none";
+                newsletterEmail.placeholder = "Enter e-mail";
 
             } else {
                 //display validation error
-                document.getElementById('newsletterEmail').placeholder = response.email_error;
+                newsletterEmail.placeholder = response.email_error;
 
                 //add red border
-                document.getElementById('newsletterEmail').style.color = "3px solid #cc3333";
+                newsletterEmail.style.color = "3px solid #cc3333";
             }
 
         }

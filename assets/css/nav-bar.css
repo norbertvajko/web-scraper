@@ -169,40 +169,34 @@
     margin-top:5px;
 }
 #products-list {
+
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    /* justify-content: right; */
-    /* align-items: center; */
     position: absolute;
-    margin-top: 380px;
+    margin-top: 327px;
+    max-width: 654px;
     background: white;
     margin-left: 18px;
+    width: 693px;
 }
 
 #pic {
     vertical-align: middle;
 }
-#user {
-    margin:3px;
+
+.drop-items {
+    border-bottom: 1px dashed;
+    border-top: none;
 }
-/*#img-drop {*/
-/*    width: 90px;*/
-/*    height: 100px;*/
-/*}*/
 
+.drop-items a {
+    text-decoration: none;
+}
 
-/*.form p:nth-child(1) {*/
-/*    font-size: 10px;*/
-/*    font-weight: lighter;*/
-/*    color: grey;*/
-/*    text-align: center;*/
-/*}*/
-/*.form p:nth-child(2) {*/
-/*    font-size: 15px;*/
-/*    font-weight: bold;*/
-/*    color: darkblue;*/
-/*}*/
+#title-drop {
+    padding-left: 5px;
+    padding-right: 30px;
+}
 
 .form-control:focus {
     box-shadow: none;
@@ -366,16 +360,140 @@ font-size:15px;
     .navbar-collapse {
         /*height: 100vh;*/
     }
-    .search-box{
-        margin-top:27px;
-        width:100%;
+
+    .search-box {
+        margin-top: 27px;
+        width: 100%;
+    }
+
+    #products-list {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        margin-top: 39px;
+        background: white;
+        margin-left: -22px;
+        max-width: 514px;
     }
 
 }
-@media screen and (max-width: 996px) {
-    .search-box{
-        margin-top:10px;
-        width:100%;
-    }
 
+
+
+
+/*@media screen and (max-width: 761px) {*/
+/*    #products-list {*/
+/*        display: flex;*/
+/*        flex-direction: column;*/
+/*        position: absolute;*/
+/*        margin-top: 39px;*/
+/*        !*max-width: 514px;*!*/
+/*        background: white;*/
+/*        margin-left: 18px;*/
+/*        !*width: 514px;*!*/
+/*    }*/
+/*}*/
+
+
+
+/*@media screen and (max-width: 991px) {*/
+/*    #products-list {*/
+/*        display: flex;*/
+/*        flex-direction: column;*/
+/*        position: absolute;*/
+/*        margin-top: 59px;*/
+/*        max-width: 389px;*/
+/*        background: white;*/
+/*        !* margin-left: 18px; *!*/
+/*        width: 389px;*/
+/*    }*/
+/*}*/
+
+
+
+    @media screen and (min-width:590px ) and (max-width:769px ) {
+        #products-list {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            margin-top: 39px;
+            max-width: 677px;
+            background: white;
+            margin-left: -43px;
+            width: 687px;
+        }
+}
+
+@media screen and (min-width:769px ) and (max-width:991px ) {
+    #products-list {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        margin-top: 39px;
+        max-width: 769px;
+        background: white;
+        margin-left: -36px;
+        /* width: 741px; */
+        /* width: fit-content; */
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #products-list {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        margin-top: 39px;
+        max-width: 741px;
+        background: white;
+        /*margin-left: 18px;*/
+        width: 741px;
+    }
+}
+
+
+@media screen and (min-width: 991px) {
+    #products-list {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        margin-top: 327px;
+        max-width: 564px;
+        background: white;
+        margin-left: 18px;
+        width: 564px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #products-list {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        margin-top: 327px;
+        max-width: 741px;
+        background: white;
+        margin-left: 18px;
+        width: 741px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    #products-list {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        margin-top: 327px;
+        max-width: 657px;
+        background: white;
+        margin-left: 18px;
+        width: 657px;
+    }
+}
+@media screen and (max-width: 1400px) {
+    .search-box {
+        margin-top: 10px;
+        width: 100%;
+    }
 }
