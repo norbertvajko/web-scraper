@@ -36,6 +36,10 @@ if ($result) {
 
 ?>
 
+
+
+
+
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -67,7 +71,34 @@ if ($result) {
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous">
     </script>
+    <script>
+        function getStars(rating) {
 
+            const totalStars = 5;
+
+            // Round to nearest half
+            rating = Math.round(rating * totalStars) / 100;
+            console.log(rating);
+            let output = [];
+
+            // Append all the filled whole stars
+            for (var i = rating; i >= 1; i--)
+                output.push('<i class="fa fa-star" aria-hidden="true" style="color: gold;"></i>&nbsp;');
+
+            // If there is a half a star, append it
+            // if (i == .5)  output.push('<i class="fa fa-star-half-o" aria-hidden="true" style="color: gold;"></i>&nbsp;');
+            if(i >= .1) { output.push('<i class="fa fa-star-half-o" aria-hidden="true" style="color: gold;"></i>&nbsp;'); }
+
+            // if(i < .5)  output.pop('<i class="fa fa-star-half-o" aria-hidden="true" style="color: gold;"></i>&nbsp;');
+
+
+            // Fill the empty stars
+            for (let i = (5 - rating); i >=1; i--)
+                output.push('<i class="fa fa-star-o" aria-hidden="true" style="color: gold;"></i>&nbsp;');
+
+            return output.join('');
+        }
+    </script>
 
 </head>
 <body>
@@ -105,7 +136,7 @@ if ($result) {
                                 <!--                        <i class="fa fa-star-o"></i>-->
                                 <!--                        <a href="#">(13)</a>-->
                                 <div class="stars-inner" id="productReviews">
-                                    <?php echo $row['reviews'] ?>
+                                    <script> getStars(<?php echo $row['reviews']?>)</script>
                                 </div>
                             </div>
                             <div class="offer-instock">
@@ -158,7 +189,7 @@ if ($result) {
                         </div>
                     </div>
                 </div>
-                <i class="fa fa-heart-o favorite-icon"></i>
+                <i class="fa fa-heart-o favorite-icon" id="favorite-icon-add"></i>
             </div>
     </header>
     <!----------------------------------------------- End Banner Area ----------------------------------------------------->
@@ -235,7 +266,7 @@ if ($result) {
                             <div class="row align-items-center my-2 mx-1 ">
                                 <div class="col-2 best-offer-logo w-fc">
                                     <div class="offer-company-logo">
-                                        <img src="<?php echo $row['logo'][0] ?>" id="companyLogoOne" class="mw-120 img-fluid"
+                                        <img src="<?php echo $row['logo'] ?>" id="companyLogoOne" class="mw-120 img-fluid"
                                              alt="company-logo">
                                     </div>
                                 </div>
@@ -466,36 +497,9 @@ if ($result) {
 <!--    }-->
 <!--</script>-->
 
-<script>
-    function getStars(rating) {
-
-        const totalStars = 5;
-
-        // Round to nearest half
-        rating = Math.round(rating * totalStars) / 100;
-        console.log(rating);
-        let output = [];
-
-        // Append all the filled whole stars
-        for (var i = rating; i >= 1; i--)
-            output.push('<i class="fa fa-star" aria-hidden="true" style="color: gold;"></i>&nbsp;');
-
-        // If there is a half a star, append it
-        // if (i == .5)  output.push('<i class="fa fa-star-half-o" aria-hidden="true" style="color: gold;"></i>&nbsp;');
-        if(i >= .1) { output.push('<i class="fa fa-star-half-o" aria-hidden="true" style="color: gold;"></i>&nbsp;'); }
-
-        // if(i < .5)  output.pop('<i class="fa fa-star-half-o" aria-hidden="true" style="color: gold;"></i>&nbsp;');
 
 
-        // Fill the empty stars
-        for (let i = (5 - rating); i >=1; i--)
-            output.push('<i class="fa fa-star-o" aria-hidden="true" style="color: gold;"></i>&nbsp;');
-
-        return output.join('');
-    }
-</script>
-
-
-<script src="/assets/js/searchResults.js"></script>
+<script src="/assets/js/addToFavorites.js"></script>
+<!--<script src="/assets/js/searchResults.js"></script>-->
 </body>
 </html>

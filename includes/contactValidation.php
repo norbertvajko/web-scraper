@@ -43,11 +43,11 @@
 ////    mysqli_query($GLOBALS['conn'], $query);
 //}
 //
-////transform into json obj
-//echo json_encode($response);
-//
-//
-//
-//
-//
-//
+//transform into json obj
+echo json_encode($response);
+
+
+
+
+
+

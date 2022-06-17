@@ -34,11 +34,6 @@ function load_data() {
 
 
                 if (response.length > 0) {
-                    const liveSearchResult = document.getElementById('live-search-result');
-                    const divSearchResult  = document.querySelector('.live-search-result .search-result');
-
-                    let html = `<li style="padding: 8px 12px; font-weight: bold">Sam pham</li>`;
-
 
 
                     for (let i = 0; i <response.length; i++) {

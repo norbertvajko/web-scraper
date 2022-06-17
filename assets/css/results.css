@@ -120,6 +120,9 @@ body {
     color: red;
     font-size: 28px;
 }
+.fav-ico-results .active {
+    color:black;
+}
 .products {
     width:100%;
     display:flex;
@@ -260,6 +263,7 @@ body {
     color: #4f5e6f;
     white-space: nowrap;
 }
+
 
 
 @media (min-width: 768px) {

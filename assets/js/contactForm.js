@@ -19,7 +19,7 @@ function save_contact() {
 
     let ajax_request = new XMLHttpRequest();
 
-    ajax_request.open('POST', '../../views/sendEmail.php', true);
+    ajax_request.open('POST', '../../includes/sendEmail.php', true);
 
     ajax_request.send(form_data);
 
