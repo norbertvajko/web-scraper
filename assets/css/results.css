@@ -199,7 +199,27 @@ body {
     color:#fff;
     text-decoration: none;
 }
+.product-logo {
+    background-color: black;
+}
+.product-log {
+    position: absolute;
+    top: 25%;
+    left: 22%;
+}
+.product-log img {
+    background-color: black;
+}
+.product-btn-site {
+    position: absolute;
+    bottom: 10%;
+    left: 23%;
+}
 
+.align-items-center {
+    display: flex;
+    justify-content: space-around;
+}
 /*arrow*/
 #productLink:after {
     content: "";
@@ -263,9 +283,52 @@ body {
     color: #4f5e6f;
     white-space: nowrap;
 }
-
-
-
+.product-page-top button {
+    width: fit-content;
+    position: absolute;
+    right: 20px;
+}
+.added-to-fav {
+    border: 1px solid red;
+    position: absolute;
+    width: fit-content;
+    right: 0;
+    top: 37px;
+}
+#productTitle {
+    font-size: 17px;
+    font-weight: bold;
+    white-space: pre-line;
+    text-align: center;
+}
+.product-page-top .btn-danger {
+    outline: none;
+    background: white;
+    box-shadow: none;
+}
+#heartIcon {
+    color:red;
+}
+@media screen and (min-width: 355px) and (max-width: 575px) {
+    .featured-content {
+        margin-top: 119px;
+    }
+    .product-log {
+        position: absolute;
+        top: -56%;
+        left: 26%;
+    }
+    .product-btn-site {
+        width: 100%;
+        position: absolute;
+        left: -1%;
+        top: -28%;
+    }
+    #addToFav {
+        right: 12%;
+        top: 19%;
+    }
+}
 @media (min-width: 768px) {
     .button-51 {
         padding: 16px 32px;

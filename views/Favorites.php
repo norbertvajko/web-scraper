@@ -14,8 +14,7 @@ session_start();
     <title>Favorites</title>
 
     <!-- Icons -->
-    <link rel="stylesheet"
-          href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
@@ -25,6 +24,11 @@ session_start();
     <link href="../assets/css/favorites-page.css" rel="stylesheet">
     <link href="../assets/css/home-page.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous">
+    </script>
 </head>
 <body>
 
@@ -37,6 +41,7 @@ session_start();
 <!--------------------------------------------- End Nav Bar Area ------------------------------------------------------>
 
 <!--------------------------------------------- Start Banner Area ----------------------------------------------------->
+<div class="blur" id="blur">
 
 <header class="fav-header mt-62">
     <?php
@@ -58,17 +63,38 @@ session_start();
                         <img src="https://s13emagst.akamaized.net/layout/ro/static-upload/icon_guest.png" alt=""
                              class="img-fluid">
                     </div>
+                    <?php if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) { ?>
+                    <div class="menu-user-body-title">
+
+                        <h5 class="text-center">
+                            Hello, <?= $_SESSION['username']; ?>
+                            <h6 class="text-center text-success mt-4">We are happy to see you back!</h6>
+                        </h5>
+
+
+                    </div>
+                    <?php
+                        } else {
+                        ?>
                     <div class="menu-user-body-title">
                         <h5 class="text-center">
-                            Hello , please sign in
-                            <h6 class="text-center">in order to have full control with our offers</h6>
+                            Hello, please sign in
+                            <h6 class="text-center"> In order to have full control with our offers</h6>
                         </h5>
                     </div>
+
                     <div class="menu-user-footer d-flex flex-column">
                         <button type="button" class="btn btn-primary mb-2" id="loginBTN">Login</button>
                         <button type="button" class="btn btn-primary" id="registerBTN">Register</button>
                     </div>
+                    <?php } ?>
                 </div>
+
+
+                <?php if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])){
+
+                }?>
+
                 <div class="menu-user-body ms-35">
                     <div class="menu-user-content h-100">
                         <div class="menu-user-title text-start d-flex flex-row align-items-center p-3">
@@ -100,25 +126,33 @@ session_start();
 
 <!------------------------------------------------- End Main Area ----------------------------------------------------->
 
+</div>
 <!----------------------------------------------- Start Footer Area --------------------------------------------------->
 
 <?php include "components/footer.php"; ?>
 
 <!------------------------------------------------ End Footer Area ---------------------------------------------------->
 
+
 <script>
+
 
     const logIN = document.getElementById('loginBTN');
     const register = document.getElementById('registerBTN')
 
+    if (logIN) {
     logIN.addEventListener("click", () => {
         showLoginPopUp();
     });
-    register.addEventListener("click", () => {
-       showRegisterPopUp();
-    });
+    }
+    if (register) {
+        register.addEventListener("click", () => {
+            showRegisterPopUp();
+        });
+    }
 
 </script>
 
 </body>
+
 </html>

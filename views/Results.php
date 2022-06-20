@@ -1,4 +1,6 @@
-<?php include './../includes/classes/searchProducts.php'; ?>
+<?php
+session_start();
+?>
 <?php
 
 include '../includes/connDB.php';
@@ -18,6 +20,7 @@ $sql = " SELECT name, price, images, in_stock, reviews, link, logo FROM products
 $result = mysqli_query($GLOBALS['conn'],$sql);
 
 if ($result) {
+
     foreach ($result as $row) {
 
         $data[] = [
@@ -31,7 +34,9 @@ if ($result) {
         ];
     }
 
-}
+}$userId = $_SESSION['user_id'];
+var_dump($userId);
+
 //echo json_encode($data);
 
 ?>
@@ -118,23 +123,16 @@ if ($result) {
         <div class="container p-3">
             <div class="box" id="containerBox">
                 <div class="row product-page-top position-relative">
-                    <i class="fa fa-heart-o fa-2x fav-ico-results"></i>
+                    <button class="btn btn-danger" id="addToFav" name="btnFav" onclick="favorite(<?php echo $idParam ?>);"><i class="fa fa-heart -o" id="heartIcon" "></i></button>
+                    <div class="added-to-fav hide-c " id="addedToFav"></div>
                     <h1 class="product-up-title d-block d-sm-none text-center p-3"><?php echo $row['name'] ?></h1>
                     <div class="col-lg-4 col-md-3 col-sm-6 col-xs-5 d-flex justify-content-center product-image">
-                        <img id="productImagee" src="<?php echo $row['images'] ?>" alt=""
-                             class="product-img img-fluid ">
+                        <img id="productImagee" src="<?php echo $row['images'] ?>" alt="" class="product-img">
                     </div>
                     <div class="d-flex flex-column justify-content-center align-items-center col-lg-4 col-md-5 col-sm-6 col-xs-8 product-details pt-2">
-
                         <h1 class="prod-title d-none d-sm-block mb-3" id="productTitle" style="font-size: 17px;font-weight: bold;"><?php echo $row['name'] ?></h1>
                         <div class="hidden-xs">
                             <div class="stars-outer">
-                                <!--                        <i class="fa fa-star"></i>-->
-                                <!--                        <i class="fa fa-star"></i>-->
-                                <!--                        <i class="fa fa-star"></i>-->
-                                <!--                        <i class="fa fa-star"></i>-->
-                                <!--                        <i class="fa fa-star-o"></i>-->
-                                <!--                        <a href="#">(13)</a>-->
                                 <div class="stars-inner" id="productReviews">
                                     <script> getStars(<?php echo $row['reviews']?>)</script>
                                 </div>
@@ -167,29 +165,17 @@ if ($result) {
 
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-3 featured-offers">
-                        <div class="featured-content d-xs-flex justify-content-between d-sm-flex justify-content-between d-md-block h-100 p-4">
-                            <!--                    <ul class="product-price-alert ps-0">-->
-                            <!--                        <li>-->
-                            <!--                            <a href="#">Price Alert-->
-                            <!--                                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>-->
-                            <!--                            </a>-->
-                            <!--                        </li>-->
-                            <!--                        <li>-->
-                            <!--                            <a href="#">Compare-->
-                            <!--                                <i class="fa fa-balance-scale" aria-hidden="true"></i>-->
-                            <!--                            </a>-->
-                            <!--                        </li>-->
-                            <!--                    </ul>-->
-                            <div class="product-logo">
-                                <img src="<?php echo $row['logo'] ?>" id="productLogo" alt="">
+                        <div class="featured-content position-relative d-xs-flex justify-content-between d-sm-flex justify-content-between d-md-block h-100 p-4">
+                            <div class="product-log">
+                                <img src="<?php echo $row['logo'] ?>" id="productLogo"  alt="">
                             </div>
                             <div class="product-btn-site">
-                                <a href="<?php echo $row['link'] ?>" class="to-site-link" id="productLink" target="_blank">to site</a>
+                                <a href="<?php echo $row['link'] ?>" class="btn btn-warning" target="_blank">See product</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <i class="fa fa-heart-o favorite-icon" id="favorite-icon-add"></i>
+                <i class="fa fa-heart-o favorite-icon" type="button" id="favorite-icon-add"></i>
             </div>
     </header>
     <!----------------------------------------------- End Banner Area ----------------------------------------------------->
@@ -262,11 +248,11 @@ if ($result) {
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="bestOffer" role="tabpanel"
                          aria-labelledby="bestOffer-tab">
-                        <div class="container my-4 mx-2 ">
+                        <div class="container my-4 mx-2 p-3 ">
                             <div class="row align-items-center my-2 mx-1 ">
                                 <div class="col-2 best-offer-logo w-fc">
                                     <div class="offer-company-logo">
-                                        <img src="<?php echo $row['logo'] ?>" id="companyLogoOne" class="mw-120 img-fluid"
+                                        <img src="<?php echo $row['logo'] ?>" id="companyLogoOne" class="mw-120 img-fluid product-logo"
                                              alt="company-logo">
                                     </div>
                                 </div>

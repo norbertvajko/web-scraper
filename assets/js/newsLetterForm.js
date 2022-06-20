@@ -39,7 +39,12 @@ function save_newsletter() {
                 newsletterEmail.placeholder = response.email_error;
 
                 //add red border
-                newsletterEmail.style.color = "3px solid #cc3333";
+                newsletterEmail.style.border = "3px solid red";
+
+                //exit red border after 2 sec
+                setTimeout(() => {
+                    newsletterEmail.style.border = "none";
+                }, 2000);
             }
 
         }

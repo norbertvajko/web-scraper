@@ -47,21 +47,20 @@ session_start();
 
 <div class="blur" id="blur">
 
-<header class="contact-banner mt-100">
-    <h1>Here is the header</h1>
-</header>
+    <!--<header class="contact-banner mt-100">-->
+    <!--    <h1>Here is the header</h1>-->
+    <!--</header>-->
 
-<!----------------------------------------------- End Banner Area ----------------------------------------------------->
+    <!----------------------------------------------- End Banner Area ----------------------------------------------------->
 
-<!----------------------------------------------- Start Main Area ----------------------------------------------------->
+    <!----------------------------------------------- Start Main Area ----------------------------------------------------->
 
-<main class="content">
-    <section class="contact-us">
-        <div class="container">
-            <div class="contact-wrap">
-                <form class="contact-form w-100 d-flex flex-wrap justify-content-between pb-5"
-<!--                      action="emailTemplate.php" id="formID" method="post">-->
-                    <h1 class="contact-form-title w-100 d-flex justify-content-start pb-5">Contact Us</h1>
+    <main class="content">
+        <section class="contact-us mt-100">
+            <div class="container">
+                <div class="contact-wrap">
+                    <form class="contact-form w-100 d-flex flex-wrap justify-content-between pb-5">
+                    <h1 class="contact-form-title w-100 d-flex justify-content-start pb-5 ">Contact Us</h1>
                     <div class="contact-form-row row w-100 d-flex flex-row">
                         <div class="contact-input position-relative w-50">
                             <span class="label-input">Name</span>
@@ -92,24 +91,51 @@ session_start();
                     <span id="message_error" class="message-error"></span>
                     <span id="sucMessage"></span>
                     <div class="contact-form-button w-100 d-flex flex-wrap mt-40">
-                        <button class="btn-primary" id="submitButton" type="submit" name="submit"
+                        <button class="btn btn-success" id="submitButton" type="submit" name="submit"
                                 onclick="save_contact(); return false;">
                             <span>
-                                Submit
+                                Send Message
                             </span>
                         </button>
                     </div>
-                </form>
+                    </form>
+                </div>
             </div>
-        </div>
-    </section>
-    <section class="contact-map">
-        <div class="map-location">
-            <iframe width="100%" height="600" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2763.0142178006136!2d21.317151315851984!3d46.17037269406537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x474599016319a9b3%3A0xc7f128d36aedf597!2sStrada%20Nicolae%20B%C4%83lcescu%2022%2C%20Arad!5e0!3m2!1sen!2sro!4v1654098908600!5m2!1sen!2sro" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-    </section>
-</main>
+        </section>
+        <section class="contact-map">
+            <div class="map-location">
+                <div class="map-location-header text-center my-5">
+                    <h4>Find Us on Google Map</h4>
+                    <p class="map-location-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore quo beatae quasi assumenda,
+                        expedita aliquam minima tenetur maiores neque incidunt repellat aut voluptas hic dolorem sequi
+                        ab porro, quia error.</p>
+                </div>
+                <iframe width="100%" height="600"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2763.0142178006136!2d21.317151315851984!3d46.17037269406537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x474599016319a9b3%3A0xc7f128d36aedf597!2sStrada%20Nicolae%20B%C4%83lcescu%2022%2C%20Arad!5e0!3m2!1sen!2sro!4v1654098908600!5m2!1sen!2sro"
+                        style="border:0; filter: grayscale(100%); " allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
 
+
+        <!--    <section class="map_sec">-->
+        <!--        <div class="container">-->
+        <!--            <div class="row">-->
+        <!--                <div class="col-md-10 offset-md-1">-->
+        <!--                    <div class="map_inner">-->
+        <!--                        <h4>Find Us on Google Map</h4>-->
+        <!--                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore quo beatae quasi assumenda, expedita aliquam minima tenetur maiores neque incidunt repellat aut voluptas hic dolorem sequi ab porro, quia error.</p>-->
+        <!--                        <div class="map-location">-->-->
+        <!--                                        <iframe width="100%" height="600" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2763.0142178006136!2d21.317151315851984!3d46.17037269406537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x474599016319a9b3%3A0xc7f128d36aedf597!2sStrada%20Nicolae%20B%C4%83lcescu%2022%2C%20Arad!5e0!3m2!1sen!2sro!4v1654098908600!5m2!1sen!2sro" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>-->
+        <!--                                    </div>-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
+        <!--    </section>-->
+
+
+    </main>
 
 
 </div>

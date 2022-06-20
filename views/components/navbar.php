@@ -8,7 +8,7 @@
     </button>
     <div class="collapse navbar-collapse navbar-menu" id="navbar1">
 
-        <form action="../../includes/liveSearch.php" class="search-box  w-53 ms-3" method="post">
+        <form action="" class="search-box  w-53 ms-3" method="post">
             <div class="bg-light rounded rounded-pill shadow-sm ">
                 <div class="input-group ps-3">
                     <label class="w-90">
@@ -86,7 +86,7 @@
 
                 <li class="list-links mx-3">
                     <a href="/views/Favorites.php">
-                        <i class="fa fa-heart-o" style="font-size:22px"></i>
+                        <i class="fa fa-heart-o" id="navFavIcon" style="font-size:22px"></i>
                         Favorites
                     </a>
                 </li>
@@ -251,27 +251,7 @@
     </div>
 </div>
 
-<script>
-    let dropDownList = document.getElementById('products-list');
-
-    function imu(x) {
-        if (x.length == 0) {
-            dropDownList.innerHTML = '';
-        } else {
-            let XML = new XMLHttpRequest();
-            XML.onreadystatechange = function () {
-
-                if (XML.readyState == 4 && XML.status == 200) {
-                    dropDownList.innerHTML = XML.responseText;
-                }
-            };
-            XML.open('GET', '../../includes/liveSearch.php?q=' + x, true);
-            XML.send();
-        }
-    }
-
-</script>
-
+<script src="/assets/js/liveSearchDropdown.js"></script>
 <script src="/assets/js/newPassword.js"></script>
 <script src="/assets/js/forgotPasswordForm.js"></script>
 <script src="/assets/js/forgotPasswordPopUp.js"></script>
