@@ -16,14 +16,18 @@ function favorite(product_id) {
                     heartIcon.style = "color:white;";
                     first_click = false;
 
-
-
+                    showAddedToFav();
+                    colorNavFav();
 
                 } else {
                     favoriteIcon.style = "background:white";
                     heartIcon.style = "color:red;";
                     first_click = true;
+
+                    showRemovedFav();
+
                 }
+
 
             }
 
@@ -31,4 +35,28 @@ function favorite(product_id) {
 
     }
     xhr.send();
+}
+
+function showAddedToFav() {
+    document.getElementById('favoritesPopup').classList.toggle("active");
+    document.getElementById('fav-popup-text').innerHTML = " <i class=\"fa fa-heart fa-2x\" aria-hidden=\"true\" style='color: red'></i> Product added to favorites";
+
+
+    setTimeout(() => {
+        document.getElementById('favoritesPopup').classList.toggle("active");
+    }, 2000);
+}
+function showRemovedFav() {
+    document.getElementById('favoritesPopup').classList.toggle("active");
+    document.getElementById('fav-popup-text').innerHTML = " <i class=\"fa fa-heart-o fa-2x\" aria-hidden=\"true\" style='color: red;text-align: center;'></i> Product removed from favorites";
+
+    setTimeout(() => {
+        document.getElementById('favoritesPopup').classList.toggle("active");
+    }, 2000);
+}
+function colorNavFav() {
+    document.getElementById('navFavIcon').style.color = "red";
+    setTimeout(() => {
+        document.getElementById('navFavIcon').style.color = "";
+    }, 2000);
 }

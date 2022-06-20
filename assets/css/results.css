@@ -309,6 +309,9 @@ body {
 #heartIcon {
     color:red;
 }
+.favorites-popup {
+
+}
 @media screen and (min-width: 355px) and (max-width: 575px) {
     .featured-content {
         margin-top: 119px;
@@ -329,6 +332,54 @@ body {
         top: 19%;
     }
 }
+
+.favorites-popup {
+    position: fixed;
+    top: 7%;
+    left: 100%;
+    /*transform:translate(-50%, -50%) scale(1.25);*/
+    max-width: 300px;
+    padding:20px 30px;
+    background: white;
+    box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.15);
+    /*border-radius:10px;*/
+    opacity: 0;
+    visibility: hidden;
+    /*transition: 2s;*/
+
+}
+.favorites-popup.active {
+    top: 7%;
+    opacity: 1;
+    visibility: visible;
+    /*height: auto;*/
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    /*position: relative;*/
+    animation-name: example;
+    animation-duration: 2s;
+}
+
+@keyframes example {
+    1% {
+        left:100%;
+    }
+    50% {
+        left:82%;
+    }
+    100% {
+        left:84%;
+    }
+
+
+}
+
+
+
+
 @media (min-width: 768px) {
     .button-51 {
         padding: 16px 32px;

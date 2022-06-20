@@ -34,9 +34,7 @@ if ($result) {
         ];
     }
 
-}$userId = $_SESSION['user_id'];
-var_dump($userId);
-
+}
 //echo json_encode($data);
 
 ?>
@@ -123,7 +121,13 @@ var_dump($userId);
         <div class="container p-3">
             <div class="box" id="containerBox">
                 <div class="row product-page-top position-relative">
-                    <button class="btn btn-danger" id="addToFav" name="btnFav" onclick="favorite(<?php echo $idParam ?>);"><i class="fa fa-heart -o" id="heartIcon" "></i></button>
+                    <button class="btn btn-danger" id="addToFav" name="btnFav" onclick="favorite(<?php echo $idParam ?>);showFavPopup();"><i class="fa fa-heart -o" id="heartIcon" "></i></button>
+                    <div class="favorites-popup" id="favoritesPopup">
+                        <div class="content">
+                            <h6 id="fav-popup-text"></h6>
+                        </div>
+                    </div>
+
                     <div class="added-to-fav hide-c " id="addedToFav"></div>
                     <h1 class="product-up-title d-block d-sm-none text-center p-3"><?php echo $row['name'] ?></h1>
                     <div class="col-lg-4 col-md-3 col-sm-6 col-xs-5 d-flex justify-content-center product-image">
@@ -277,7 +281,7 @@ var_dump($userId);
                                 <div class="row align-items-center my-2 mx-1 ">
                                     <div class="col-2 best-offer-logo w-fc">
                                         <div class="offer-company-logo">
-                                            <img src="" id="companyLogoTwo" class="mw-120 img-fluid"
+                                            <img src="<?php echo $row['logo'] ?>" id="companyLogoTwo" class="mw-120 img-fluid"
                                                  alt="company-logo">
                                         </div>
                                     </div>
@@ -293,7 +297,7 @@ var_dump($userId);
                                     <div class="col-2 best-offer-price w-fc d-flex justify-content-end">
                                         <div class="offer-price">
                                                 <span class="best-offer-price" id="offerPriceTwo">
-
+                                                                    <?php echo $row['price'] ?>
                                                 </span>
                                         </div>
                                     </div>

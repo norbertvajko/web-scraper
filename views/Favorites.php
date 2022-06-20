@@ -93,6 +93,7 @@ session_start();
 
                 <?php if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])){
 
+//                        $sql = "SELECT name, reviews, price, images FROM products WHERE id="
                 }?>
 
                 <div class="menu-user-body ms-35">
