@@ -47,9 +47,11 @@ session_start();
 
 <div class="blur" id="blur">
 
-    <!--<header class="contact-banner mt-100">-->
-    <!--    <h1>Here is the header</h1>-->
-    <!--</header>-->
+    <header class="contact-banner mt-100">
+        <div class="container">
+            <img src="/assets/images/contact-banner1.jpg" alt="contact-banner">
+        </div>
+    </header>
 
     <!----------------------------------------------- End Banner Area ----------------------------------------------------->
 
@@ -60,7 +62,8 @@ session_start();
             <div class="container">
                 <div class="contact-wrap">
                     <form class="contact-form w-100 d-flex flex-wrap justify-content-between pb-5">
-                    <h1 class="contact-form-title w-100 d-flex justify-content-start pb-5 ">Contact Us</h1>
+                    <h1 class="contact-form-title w-100 d-flex justify-content-center align-items-center text-success pb-5 ">We'd love to hear from you!<span style='font-size: 60px;margin-left: 20px;}'>&#128522;</span></h1>
+
                     <div class="contact-form-row row w-100 d-flex flex-row">
                         <div class="contact-input position-relative w-50">
                             <span class="label-input">Name</span>

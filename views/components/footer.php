@@ -38,8 +38,8 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="newsletter-header m-auto text-center">
-                        <h5>Do you want to receive smart shopping advice from us?</h5>
-                        <p>Then subscribe to our newsletter!</p>
+                        <h5 id="newsletterTitleQ">Do you want to receive smart shopping advice from us?</h5>
+                        <p id="newsletterTP">Then subscribe to our newsletter!</p>
                     </div>
 
                     <form class="newsletter-form" action="/includes/newsLetterValidation.php" method="post" id="newsLetterForm">

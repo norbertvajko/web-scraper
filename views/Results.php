@@ -74,34 +74,7 @@ if ($result) {
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous">
     </script>
-    <script>
-        function getStars(rating) {
 
-            const totalStars = 5;
-
-            // Round to nearest half
-            rating = Math.round(rating * totalStars) / 100;
-            console.log(rating);
-            let output = [];
-
-            // Append all the filled whole stars
-            for (var i = rating; i >= 1; i--)
-                output.push('<i class="fa fa-star" aria-hidden="true" style="color: gold;"></i>&nbsp;');
-
-            // If there is a half a star, append it
-            // if (i == .5)  output.push('<i class="fa fa-star-half-o" aria-hidden="true" style="color: gold;"></i>&nbsp;');
-            if(i >= .1) { output.push('<i class="fa fa-star-half-o" aria-hidden="true" style="color: gold;"></i>&nbsp;'); }
-
-            // if(i < .5)  output.pop('<i class="fa fa-star-half-o" aria-hidden="true" style="color: gold;"></i>&nbsp;');
-
-
-            // Fill the empty stars
-            for (let i = (5 - rating); i >=1; i--)
-                output.push('<i class="fa fa-star-o" aria-hidden="true" style="color: gold;"></i>&nbsp;');
-
-            return output.join('');
-        }
-    </script>
 
 </head>
 <body>
@@ -121,7 +94,9 @@ if ($result) {
         <div class="container p-3">
             <div class="box" id="containerBox">
                 <div class="row product-page-top position-relative">
-                    <button class="btn btn-danger" id="addToFav" name="btnFav" onclick="favorite(<?php echo $idParam ?>);showFavPopup();"><i class="fa fa-heart -o" id="heartIcon" "></i></button>
+                    <button class="btn btn-danger" id="addToFav" name="btnFav"
+                            onclick="favorite(<?php echo $idParam ?>);"><i class="fa fa-heart -o" id="heartIcon" "></i>
+                    </button>
                     <div class="favorites-popup" id="favoritesPopup">
                         <div class="content">
                             <h6 id="fav-popup-text"></h6>
@@ -134,15 +109,15 @@ if ($result) {
                         <img id="productImagee" src="<?php echo $row['images'] ?>" alt="" class="product-img">
                     </div>
                     <div class="d-flex flex-column justify-content-center align-items-center col-lg-4 col-md-5 col-sm-6 col-xs-8 product-details pt-2">
-                        <h1 class="prod-title d-none d-sm-block mb-3" id="productTitle" style="font-size: 17px;font-weight: bold;"><?php echo $row['name'] ?></h1>
+                        <h1 class="prod-title d-none d-sm-block mb-3" id="productTitle"
+                            style="font-size: 17px;font-weight: bold;"><?php echo $row['name'] ?></h1>
                         <div class="hidden-xs">
                             <div class="stars-outer">
                                 <div class="stars-inner" id="productReviews">
-                                    <script> getStars(<?php echo $row['reviews']?>)</script>
                                 </div>
                             </div>
                             <div class="offer-instock">
-                                <span id="productInStock"><b><?php echo $row['in_stock']?></b></span>
+                                <span id="productInStock"><b><?php echo $row['in_stock'] ?></b></span>
                             </div>
                         </div>
 
@@ -487,6 +462,42 @@ if ($result) {
 <!--    }-->
 <!--</script>-->
 
+<script>
+
+    function getStars(rating)  {
+            const totalStars = 5;
+
+            // Round to nearest half
+            rating = Math.round(rating * totalStars) / 100;
+            console.log(rating);
+            let output = [];
+
+            // Append all the filled whole stars
+            for (var i = rating; i >= 1; i--)
+                output.push('<i class="fa fa-star" aria-hidden="true" style="color: gold;"></i>&nbsp;');
+
+            // If there is a half a star, append it
+            // if (i == .5)  output.push('<i class="fa fa-star-half-o" aria-hidden="true" style="color: gold;"></i>&nbsp;');
+            if (i >= .1) {
+                output.push('<i class="fa fa-star-half-o" aria-hidden="true" style="color: gold;"></i>&nbsp;');
+            }
+
+            // if(i < .5)  output.pop('<i class="fa fa-star-half-o" aria-hidden="true" style="color: gold;"></i>&nbsp;');
+
+
+            // Fill the empty stars
+            for (let i = (5 - rating); i >= 1; i--)
+                output.push('<i class="fa fa-star-o" aria-hidden="true" style="color: gold;"></i>&nbsp;');
+
+            return output.join('');
+    };
+
+    document.addEventListener('DOMContentLoaded',() => {
+        console.log(getStars(4));
+        document.getElementById('productReviews').innerHTML = getStars(<?= $row['reviews']?>)
+    })
+
+</script>
 
 
 <script src="/assets/js/addToFavorites.js"></script>

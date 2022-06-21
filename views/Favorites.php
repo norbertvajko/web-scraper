@@ -1,5 +1,7 @@
 <?php
+
 session_start();
+
 ?>
 
 <!DOCTYPE html>
@@ -93,14 +95,39 @@ session_start();
 
                 <?php if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])){
 
-//                        $sql = "SELECT name, reviews, price, images FROM products WHERE id="
+                    $user_id = $_SESSION['user_id'];
+                    require_once "../includes/connDB.php";
+                           $sql =  "SELECT name, reviews, price, images FROM products LEFT JOIN favorites ON products.id = favorites.product_id WHERE favorites.user_id = '$user_id'";
+                           $result = mysqli_query($GLOBALS['conn'],$sql);
+
+                    if ($result->num_rows) {
+                        $noOfFavorites = 0;
+                        foreach ($result as $row) {
+
+                            $noOfFavorites++;
+
+                            $data[] = [
+                                'title' => $row['name'],
+                                'price' => $row['reviews'],
+                                'image' => $row['price'],
+                                'stock' => $row['images']
+                            ];
+                            echo $row['name'] .'<br>';
+
+                        }
+                        echo $noOfFavorites;
+
+                    }
+
                 }?>
+
+
 
                 <div class="menu-user-body ms-35">
                     <div class="menu-user-content h-100">
                         <div class="menu-user-title text-start d-flex flex-row align-items-center p-3">
                             <h1>Favorites</h1>
-                            <span>0 products</span>
+                            <span><?= $noOfFavorites ?> products</span>
                         </div>
                         <div class="menu-user-photo">
                             <div class="no-favorites-photo d-flex justify-content-center">
