@@ -1,3 +1,5 @@
+
+
 <div class="container">
     <div class="row">
         <div class="col-md-12 ">
@@ -11,7 +13,7 @@
                             <div class="col-sm-3">
                                 <div class="thumb-wrapper">
                                     <div class="img-box">
-                                        <img src="assets/images/product1.jpg" class="img-fluid"
+                                        <img src="<?= $row['images'] ?>" class="img-fluid"
                                              alt="product-img">
                                     </div>
                                     <div class="thumb-content">

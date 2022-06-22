@@ -46,11 +46,11 @@ $noOfFavorites = 0;
 <!--------------------------------------------- Start Banner Area ----------------------------------------------------->
 <div class="blur" id="blur">
 
-<header class="fav-header mt-62">
-    <?php
-//    include "components/favorite_components/fav_header.php";
-    ?>
-</header>
+    <header class="fav-header mt-62">
+        <?php
+        //    include "components/favorite_components/fav_header.php";
+        ?>
+    </header>
 
     <!----------------------------------------------- End Banner Area ----------------------------------------------------->
 
@@ -76,9 +76,9 @@ $noOfFavorites = 0;
 
                     </div>
                     <?php
-                        } else {
-                        ?>
-                    <div class="menu-user-body-title my-5">
+                } else {
+                    ?>
+                    <div class="menu-user-body-title my-3">
                         <h5 class="text-center">
                             Hello, please sign in
                             <h6 class="text-center"> In order to have full control with our offers</h6>
@@ -138,14 +138,14 @@ $noOfFavorites = 0;
                                         </div>
 
                                         <div class="margin-card-content">
-                                                   Vandut de:
+                                            Vandut de:
                                             <span class="font-semi-bold inline-block--top nowrap-ellipsis">
                                                     eMAG
                                              </span>
                                         </div>
 
                                         <div class="mrg-btm-xs product-pricing">
-                                         <?= $row['price'] ?><span> lei</span>
+                                            <?= $row['price'] ?><span> lei</span>
                                         </div>
                                         <div class="actions-wrapper">
                                             <div class="content">
@@ -228,32 +228,32 @@ $noOfFavorites = 0;
 
 
 
-<!------------------------------------------------- End Main Area ----------------------------------------------------->
+    <!------------------------------------------------- End Main Area ----------------------------------------------------->
 
-<!----------------------------------------------- Start Footer Area --------------------------------------------------->
+    <!----------------------------------------------- Start Footer Area --------------------------------------------------->
 
-<?php include "components/footer.php"; ?>
+    <?php include "components/footer.php"; ?>
 
-<!------------------------------------------------ End Footer Area ---------------------------------------------------->
+    <!------------------------------------------------ End Footer Area ---------------------------------------------------->
 
-<script>
+    <script>
 
-    const logIN = document.getElementById('loginBTN');
-    const register = document.getElementById('registerBTN')
+        const logIN = document.getElementById('loginBTN');
+        const register = document.getElementById('registerBTN')
 
-    if (logIN) {
-    logIN.addEventListener("click", () => {
-        showLoginPopUp();
-    });
-    }
-    if (register) {
-        register.addEventListener("click", () => {
-            showRegisterPopUp();
-        });
-    }
+        if (logIN) {
+            logIN.addEventListener("click", () => {
+                showLoginPopUp();
+            });
+        }
+        if (register) {
+            register.addEventListener("click", () => {
+                showRegisterPopUp();
+            });
+        }
 
 
-</script>
+    </script>
 
 
 </body>

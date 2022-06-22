@@ -19,16 +19,19 @@ $sql = " SELECT name, price, images, in_stock, reviews, link, logo FROM products
 $result = mysqli_query($GLOBALS['conn'],$sql);
 //var_dump($result);
 
+
+$date = date("Y-m-d H:i:s");
+//save search input
 if ($result) {
     foreach ($result as $row) {
-//        $title = $row['name'];
-//        $date = date("Y-m-d H:i:s");
-//
-//        if (empty($_POST['valueToSearch'])) {
-//
-//            $newSQL = "INSERT INTO recent_searches (query, time) VALUES ('$title','$date') ";
-//            mysqli_query($GLOBALS['conn'], $newSQL);
-//        }
+        $title = $row['name'];
+
+
+    }
+    if (empty($_POST['valueToSearch'])) {
+
+        $newSQL = "INSERT INTO recent_searches (product_id, date) VALUES ('$idParam','$date') ";
+        mysqli_query($GLOBALS['conn'], $newSQL);
     }
 }
 //echo json_encode($data);
@@ -166,7 +169,7 @@ if ($result) {
                     <ul class="nav nav-tabs position-relative" id="nav-tab" role="tablist">
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" id="bestOffer-tab" data-bs-toggle="tab" data-bs-target="#bestOffer"
-                                    type="button" role="tab" aria-controls="bestOffer" aria-selected="true">Best Offer
+                                    type="button" role="tab" aria-controls="bestOffer" aria-selected="true">Offers
                             </button>
                         </li>
                         <li class="nav-item" role="presentation">
@@ -249,86 +252,87 @@ if ($result) {
                                     </div>
 
                                 </div>
-                                <div class="row align-items-center my-2 mx-1 ">
-                                    <div class="col-2 best-offer-logo w-fc">
-                                        <div class="offer-company-logo">
-                                            <img src="<?php echo $row['logo'] ?>" id="companyLogoTwo" class="mw-120 img-fluid"
-                                                 alt="company-logo">
-                                        </div>
-                                    </div>
-                                    <div class="col-2 best-offer-stars w-fc d-none d-lg-block">
-                                        <div class="offer-rating" id="offerRatingTwo">
 
-                                        </div>
-
-                                    </div>
-                                    <div class="col-6 best-offer-title ">
-                                        <h3 id="offerNameTwo"></h3>
-                                    </div>
-                                    <div class="col-2 best-offer-price w-fc d-flex justify-content-end">
-                                        <div class="offer-price">
-                                                <span class="best-offer-price" id="offerPriceTwo">
-                                                                    <?php echo $row['price'] ?>
-                                                </span>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="row align-items-center my-2 mx-1 ">
-                                    <div class="col-2 best-offer-logo w-fc ">
-                                        <div class="offer-company-logo">
-                                            <img src="" id="companyLogoThree" class="mw-120 img-fluid"
-                                                 alt="company-logo">
-                                        </div>
-                                    </div>
-                                    <div class="col-2 w-fc best-offer-stars d-none d-lg-block">
-                                        <div class="offer-rating" id="offerRatingThree">
-
-                                        </div>
-                                    </div>
-                                    <div class="col-6 best-offer-title">
-                                        <h3 id="offerNameThree"></h3>
-                                    </div>
-                                    <div class="col-2 w-fc best-offer-price d-flex justify-content-end">
-                                        <div class="offer-price">
-                                               <span class="best-offer-price" id="offerPriceThree">
-
-                                                </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            <div class="container">
-                                <div class="row">
-                                    <div class="rest-offers-content my-4">
-                                        <div class="rest-offers-header my-4">
-                                            <h3>Restul ofertelor</h3>
-                                            <div class="row align-items-center my-2 mx-1 ">
-                                                <div class="col-2 best-offer-logo w-fc ">
-                                                    <div class="offer-company-logo">
-                                                        <img src="" id="companyLogoRest" class="mw-120 img-fluid"
-                                                             alt="company-logo">
-                                                    </div>
-                                                </div>
-                                                <div class="col-2 w-fc best-offer-stars d-none d-lg-block">
-                                                    <div class="offer-rating" id="offerRatingRest">
-
-                                                    </div>
-                                                </div>
-                                                <div class="col-6 best-offer-title">
-                                                    <h3 id="offerNameThree"></h3>
-                                                </div>
-                                                <div class="col-2 w-fc best-offer-price d-flex justify-content-end">
-                                                    <div class="offer-price">
-                                               <span class="best-offer-price" id="offerPriceRest">
-
-                                                </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+<!--                                <div class="row align-items-center my-2 mx-1 ">-->
+<!--                                    <div class="col-2 best-offer-logo w-fc">-->
+<!--                                        <div class="offer-company-logo">-->
+<!--                                            <img src="--><?php //echo $row['logo'] ?><!--" id="companyLogoTwo" class="mw-120 img-fluid"-->
+<!--                                                 alt="company-logo">-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-2 best-offer-stars w-fc d-none d-lg-block">-->
+<!--                                        <div class="offer-rating" id="offerRatingTwo">-->
+<!---->
+<!--                                        </div>-->
+<!---->
+<!--                                    </div>-->
+<!--                                    <div class="col-6 best-offer-title ">-->
+<!--                                        <h3 id="offerNameTwo"></h3>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-2 best-offer-price w-fc d-flex justify-content-end">-->
+<!--                                        <div class="offer-price">-->
+<!--                                                <span class="best-offer-price" id="offerPriceTwo">-->
+<!--                                                                    --><?php //echo $row['price'] ?>
+<!--                                                </span>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!---->
+<!--                                </div>-->
+<!--                                <div class="row align-items-center my-2 mx-1 ">-->
+<!--                                    <div class="col-2 best-offer-logo w-fc ">-->
+<!--                                        <div class="offer-company-logo">-->
+<!--                                            <img src="" id="companyLogoThree" class="mw-120 img-fluid"-->
+<!--                                                 alt="company-logo">-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-2 w-fc best-offer-stars d-none d-lg-block">-->
+<!--                                        <div class="offer-rating" id="offerRatingThree">-->
+<!---->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-6 best-offer-title">-->
+<!--                                        <h3 id="offerNameThree"></h3>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-2 w-fc best-offer-price d-flex justify-content-end">-->
+<!--                                        <div class="offer-price">-->
+<!--                                               <span class="best-offer-price" id="offerPriceThree">-->
+<!---->
+<!--                                                </span>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            <div class="container">-->
+<!--                                <div class="row">-->
+<!--                                    <div class="rest-offers-content my-4">-->
+<!--                                        <div class="rest-offers-header my-4">-->
+<!--                                            <h3>Restul ofertelor</h3>-->
+<!--                                            <div class="row align-items-center my-2 mx-1 ">-->
+<!--                                                <div class="col-2 best-offer-logo w-fc ">-->
+<!--                                                    <div class="offer-company-logo">-->
+<!--                                                        <img src="" id="companyLogoRest" class="mw-120 img-fluid"-->
+<!--                                                             alt="company-logo">-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                                <div class="col-2 w-fc best-offer-stars d-none d-lg-block">-->
+<!--                                                    <div class="offer-rating" id="offerRatingRest">-->
+<!---->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                                <div class="col-6 best-offer-title">-->
+<!--                                                    <h3 id="offerNameThree"></h3>-->
+<!--                                                </div>-->
+<!--                                                <div class="col-2 w-fc best-offer-price d-flex justify-content-end">-->
+<!--                                                    <div class="offer-price">-->
+<!--                                               <span class="best-offer-price" id="offerPriceRest">-->
+<!---->
+<!--                                                </span>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
                         </div>
                         <section class="rest-offers">
 <!--                            <div class="container">-->
