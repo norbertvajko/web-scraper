@@ -1,21 +1,105 @@
-.main-favorites {
-    background-color: #f2f2f7;
-}
 
+
+.main-favorites {
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    background-color: rgb(245, 246, 250);
+}
+.menu-user {
+    /*max-width: 17%;*/
+}
 .menu-user-header {
     background-color: white;
     border: 1px solid #eeeeee;
     border-radius: 3px;
     box-shadow: 1px 1px 3px rgb(0 0 0 / 15%);
 }
+.menu-user-container {
+    width: 23%;
+    margin-top: 32px;
+}
 .menu-user-content {
     background-color: white;
     border: 1px solid #eeeeee;
     border-radius: 3px;
     box-shadow: 1px 1px 3px rgb(0 0 0 / 15%);
+    padding: 33px;
 }
 .no-favorites-photo img {
     max-width: 40%;
     height: auto;
 }
+
+.d-flex {
+    width: 100%;
+    display: -webkit-box;
+    display: flex;
+}
+
+body {
+    background: #eee;
+}
+.about-product img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.product-card-account:last-child {
+    border-bottom: 1px solid #f0f0f0;
+}
+.product-card-account {
+    position: relative;
+    /* border-top: 1px solid #f0f0f0; */
+    font-size: 13px;
+}
+.pad-sep-sm {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.flex-item {
+    -webkit-box-flex: 1;
+    /*flex: 1;*/
+}
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+
+.list-of-favorites {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* padding-left: 0px; */
+    background: white;
+    /* padding: 31px; */
+    /* margin-left: 151px; */
+    margin-top: 32px;
+    width: 74%;
+
+}
+
+#btnVeziProd {
+list-style: none;
+    color: red;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+#favCardTitleC {
+    color: cornflowerblue;
+    font-size: 29px;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+
+
+
+
+
+
+
+
+
+
 

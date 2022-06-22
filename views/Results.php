@@ -493,7 +493,7 @@ if ($result) {
     };
 
     document.addEventListener('DOMContentLoaded',() => {
-        console.log(getStars(4));
+        // console.log(getStars(4));
         document.getElementById('productReviews').innerHTML = getStars(<?= $row['reviews']?>)
     })
 
