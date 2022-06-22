@@ -1,9 +1,8 @@
 
 
 .main-favorites {
-    /*display: flex;*/
-    /*justify-content: center;*/
-    /*align-items: center;*/
+    justify-content: center;
+    align-items: center;
     background-color: rgb(245, 246, 250);
 }
 .menu-user {
@@ -32,9 +31,9 @@
 }
 
 .d-flex {
-    width: 100%;
-    display: -webkit-box;
-    display: flex;
+    /*width: 100%;*/
+    /*display: -webkit-box;*/
+    /*display: flex;*/
 }
 
 body {

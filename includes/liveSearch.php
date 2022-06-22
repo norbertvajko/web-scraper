@@ -20,7 +20,6 @@ if ($result) {
         echo "</div>";
     }
 
-
 }
 
 return json_encode($data);

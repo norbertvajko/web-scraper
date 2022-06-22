@@ -362,7 +362,9 @@ body {
     animation-name: example;
     animation-duration: 2s;
 }
-
+#productPrice {
+    margin-left:7px;
+}
 @keyframes example {
     1% {
         left:100%;

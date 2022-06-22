@@ -2,11 +2,10 @@
 session_start();
 ?>
 <?php
-
 include '../includes/connDB.php';
 
 //preia product id din url
-$actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+$actual_link = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
 //var_dump($actual_link);
 $url_components = parse_url($actual_link);
@@ -16,24 +15,21 @@ $url_components = parse_url($actual_link);
 parse_str($url_components['query'], $params);
 $idParam = $params['productId'];
 
-$sql = " SELECT name, price, images, in_stock, reviews, link, logo FROM products WHERE id = '$idParam' ";
+$sql = " SELECT name, price, images, in_stock, reviews, link, logo FROM products WHERE id = '$idParam'";
 $result = mysqli_query($GLOBALS['conn'],$sql);
+//var_dump($result);
 
 if ($result) {
-
     foreach ($result as $row) {
-
-        $data[] = [
-            'post_title' => $row['name'],
-            'post_price' => $row['price'],
-            'post_image' => $row['images'],
-            'post_stock' => $row['in_stock'],
-            'post_reviews' => $row['reviews'],
-            'post_link' => $row['link'],
-            'post_logo' => $row['logo']
-        ];
+//        $title = $row['name'];
+//        $date = date("Y-m-d H:i:s");
+//
+//        if (empty($_POST['valueToSearch'])) {
+//
+//            $newSQL = "INSERT INTO recent_searches (query, time) VALUES ('$title','$date') ";
+//            mysqli_query($GLOBALS['conn'], $newSQL);
+//        }
     }
-
 }
 //echo json_encode($data);
 
@@ -140,7 +136,7 @@ if ($result) {
                                 </li>
                             </ul>
                         </div>
-                        <h3 class="lowest-price d-flex flex-md-wrap">Lowest price:<span id="productPrice"><?php echo $row['price'] ?></span></h3>
+                        <h3 class="lowest-price d-flex flex-md-wrap">Lowest price:<span id="productPrice"><?php echo $row['price'] ?></span >&nbsp;lei</h3>
 
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-3 featured-offers">
@@ -490,11 +486,12 @@ if ($result) {
                 output.push('<i class="fa fa-star-o" aria-hidden="true" style="color: gold;"></i>&nbsp;');
 
             return output.join('');
-    };
+    }
 
     document.addEventListener('DOMContentLoaded',() => {
         // console.log(getStars(4));
         document.getElementById('productReviews').innerHTML = getStars(<?= $row['reviews']?>)
+        document.getElementById('offerRatingOne').innerHTML = getStars(<?= $row['reviews']?>)
     })
 
 </script>
