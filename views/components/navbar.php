@@ -251,6 +251,7 @@
     </div>
 </div>
 
+<script src="/assets/js/recentSearches.js"></script>
 <script src="/assets/js/liveSearchDropdown.js"></script>
 <script src="/assets/js/newPassword.js"></script>
 <script src="/assets/js/forgotPasswordForm.js"></script>

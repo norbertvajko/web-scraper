@@ -20,19 +20,14 @@ $result = mysqli_query($GLOBALS['conn'],$sql);
 //var_dump($result);
 
 
-$date = date("Y-m-d H:i:s");
+
 //save search input
-if ($result) {
+if ($result->num_rows > 0) {
     foreach ($result as $row) {
         $title = $row['name'];
 
-
     }
-    if (empty($_POST['valueToSearch'])) {
 
-        $newSQL = "INSERT INTO recent_searches (product_id, date) VALUES ('$idParam','$date') ";
-        mysqli_query($GLOBALS['conn'], $newSQL);
-    }
 }
 //echo json_encode($data);
 

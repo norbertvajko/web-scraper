@@ -1,29 +1,26 @@
 <?php
 
+date_default_timezone_set('Europe/Bucharest');
+$date = date('m/d/Y h:i:s a', time());
+
 include "connDB.php";
 
+$input  = $_POST['valueToSearch'];
 
-$search =  $_POST['valueToSearch'];
-$date = date('Y-m-d H:i:s');
+$query = "SELECT id FROM products WHERE name LIKE '%" . $input . "%' ";
+$result = mysqli_query($GLOBALS['conn'],$query);
 
-if (isset($valueToSearch)) {
+if ($result) {
 
-    $query = "SELECT name FROM products WHERE name LIKE '%" . $search . "%' LIMIT 3";
-    $result = mysqli_query($GLOBALS['conn'], $query);
+    foreach ($result as $row) {
 
-    if ($result) {
+        $id = $row['id'];
 
-        foreach ($result as $row) {
-
-            $searQ = "INSERT into recent_searches (query,time) VALUES ('$search','$date')";
-            mysqli_query($GLOBALS['conn'], $searQ);
-        }
+        $insertSQL = "INSERT INTO recent_searches (product_id, date) VALUES ('$id', '$date')";
+        mysqli_query($GLOBALS['conn'],$insertSQL);
 
     }
+
 }
 
-
-
-
-
-
+//return json_encode($data);

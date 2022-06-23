@@ -103,7 +103,7 @@ session_start();
 include "views/components/footer.php";
 ?>
 <!------------------------------------------------ End Footer Area ---------------------------------------------------->
-
+<script src="/assets/js/recentSearches.js"></script>
 
 </body>
 </html>

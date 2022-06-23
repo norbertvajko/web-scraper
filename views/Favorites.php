@@ -98,7 +98,7 @@ $noOfFavorites = 0;
 
             $user_id = $_SESSION['user_id'];
             require_once "../includes/connDB.php";
-            $sql = "SELECT name, reviews, price, images, in_stock FROM products LEFT JOIN favorites ON products.id = favorites.product_id WHERE favorites.user_id = '$user_id'";
+            $sql = "SELECT name, reviews, price, images, in_stock, link, logo FROM products LEFT JOIN favorites ON products.id = favorites.product_id WHERE favorites.user_id = '$user_id'";
             $result = mysqli_query($GLOBALS['conn'], $sql);
 
             if ($result->num_rows) {
@@ -118,7 +118,7 @@ $noOfFavorites = 0;
                                         </div>
                                     </a>
                                 </div>
-                                <div class="d-flex flex-item flex-wrap card-container">
+                                <div class="d-flex flex-item flex-column p-3 flex-wrap card-container">
                                     <div class="card-content pad-hrz-sm flex-item">
                                         <h2 class="mrg-sep-none  margin-card-content">
                                             <a href="#" class="product-title font-semi-bold">
@@ -132,6 +132,11 @@ $noOfFavorites = 0;
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="hidden-xs">
+                                        <div class="stars-outer">
+                                            <div class="stars-inner" id="productRevi"></div>
+                                        </div>
+                                    </div>
                                     <div class="card-secondary pad-hrz-sm flex-item text-right">
                                         <div class="favorite-product-availability product-stock-status text-availability-in_stock">
                                             <b><?= $row['in_stock'] ?></b>
@@ -139,9 +144,9 @@ $noOfFavorites = 0;
 
                                         <div class="margin-card-content">
                                             Vandut de:
-                                            <span class="font-semi-bold inline-block--top nowrap-ellipsis">
-                                                    eMAG
-                                             </span>
+                                            <div class="product-log">
+                                                <img src="<?= $row['logo'] ?>" id="productLogo" alt="">
+                                            </div>
                                         </div>
 
                                         <div class="mrg-btm-xs product-pricing">
@@ -149,11 +154,9 @@ $noOfFavorites = 0;
                                         </div>
                                         <div class="actions-wrapper">
                                             <div class="content">
-                                                <form action="https://www.emag.ro/newaddtocart?source=front&amp;ref=fav_add-to-cart-btn&amp;ref_zone=FavoritesPage&amp;X-Product-Id=6006799&amp;X-Search-Position=0&amp;X-Search-Page=&amp;X-Search-Id=&amp;X-Section=&amp;X-MB="
-                                                      method="post" novalidate="true" data-id="6006799"><input
-                                                            type="hidden" name="product[]" value="6006799">
-                                                    <button class="btn btn-warning">Vezi produsul</button>
-                                                </form>
+                                                <div class="product-btn-site my-3">
+                                                    <a href="<?php echo $row['link'] ?>" class="btn btn-warning" target="_blank">See product</a>
+                                                </div>
                                             </div>
                                             <div>
                                                 <button class="btn btn-link btn-sm" id="btnVeziProd">
@@ -252,6 +255,10 @@ $noOfFavorites = 0;
             });
         }
 
+        document.addEventListener('DOMContentLoaded',() => {
+            // console.log(getStars(4));
+            document.getElementById('productRevi').innerHTML = getStars(<?= $row['reviews']?>)
+        })
 
     </script>
 

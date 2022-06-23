@@ -1,5 +1,3 @@
-
-
 .main-favorites {
     justify-content: center;
     align-items: center;
@@ -86,13 +84,25 @@ list-style: none;
 
 #favCardTitleC {
     color: cornflowerblue;
-    font-size: 29px;
+    font-size: 22px;
     font-weight: bold;
     text-decoration: none;
 
 }
+.product-title {
+    text-decoration: none;
+}
+.product-pricing {
+    font-size:26px;
+}
 
+.product-log img {
+    background-color: black;
+}
 
+@media screen and (max-width: 620px) {
+
+}
 
 
 
