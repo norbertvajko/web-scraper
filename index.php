@@ -77,6 +77,8 @@ session_start();
         </section>
 
 
+
+
         <section class="main-body carousel-best-offer">
             <?php
             include "views/components/index_components/carousel.php";
@@ -103,7 +105,7 @@ session_start();
 include "views/components/footer.php";
 ?>
 <!------------------------------------------------ End Footer Area ---------------------------------------------------->
-<script src="/assets/js/recentSearches.js"></script>
+
 
 </body>
 </html>

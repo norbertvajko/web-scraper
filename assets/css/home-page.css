@@ -113,8 +113,14 @@ body {
     max-height:165px;
 }
 .thumb-content h6 {
-    font-size:12px;
+    font-size: 16px;
+    font-weight: bold;
 }
+.thumb-content h6 a {
+    color: dimgrey;
+    text-decoration: none;
+}
+
 
 .slide-progress-dots .container {
     height: 500px;
@@ -179,11 +185,29 @@ body {
     display: none !important;
 }
 
+.item-col-wrap {
+    border: 1px solid white;
+    border-radius: 12px;
+    padding: 17px;
+    background: white;
+}
+.item-col-wrap:hover {
+    box-shadow: 5px 10px 18px #888888;
+}
 
-
-
-
-
+.main-body {
+    background-color: rgb(245, 246, 250);
+}
+.item-price {
+    font-size: 22px;
+    font-weight: bold;
+    color: cadetblue;
+}
+#lei {
+    font-weight: normal;
+    color:black;
+    font-size:18px;
+}
 
 
 @media screen and (max-width: 576px) {

@@ -49,7 +49,7 @@ session_start();
 
     <header class="contact-banner mt-100">
         <div class="container">
-            <img src="/assets/images/contact-banner1.jpg" alt="contact-banner">
+
         </div>
     </header>
 

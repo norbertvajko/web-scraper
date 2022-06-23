@@ -172,7 +172,7 @@ $noOfFavorites = 0;
                 <?php }
             } else { ?>
 
-                <div class="menu-user-body ms-35">
+                <div class="menu-user-body ">
                     <div class="menu-user-content h-100">
                         <div class="menu-user-title text-start d-flex flex-row align-items-center p-3">
                             <h1>Favorites</h1>
@@ -200,7 +200,7 @@ $noOfFavorites = 0;
             <?php }
         } else { ?>
 
-            <div class="menu-user-body ms-35">
+            <div class="menu-user-body ">
                 <div class="menu-user-content h-100">
                     <div class="menu-user-title text-start d-flex flex-row align-items-center p-3">
                         <h1>Favorites</h1>
@@ -239,6 +239,16 @@ $noOfFavorites = 0;
 
     <!------------------------------------------------ End Footer Area ---------------------------------------------------->
 
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded',() => {
+            // console.log(getStars(4));
+            document.getElementById('productRevi').innerHTML = getStars(<?= $row['reviews']?>)
+        })
+
+    </script>
+
     <script>
 
         const logIN = document.getElementById('loginBTN');
@@ -255,10 +265,7 @@ $noOfFavorites = 0;
             });
         }
 
-        document.addEventListener('DOMContentLoaded',() => {
-            // console.log(getStars(4));
-            document.getElementById('productRevi').innerHTML = getStars(<?= $row['reviews']?>)
-        })
+
 
     </script>
 

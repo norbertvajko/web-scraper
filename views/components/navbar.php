@@ -56,7 +56,7 @@
                             <?php if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) { ?>
                                 <span><h6>Welcome</h6> <span id="usernameDropdown"><?= $_SESSION['username']; ?></span> </span>
                                 <ul class="user-dropdown-content">
-                                    <li class="user-dropdown-item"><a href="#">Favorites</a></li>
+                                    <li class="user-dropdown-item"><a href="/views/Favorites.php">Favorites</a></li>
                                     <li class="user-dropdown-item"><a href="#">History</a></li>
                                     <li class="user-dropdown-item"><a href="#">Settings</a></li>
                                     <li class="user-dropdown-item" id="log-out-user">Log out</li>
@@ -224,6 +224,7 @@
             <form action="" method="post" id="resetPasswordForm">
                 <div class="form">
                     <h3>Reset Password</h3>
+                    <p>Please enter your new password.</p>
                     <div class="form-element d-flex flex-column">
                         <label>
                             <input type="password" class="inputs-n login_data" name="reset_passwd" id="resetPassWd"
