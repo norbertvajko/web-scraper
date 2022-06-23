@@ -1,26 +1,15 @@
-let productD = document.getElementById('productResultsD')
-
-if (productD) {
-    productD.addEventListener('click', () => {
-
-
-        let xhr = new XMLHttpRequest();
-        xhr.open("POST", "../../includes/recent_searches.php", true);
-        xhr.onload = () => {
-            if (xhr.readyState === XMLHttpRequest.DONE) {
-
-                let response = JSON.parse(xhr.responseText);
-
-                if (xhr.status === 200) {
-
-                    // location.href
-
-                }
-
-            }
-
+function saveSearch(product_id) {
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", "../../includes/recent_searches.php", true);
+    xhr.onload = () => {
+        let response = JSON.parse(xhr.responseText);
+        if (response.success == true) {
+            window.location.href = '/views/Results.php?productId=' + product_id;
+        } else {
+            // error
         }
-        xhr.send();
-    });
-
+    }
+    var formData = new FormData;
+    formData.append('product_id', product_id);
+    xhr.send(formData);
 }

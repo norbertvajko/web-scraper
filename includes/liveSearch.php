@@ -16,7 +16,7 @@ if ($result) {
 
         echo "<div class='drop-items d-flex flex-row align-items-center'>";
         echo "<div id='img-drop'><img src='" . $row['images'] . "' style='height: 90px; width: 90px;' /></div>";
-        echo "<div id='title-drop' style='padding-left: 13px;padding-top: 7px;'><a id='productResultsD' href='/views/Results.php?productId=" . $row['id'] . "'>" . $row['name'] . " </a></div>";
+        echo "<div id='title-drop' style='padding-left: 13px;padding-top: 7px;'><button onclick='saveSearch(" . $row['id'] . ")'>" . $row['name'] . " </button></div>";
         echo "</div>";
     }
 
