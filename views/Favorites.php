@@ -70,7 +70,7 @@ $noOfFavorites = 0;
 
                         <h5 class="text-center">
                             Hello, <?= $_SESSION['username']; ?>
-                            <h6 class="text-center text-success mt-4">We are happy to see you back!</h6>
+                            <h6 class="text-center text-success mt-4 ">We are happy to see you back!</h6>
                         </h5>
 
 
@@ -114,7 +114,8 @@ $noOfFavorites = 0;
                             <div class="d-flex">
                                 <div class="card-image px-5 flex-item flex-c"><a href="#"
                                                                                  class="thumbnail-wrapper js-product-url">
-                                        <div class="thumbnail"><img src="<?= $row['images'] ?>" alt="Product Image">
+                                        <div class="thumbnail"><img src="<?= $row['images'] ?>" alt="Product Image"
+                                                                    class="img-fluid">
                                         </div>
                                     </a>
                                 </div>
@@ -125,19 +126,22 @@ $noOfFavorites = 0;
                                                 <span id="favCardTitleC"><?= $row['name'] ?></span>
                                             </a>
                                         </h2>
+
+                                    </div>
+                                    <!--                                    <div class="hidden-xs">-->
+                                    <!--                                        <div class="stars-outer">-->
+                                    <!--                                            <div class="stars-inner" id="productRev">-->
+                                    <!---->
+                                    <!--                                            </div>-->
+                                    <!--                                        </div>-->
+                                    <!--                                    </div>-->
+                                    <div class="card-secondary pad-hrz-sm flex-item text-right">
                                         <div class="mrg-btm-xs">
                                             <div class="stars-outer">
-                                                <div class="stars-inner" id="productRevi">
+                                                <div class="stars-inner" id="productRev">
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="hidden-xs">
-                                        <div class="stars-outer">
-                                            <div class="stars-inner" id="productRevi"></div>
-                                        </div>
-                                    </div>
-                                    <div class="card-secondary pad-hrz-sm flex-item text-right">
                                         <div class="favorite-product-availability product-stock-status text-availability-in_stock">
                                             <b><?= $row['in_stock'] ?></b>
                                         </div>
@@ -198,34 +202,7 @@ $noOfFavorites = 0;
                     </div>
                 </div>
             <?php }
-        } else { ?>
-
-            <div class="menu-user-body ">
-                <div class="menu-user-content h-100">
-                    <div class="menu-user-title text-start d-flex flex-row align-items-center p-3">
-                        <h1>Favorites</h1>
-                        <span><?= $noOfFavorites ?> products</span>
-                    </div>
-                    <div class="menu-user-photo">
-                        <div class="no-favorites-photo d-flex justify-content-center">
-                            <img src="https://cdn.dribbble.com/users/1291846/screenshots/3720238/media/1038c769be34018f642b683e83fca9ea.png"
-                                 class="img-fluid" alt="">
-                        </div>
-                    </div>
-                    <div class="menu-user-description d-flex justify-content-center">
-                        <h4>You have no products in your list</h4>
-                    </div>
-                    <div class="menu-user-recomandation">
-                        <div class="recomndation-p d-flex justify-content-center">
-                            <p>Go take a look at the most popular products</p>
-                        </div>
-                        <div class="recomandation-btn d-flex justify-content-center"
-                        ">
-                        <button type="button" class="btn btn-primary">See offers</button>
-                    </div>
-                </div>
-            </div>
-        <?php }
+        }
         ?>
     </main>
 
@@ -240,12 +217,19 @@ $noOfFavorites = 0;
     <!------------------------------------------------ End Footer Area ---------------------------------------------------->
 
 
+    <script src="/assets/js/getStars.js"></script>
     <script>
 
+        let stars = document.getElementsByClassName('star-rating');
         document.addEventListener('DOMContentLoaded',() => {
             // console.log(getStars(4));
-            document.getElementById('productRevi').innerHTML = getStars(<?= $row['reviews']?>)
-        })
+            // for (var i=0; i<stars.length;i++) {
+            for (let i = 0; i < stars.length; i++) {
+
+                stars[i].innerHTML = getStars(<?= $row['reviews']?>)
+            }
+
+        }); 
 
     </script>
 
@@ -265,7 +249,26 @@ $noOfFavorites = 0;
             });
         }
 
+    </script>
 
+    <script>
+
+        function deleteFavoriteProduct() {
+
+          let delButton = document.getElementById('btnVeziProd');
+
+            let request = new XMLHttpRequest();
+            request.open('POST' , '');
+            request.onload = function () {
+                if (request.readyState === 4 && request.status === 200) {
+                    const response = JSON.parse(request.responseText);
+
+                    response.success = 'dasdasda';
+                }
+
+            }
+            request.send();
+        }
 
     </script>
 

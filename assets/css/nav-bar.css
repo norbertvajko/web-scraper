@@ -343,6 +343,13 @@ font-size:15px;
 #time {
     font-weight: 800;
 }
+
+#titleBtnDropdwon {
+    background: transparent;
+    border: none;
+}
+
+
 .numberCircle {
     width: 64%;
     margin: auto;

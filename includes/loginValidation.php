@@ -36,7 +36,6 @@ if (empty($password)) {
 }
 
 
-
 if ($loginComplete) {
     $password = md5($password);
     $query = "SELECT * FROM users WHERE email = '$username' AND password='$password'";

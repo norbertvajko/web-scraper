@@ -100,7 +100,7 @@ if ($result->num_rows > 0) {
                     <div class="added-to-fav hide-c " id="addedToFav"></div>
                     <h1 class="product-up-title d-block d-sm-none text-center p-3"><?php echo $row['name'] ?></h1>
                     <div class="col-lg-4 col-md-3 col-sm-6 col-xs-5 d-flex justify-content-center product-image">
-                        <img id="productImagee" src="<?php echo $row['images'] ?>" alt="" class="product-img">
+                        <img id="productImagee"  src="<?php echo $row['images'] ?>" alt="" class="product-img img-fluid">
                     </div>
                     <div class="d-flex flex-column justify-content-center align-items-center col-lg-4 col-md-5 col-sm-6 col-xs-8 product-details pt-2">
                         <h1 class="prod-title d-none d-sm-block mb-3" id="productTitle"
@@ -140,7 +140,7 @@ if ($result->num_rows > 0) {
                     <div class="col-xs-12 col-sm-12 col-md-3 featured-offers">
                         <div class="featured-content position-relative d-xs-flex justify-content-between d-sm-flex justify-content-between d-md-block h-100 p-4">
                             <div class="product-log">
-                                <img src="<?php echo $row['logo'] ?>" id="productLogo"  alt="">
+                                <img src="<?php echo $row['logo'] ?>" id="productLogo"  alt="" class="img-fluid">
                             </div>
                             <div class="product-btn-site">
                                 <a href="<?php echo $row['link'] ?>" class="btn btn-warning" target="_blank">See product</a>

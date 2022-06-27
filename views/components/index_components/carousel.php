@@ -28,20 +28,10 @@ if ($result) {
 
         $newSQL = "SELECT name, reviews, price, images, in_stock, link, logo FROM products LEFT JOIN recent_searches ON products.id = recent_searches.product_id WHERE recent_searches.product_id = '$prod_id'";
         $newResult = mysqli_query($GLOBALS['conn'], $newSQL);
-
-
-        foreach ($newResult as $item ) {
-
-
-        }
     }
-
-
 } else {
     echo "Not found";
 }
-
-
 ?>
 
 
@@ -53,9 +43,9 @@ if ($result) {
             </div>
             <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner py-3 px-py-88">
-                    <div class="carousel-item active">
+                <?php foreach ($newResult as $item): ?>
+                    <div class="carousel-item">
                         <div class="row">
-
                             <div class="col-sm-3 item-col-wrap ">
                                 <div class="thumb-wrapper">
                                     <div class="img-box">
@@ -63,21 +53,22 @@ if ($result) {
                                              alt="product-img">
                                     </div>
                                     <div class="thumb-content">
-                                        <h6><a href="<?= $item['link'] ?>"><?= $item['name'] ?></a></h6>
+                                        <h6><a href="<?= $item['link'] ?> " target="_blank"><?= $item['name'] ?></a></h6>
                                         <div class="star-rating my-2" id="carouselItemStars">
                                             <?= $item['reviews'] ?>
                                         </div>
                                         <p class="item-price my-2">
                                             <?= $item['price'] ?> <span id="lei">RON</span>
                                         </p>
-<!--                                        <button class="btn btn-danger " id="addToFav" name="btnFav" onclick="favorite(2564);"><i class="fa fa-heart -o" id="heartIcon" "=""></i>-->
-<!--                                        </button>-->
+                                        <!--                                        <button class="btn btn-danger " id="addToFav" name="btnFav" onclick="favorite(2564);"><i class="fa fa-heart -o" id="heartIcon" "=""></i>-->
+                                        <!--                                        </button>-->
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
+                    <?php endforeach; ?>
+
                     <button class="carousel-control-prev" type="button"
                             data-bs-target="#carouselExampleInterval"
                             data-bs-slide="prev">
@@ -102,6 +93,7 @@ if ($result) {
     let stars = document.getElementsByClassName('star-rating');
     document.addEventListener('DOMContentLoaded',() => {
         // console.log(getStars(4));
+        document.querySelector(".carousel-item").classList.add('active');
         // for (var i=0; i<stars.length;i++) {
         for (let i = 0; i < stars.length; i++) {
 
