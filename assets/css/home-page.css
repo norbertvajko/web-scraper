@@ -201,10 +201,11 @@ body {
 .item-price {
     font-size: 22px;
     font-weight: bold;
-    color: cadetblue;
+    color: #ef2809;
+    text-align: center;
 }
 #lei {
-    font-weight: normal;
+    font-weight: bold;
     color:black;
     font-size:18px;
 }

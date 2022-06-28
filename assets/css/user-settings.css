@@ -58,6 +58,8 @@ body {
     font-size: 18px;
 }
 
+
+
 @media (min-width: 992px) {
     .uas-setting-actions {
         align-self: center;
@@ -99,5 +101,12 @@ body {
     .menu-container + .page-container {
         float: left;
         width: calc(100% - 243px);
+    }
+}
+
+
+@media screen and (max-width: 991px) {
+    .user-account-content {
+    max-width: 100vw;
     }
 }

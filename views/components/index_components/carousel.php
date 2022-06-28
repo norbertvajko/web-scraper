@@ -1,10 +1,14 @@
 
 
 
+<div class="container">
+    <h3 class="mb-30">Cele mai cautate produse</h3>
+    <div class="splide" role="group" aria-label="Splide Basic HTML Example">
+        <div class="splide__track">
+            <ul class="splide__list">
 
 
-
-<?php
+                <?php
 
 include 'includes/connDB.php';
 
@@ -23,88 +27,86 @@ if ($result) {
 //var_dump($result);
 
     foreach ($result as $row) {
-//       var_dump($row['product_id']);
-        $prod_id = $row['product_id'];
+                //       var_dump($row['product_id']);
+                $prod_id = $row['product_id'];
 
-        $newSQL = "SELECT name, reviews, price, images, in_stock, link, logo FROM products LEFT JOIN recent_searches ON products.id = recent_searches.product_id WHERE recent_searches.product_id = '$prod_id'";
-        $newResult = mysqli_query($GLOBALS['conn'], $newSQL);
-    }
+
+                $newSQL = "SELECT name, reviews, price, images, in_stock, link, logo FROM products LEFT JOIN recent_searches ON products.id = recent_searches.product_id WHERE recent_searches.product_id = '$prod_id'";
+                $newResult = mysqli_query($GLOBALS['conn'], $newSQL);
+
+                if ($newResult->num_rows == 1) {
+
+                foreach ($newResult as $item) {
+                    ?>
+
+                <li class="splide__slide">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="img-box px-4">
+                                <img src="<?= $item['images'] ?>" class="img-fluid"
+                                     alt="product-img">
+                            </div>
+                            <h6><a href="<?=$item['link'] ?>" target="_blank"><?= str_replace('Telefon mobil','',$item['name']) ?></a></h6>
+                            <div class="stars-outer">
+<!--                                <div class="stars-inner text-center" id="productReviews">-->
+<!--                                   --><?//= $item['reviews'] ?>
+<!--                                </div>-->
+                                <div class="prd-logo">
+                                    <img class="w-50" src="<?= $item['logo'] ?>">
+                                </div>
+                            </div>
+                            <p class="item-price my-2">
+                                <?= $item['price'] ?> <span id="lei">RON</span>
+                            </p>
+                            <button class="add-to-fav-button" id="cardAddToFav">
+                                <i class="fa fa-heart-o"></i>
+                            </button>
+                            <!--                                    <a href="#" class="card-link">Another link</a>-->
+                        </div>
+                    </div>
+                </li>
+
+                <?php
+
+                } ?>
+
+
+                <?php
+
+                 }
+            }
+
 } else {
     echo "Not found";
 }
 ?>
 
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-12 ">
-            <div class="carousel-header">
-                <h3 class="carousel-title my-3">Most searched products</h3>
-            </div>
-            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner py-3 px-py-88">
-                <?php foreach ($newResult as $item): ?>
-                    <div class="carousel-item">
-                        <div class="row">
-                            <div class="col-sm-3 item-col-wrap ">
-                                <div class="thumb-wrapper">
-                                    <div class="img-box">
-                                        <img src="<?= $item['images'] ?>" class="img-fluid"
-                                             alt="product-img">
-                                    </div>
-                                    <div class="thumb-content">
-                                        <h6><a href="<?= $item['link'] ?> " target="_blank"><?= $item['name'] ?></a></h6>
-                                        <div class="star-rating my-2" id="carouselItemStars">
-                                            <?= $item['reviews'] ?>
-                                        </div>
-                                        <p class="item-price my-2">
-                                            <?= $item['price'] ?> <span id="lei">RON</span>
-                                        </p>
-                                        <!--                                        <button class="btn btn-danger " id="addToFav" name="btnFav" onclick="favorite(2564);"><i class="fa fa-heart -o" id="heartIcon" "=""></i>-->
-                                        <!--                                        </button>-->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <?php endforeach; ?>
-
-                    <button class="carousel-control-prev" type="button"
-                            data-bs-target="#carouselExampleInterval"
-                            data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button"
-                            data-bs-target="#carouselExampleInterval"
-                            data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-            </div>
+            </ul>
         </div>
     </div>
+
 </div>
 
-<script src="/assets/js/getStars.js"></script>
+
+
+
+
 <script>
+    document.addEventListener('DOMContentLoaded', function () {
 
-    let stars = document.getElementsByClassName('star-rating');
-    document.addEventListener('DOMContentLoaded',() => {
-        // console.log(getStars(4));
-        document.querySelector(".carousel-item").classList.add('active');
-        // for (var i=0; i<stars.length;i++) {
-        for (let i = 0; i < stars.length; i++) {
 
-            stars[i].innerHTML = getStars(<?= $item['reviews']?>)
-        }
 
-            // i++;
-        // }
+        const splide = new Splide('.splide', {
+            type: 'loop',
+            perPage: 3,
+            perMove: 1,
+        });
 
-    })
+        splide.mount();
 
+    });
 
 </script>
 
+<script src="/assets/js/getStars.js"></script>

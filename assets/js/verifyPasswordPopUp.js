@@ -1,13 +1,12 @@
-function showResetPassPopUp() {
+function showResetEmailPopUp() {
 
     const verifyPasswordPopup = document.querySelector(".verify-password");
 
     const modifyEmailButton = document.getElementById("modifyEmailB");
     const verifyPasswordForm = document.getElementById('registerFormID');
-    const verifyPCloseBtn = document.getElementById('resetPasClosBtn');
+    const verifyPCloseBtn = document.querySelector(".verify-password .close-btn");
     const continueBtn = document.getElementById('verifyPassB');
     const passwordInput = document.getElementById('verifyPWD');
-
 
     const verifyPasswordError = document.getElementById('verifyPassError');
     const verifyCorrPassword = document.getElementById('verifyPassSuccess');
@@ -15,13 +14,15 @@ function showResetPassPopUp() {
 
 //Enter VerifyPassPopUp
     if (modifyEmailButton) {
-        // verifyPasswordPopup.classList.add("active");
+
         showVerifyPasswordPopUp();
-        closePopUp();
         verifyPCloseBtn.addEventListener("click", function () {
 
             verifyPasswordForm.reset();
             closeVerifyPassPopUp();
+            passwordInput.value = "";
+            verifyPasswordError.innerHTML = "";
+            verifyCorrPassword.innerHTML = "";
         });
 
     }
@@ -29,37 +30,94 @@ function showResetPassPopUp() {
     if (continueBtn) {
         continueBtn.addEventListener("click", (e) => {
 
-            const formData = new FormData();
-            formData.append(passwordInput.name, passwordInput.value);
+            let fpData = new FormData();
 
-            let request = new XMLHttpRequest();
-            request.open('POST', '../../includes/verifyPassword.php');
+            fpData.append(passwordInput.name, passwordInput.value);
 
-            if (request.readyState === 4 && request.status === 200) {
-                let response = JSON.parse(request.responseText);
+            let ajax_request = new XMLHttpRequest();
 
-                if (response.success !== '') {
-                    verifyCorrPassword.innerHTML = response.success;
-                }
-                else {
-                    verifyPasswordError.innerHTML = response.pass_error;
+            ajax_request.open('POST', '/includes/verifyPassword.php', true);
+
+            ajax_request.send(fpData);
+
+            ajax_request.onreadystatechange = function () {
+                if (ajax_request.readyState === 4 && ajax_request.status === 200) {
+
+                    let response = JSON.parse(ajax_request.responseText);
+
+                    if (response.success !== '') {
+
+
+                        newEmail();
+                        document.getElementById('changeEmailB').addEventListener('click', () => {
+
+                                const newEmailError = document.getElementById('newEmailError');
+                                const successNewEmail = document.getElementById('successNewEmail');
+                                const emailInput = document.getElementById('newEmail');
+                                let request = new XMLHttpRequest();
+
+                                let fpData = new FormData();
+                                fpData.append(emailInput.name, emailInput.value);
+
+                                request.open('POST', '../../includes/newEmail.php');
+                                request.send(fpData);
+
+
+                                request.onreadystatechange = function () {
+                                    if (request.readyState === 4 && request.status === 200) {
+                                        let response = JSON.parse(request.responseText);
+
+                                        if (response.success !== '') {
+
+                                            successNewEmail.innerHTML = response.success;
+                                            newEmailError.innerHTML = "";
+
+                                            setTimeout(() => {
+                                                location.reload();
+                                            }, 2000);
+                                        } else {
+                                            newEmailError.innerHTML = response.new_email_err;
+                                        }
+                                    }
+                                }
+
+                            }
+                        )
+                        ;
+
+
+                    } else {
+                        //display validation error
+                        verifyPasswordError.innerHTML = response.pass_error;
+                    }
+
                 }
             }
-            request.send(formData);
         });
     }
 
 
     function showVerifyPasswordPopUp() {
-        console.log(verifyPasswordPopup);
         verifyPasswordPopup.classList.add("active");
-
     }
 
     function closeVerifyPassPopUp() {
         verifyPasswordPopup.classList.remove("active");
         verifyPasswordForm.reset();
         verifyPasswordError.innerHTML = "";
+
+    }
+
+    function newEmail() {
+        document.getElementById('enteryourPTitle').innerHTML = "Introdu noua adresa de e-mail";
+        verifyPasswordError.innerHTML = "";
+
+        document.getElementById('lastPassInp').innerHTML = "";
+        document.getElementById('verifyPassB').style.display = "none";
+
+
+        document.getElementById('newEmail').classList.toggle('hide-c');
+        document.getElementById('changeEmailB').classList.toggle('hide-c');
 
     }
 

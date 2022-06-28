@@ -85,35 +85,13 @@ session_start();
 
 
 
-<!--        <section class="main-body carousel-best-offer">-->
-<!--            --><?php
-//            include "views/components/index_components/carousel.php";
-//            ?>
-<!--        </section>-->
+        <section class="main-body carousel-best-offer">
+            <?php
+            include "views/components/index_components/carousel.php";
+            ?>
+        </section>
 
-        <div class="container">
-            <div class="splide" role="group" aria-label="Splide Basic HTML Example">
-                <div class="splide__track">
-                    <ul class="splide__list">
-                        <li class="splide__slide"><img src="assets/images/result-product.jpg"></li>
-                        <li class="splide__slide">Slide 02</li>
-                        <li class="splide__slide">Slide 03</li>
-                    </ul>
-                </div>
-            </div>
 
-            <script>
-                document.addEventListener( 'DOMContentLoaded', function() {
-                    var splide = new Splide( '.splide', {
-                        type   : 'loop',
-                        perPage: 3,
-                        perMove: 1,
-                    } );
-
-                    splide.mount();
-                } );
-            </script>
-        </div>
 
         <section class="main-footer scrappy-benefits">
 

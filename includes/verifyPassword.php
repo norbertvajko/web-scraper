@@ -13,28 +13,33 @@ $response = [
 ];
 
 // Check to see if the e-mail exists
-$check_password = mysqli_query($GLOBALS['conn'], "SELECT password from users WHERE ID = '$user_id'");
+$sql = "SELECT password from users WHERE ID = '$user_id'";
+$result = mysqli_query($GLOBALS['conn'],$sql);
 
-
-foreach ($check_password as $row) {
-
-    $dbPass = $row;
-    var_dump(json_encode($dbPass));
-}
 
 
 if (empty($password)) {
-    $response['pass_error'] = 'Field Required';
-    $verifyPassword = false;
-} elseif ($dbPass != $hashedPass) {
-    $response['pass_error'] = 'Wrong password';
+    $response['pass_error'] = 'Camp obligatoriu';
     $verifyPassword = false;
 }
 
-var_dump($hashedPass);
 
 if ($verifyPassword) {
-    $response['success'] = "Success";
+    if (mysqli_num_rows($result)) {
+
+        while ($row = mysqli_fetch_assoc($result)) {
+
+            $password_db = $row['password'];
+
+
+            if ($hashedPass == $password_db) {
+                $response['success'] = "Success";
+            } else {
+                $response['pass_error'] = "Parola incorecta";
+            }
+        }
+    }
+
 }
 
 //transform into json obj
