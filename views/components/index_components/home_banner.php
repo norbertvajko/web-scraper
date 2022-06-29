@@ -1,8 +1,7 @@
 <div class="container">
     <div class="row py-6">
         <div class="col-lg-6 col-md-12 col-xs-12 col-sm-12 banner-text">
-            <h1>Scrappy <br>
-                Web Scraping tool</h1>
+            <h1 id="homeBannerTitle">Scrappy<br></h1>
             <p>kdasndasodnndadlkdnaadansakd <br>
                 fdsnfsdkfnsflfsdfs</p>
         </div>
@@ -15,11 +14,7 @@
                 </div>
             </div>
             <div class="terminal-body position-relative">
-                <div class="terminal-question px-5 py-5" id="msgText">
-                </div>
-                <div class="terminal-answer">
-                    <input type="text" id="inputText" class="terminal-search"/>
-                </div>
+                <div class="terminal-question mt-3 px-5 py-5" id="msgText"></div>
                 <div class="arrow-icon "<a href="#">
                     <div class="arrow"></div>
                 </div>

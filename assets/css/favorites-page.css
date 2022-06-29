@@ -1,7 +1,11 @@
+body {
+    background-color: rgb(245, 246, 250);
+}
+
 .main-favorites {
     justify-content: center;
     align-items: center;
-    background-color: rgb(245, 246, 250);
+
 }
 .menu-user {
     /*max-width: 17%;*/
@@ -79,9 +83,10 @@ body {
 }
 
 #btnVeziProd {
-list-style: none;
-    color: red;
-    font-size: 22px;
+    background: red;
+    list-style: none;
+    color: white;
+    font-size: 18px;
     text-decoration: none;
 }
 
@@ -101,6 +106,13 @@ list-style: none;
 
 .product-log img {
     background-color: black;
+}
+#happyToseeYou {
+    font-size: 30px;
+    font-weight: 700;
+}
+#userNameStyle {
+    font-size: 24px;
 }
 
 @media screen and (max-width: 864px) {

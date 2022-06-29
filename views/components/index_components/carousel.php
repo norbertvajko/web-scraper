@@ -58,7 +58,7 @@ if ($result) {
                             <p class="item-price my-2">
                                 <?= $item['price'] ?> <span id="lei">RON</span>
                             </p>
-                            <button class="add-to-fav-button" id="cardAddToFav">
+                            <button class="add-to-fav-button cardAddToFav" onclick="favorite(<?= $prod_id ?>, this)">
                                 <i class="fa fa-heart-o"></i>
                             </button>
                             <!--                                    <a href="#" class="card-link">Another link</a>-->
@@ -109,4 +109,5 @@ if ($result) {
 
 </script>
 
+<script src="/assets/js/addToFavorites.js"></script>
 <script src="/assets/js/getStars.js"></script>

@@ -1,8 +1,11 @@
 <?php
 
 session_start();
+
 $is_logged_in = isset($_SESSION['user_id']) && !empty($_SESSION['user_id']);
 $noOfFavorites = 0;
+
+
 ?>
 
 <!DOCTYPE html>
@@ -56,132 +59,137 @@ $noOfFavorites = 0;
 
 
     <!----------------------------------------------- Start Main Area ----------------------------------------------------->
+    <div class="container">
+        <main class="main-favorites p-5 <?= $is_logged_in ? '' : 'd-flex' ?>">
+            <div class="menu-user">
+                <div class="menu-user-header p-5 ">
 
-    <main class="main-favorites p-5 <?= $is_logged_in ? '' : 'd-flex' ?>">
-        <div class="menu-user">
-            <div class="menu-user-header p-5 ">
+                    <div class="menu-user-logo text-center p-3">
+                        <img src="https://s13emagst.akamaized.net/layout/ro/static-upload/icon_guest.png" alt=""
+                             class="img-fluid">
+                    </div>
+                    <?php if ($is_logged_in) { ?>
+                        <div class="menu-user-body-title">
 
-                <div class="menu-user-logo text-center p-3">
-                    <img src="https://s13emagst.akamaized.net/layout/ro/static-upload/icon_guest.png" alt=""
-                         class="img-fluid">
+                            <h5 class="text-center">
+                                Hello, <b id="userNameStyle"><?= $_SESSION['username']; ?></b>
+                                <h6 id="happyToseeYou" class="text-center text-success mt-4 ">We are happy to see you
+                                    back!</h6>
+                            </h5>
+
+
+                        </div>
+                        <?php
+                    } else {
+                        ?>
+                        <div class="menu-user-body-title my-3">
+                            <h5 class="text-center">
+                                Hello, please sign in
+                                <h6 class="text-center"> In order to have full control with our offers</h6>
+                            </h5>
+                        </div>
+
+                        <div class="menu-user-footer d-flex flex-column">
+                            <button type="button" class="btn btn-primary mb-2 w-50 m-auto" id="loginBTN">Login</button>
+                            <button type="button" class="btn btn-primary w-50 m-auto" id="registerBTN">Register</button>
+                        </div>
+                    <?php } ?>
                 </div>
-                <?php if ($is_logged_in) { ?>
-                    <div class="menu-user-body-title">
-
-                        <h5 class="text-center">
-                            Hello, <?= $_SESSION['username']; ?>
-                            <h6 class="text-center text-success mt-4 ">We are happy to see you back!</h6>
-                        </h5>
-
-
-                    </div>
-                    <?php
-                } else {
-                    ?>
-                    <div class="menu-user-body-title my-3">
-                        <h5 class="text-center">
-                            Hello, please sign in
-                            <h6 class="text-center"> In order to have full control with our offers</h6>
-                        </h5>
-                    </div>
-
-                    <div class="menu-user-footer d-flex flex-column">
-                        <button type="button" class="btn btn-primary mb-2 w-50 m-auto" id="loginBTN">Login</button>
-                        <button type="button" class="btn btn-primary w-50 m-auto" id="registerBTN">Register</button>
-                    </div>
-                <?php } ?>
             </div>
-        </div>
 
 
-        <?php if ($is_logged_in) {
+            <?php if ($is_logged_in) : ?>
 
-            $user_id = $_SESSION['user_id'];
-            require_once "../includes/connDB.php";
-            $sql = "SELECT name, reviews, price, images, in_stock, link, logo FROM products LEFT JOIN favorites ON products.id = favorites.product_id WHERE favorites.user_id = '$user_id'";
-            $result = mysqli_query($GLOBALS['conn'], $sql);
+                <?php
+                $user_id = $_SESSION['user_id'];
+                require_once "../includes/connDB.php";
+                $sql = "SELECT name, reviews, price, images, in_stock, link, logo, favorites.id AS favId FROM products LEFT JOIN favorites ON products.id = favorites.product_id WHERE favorites.user_id = '$user_id'";
+                $result = mysqli_query($GLOBALS['conn'], $sql);
+                ?>
 
-            if ($result->num_rows) {
+                <?php if ($result->num_rows) : ?>
 
-                foreach ($result as $row) {
+                    <div id="list-of-favorites">
 
-                    $noOfFavorites++;
+                    <?php foreach ($result as $row) : ?>
 
-                    ?>
+                        <?php $noOfFavorites++; ?>
 
-                    <div id="list-of-favorites" class="list-of-favorites mx-auto">
-                        <div class="product-card-account pad-sep-sm js-tracking-viewport-product">
-                            <div class="d-flex">
-                                <div class="card-image px-5 flex-item flex-c"><a href="#"
-                                                                                 class="thumbnail-wrapper js-product-url">
-                                        <div class="thumbnail"><img src="<?= $row['images'] ?>" alt="Product Image"
-                                                                    class="img-fluid">
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="d-flex flex-item flex-column p-3 flex-wrap card-container">
-                                    <div class="card-content pad-hrz-sm flex-item">
-                                        <h2 class="mrg-sep-none  margin-card-content">
-                                            <a href="#" class="product-title font-semi-bold">
-                                                <span id="favCardTitleC"><?= $row['name'] ?></span>
-                                            </a>
-                                        </h2>
-
+                        <div class="list-of-favorites mx-auto">
+                            <div class="product-card-account pad-sep-sm js-tracking-viewport-product">
+                                <div class="d-flex">
+                                    <div class="card-image px-5 flex-item flex-c"><a href="#"
+                                                                                     class="thumbnail-wrapper js-product-url">
+                                            <div class="thumbnail"><img src="<?= $row['images'] ?>" alt="Product Image"
+                                                                        class="img-fluid">
+                                            </div>
+                                        </a>
                                     </div>
-                                    <!--                                    <div class="hidden-xs">-->
-                                    <!--                                        <div class="stars-outer">-->
-                                    <!--                                            <div class="stars-inner" id="productRev">-->
-                                    <!---->
-                                    <!--                                            </div>-->
-                                    <!--                                        </div>-->
-                                    <!--                                    </div>-->
-                                    <div class="card-secondary pad-hrz-sm flex-item text-right">
-                                        <div class="mrg-btm-xs">
-                                            <div class="stars-outer">
-                                                <div class="stars-inner" id="productRev">
+                                    <div class="d-flex flex-item flex-column p-3 flex-wrap card-container">
+                                        <div class="card-content pad-hrz-sm flex-item">
+                                            <h2 class="mrg-sep-none  margin-card-content">
+                                                <a href="#" class="product-title font-semi-bold">
+                                                    <span id="favCardTitleC"><?= $row['name'] ?></span>
+                                                </a>
+                                            </h2>
+
+                                        </div>
+                                        <!--                                    <div class="hidden-xs">-->
+                                        <!--                                        <div class="stars-outer">-->
+                                        <!--                                            <div class="stars-inner" id="productRev">-->
+                                        <!---->
+                                        <!--                                            </div>-->
+                                        <!--                                        </div>-->
+                                        <!--                                    </div>-->
+                                        <div class="card-secondary pad-hrz-sm flex-item text-right">
+                                            <div class="mrg-btm-xs">
+                                                <div class="stars-outer">
+                                                    <div class="stars-inner" id="productRev">
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="favorite-product-availability product-stock-status text-availability-in_stock">
-                                            <b><?= $row['in_stock'] ?></b>
-                                        </div>
-
-                                        <div class="margin-card-content">
-                                            Vandut de:
-                                            <div class="product-log">
-                                                <img src="<?= $row['logo'] ?>" id="productLogo" alt="">
+                                            <div class="favorite-product-availability product-stock-status text-availability-in_stock">
+                                                <b><?= $row['in_stock'] ?></b>
                                             </div>
-                                        </div>
 
-                                        <div class="mrg-btm-xs product-pricing">
-                                            <?= $row['price'] ?><span> lei</span>
-                                        </div>
-                                        <div class="actions-wrapper">
-                                            <div class="content">
-                                                <div class="product-btn-site my-3">
-                                                    <a href="<?php echo $row['link'] ?>" class="btn btn-warning" target="_blank">See product</a>
+                                            <div class="margin-card-content">
+                                                Vandut de:
+                                                <div class="product-log">
+                                                    <img src="<?= $row['logo'] ?>" id="productLogo" alt="">
                                                 </div>
                                             </div>
-                                            <div>
-                                                <button class="btn btn-link btn-sm" id="btnVeziProd">
-                                                    <span class="hidden-sm hidden-xs gtm_9p2y1a">Sterge</span>
-                                                </button>
+
+                                            <div class="mrg-btm-xs product-pricing">
+                                                <?= $row['price'] ?><span> lei</span>
+                                            </div>
+                                            <div class="actions-wrapper">
+                                                <div class="content">
+                                                    <div class="product-btn-site my-3">
+                                                        <a href="<?php echo $row['link'] ?>" class="btn btn-warning"
+                                                           target="_blank">See product</a>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <button class="btn btn-link btn-sm" id="btnVeziProd" name="btnVeziProd"
+                                                            onclick="deleteFavoriteProduct(<?= $row['favId'] ?>);">
+                                                        <span class="hidden-sm hidden-xs gtm_9p2y1a">Sterge</span>
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                <?php }
-            } else { ?>
 
-                <div class="menu-user-body ">
-                    <div class="menu-user-content h-100">
-                        <div class="menu-user-title text-start d-flex flex-row align-items-center p-3">
-                            <h1>Favorites</h1>
-                            <span><?= $noOfFavorites ?> products</span>
-                        </div>
+                    <?php endforeach; ?>
+
+                </div>
+
+                <?php endif; ?>
+
+                <div class="menu-user-body <?= ($result->num_rows) ? 'hide-c' : ''?>" id="noFavItemsContainer">
+                    <div class="menu-user-content h-100" id="menuUserContentNoFav">
                         <div class="menu-user-photo">
                             <div class="no-favorites-photo d-flex justify-content-center">
                                 <img src="https://cdn.dribbble.com/users/1291846/screenshots/3720238/media/1038c769be34018f642b683e83fca9ea.png"
@@ -195,17 +203,17 @@ $noOfFavorites = 0;
                             <div class="recomndation-p d-flex justify-content-center">
                                 <p>Go take a look at the most popular products</p>
                             </div>
-                            <div class="recomandation-btn d-flex justify-content-center"
-                            ">
-                            <button type="button" class="btn btn-primary ">See offers</button>
+                            <div class="recomandation-btn d-flex justify-content-center">
+                            </div>
                         </div>
                     </div>
                 </div>
-            <?php }
-        }
-        ?>
-    </main>
 
+            <?php endif; ?>
+
+        </main>
+
+    </div>
 
 
     <!------------------------------------------------- End Main Area ----------------------------------------------------->
@@ -218,20 +226,20 @@ $noOfFavorites = 0;
 
 
     <script src="/assets/js/getStars.js"></script>
-    <script>
-
-        let stars = document.getElementsByClassName('star-rating');
-        document.addEventListener('DOMContentLoaded',() => {
-            // console.log(getStars(4));
-            // for (var i=0; i<stars.length;i++) {
-            for (let i = 0; i < stars.length; i++) {
-
-                stars[i].innerHTML = getStars(<?= $row['reviews']?>)
-            }
-
-        }); 
-
-    </script>
+    <!--    <script>-->
+    <!---->
+    <!--        let stars = document.getElementsByClassName('star-rating');-->
+    <!--        document.addEventListener('DOMContentLoaded',() => {-->
+    <!--            // console.log(getStars(4));-->
+    <!--            // for (var i=0; i<stars.length;i++) {-->
+    <!--            for (let i = 0; i < stars.length; i++) {-->
+    <!---->
+    <!--                stars[i].innerHTML = getStars( $row['reviews']//)-->
+    <!--//            }-->
+    <!--//-->
+    <!--//        });-->
+    <!--//-->
+    <!--//    </script>-->
 
     <script>
 
@@ -253,21 +261,36 @@ $noOfFavorites = 0;
 
     <script>
 
-        function deleteFavoriteProduct() {
+        function deleteFavoriteProduct(id) {
 
-          let delButton = document.getElementById('btnVeziProd');
+            const favoriteItemContainer = document.querySelector('.list-of-favorites');
+            // const noFavoritesContainer = document.getElementsByClassName('menu-user-body');
 
-            let request = new XMLHttpRequest();
-            request.open('POST' , '');
-            request.onload = function () {
-                if (request.readyState === 4 && request.status === 200) {
-                    const response = JSON.parse(request.responseText);
+            let ajax_request = new XMLHttpRequest();
 
-                    response.success = 'dasdasda';
+            ajax_request.open('POST', '/includes/deleteFromFav.php', true);
+
+            let formdata = new FormData;
+            formdata.append('favorites_id', id);
+            ajax_request.send(formdata);
+
+            ajax_request.onreadystatechange = function () {
+                if (ajax_request.readyState === 4 && ajax_request.status === 200) {
+
+                    let response = JSON.parse(ajax_request.responseText);
+
+                    if (response.success !== '') {
+
+                        favoriteItemContainer.remove();
+
+                        // console.log(document.getElementById('list-of-favorites'));
+
+                        if (document.getElementById('list-of-favorites').childElementCount < 1) {
+                            document.getElementById('noFavItemsContainer').classList.toggle("hide-c");
+                        }
+                    }
                 }
-
             }
-            request.send();
         }
 
     </script>

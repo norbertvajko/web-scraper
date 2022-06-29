@@ -8,7 +8,7 @@
     </button>
     <div class="collapse navbar-collapse navbar-menu" id="navbar1">
 
-        <form action="" class="search-box  w-53 ms-3" method="post">
+        <form action="" class="search-box  w-53"  method="post">
             <div class="bg-light rounded rounded-pill shadow-sm ">
                 <div class="input-group ps-3">
                     <label class="w-90">
@@ -35,7 +35,7 @@
             </div>
 
         </form>
-        <div id="products-list">
+        <div id="products-list"">
                 <div id="img-drop"></div>
                 <div id="title-drop"></div>
         </div>
@@ -105,7 +105,7 @@
         <?php include "resetPasswordPopup.php" ?>
 
     </div>
-</div>
+<!--</div>-->
 
 <script src="/assets/js/recentSearches.js"></script>
 <script src="/assets/js/liveSearchDropdown.js"></script>
@@ -114,3 +114,20 @@
 <script src="/assets/js/logOut.js"></script>
 <!--<script src="/assets/js/searchResults.js"></script>-->
 
+<script>
+
+        // const dropdownSearchList = document.getElementById('products-list');
+        //
+        // document.addEventListener('click', function(event) {
+        //     const isClickInsideElement = dropdownSearchList.contains(event.target);
+        //     if (!isClickInsideElement) {
+        //         //Do something click is outside specified element
+        //         console.log("clicked outside");
+        //        dropdownSearchList.style.display = "none";
+        //     } else {
+        //         console.log("clicked inside");
+        //     }
+        // });
+
+
+</script>

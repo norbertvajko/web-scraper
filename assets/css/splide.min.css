@@ -391,7 +391,7 @@
     text-align: center;
     background: black;
 }
-#cardAddToFav {
+.cardAddToFav {
     right: 22px;
     top: 21px;
     position: absolute;

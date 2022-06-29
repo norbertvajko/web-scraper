@@ -91,6 +91,9 @@ session_start();
             ?>
         </section>
 
+        <section class="customer-opinion">
+
+        </section>
 
 
         <section class="main-footer scrappy-benefits">
@@ -113,7 +116,6 @@ session_start();
 include "views/components/footer.php";
 ?>
 <!------------------------------------------------ End Footer Area ---------------------------------------------------->
-
 
 </body>
 </html>

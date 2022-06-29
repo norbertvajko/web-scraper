@@ -156,10 +156,11 @@ body {
     color:rgb(35, 230, 168);
 }
 .terminal-question {
-    color:white;
+    color: white;
     background: transparent;
     cursor: default;
     caret-color: greenyellow;
+    font-size: 18px;
 }
 .terminal-search {
     position:absolute;
@@ -223,6 +224,12 @@ body {
 
 }
 
+.banner-text h1 {
+    font-size: 70px;
+    font-weight: 600;
+    text-shadow: 0px 4px 10px rgba(10, 10, 10, 0.8)
+}
+
 @media screen and (max-width: 620px) {
 
     .banner-area .terminal-banner {
@@ -236,6 +243,12 @@ body {
         /* padding-left: 6px; */
         width: 85%;
         /* margin-right: 50px; */
+    }
+}
+
+@media screen and (max-width: 395px) {
+    .splide__slide {
+        margin-left: 48px;
     }
 
 }
