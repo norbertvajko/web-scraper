@@ -1,6 +1,6 @@
 <div class="popupRegister popup">
     <div class="close-btn">&times;</div>
-    <form action="/includes/registerValidation.php" method="post" id="registerFormID">
+    <form action="/includes/user/registerValidation.php" method="post" id="registerFormID">
         <div class="form">
             <h3>Register</h3>
             <p>Create your free account to get started</p>

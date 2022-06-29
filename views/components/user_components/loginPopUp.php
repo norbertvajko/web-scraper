@@ -1,6 +1,6 @@
 <div class="popup">
     <div class="close-btn">&times;</div>
-    <form action="/includes/loginValidation.php" method="post" id="loginFormID">
+    <form action="/includes/user/loginValidation.php" method="post" id="loginFormID">
         <div class="form">
             <h3>Log In</h3>
             <div class="form-element d-flex flex-column">

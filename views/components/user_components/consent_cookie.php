@@ -1,12 +1,12 @@
 <?php
     if (!isset($_COOKIE['consent_cookie'])) :
 ?>
-        <link href="../../assets/css/consent-banner.css" rel="stylesheet">
+        <link href="../../../assets/css/consent-banner.css" rel="stylesheet">
 
 
         <div class="cookie-container" id="cookieContainer">
             <div class="consent-title text-center">
-                <h1>We value your privacy <img src="../../assets/images/cookie.png" class="img-fluid ms-2" alt=""></h1>
+                <h1>We value your privacy <img src="../../../assets/images/cookie.png" class="img-fluid ms-2" alt=""></h1>
 
             </div>
             <div class="consent-description">
@@ -26,7 +26,7 @@
 
             </div>
         </div>
-        <script src="../../assets/js/consentPopUp.js"></script>
+        <script src="../../../assets/js/consentPopUp.js"></script>
 <?php
     endif;
 ?>

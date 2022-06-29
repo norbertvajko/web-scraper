@@ -393,5 +393,30 @@ body {
     .btn-warning {
         width:50%;
     }
+    .product-image {
+        text-align: center;
+    }
+
+
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    .product-log {
+        position: absolute;
+        top: 25%;
+        left: 54%;
+    }
+    .product-btn-site {
+        position: absolute;
+        bottom: -21%;
+        left: 12%;
+    }
+    .product-page-top button {
+        width: fit-content;
+        position: absolute;
+        /* right: 20px; */
+        left: 15px;
+    }
+
 
 }

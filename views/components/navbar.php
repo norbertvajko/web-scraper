@@ -58,7 +58,7 @@
                                 <ul class="user-dropdown-content">
                                     <li class="user-dropdown-item"><a href="/views/Favorites.php">Favorites</a></li>
                                     <li class="user-dropdown-item"><a href="#">History</a></li>
-                                    <li class="user-dropdown-item"><a href="/views/User_Settings.php">Settings</a></li>
+                                    <li class="user-dropdown-item"><a href="/views/components/user_components/User_Settings.php">Settings</a></li>
                                     <li class="user-dropdown-item" id="log-out-user">Log out</li>
                                 </ul>
                                 <?php

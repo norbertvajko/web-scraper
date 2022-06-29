@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
-    <file url="file://$PROJECT_DIR$/includes/addToFavorites.php" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/includes/classes/searchProducts.php" dialect="GenericSQL" />
-    <file url="file://$PROJECT_DIR$/includes/contactValidation.php" dialect="GenericSQL" />
-    <file url="file://$PROJECT_DIR$/includes/forgetPasswordValidation.php" dialect="GenericSQL" />
-    <file url="file://$PROJECT_DIR$/includes/liveSearch.php" dialect="GenericSQL" />
-    <file url="file://$PROJECT_DIR$/includes/loginValidation.php" dialect="GenericSQL" />
-    <file url="file://$PROJECT_DIR$/includes/newPasswordReset.php" dialect="GenericSQL" />
-    <file url="file://$PROJECT_DIR$/includes/newsLetterValidation.php" dialect="GenericSQL" />
-    <file url="file://$PROJECT_DIR$/includes/registerValidation.php" dialect="GenericSQL" />
-    <file url="file://$PROJECT_DIR$/includes/scrape.php" dialect="GenericSQL" />
-    <file url="file://$PROJECT_DIR$/includes/typeNewPassword.php" dialect="GenericSQL" />
-    <file url="file://$PROJECT_DIR$/includes/verificationEmail.php" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/includes/products/liveSearch.php" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/includes/scrape/scrape.php" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/includes/user/addToFavorites.php" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/includes/user/contactValidation.php" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/includes/user/forgetPasswordValidation.php" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/includes/user/loginValidation.php" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/includes/user/newPasswordReset.php" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/includes/user/newsLetterValidation.php" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/includes/user/registerValidation.php" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/includes/user/typeNewPassword.php" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/includes/user/verificationEmail.php" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/views/Favorites.php" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/views/Results.php" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/views/components/index_components/carousel.php" dialect="GenericSQL" />
