@@ -147,7 +147,7 @@ footer p {
 }
 .newsletter-popup .content {
     position: absolute;
-    bottom: -37%;
+    bottom: -77%;
     left: 50%;
     transform: translate(-50%,-50%) scale(0);
     background: #fff;

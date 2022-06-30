@@ -1,6 +1,6 @@
 <div class="container p-4">
+    <h2 class="main-features-title mb-30 ">Main features</h2>
     <div class="row">
-        <h2 class="main-features-title text-center ">MAIN FEATURES</h2>
         <div class="col-12 col-md-6 col-lg-4">
             <div class="price-comparassion p-3 my-3">
                 <div class="price-comparassion-header d-flex justify-content-between align-items-center flex-lg-row flex-column">

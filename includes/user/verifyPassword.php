@@ -19,7 +19,7 @@ $result = mysqli_query($GLOBALS['conn'],$sql);
 
 
 if (empty($password)) {
-    $response['pass_error'] = 'Camp obligatoriu';
+    $response['pass_error'] = 'Field Required';
     $verifyPassword = false;
 }
 
@@ -35,7 +35,7 @@ if ($verifyPassword) {
             if ($hashedPass == $password_db) {
                 $response['success'] = "Success";
             } else {
-                $response['pass_error'] = "Parola incorecta";
+                $response['pass_error'] = "Incorrect password";
             }
         }
     }

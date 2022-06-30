@@ -2,7 +2,7 @@
     <div class="close-btn " id="resetPasClosBtn">&times;</div>
     <form action="" method="post" id="setPasswordForm">
         <div class="form">
-            <h3 id="changePassTitle">Schimba parola</h3>
+            <h3 id="changePassTitle">Change your password</h3>
 
             <div class="form-element d-flex flex-column">
                 <label>
@@ -19,7 +19,7 @@
                 <span id="successNewPass" class="message-success"></span>
 
 
-                <button type="button" class="mt-3" id="changePassB" name="changePassB">Schimba parola</button>
+                <button type="button" class="mt-3" id="changePassB" name="changePassB">Change password</button>
             </div>
         </div>
     </form>

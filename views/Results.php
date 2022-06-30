@@ -446,16 +446,7 @@ if ($result->num_rows > 0) {
 <?php include "components/footer.php"; ?>
 
 <!------------------------------------------------ End Footer Area ---------------------------------------------------->
-<!--<script>-->
-<!--    function myFunction() {-->
-<!--        const searchButton = document.getElementById('search-button');-->
-<!--        const searchInput = document.getElementById('search-input');-->
-<!--        searchButton.addEventListener('click', () => {-->
-<!--            const inputValue = searchInput.value;-->
-<!--            alert(inputValue);-->
-<!--        });-->
-<!--    }-->
-<!--</script>-->
+
 
 <script>
 

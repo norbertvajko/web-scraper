@@ -27,17 +27,18 @@ $specialchars = preg_match('@[^\w]@', $newPassword);
 
 
 if (empty($newPassword)) {
-    $response['new_pass_error'] = 'Camp obligatoriu';
+    $response['new_pass_error'] = 'Field required';
     $newPasswordComplete = false;
 } elseif (!$uppercase || !$lowercase || !$number || !$specialchars || strlen($newPassword) < 8) {
-    $response['new_pass_error'] = "Parola trebuie sa contina cel putin 8 caractere , o litera mare, un numar, si un caracter special.";
+    $response['new_pass_error'] = "Password should be at least 8 characters in length , and should include
+    at least one upper case letter, one number, and one special character.";
     $newPasswordComplete = false;
 }
 if (empty($_POST['change_passwd_corr'])) {
-    $response['new_pass_error_correct'] = "Camp obligatoriu";
+    $response['new_pass_error_correct'] = "Field required";
     $newPasswordComplete = false;
 } elseif ($_POST['change_passwd'] !== $_POST['change_passwd_corr']) {
-    $response['new_pass_error_correct'] = "Parolele nu sunt la fel. Incearca din nou!";
+    $response['new_pass_error_correct'] = "Passwords must be same!";
     $newPasswordComplete = false;
 }
 
@@ -48,7 +49,7 @@ if ($newPasswordComplete) {
     mysqli_query($GLOBALS['conn'], $newQuery);
 
 
-    $response['success'] = "Parola a fost schimbata cu succes!";
+    $response['success'] = "Password changed successfully";
 }
 
 //transform into json obj

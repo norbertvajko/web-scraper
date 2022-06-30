@@ -51,7 +51,7 @@ function new_password() {
                     rData.append(retypeCorPassInput.name , retypeCorPassInput.value);
 
                     let newHXR = new XMLHttpRequest();
-                    newHXR.open('POST', '../../includes/typeNewPassword.php');
+                    newHXR.open('POST', '../../includes/user/typeNewPassword.php');
                     newHXR.send(rData);
 
                     newHXR.onreadystatechange = function () {

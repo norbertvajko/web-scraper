@@ -9,16 +9,16 @@
 //    'images' => '!<span class=""><img class=""  src="(.*?)" .*"\/><\/span><\/span>!',
 //    'link' => '!<a class="product-item-link" href="(.*?)">!',
 //    'logo' => '!aria-label="store logo"><img src="(.*?)"!',
-//    'description' => $GLOBALS['description'],
+////    'description' => $GLOBALS['description'],
 //
 //];
 ////    var_dump($flancoProducts['description']);
 //
 //    webCrawl('https://www.flanco.ro/telefoane-tablete/smartphone/p/' . $page. '.html', $flancoProducts);
 //}
-//
-//
-//
+
+
+
 //
 //$ideallProducts = [
 //    'name' => '!<a href="\/.*?\/.*" title=".*">(.*?)<\/a>!',
@@ -35,15 +35,15 @@
 //               .*<\/span>!'
 //];
 //for ($page = 1; $page < 27; $page++) { webCrawl('https://www.ideall.ro/magazin-telefoane-mobile?pag=' . $page, $ideallProducts); }
-//
-//
-$quickProducts = [
-    'name' => '!<div class="card-product-description ">
-                (.*?)
-            <\/div>!',
-    'price' => '!<div class="priceFormat card-price" translate="no">(.*?)<sup>.*?<\/sup><sub>Lei<\/sub><\/div>!'
-];
-webCrawl('https://www.quickmobile.ro/telefoane-si-accesorii/telefoane-mobile', $quickProducts);
+
+
+//$quickProducts = [
+//    'name' => '!<div class="card-product-description ">
+//                (.*?)
+//            <\/div>!',
+//    'price' => '!<div class="priceFormat card-price" translate="no">(.*?)<sup>.*?<\/sup><sub>Lei<\/sub><\/div>!'
+//];
+//webCrawl('https://www.quickmobile.ro/telefoane-si-accesorii/telefoane-mobile', $quickProducts);
 
 //$emagProducts = [
 //    'name' => '!class="card-v2-title semibold mrg-btm-xxs js-product-url" data-zone="title">(.*?)<\/a>!',
@@ -51,21 +51,22 @@ webCrawl('https://www.quickmobile.ro/telefoane-si-accesorii/telefoane-mobile', $
 //];
 //webCrawl('https://www.emag.ro/telefoane-mobile/p2/c',$emagProducts);
 //
-//$evoProducts = [
-//    'name' => '!<h2>
-//            <a href=".*?"> (.*?)<\/a>        <\/h2>!',
-//    'price' => '!<div style=".*?"><span class="real_price">(.*?) .*<\/span><\/div>!',
-//    'rating' => '!<div class="rating-result" id="rating-result_.*?"><span><span>(.*?)(?:%)<\/span><\/span><\/div>!',
-//    'inStock' => '!class="stock_instocmagazin">
-//                    .(.*?).\/span>!',
-//    'images' => '!<span class=""><img class=""  src="(.*?)" .*"\/><\/span><\/span>!',
-//    'link' => '! <a href="(.*?)"> .*<\/a>        <\/h2>!'
-//
-//
-//];
-//var_dump($evoProducts);
-//webCrawl('https://www.evomag.ro/solutii-mobile-telefoane-mobile/', $evoProducts);
 
+for ($page = 1; $page < 5; $page++) {
+    $evoProducts = [
+        'name' => '!<h2>\n\s\s\s\s\s\s\s\s\s\s\s\s<a href=".*?">\s(.*?)<\/a>\s\s\s\s\s\s\s\s<\/h2>!',
+        'price' => '!<div style=".*?"><span class="real_price">(.*?) .*<\/span><\/div>!',
+        'rating' => '!<div class="rating-result" id="rating-result_.*?"><span><span>(.*?)(?:%)<\/span><\/span><\/div>!',
+        'inStock' => '!<a href=".*?">
+                <span class=".*?">
+                    (.*?)                <\/span>
+            <\/a>!',
+        'images' => '!<div class="npi_image">\n\s\s\s\s\s\s\s\s<a\sclass=""\stitle=".*?"\shref=".*?"><img\sclass=""\sloading="lazy"\sdraggable="false"\ssrc="(.*?)"\salt=".*?"\s\/><\/a>\s\s\s\s<\/div>!',
+        'link' => '! <a href="(.*?)"> .*<\/a>        <\/h2>!'
+    ];
+
+    webCrawl('https://www.evomag.ro/solutii-mobile-telefoane-mobile/filtru/pagina:'.$page, $evoProducts);
+}
 
 function webCrawl($url, $products)
 {
@@ -116,9 +117,9 @@ function webCrawl($url, $products)
     $obj = json_encode($products);
     $test = json_decode($obj);
 
-    for ($i = 0; $i < count($test->name); $i++) {
-        upload_data($test, $i);
-    }
+//    for ($i = 0; $i < count($test->name); $i++) {
+//        upload_data($test, $i);
+//    }
 }
 
 
@@ -130,27 +131,26 @@ function scrape_data($regex_stock, $result, $key)
         if ($match[1][$i] == '') {
             $match[1][$i] = $match[2][$i];
         }
-        if ($key == "link") {
-//            var_dump($match[1][$i]);
-
-          $pageTwo = get_contents($match[1][$i]);
-             preg_match_all('!(<div class="spec-table-col">.*<\/div>)!',$pageTwo,$description);
-            var_dump($description[1]);die;
-        }
+//        if ($key == "link") {
+//
+//          $pageTwo = get_contents($match[1][$i]);
+//             preg_match_all('!(<div class="spec-table-col">.*<\/div>)!',$pageTwo,$description);
+//            var_dump($description[1]);die;
+//        }
     }
 
     return $match[1];
 }
-function upload_data($phones, $index)
-{
-    $phoneName = $phones->name[$index];
-    $phoneReviews = $phones->rating[$index];
-    $phonePrice = str_replace('.', '', $phones->price[$index]);
-    $phonePrice = str_replace(',', '.', $phonePrice);
-    $phoneInStock = $phones->inStock[$index];
-    $phoneImages = $phones->images[$index];
-    $phoneLink = $phones->link[$index];
-    $phoneLogo = $phones->logo[0];
+//function upload_data($phones, $index)
+//{
+//    $phoneName = $phones->name[$index];
+//    $phoneReviews = $phones->rating[$index];
+//    $phonePrice = str_replace('.', '', $phones->price[$index]);
+//    $phonePrice = str_replace(',', '.', $phonePrice);
+//    $phoneInStock = $phones->inStock[$index];
+//    $phoneImages = $phones->images[$index];
+//    $phoneLink = $phones->link[$index];
+//    $phoneLogo = $phones->logo[0];
 
 
 //    $query = "INSERT INTO products (shop_id, category_id, name, description, reviews, price, in_stock, images , link, logo)
@@ -159,7 +159,7 @@ function upload_data($phones, $index)
 //    if (!mysqli_query($GLOBALS['conn'], $query))
 //        echo mysqli_error($GLOBALS['conn']) . '<br>';
 
-}
+//}
 function curl_data($options)
 {
     $curl = curl_init();

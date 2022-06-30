@@ -129,8 +129,8 @@ $noOfFavorites = 0;
                                     <div class="d-flex flex-item flex-column p-3 flex-wrap card-container">
                                         <div class="card-content pad-hrz-sm flex-item">
                                             <h2 class="mrg-sep-none  margin-card-content">
-                                                <a href="#" class="product-title font-semi-bold">
-                                                    <span id="favCardTitleC"><?= $row['name'] ?></span>
+                                                <a href="<?=$row['link']?>" target="_blank" class="product-title font-semi-bold">
+                                                    <span id="favCardTitleC"><?= str_replace("Telefon mobil",'',$row['name']) ?></span>
                                                 </a>
                                             </h2>
 
@@ -146,7 +146,7 @@ $noOfFavorites = 0;
                                                 <b><?= $row['in_stock'] ?></b>
                                             </div>
 
-                                            <div class="margin-card-content">
+                                            <div class="margin-card-content" style="font-size: 17px;">
                                                 Vandut de:
                                                 <div class="product-log">
                                                     <img src="<?= $row['logo'] ?>" id="productLogo" alt="">

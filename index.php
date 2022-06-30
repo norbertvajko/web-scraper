@@ -26,8 +26,7 @@ session_start();
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <!--SPLIDE-->
-    <link rel="stylesheet" href="assets/css/splide.min.css">
+
 
     <link rel="icon" type="image/x-icon" href="assets/images/spider-title-logo.png">
     <link href="assets/css/home-page.css" rel="stylesheet">
@@ -38,8 +37,7 @@ session_start();
             crossorigin="anonymous">
     </script>
 
-    <!--SPLIDE-->
-    <script src="/assets/js/splide.min.js"></script>
+
 
 
 </head>
@@ -81,10 +79,15 @@ session_start();
 
         <section class="main-body carousel-best-offer">
             <?php
-            include "views/components/index_components/carousel.php";
+            include "views/components/index_components/carousel_most_searched.php";
             ?>
         </section>
 
+        <section class="main-body carousel-best-offer">
+            <?php
+            include "views/components/index_components/carousel_most_rated.php";
+            ?>
+        </section>
 
         <section class="consent">
             <?php

@@ -20,6 +20,7 @@ if ($result) {
         echo "<div id='img-drop'><img src='" . $row['images'] . "' style='height: 90px; width: 90px;' /></div>";
         echo "<div id='title-drop' style='padding-left: 13px;padding-top: 7px;'><button id='titleBtnDropdwon' onclick='saveSearch(" . $row['id'] . ")'>" . $row['name'] . " </button></div>";
         echo "</div>";
+
     }
 
 }

@@ -16,10 +16,6 @@
                                placeholder="What're you searching for?" aria-describedby="button-addon1"
                                onkeyup="imu(this.value)"
                                class="form-control border-0 bg-light"/>
-
-                        <!--                        <input type="text" id="product" name="product" onkeyup="onKeyUp();">-->
-                        <!--                        <input type="hidden" id="productCode" name="productCode">-->
-
                     </label>
 
                     <div class="input-group-append position-absolute end-0">
@@ -51,7 +47,6 @@
                                 <span><h6>Welcome</h6> <span id="usernameDropdown"><?= $_SESSION['username']; ?></span> </span>
                                 <ul class="user-dropdown-content">
                                     <li class="user-dropdown-item"><a href="/views/Favorites.php">Favorites</a></li>
-                                    <li class="user-dropdown-item"><a href="#">History</a></li>
                                     <li class="user-dropdown-item"><a href="/views/User_Settings.php">Settings</a></li>
                                     <li class="user-dropdown-item" id="log-out-user">Log out</li>
                                 </ul>

@@ -1,7 +1,7 @@
 <?php
 session_start();
-$user_id = $_SESSION['user_id'];
-$is_logged_in = isset($user_id) && !empty($user_id);
+
+$is_logged_in = isset($_SESSION['user_id']) && !empty($_SESSION['user_id']);
 
 ?>
 
@@ -56,7 +56,8 @@ $is_logged_in = isset($user_id) && !empty($user_id);
             <section class="user-account-content user-account-security">
                 <div class="uas-header">
                     <div class="uas-header-title">
-                        <h1 class="user-settings-title-h1">  <i class="fa fa-cog fa-2x" aria-hidden="true"></i>Setări siguranță</h1>
+                        <h1 class="user-settings-title-h1"><i class="fa fa-cog fa-2x" aria-hidden="true"></i>User
+                            Settings</h1>
                     </div>
                 </div>
 
@@ -64,9 +65,11 @@ $is_logged_in = isset($user_id) && !empty($user_id);
                 <?php
 
                 if ($is_logged_in) {
-                require_once '../includes/db/connDB.php';
+                include '../includes/db/connDB.php';
                 include "components/user_components/verifyPasswordPopUp.php";
                 include "components/user_components/changeUserPasswordPopUp.php";
+
+                $user_id = $_SESSION['user_id'];
 
                 $sql = " SELECT email FROM users WHERE ID = '$user_id'";
                 $result = mysqli_query($GLOBALS['conn'], $sql);
@@ -84,27 +87,35 @@ $is_logged_in = isset($user_id) && !empty($user_id);
                             <div>
                                 <div class="uas-setting-details">
                                     <div class="mb-3">
-                                        <h2 class="font-size-md font-semi-bold"><i class="fa fa-envelope " aria-hidden="true"></i>E-mail</h2>
-                                        <div class="text-gray">Adresa de email actuală a contului tău este <span id="fontBoldSize"> <?= $email ?> </span> </div>
+                                        <h2 class="font-size-md font-semi-bold"><i class="fa fa-envelope "
+                                                                                   aria-hidden="true"></i>E-mail</h2>
+                                        <div class="text-gray">Your current e-mail address is <span
+                                                    id="fontBoldSize"> <?= $email ?> </span></div>
                                     </div>
 
                                     <div class="uas-setting-actions">
 
-                                        <button class="btn btn-primary" id="modifyEmailB" onclick="showResetEmailPopUp();" > modifică</button>
+                                        <button class="btn btn-primary" id="modifyEmailB"
+                                                onclick="showResetEmailPopUp();"> modify
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="uas-setting uas-setting-password">
                                     <div>
                                         <div class="uas-setting-details">
                                             <div class="mb-3">
-                                                <h2 class="font-size-md font-semi-bold"><i class="fa fa-key" aria-hidden="true"></i>Parola</h2>
-                                                <div class="text-gray">Este o idee bună să folosești o parolă puternică pe care
-                                                    nu o mai folosești și în altă parte
+                                                <h2 class="font-size-md font-semi-bold"><i class="fa fa-key"
+                                                                                           aria-hidden="true"></i>Password
+                                                </h2>
+                                                <div class="text-gray">It's a great idea to pick a password you don't
+                                                    use anywhere else!
                                                 </div>
                                             </div>
 
                                             <div class="uas-setting-actions">
-                                                <button class="btn btn-primary" id="modifyPassB" onclick="showResetPassPopUp();" > modifică</button>
+                                                <button class="btn btn-primary" id="modifyPassB"
+                                                        onclick="showResetPassPopUp();"> modify
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
@@ -112,14 +123,20 @@ $is_logged_in = isset($user_id) && !empty($user_id);
                             </div>
 
 
-                                <?php
+                            <?php
                                 }
 
                                 }
                                 } else { ?>
-                                    <p>Trebuie sa fii logat pentru a avea acces la setarile contului!</p>
-                                    <button type="button" class="btn btn-primary" id="loginBTN">Logheaza-te</button>
-                                <?php }
+                                <div class="pt-3">
+                                    <p class="text-center mt-4" style="font-size: 25px;">You have to be logged in to
+                                        access user settings!</p>
+                                    <div class="text-center mt-5">
+                                        <button type="button" class="btn btn-primary " id="loginBTN">Login</button>
+                                    </div>
+                                </div>
+                                <br><br><br><br><br><br><br>
+                            <?php }
                                 ?>
 
                             </div>
@@ -137,16 +154,7 @@ $is_logged_in = isset($user_id) && !empty($user_id);
 <?php include "components/footer.php"; ?>
 
 <!------------------------------------------------ End Footer Area ---------------------------------------------------->
-<!--<script>-->
-<!--    function myFunction() {-->
-<!--        const searchButton = document.getElementById('search-button');-->
-<!--        const searchInput = document.getElementById('search-input');-->
-<!--        searchButton.addEventListener('click', () => {-->
-<!--            const inputValue = searchInput.value;-->
-<!--            alert(inputValue);-->
-<!--        });-->
-<!--    }-->
-<!--</script>-->
+
 
 <script src="/assets/js/setNewPassword.js"></script>
 <script src="/assets/js/recentSearches.js"></script>

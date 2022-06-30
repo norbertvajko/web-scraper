@@ -59,7 +59,7 @@ function showResetEmailPopUp() {
                                 let fpData = new FormData();
                                 fpData.append(emailInput.name, emailInput.value);
 
-                                request.open('POST', '../../includes/newEmail.php');
+                                request.open('POST', '../../includes/user/newEmail.php');
                                 request.send(fpData);
 
 
@@ -109,7 +109,7 @@ function showResetEmailPopUp() {
     }
 
     function newEmail() {
-        document.getElementById('enteryourPTitle').innerHTML = "Introdu noua adresa de e-mail";
+        document.getElementById('enteryourPTitle').innerHTML = "Choose your new e-mail address";
         verifyPasswordError.innerHTML = "";
 
         document.getElementById('lastPassInp').innerHTML = "";

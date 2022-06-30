@@ -78,8 +78,6 @@ body {
     /* padding: 31px; */
     /* margin-left: 151px; */
     margin-top: 32px;
-    width: 74%;
-
 }
 
 #btnVeziProd {
@@ -101,7 +99,9 @@ body {
     text-decoration: none;
 }
 .product-pricing {
+    margin-top:10px;
     font-size:26px;
+    color:chocolate;
 }
 
 .product-log img {
@@ -122,25 +122,11 @@ body {
 }
 
 
-@media screen and (max-width: 570px) {
-
-
-    @keyframes example {
-        1% {
-            left: 90%;
-        }
-        50% {
-            left: 70%;
-        }
-        100% {
-            left: 75%;
-        }
-
+@media screen and (max-width: 576px) {
+    #favCardTitleC {
+        font-size:18px;
     }
 }
-
-
-
 
 
 

@@ -1,9 +1,11 @@
-let favoriteIcon = document.getElementById('addToFav');
-const addedToFavCarousel = document.getElementsByClassName('cardAddToFav');
+let favoriteIconR = document.getElementById('addToFav');
 let heartIcon = document.getElementById('heartIcon');
 let first_click = true;
 
 function favorite(product_id, favIconBtn) {
+
+
+
     let xhr = new XMLHttpRequest();
     xhr.open("GET", "../../includes/user/addToFavorites.php?product=" + product_id, true);
     xhr.onload = () => {
@@ -11,31 +13,19 @@ function favorite(product_id, favIconBtn) {
 
             if (xhr.status === 200) {
 
-                let inCarousel = false;
 
-                if (!favoriteIcon) {
-                    favoriteIcon = favIconBtn;
-                    heartIcon = favoriteIcon.firstElementChild;
-                    inCarousel = true;
-                }
 
                 if (first_click) {
-                    favoriteIcon.style = "background:red";
-                    favoriteIcon.style.border = "1px solid red";
+                    favoriteIconR.style = "background:red";
+                    favoriteIconR.style.border = "1px solid red";
                     heartIcon.style = "color:white;";
                     first_click = false;
-
-                    // if (!inCarousel) {
-                        showAddedToFav();
-                        colorNavFav();
-                    // }
+                    showAddedToFav();
 
                 } else {
-                    favoriteIcon.style = "background:white";
+                    favoriteIconR.style = "background:white";
                     heartIcon.style = "color:red;";
                     first_click = true;
-
-
                     showRemovedFav();
 
 

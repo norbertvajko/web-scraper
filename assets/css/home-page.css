@@ -183,7 +183,7 @@ body {
     filter: blur(3px);
 }
 .main-features-title {
-    display: none !important;
+
 }
 
 .item-col-wrap {
@@ -210,7 +210,14 @@ body {
     color:black;
     font-size:18px;
 }
-
+#priceMonitorT {
+    color: powderblue;
+}
+#textDescrBanner {
+    color: aquamarine;
+    font-size: 17px;
+    font-weight: bold;
+}
 
 @media screen and (max-width: 576px) {
     .banner-text {

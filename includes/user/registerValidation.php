@@ -90,7 +90,7 @@ if ($registerComplete) {
 
         $to = $registerEmail;
         $subject = "Email Verification";
-        $message = "<a href='https://n_vajko.internship.rankingcoach.com/includes/verificationEmail.php?vkey=$vkey'>Register Account</a>";
+        $message = "<a href='https://n_vajko.internship.rankingcoach.com/includes/user/verificationEmail.php?vkey=$vkey'>Register Account</a>";
         $headers[] = 'MIME-Version: 1.0';
         $headers[] = 'Content-type: text/html; charset=iso-8859-1';
         $headers[] = 'From: Scrappy <scrappy@example.com>';

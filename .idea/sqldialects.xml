@@ -14,6 +14,6 @@
     <file url="file://$PROJECT_DIR$/includes/user/verificationEmail.php" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/views/Favorites.php" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/views/Results.php" dialect="GenericSQL" />
-    <file url="file://$PROJECT_DIR$/views/components/index_components/carousel.php" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/views/components/index_components/carousel_most_searched.php" dialect="GenericSQL" />
   </component>
 </project>

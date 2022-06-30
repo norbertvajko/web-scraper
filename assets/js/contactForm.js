@@ -31,9 +31,8 @@ function save_contact() {
 
             if (response.success !== '') {
 
-               contactForm.reset();
 
-                messageSuccess.innerHTML = response.success;
+                contactForm.reset();
 
                 setTimeout(function () {
 
@@ -41,10 +40,12 @@ function save_contact() {
 
                 }, 4000);
 
+                messageSuccess.innerHTML = response.success;
                 nameError.innerHTML = '';
                 emailError.innerHTML = '';
                 messageError.innerHTML = '';
                 subjectError.innerHTML = '';
+
 
 
             } else {

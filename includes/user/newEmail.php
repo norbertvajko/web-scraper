@@ -30,7 +30,7 @@ if ($newEmailComplete) {
         $newSQL = "UPDATE users SET email = '$newEmail' WHERE ID = '$user_id' ";
         mysqli_query($GLOBALS['conn'],$newSQL);
 
-        $response['success'] = 'E-mailul a fost schimbat';
+        $response['success'] = 'Your e-mail was successfully changed!';
     } else {
         $response['new_email_err'] = "Error";
     }

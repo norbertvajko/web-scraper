@@ -84,3 +84,24 @@ body {
     letter-spacing: 1px;
     color: #00acc1;
 }
+
+.text-container h6 a {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-size: 15px;
+}
+
+#productLog {
+    background-color: black;
+    margin-top: 12px;
+    height: 46px;
+    margin-bottom: 12px;
+}
+#productPrice {
+    font-size: 28px;
+    color: red;
+}

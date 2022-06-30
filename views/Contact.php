@@ -62,8 +62,8 @@ session_start();
         <section class="contact-us mt-100">
             <div class="container">
                 <div class="contact-wrap">
-                    <form class="contact-form w-100 d-flex flex-wrap justify-content-between pb-5">
-                    <h1 class="contact-form-title w-100 d-flex justify-content-center align-items-center text-success pb-5 ">We'd love to hear from you!<span style='font-size: 60px;margin-left: 20px;}'>&#128522;</span></h1>
+                    <form id="formID" class="contact-form w-100 d-flex flex-wrap justify-content-between pb-5">
+                    <h1 class="contact-form-title w-100 d-flex justify-content-center align-items-center  pb-5 ">We'd love to hear from you!<span style='font-size: 60px;margin-left: 20px;}'>&#128522;</span></h1>
 
                     <div class="contact-form-row row w-100 d-flex flex-row">
                         <div class="contact-input position-relative w-50">
@@ -78,8 +78,8 @@ session_start();
                                    placeholder="Enter your e-mail">
                             <span id="email_error" class="message-error"></span>
                         </div>
-                        <div class="contact-input w-50 m-auto">
-                            <span class="label-input">Subject</span>
+                        <div class="contact-input w-50">
+                            <span class="label-input"></span>
                             <input class="input form_data" type="text" name="subject" id="formSubject"
                                    placeholder="Subject">
                             <span id="subject_error" class="message-error"></span>
@@ -116,7 +116,7 @@ session_start();
                 </div>
                 <iframe width="100%" height="600"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2763.0142178006136!2d21.317151315851984!3d46.17037269406537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x474599016319a9b3%3A0xc7f128d36aedf597!2sStrada%20Nicolae%20B%C4%83lcescu%2022%2C%20Arad!5e0!3m2!1sen!2sro!4v1654098908600!5m2!1sen!2sro"
-                        style="border:0; filter: grayscale(100%); " allowfullscreen="" loading="lazy"
+                        style="border:0; " allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
