@@ -1,6 +1,6 @@
 <?php
 
-include_once("../controller/Contact.php");
+include_once("../../controller/Contact.php");
 
 $controller = new Controller_Contact();
 $controller->sendMail();

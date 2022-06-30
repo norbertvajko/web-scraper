@@ -5,7 +5,6 @@
     <file url="file://$PROJECT_DIR$/includes/products/liveSearch.php" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/includes/scrape/scrape.php" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/includes/user/addToFavorites.php" dialect="GenericSQL" />
-    <file url="file://$PROJECT_DIR$/includes/user/contactValidation.php" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/includes/user/forgetPasswordValidation.php" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/includes/user/loginValidation.php" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/includes/user/newPasswordReset.php" dialect="GenericSQL" />

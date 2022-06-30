@@ -18,7 +18,7 @@ function new_password() {
 
     let ajax_request = new XMLHttpRequest();
 
-    ajax_request.open('POST', '/includes/newPasswordReset.php', true);
+    ajax_request.open('POST', '/includes/user/newPasswordReset.php', true);
 
     ajax_request.send(fpData);
 

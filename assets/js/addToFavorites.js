@@ -5,7 +5,7 @@ let first_click = true;
 
 function favorite(product_id, favIconBtn) {
     let xhr = new XMLHttpRequest();
-    xhr.open("GET", "../../includes/addToFavorites.php?product=" + product_id, true);
+    xhr.open("GET", "../../includes/user/addToFavorites.php?product=" + product_id, true);
     xhr.onload = () => {
         if (xhr.readyState === XMLHttpRequest.DONE) {
 
@@ -25,19 +25,18 @@ function favorite(product_id, favIconBtn) {
                     heartIcon.style = "color:white;";
                     first_click = false;
 
-                    if (!inCarousel) {
+                    // if (!inCarousel) {
                         showAddedToFav();
                         colorNavFav();
-                    }
+                    // }
 
                 } else {
                     favoriteIcon.style = "background:white";
                     heartIcon.style = "color:red;";
                     first_click = true;
 
-                    if (!inCarousel) {
-                        showRemovedFav();
-                    }
+
+                    showRemovedFav();
 
 
                 }

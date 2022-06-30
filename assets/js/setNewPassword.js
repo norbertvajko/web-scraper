@@ -34,7 +34,7 @@ function showResetPassPopUp() {
 
             let ajax_request = new XMLHttpRequest();
 
-            ajax_request.open('POST', '/includes/changePassword.php', true);
+            ajax_request.open('POST', '/includes/user/changePassword.php', true);
 
             ajax_request.send(fpData);
 

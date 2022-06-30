@@ -195,7 +195,7 @@
 }
 
 .splide__arrow--prev {
-    left: 1em
+    left: -3em;
 }
 
 .splide__arrow--prev svg {
@@ -203,7 +203,7 @@
 }
 
 .splide__arrow--next {
-    right: 1em
+    right: -3em;
 }
 
 .splide.is-focus-in .splide__arrow:focus {

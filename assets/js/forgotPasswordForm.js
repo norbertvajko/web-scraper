@@ -18,7 +18,7 @@ function save_forgot_pass() {
 
     let ajax_request = new XMLHttpRequest();
 
-    ajax_request.open('POST', '/includes/forgetPasswordValidation.php', true);
+    ajax_request.open('POST', '/includes/user/forgetPasswordValidation.php', true);
 
     ajax_request.send(fpData);
 

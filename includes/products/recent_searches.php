@@ -3,7 +3,7 @@
 date_default_timezone_set('Europe/Bucharest');
 $date = time();
 
-include "connDB.php";
+include "../db/connDB.php";
 
 $product_id  = $_POST['product_id'];
 

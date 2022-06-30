@@ -23,7 +23,7 @@ function save_register() {
     }
 
     let ajax_request = new XMLHttpRequest();
-    ajax_request.open('POST', '/includes/registerValidation.php', true);
+    ajax_request.open('POST', '/includes/user/registerValidation.php', true);
     ajax_request.send(registerData);
 
     ajax_request.onreadystatechange = function () {

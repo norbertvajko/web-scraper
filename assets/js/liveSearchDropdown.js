@@ -11,7 +11,7 @@ function imu(x) {
                 dropDownList.innerHTML = XML.responseText;
             }
         };
-        XML.open('GET', '../../includes/liveSearch.php?q=' + x, true);
+        XML.open('GET', '../../includes/products/liveSearch.php?q=' + x, true);
         XML.send();
     }
 }

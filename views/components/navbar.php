@@ -23,8 +23,8 @@
                     </label>
 
                     <div class="input-group-append position-absolute end-0">
-                        <button id="button-addon1" type="button" name="searchProducts" class="btn btn-link text-primary"
-                                onclick="searchProd(); return false;">
+                        <button id="button-addon1" type="button" name="searchProducts"
+                                class="btn btn-link text-primary">
                             <i class="fa fa-search"></i>
                         </button>
                     </div>
@@ -39,12 +39,6 @@
                 <div id="img-drop"></div>
                 <div id="title-drop"></div>
         </div>
-        <!--                    <div class="live-search-result">-->
-        <!--                        <ul class="search-result">-->
-        <!--                            <li class="prod"></li>-->
-        <!--                        </ul>-->
-        <!--                    </div>-->
-
         <div class="navbar-links ms-auto">
             <ul class="navbar-list-links m-0 d-flex justify-content-center align-items-center ">
                 <li class="list-links mx-2">
@@ -58,7 +52,7 @@
                                 <ul class="user-dropdown-content">
                                     <li class="user-dropdown-item"><a href="/views/Favorites.php">Favorites</a></li>
                                     <li class="user-dropdown-item"><a href="#">History</a></li>
-                                    <li class="user-dropdown-item"><a href="/views/components/user_components/User_Settings.php">Settings</a></li>
+                                    <li class="user-dropdown-item"><a href="/views/User_Settings.php">Settings</a></li>
                                     <li class="user-dropdown-item" id="log-out-user">Log out</li>
                                 </ul>
                                 <?php
@@ -99,35 +93,16 @@
             </ul>
         </div>
 
-        <?php include "loginPopUp.php" ?>
-        <?php include "registerPopUp.php" ?>
-        <?php include "forgotPasswordPopup.php" ?>
-        <?php include "resetPasswordPopup.php" ?>
+    <?php include "user_components/loginPopUp.php" ?>
+    <?php include "user_components/registerPopUp.php" ?>
+    <?php include "user_components/forgotPasswordPopup.php" ?>
+    <?php include "user_components/resetPasswordPopup.php" ?>
 
-    </div>
-<!--</div>-->
+</div>
+
 
 <script src="/assets/js/recentSearches.js"></script>
 <script src="/assets/js/liveSearchDropdown.js"></script>
 <script src="/assets/js/newPasswordReset.js"></script>
-
 <script src="/assets/js/logOut.js"></script>
-<!--<script src="/assets/js/searchResults.js"></script>-->
-
-<script>
-
-        // const dropdownSearchList = document.getElementById('products-list');
-        //
-        // document.addEventListener('click', function(event) {
-        //     const isClickInsideElement = dropdownSearchList.contains(event.target);
-        //     if (!isClickInsideElement) {
-        //         //Do something click is outside specified element
-        //         console.log("clicked outside");
-        //        dropdownSearchList.style.display = "none";
-        //     } else {
-        //         console.log("clicked inside");
-        //     }
-        // });
-
-
-</script>
+<script src="/assets/js/searchBar.js"></script>

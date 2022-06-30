@@ -23,7 +23,7 @@ function save_data() {
 
     let ajax_request = new XMLHttpRequest();
 
-    ajax_request.open('POST', '/includes/loginValidation.php', true);
+    ajax_request.open('POST', '/includes/user/loginValidation.php', true);
 
     ajax_request.send(login_data);
 
@@ -39,7 +39,7 @@ function save_data() {
 
                 if (checkBox.checked) {
                     let newHXR = new XMLHttpRequest();
-                    newHXR.open('POST', '../../includes/rememberMe.php');
+                    newHXR.open('POST', '../../includes/user/rememberMe.php');
 
 
                     newHXR.send();

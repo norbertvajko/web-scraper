@@ -1,6 +1,6 @@
 <?php
 
-require_once '../system/Model.php';
+require_once '../../system/Model.php';
 
 class Model_Contact extends Model {
 

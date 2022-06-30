@@ -11,7 +11,7 @@ function save_newsletter() {
     registerData.append(newsletterEmail.name, newsletterEmail.value);
 
     let ajax_request = new XMLHttpRequest();
-    ajax_request.open('POST', '/includes/newsLetterValidation.php', true);
+    ajax_request.open('POST', '/includes/user/newsLetterValidation.php', true);
     ajax_request.send(registerData);
 
     ajax_request.onreadystatechange = function () {

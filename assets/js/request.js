@@ -1,10 +1,10 @@
-let btn = document.getElementById('button');
-let inputSearch = document.getElementById('inputText');
+let btn = document.getElementById('button-addon1');
+let inputSearch = document.getElementById('valueToSearch');
 
 
-btn.addEventListener('click',function () {
+btn.addEventListener('click', function () {
     let request = new XMLHttpRequest();
-    request.open('GET' , 'https://dummyjson.com/products');
+    request.open('GET', 'https://dummyjson.com/products');
     request.onload = function () {
         let data = JSON.parse(request.responseText);
         renderHTML(data);
@@ -16,40 +16,48 @@ btn.addEventListener('click',function () {
 function renderHTML(ddata) {
 
     if (inputSearch.value){
-        document.getElementById("products1").innerHTML = "";
+        // document.getElementById("products1").innerHTML = "";
         for (const item in ddata.products) {
             if (ddata.products[item].title.toLowerCase().includes(inputSearch.value.toLowerCase())) {
                 let myProducts = [ddata.products[item].title, ddata.products[item].rating, ddata.products[item].price, ddata.products[item].images];
                 console.log(myProducts);
-                let card = `<div class="card">
-                    <img class="card-img" src="${ddata.products[item].images[0]}">
-                    <div class="card-info">
-                        <h1 class="card-title" id="cardTitle">
-                             ${ddata.products[item].title}
-                        </h1>
-                        <span class="card-rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-o"></i>
-                            <a class="rating-number" href="#">(13)</a>
-                        </span>
-                        <div class="card-price">
-                            ${ddata.products[item].price} lei
+                let card = `<div class="container ">
+
+                <div class="search-results">
+                <!-- Topic Cards -->
+                <div id="cards_landscape_wrap-2">
+                <div class="container">
+                    <h1>x rezultate pentru "input" </h1>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <a href="">
+                                <div class="card-flyer">
+                                    <div class="text-box">
+                                        <div class="image-box">
+                                            <img src="https://cdn.pixabay.com/photo/2018/03/30/15/11/deer-3275594_960_720.jpg"
+                                                 alt=""/>
+                                        </div>
+                                        <div class="text-container">
+                                            <h6> ${ddata.products[item].title}</h6>
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry. Lorem Ipsum has been the industry's standard dummy text ever
+                                                since the 1500s.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
-                        <div class="card-offer">
-                            <a href="#" class="card-btn">Offers</a>
-                        </div>
-                        <span class="card-badge"><i class="fa fa-heart-o favorite-icon"></i></span>
                     </div>
-                </div>`
-                document.getElementById("products1").innerHTML += card;
+                </div>
+            </div>
+        </div>
+    </div>`
+                // document.getElementById("products1").innerHTML += card;
 
             }
         }
     } else{
-        document.getElementById("products1").innerHTML = 'no results'
+        // document.getElementById("products1").innerHTML = 'no results'
     }
 }
 

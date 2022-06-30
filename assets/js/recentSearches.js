@@ -1,6 +1,6 @@
 function saveSearch(product_id) {
     let xhr = new XMLHttpRequest();
-    xhr.open("POST", "../../includes/recent_searches.php", true);
+    xhr.open("POST", "../../includes/products/recent_searches.php", true);
     xhr.onload = () => {
         let response = JSON.parse(xhr.responseText);
         if (response.success == true) {

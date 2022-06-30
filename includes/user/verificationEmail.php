@@ -1,6 +1,6 @@
 <?php
 
-include 'connDB.php';
+include '../db/connDB.php';
 
 if (isset($_GET['vkey'])) {
     $vkey = $_GET['vkey'];

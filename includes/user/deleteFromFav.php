@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "connDB.php";
+include "../db/connDB.php";
 $user_id = $_SESSION['user_id'];
 
 $favorites_id = $_POST['favorites_id'];

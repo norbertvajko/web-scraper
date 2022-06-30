@@ -1,6 +1,6 @@
 <?php
 
-include "connDB.php";
+include "../db/connDB.php";
 session_start();
 
 

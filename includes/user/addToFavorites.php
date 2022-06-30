@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include "connDB.php";
+include "../db/connDB.php";
 
 $conn = $GLOBALS['conn'];
 

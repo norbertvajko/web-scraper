@@ -1,21 +1,21 @@
 <?php
 
-for ($page = 1; $page < 13; $page++) {
-$flancoProducts = [
-    'name' => '!<h2>(.*?)<\/h2>!',
-    'price' => '!<span class="special-price"><span class="price">(.*?)(?:,)<|<span class="singlePrice"><span class="price">(.*?)(?:,)<!',
-    'rating' => '!<div class="rating-result" id="rating-result_.*?"><span><span>(.*?)(?:%)<\/span><\/span><\/div>!',
-    'inStock' => '!<div class="produs-status">.*>(.*?)<\/span>  <\/div> <\/div>!',
-    'images' => '!<span class=""><img class=""  src="(.*?)" .*"\/><\/span><\/span>!',
-    'link' => '!<a class="product-item-link" href="(.*?)">!',
-    'logo' => '!aria-label="store logo"><img src="(.*?)"!',
-    'description' => $GLOBALS['description'],
-
-];
-//    var_dump($flancoProducts['description']);
-
-    webCrawl('https://www.flanco.ro/telefoane-tablete/smartphone/p/' . $page. '.html', $flancoProducts);
-}
+//for ($page = 1; $page < 13; $page++) {
+//$flancoProducts = [
+//    'name' => '!<h2>(.*?)<\/h2>!',
+//    'price' => '!<span class="special-price"><span class="price">(.*?)(?:,)<|<span class="singlePrice"><span class="price">(.*?)(?:,)<!',
+//    'rating' => '!<div class="rating-result" id="rating-result_.*?"><span><span>(.*?)(?:%)<\/span><\/span><\/div>!',
+//    'inStock' => '!<div class="produs-status">.*>(.*?)<\/span>  <\/div> <\/div>!',
+//    'images' => '!<span class=""><img class=""  src="(.*?)" .*"\/><\/span><\/span>!',
+//    'link' => '!<a class="product-item-link" href="(.*?)">!',
+//    'logo' => '!aria-label="store logo"><img src="(.*?)"!',
+//    'description' => $GLOBALS['description'],
+//
+//];
+////    var_dump($flancoProducts['description']);
+//
+//    webCrawl('https://www.flanco.ro/telefoane-tablete/smartphone/p/' . $page. '.html', $flancoProducts);
+//}
 //
 //
 //
@@ -37,14 +37,14 @@ $flancoProducts = [
 //for ($page = 1; $page < 27; $page++) { webCrawl('https://www.ideall.ro/magazin-telefoane-mobile?pag=' . $page, $ideallProducts); }
 //
 //
-//$quickProducts = [
-//    'name' => '!<div class="card-product-description ">
-//                (.*?)
-//            <\/div>!',
-//    'price' => '!<div class="priceFormat card-price" translate="no">(.*?)<sup>.*?<\/sup><sub>Lei<\/sub><\/div>!'
-//];
-//webCrawl('https://www.quickmobile.ro/telefoane-si-accesorii/telefoane-mobile', $quickProducts);
-//
+$quickProducts = [
+    'name' => '!<div class="card-product-description ">
+                (.*?)
+            <\/div>!',
+    'price' => '!<div class="priceFormat card-price" translate="no">(.*?)<sup>.*?<\/sup><sub>Lei<\/sub><\/div>!'
+];
+webCrawl('https://www.quickmobile.ro/telefoane-si-accesorii/telefoane-mobile', $quickProducts);
+
 //$emagProducts = [
 //    'name' => '!class="card-v2-title semibold mrg-btm-xxs js-product-url" data-zone="title">(.*?)<\/a>!',
 //    'reviews' => '!<span class="average-rating semibold">(.*?)<\/span>!'

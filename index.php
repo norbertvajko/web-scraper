@@ -39,7 +39,7 @@ session_start();
     </script>
 
     <!--SPLIDE-->
-    <script src="assets/js/splide.min.js"></script>
+    <script src="/assets/js/splide.min.js"></script>
 
 
 </head>
@@ -71,10 +71,6 @@ session_start();
     <!----------------------------------------------- Start Main Area ----------------------------------------------------->
 
     <main class="main-content">
-<!--        --><?php
-//        print_r($_COOKIE);
-//        print_r($_SESSION);
-//        ?>
 
         <section class="main-header main-features p-3">
             <?php
@@ -83,26 +79,16 @@ session_start();
         </section>
 
 
-
-
         <section class="main-body carousel-best-offer">
             <?php
             include "views/components/index_components/carousel.php";
             ?>
         </section>
 
-        <section class="customer-opinion">
-
-        </section>
-
-
-        <section class="main-footer scrappy-benefits">
-
-        </section>
 
         <section class="consent">
             <?php
-                include "views/components/consent_cookie.php";
+            include "views/components/user_components/consent_cookie.php";
             ?>
         </section>
 

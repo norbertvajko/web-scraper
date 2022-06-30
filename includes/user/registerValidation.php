@@ -1,5 +1,5 @@
 <?php
-include "connDB.php";
+include "../db/connDB.php";
 $conn = $GLOBALS['conn'];
 
 $registerComplete = true;

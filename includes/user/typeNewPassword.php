@@ -1,5 +1,5 @@
 <?php
-include "connDB.php";
+include "../db/connDB.php";
 
 $newPasswordComplete = true;
 

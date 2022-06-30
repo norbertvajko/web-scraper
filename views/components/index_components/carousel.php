@@ -10,7 +10,7 @@
 
                 <?php
 
-include 'includes/connDB.php';
+include 'includes/db/connDB.php';
 
 //$sql = "SELECT * FROM recent_searches";
 

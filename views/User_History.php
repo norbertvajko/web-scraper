@@ -27,9 +27,9 @@ $is_logged_in = isset($user_id) && !empty($user_id);
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <link rel="icon" type="image/x-icon" href="../../../assets/images/spider-title-logo.png">
-    <link href="../../../assets/css/home-page.css" rel="stylesheet">
-    <link href="../../../assets/css/user-settings.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../assets/images/spider-title-logo.png">
+    <link href="../assets/css/home-page.css" rel="stylesheet">
+    <link href="../assets/css/user-settings.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
@@ -44,7 +44,7 @@ $is_logged_in = isset($user_id) && !empty($user_id);
 <!--------------------------------------------- Start Nav Bar Area ---------------------------------------------------->
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top bor-sha">
-    <?php include "../../components/navbar.php"; ?>
+    <?php include "components/navbar.php"; ?>
 </nav>
 <!--------------------------------------------- End Nav Bar Area ------------------------------------------------------>
 
@@ -56,7 +56,7 @@ $is_logged_in = isset($user_id) && !empty($user_id);
             <section class="user-account-content user-account-security">
                 <div class="uas-header">
                     <div class="uas-header-title">
-                        <h1 class="user-settings-title-h1">  <i class="fa fa-cog fa-2x" aria-hidden="true"></i>Setări siguranță</h1>
+                        <h1 class="user-settings-title-h1">  <i class="fa fa-history fa-2x" aria-hidden="true"></i>Istoric produse</h1>
                     </div>
                 </div>
 
@@ -64,9 +64,8 @@ $is_logged_in = isset($user_id) && !empty($user_id);
                 <?php
 
                 if ($is_logged_in) {
-                require_once '../../../includes/db/connDB.php';
-                include "../../../views/components/user_components/verifyPasswordPopUp.php";
-                include "../../../views/components/user_components/changeUserPasswordPopUp.php";
+                require_once '../includes/connDB.php';
+
 
                 $sql = " SELECT email FROM users WHERE ID = '$user_id'";
                 $result = mysqli_query($GLOBALS['conn'], $sql);
@@ -112,18 +111,18 @@ $is_logged_in = isset($user_id) && !empty($user_id);
                             </div>
 
 
-                                <?php
-                                }
+                            <?php
+                            }
 
-                                }
-                                } else { ?>
-                                    <p>Trebuie sa fii logat pentru a avea acces la setarile contului!</p>
-                                    <button type="button" class="btn btn-primary" id="loginBTN">Logheaza-te</button>
-                                <?php }
-                                ?>
+                            }
+                            } else { ?>
+                                <p>Trebuie sa fii logat pentru a avea acces la setarile contului!</p>
+                                <button type="button" class="btn btn-primary" id="loginBTN">Logheaza-te</button>
+                            <?php }
+                            ?>
 
-                            </div>
                         </div>
+                    </div>
 
             </section>
         </main>
@@ -134,41 +133,10 @@ $is_logged_in = isset($user_id) && !empty($user_id);
 </div>
 <!----------------------------------------------- Start Footer Area --------------------------------------------------->
 
-<?php include "../../components/footer.php"; ?>
+<?php include "components/footer.php"; ?>
 
 <!------------------------------------------------ End Footer Area ---------------------------------------------------->
-<!--<script>-->
-<!--    function myFunction() {-->
-<!--        const searchButton = document.getElementById('search-button');-->
-<!--        const searchInput = document.getElementById('search-input');-->
-<!--        searchButton.addEventListener('click', () => {-->
-<!--            const inputValue = searchInput.value;-->
-<!--            alert(inputValue);-->
-<!--        });-->
-<!--    }-->
-<!--</script>-->
 
-<script src="/assets/js/setNewPassword.js"></script>
-<script src="/assets/js/recentSearches.js"></script>
-<script src="/assets/js/verifyPasswordPopUp.js"></script>
-<!--<script src="/assets/js/searchResults.js"></script>-->
-<script>
-
-    const logIN = document.getElementById('loginBTN');
-    const register = document.getElementById('registerBTN')
-
-    if (logIN) {
-        logIN.addEventListener("click", () => {
-            showLoginPopUp();
-        });
-    }
-    if (register) {
-        register.addEventListener("click", () => {
-            showRegisterPopUp();
-        });
-    }
-
-</script>
 
 </body>
 </html>

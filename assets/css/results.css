@@ -375,8 +375,20 @@ body {
     100% {
         left:84%;
     }
+}
 
-
+@media screen and (max-width:355px) {
+    @keyframes example {
+        1% {
+            left:100%;
+        }
+        50% {
+            left:22%;
+        }
+        100% {
+            left:24%;
+        }
+    }
 }
 
 

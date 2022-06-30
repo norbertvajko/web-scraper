@@ -2,8 +2,7 @@
     <div class="row py-6">
         <div class="col-lg-6 col-md-12 col-xs-12 col-sm-12 banner-text">
             <h1 id="homeBannerTitle">Scrappy<br></h1>
-            <p>kdasndasodnndadlkdnaadansakd <br>
-                fdsnfsdkfnsflfsdfs</p>
+            <p class="w-75 py-4"></p>
         </div>
         <div class="terminal-banner col-lg-6 col-md-12 col-xs-12 col-sm-12">
             <div class="terminal-header">
@@ -23,4 +22,4 @@
     </div>
 </div>
 
-<script src="assets/js/terminalText.js"></script>
+<script src="/assets/js/terminalText.js"></script>

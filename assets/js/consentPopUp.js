@@ -12,7 +12,7 @@ if (cookieButton) {
     cookieButton.addEventListener("click", (e) => {
 
         let request = new XMLHttpRequest();
-        request.open('POST', '../../includes/consentCookieAccepted.php');
+        request.open('POST', '../../includes/user/consentCookieAccepted.php');
         e.preventDefault();
         cookieContainer.classList.remove("active");
         request.send();

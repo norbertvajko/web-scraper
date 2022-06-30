@@ -1,10 +1,11 @@
 <?php
 
+
+
 session_start();
 
 $is_logged_in = isset($_SESSION['user_id']) && !empty($_SESSION['user_id']);
 $noOfFavorites = 0;
-
 
 ?>
 
@@ -102,7 +103,7 @@ $noOfFavorites = 0;
 
                 <?php
                 $user_id = $_SESSION['user_id'];
-                require_once "../includes/connDB.php";
+                require_once "../includes/db/connDB.php";
                 $sql = "SELECT name, reviews, price, images, in_stock, link, logo, favorites.id AS favId FROM products LEFT JOIN favorites ON products.id = favorites.product_id WHERE favorites.user_id = '$user_id'";
                 $result = mysqli_query($GLOBALS['conn'], $sql);
                 ?>
@@ -134,13 +135,6 @@ $noOfFavorites = 0;
                                             </h2>
 
                                         </div>
-                                        <!--                                    <div class="hidden-xs">-->
-                                        <!--                                        <div class="stars-outer">-->
-                                        <!--                                            <div class="stars-inner" id="productRev">-->
-                                        <!---->
-                                        <!--                                            </div>-->
-                                        <!--                                        </div>-->
-                                        <!--                                    </div>-->
                                         <div class="card-secondary pad-hrz-sm flex-item text-right">
                                             <div class="mrg-btm-xs">
                                                 <div class="stars-outer">
@@ -226,21 +220,6 @@ $noOfFavorites = 0;
 
 
     <script src="/assets/js/getStars.js"></script>
-    <!--    <script>-->
-    <!---->
-    <!--        let stars = document.getElementsByClassName('star-rating');-->
-    <!--        document.addEventListener('DOMContentLoaded',() => {-->
-    <!--            // console.log(getStars(4));-->
-    <!--            // for (var i=0; i<stars.length;i++) {-->
-    <!--            for (let i = 0; i < stars.length; i++) {-->
-    <!---->
-    <!--                stars[i].innerHTML = getStars( $row['reviews']//)-->
-    <!--//            }-->
-    <!--//-->
-    <!--//        });-->
-    <!--//-->
-    <!--//    </script>-->
-
     <script>
 
         const logIN = document.getElementById('loginBTN');
@@ -268,7 +247,7 @@ $noOfFavorites = 0;
 
             let ajax_request = new XMLHttpRequest();
 
-            ajax_request.open('POST', '/includes/deleteFromFav.php', true);
+            ajax_request.open('POST', '/includes/user/deleteFromFav.php', true);
 
             let formdata = new FormData;
             formdata.append('favorites_id', id);

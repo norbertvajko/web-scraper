@@ -2,7 +2,7 @@
 session_start();
 ?>
 <?php
-include '../includes/connDB.php';
+include '../includes/db/connDB.php';
 
 //preia product id din url
 $actual_link = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";

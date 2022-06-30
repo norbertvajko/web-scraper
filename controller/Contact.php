@@ -1,8 +1,8 @@
 <?php
 
-require_once '../system/Controller.php';
-require_once '../model/Contact.php';
-require_once '../system/View.php';
+require_once '../../system/Controller.php';
+require_once '../../model/Contact.php';
+require_once '../../system/View.php';
 
 
 class Controller_Contact extends Controller {
